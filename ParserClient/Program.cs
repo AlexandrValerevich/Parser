@@ -12,9 +12,10 @@ namespace Parser.Client
     {
         static async Task Main(string[] args)
         {
-            var wbParser = new WildBerriesParser("Angular 11");
+            using var wbParser = new WildBerriesParser("Angular 11");
 
-            
+            await wbParser.UseProxy().GetListProductAsync();
+
         }
     }
 }

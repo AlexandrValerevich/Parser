@@ -4,6 +4,7 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
+using Newtonsoft.Json.Linq;
 using static System.Console;
 
 
@@ -51,25 +52,46 @@ namespace Parser
             int port = 8888;
 
             WebProxy proxy = new WebProxy(addressIP, port);
-            
             HttpClient.DefaultProxy = proxy;
 
             return this;
         }
 
-        private async Task<string> GetXinfoFromWBAsync()
+        public async Task<string> GetXinfoFromWBAsync()
         {
-            string pathQuery = "https://by.wildberries.ru/user/get-xinfo-v2";
+            string result = String.Empty;
+            string URI = "https://by.wildberries.ru/user/get-xinfo-v2";
             HttpContent httpConten = new ByteArrayContent(new byte[0]);
-            HttpResponseMessage postResponce = await _httpClient.PostAsync(pathQuery, httpConten);
 
-            postResponce.EnsureSuccessStatusCode();
+            HttpResponseMessage response = await _httpClient.PostAsync(URI, httpConten);
+            response.EnsureSuccessStatusCode();
+            string responsBoby = await response.Content.ReadAsStringAsync();
 
-            var responsBoby = await postResponce.Content.ReadAsStringAsync();
-            WriteLine(responsBoby);
+            JObject jObject = JObject.Parse(responsBoby);
+            result = jObject["xinfo"].ToString();
 
-            return responsBoby;
+            return result;
         }
+
+        public async Task<string> GetListProductAsync()
+        {
+            string result = String.Empty;
+            string requestURI = "https://wbxcatalog-sng.wildberries.ru/presets/bucket_100/catalog?" + await GetXinfoFromWBAsync() + "&preset=11091829&";
+            Header.Host = "wbxsearch-by.wildberries.ru";
+
+            HttpResponseMessage response = await _httpClient.GetAsync(requestURI);
+            response.EnsureSuccessStatusCode();
+
+            string responseBody = await response.Content.ReadAsStringAsync();
+            WriteLine(responseBody);
+
+            return result;
+        }
+
+
+
+
+        
 
 
         public void Dispose()
