@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Threading.Tasks;
 using System.Net.Http;
 
 namespace HttpFacade
@@ -7,8 +8,8 @@ namespace HttpFacade
     interface IHttpResponce
     {
         IHttpResponce EnsureSuccessStatusCode();
-        string ReadAsStringAsync();
-        byte[] ReadAsByteArrayAsync();
+        Task<string> ReadAsStringAsync();
+        Task<byte[]> ReadAsByteArrayAsync();
         Stream ReadAsStream();
         
     }

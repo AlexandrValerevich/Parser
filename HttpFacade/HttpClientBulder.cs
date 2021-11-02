@@ -7,8 +7,15 @@ namespace HttpFacade
 {
     class HttpClientBulder : IHttpClientBulder
     {
+        static HttpClientBulder Create()
+        {
+            return new HttpClientBulder();
+        }
+
         private HttpClient _httpClient;
+
         private HttpRequestHeaders _Header => _httpClient.DefaultRequestHeaders;
+
         private Uri _Uri
         {
             get 
@@ -21,6 +28,11 @@ namespace HttpFacade
             }
         }
 
+        private HttpClientBulder()
+        {
+            _httpClient = new HttpClient();
+        }
+        
         public IHttpClientBulder AddHeader(string key, string? value)
         {
             _Header.Add(key, value);
@@ -114,5 +126,6 @@ namespace HttpFacade
         {
             _httpClient = new HttpClient();
         }
+
     }
 }
