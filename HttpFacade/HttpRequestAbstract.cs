@@ -8,11 +8,12 @@ namespace HttpFacade
     abstract class HttpRequestAbstract
     {
         private HttpClient _httpClient;
+        private HttpResponce _httpResponce;
         public HttpRequestAbstract(HttpClient httpClient)
         {
             _httpClient = httpClient;
         }
         public abstract void Request();
-        public abstract void GetResponce();
+        public abstract HttpResponce GetResponce();
     }
 }
