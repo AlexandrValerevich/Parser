@@ -5,7 +5,7 @@ using System.Net.Http.Headers;
 
 namespace HttpFacade
 {
-    class HttpClientBulder : IHttpClientBulder, IDisposable
+    public class HttpClientBulder : IHttpClientBulder, IDisposable
     {
         static HttpClientBulder Create()
         {

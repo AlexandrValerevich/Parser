@@ -2,7 +2,7 @@ using System;
 
 namespace HttpFacade
 {
-    interface IHttpRequest
+    public interface IHttpRequest
     {
         void Request();
         IHttpResponce GetResponce();

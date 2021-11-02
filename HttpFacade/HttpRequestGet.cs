@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HttpFacade
 {
-    class HttpRequestGet : HttpRequestAbstract
+    public class HttpRequestGet : HttpRequestAbstract
     {
         
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HttpFacade
 {
-    class HttpRequestPost : HttpRequestAbstract
+    public class HttpRequestPost : HttpRequestAbstract
     {
         public HttpRequestPost(HttpClient httpClient): base(httpClient)
         {

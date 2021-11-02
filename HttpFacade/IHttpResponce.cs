@@ -5,7 +5,7 @@ using System.Net.Http;
 
 namespace HttpFacade
 {
-    interface IHttpResponce
+    public interface IHttpResponce
     {
         IHttpResponce EnsureSuccessStatusCode();
         Task<string> ReadAsStringAsync();

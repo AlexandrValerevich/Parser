@@ -3,7 +3,7 @@ using System.Net.Http;
 
 namespace HttpFacade
 {
-    interface IHttpClientBulder
+    public interface IHttpClientBulder
     {
         void Reset();
         HttpClient Build();

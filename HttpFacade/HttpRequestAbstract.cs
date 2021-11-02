@@ -5,7 +5,7 @@ using System.Net.Http.Headers;
 
 namespace HttpFacade
 {
-    abstract class HttpRequestAbstract : IDisposable, IHttpRequest
+    public abstract class HttpRequestAbstract : IDisposable, IHttpRequest
     {
         protected HttpClient _httpClient;
         protected HttpResponce _httpResponce;

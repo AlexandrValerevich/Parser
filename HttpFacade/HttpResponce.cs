@@ -7,7 +7,7 @@ using System.IO;
 
 namespace HttpFacade
 {
-    class HttpResponce : IDisposable, IHttpResponce
+    public class HttpResponce : IDisposable, IHttpResponce
     {
         private HttpResponseMessage _httpResponceMassage;
 
