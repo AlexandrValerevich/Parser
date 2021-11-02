@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "ParserLib"
+		},
+		{
+			"path": "HttpFacade"
 		}
 	],
 	"settings": {}

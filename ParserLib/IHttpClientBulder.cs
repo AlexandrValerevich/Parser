@@ -9,6 +9,7 @@ namespace Proxy
     interface IHttpClientBulder
     {
         HttpClient Releace();
+        void AddAddress();
         void AddHeader();
         void AddProxy();
         void Reset();
