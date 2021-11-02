@@ -7,7 +7,7 @@ using System.IO;
 
 namespace HttpFacade
 {
-    class HttpResponce : IHttpResponce
+    class HttpResponce : IDisposable, IHttpResponce
     {
         private HttpResponseMessage _httpResponceMassage;
 
@@ -40,6 +40,11 @@ namespace HttpFacade
         {
             string responce = await _Content.ReadAsStringAsync();
             return responce;
+        }
+
+        public void Dispose()
+        {
+            _httpResponceMassage.Dispose();
         }
     }
 }

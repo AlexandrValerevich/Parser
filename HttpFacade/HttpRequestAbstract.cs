@@ -5,15 +5,23 @@ using System.Net.Http.Headers;
 
 namespace HttpFacade
 {
-    abstract class HttpRequestAbstract
+    abstract class HttpRequestAbstract : IDisposable, IHttpRequest
     {
-        private HttpClient _httpClient;
-        private HttpResponce _httpResponce;
+        protected HttpClient _httpClient;
+        protected HttpResponce _httpResponce;
+        protected Uri _Uri => _httpClient.BaseAddress;
+
         public HttpRequestAbstract(HttpClient httpClient)
         {
             _httpClient = httpClient;
         }
         public abstract void Request();
-        public abstract HttpResponce GetResponce();
+
+        public abstract IHttpResponce GetResponce();
+
+        public void Dispose()
+        {
+            _httpClient.Dispose();
+        }
     }
 }

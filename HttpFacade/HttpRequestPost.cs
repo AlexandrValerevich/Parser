@@ -8,10 +8,6 @@ namespace HttpFacade
 {
     class HttpRequestPost : HttpRequestAbstract
     {
-        private HttpClient _httpClient;
-        private HttpResponce _httpResponce;
-        private Uri _Uri => _httpClient.BaseAddress;
-
         public HttpRequestPost(HttpClient httpClient): base(httpClient)
         {
             

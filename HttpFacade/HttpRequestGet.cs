@@ -8,9 +8,7 @@ namespace HttpFacade
 {
     class HttpRequestGet : HttpRequestAbstract
     {
-        private HttpClient _httpClient;
-        private HttpResponce _httpResponce;
-        private Uri _Uri => _httpClient.BaseAddress;
+        
 
         public HttpRequestGet(HttpClient httpClient): base(httpClient)
         {

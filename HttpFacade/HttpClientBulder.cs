@@ -5,7 +5,7 @@ using System.Net.Http.Headers;
 
 namespace HttpFacade
 {
-    class HttpClientBulder : IHttpClientBulder
+    class HttpClientBulder : IHttpClientBulder, IDisposable
     {
         static HttpClientBulder Create()
         {
@@ -127,5 +127,9 @@ namespace HttpFacade
             _httpClient = new HttpClient();
         }
 
+        public void Dispose()
+        {
+            _httpClient.Dispose();
+        }
     }
 }
