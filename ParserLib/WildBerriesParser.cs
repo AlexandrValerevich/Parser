@@ -10,7 +10,7 @@ using static System.Console;
 
 namespace Parser
 {
-    public class WildBerriesParser : IDisposable
+    public class WildBerriesParser : IParser
     {
         private HttpClient _httpClient;
         private string _product;
