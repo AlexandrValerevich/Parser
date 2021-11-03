@@ -11,7 +11,7 @@ namespace HttpFacade
     {
         private HttpResponseMessage _httpResponceMassage;
 
-        private HttpContent _Content => _Content;
+        private HttpContent _Content => _httpResponceMassage.Content;
 
         public HttpResponce(HttpResponseMessage httpResponceMassage)
         {

@@ -16,9 +16,9 @@ namespace Parser.Client
             IParser wbParser = new WildBerriesParser("Angular 11");
 
             HttpClient.DefaultProxy = new WebProxy("127.0.0.1", 8888);
-
             wbParser.ParseAsync();
-            System.Threading.Thread.Sleep(3000);
+
+            Console.ReadKey();
 
         }
     }
