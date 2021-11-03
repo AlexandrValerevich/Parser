@@ -18,16 +18,7 @@ namespace Parser
         {
             _bookName = bookName.Replace(" ", "+");
         }
-        // public WildBerriesParser UseProxy()
-        // {
-        //     string addressIP = "127.0.0.1";
-        //     int port = 8888;
-
-        //     WebProxy proxy = new WebProxy(addressIP, port);
-        //     HttpClient.DefaultProxy = proxy;
-
-        //     return this;
-        // }
+        
         public BookInfo GetResult()
         {
             return new BookInfo(); 
@@ -35,7 +26,6 @@ namespace Parser
 
         public async Task ParseAsync()
         {
-
             string text = await GetXinfoAsync();
             Console.WriteLine(text);
         }
@@ -46,13 +36,18 @@ namespace Parser
             IHttpResponce httpResponce = await GetResponceForXInfoAsync(httpClient);
 
             string textRecponce = await httpResponce.ReadAsStringAsync();
-            
+
             return textRecponce;
         }
 
         private HttpClient CreateHttpClientForXInfoRequst()
         {
-            HttpClientBulder httpClientBulder = HttpClientBulder.Create();
+            HttpClientHandler httpClientHandler = new HttpClientHandler
+            {
+                AutomaticDecompression = DecompressionMethods.GZip
+            };
+
+            HttpClientBulder httpClientBulder = HttpClientBulder.Create(httpClientHandler);
 
             httpClientBulder
             .AddUri("https://by.wildberries.ru/user/get-xinfo-v2")
