@@ -46,5 +46,15 @@ namespace HttpFacade
         {
             _httpResponceMassage.Dispose();
         }
+
+        public string ReadAsString()
+        {
+            Task<string> taskResponce = _Content.ReadAsStringAsync();
+            taskResponce.Wait();
+
+            string responce = taskResponce.Result;
+
+            return responce;
+        }
     }
 }

@@ -13,13 +13,23 @@ namespace HttpFacade
         public HttpRequestGet(HttpClient httpClient): base(httpClient)
         {}
 
-        public override async Task<IHttpResponce> Request()
+        public override IHttpResponce Request()
         {
-            HttpResponseMessage responce = await _httpClient.GetAsync(_Uri);
-            var httpResponce = new HttpResponce(responce);
+            Task<HttpResponseMessage> taskResponce = _httpClient.GetAsync(_Uri);
+            taskResponce.Wait();
+
+            HttpResponseMessage responce = taskResponce.Result;
+            IHttpResponce httpResponce = new HttpResponce(responce);
 
             return httpResponce; 
         }
 
+        public override async Task<IHttpResponce> RequestAsync()
+        {
+            HttpResponseMessage responce = await _httpClient.GetAsync(_Uri);
+            IHttpResponce httpResponce = new HttpResponce(responce);
+
+            return httpResponce; 
+        }
     }
 }

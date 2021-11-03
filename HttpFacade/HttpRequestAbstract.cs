@@ -11,15 +11,18 @@ namespace HttpFacade
         protected HttpClient _httpClient;
         protected Uri _Uri => _httpClient.BaseAddress;
 
-        public HttpRequestAbstract(HttpClient httpClient)
+        protected HttpRequestAbstract(HttpClient httpClient)
         {
             _httpClient = httpClient;
         }
-        public abstract Task<IHttpResponce> Request();
+        public abstract IHttpResponce Request();
+
+        public abstract Task<IHttpResponce> RequestAsync();
 
         public void Dispose()
         {
             _httpClient.Dispose();
         }
+
     }
 }

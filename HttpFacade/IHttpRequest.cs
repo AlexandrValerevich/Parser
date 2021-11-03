@@ -5,6 +5,8 @@ namespace HttpFacade
 {
     public interface IHttpRequest
     {
-        Task<IHttpResponce> Request();
+        IHttpResponce Request();
+
+        Task<IHttpResponce> RequestAsync();
     }
 }

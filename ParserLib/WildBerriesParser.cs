@@ -43,7 +43,7 @@ namespace Parser
 
         private async Task<IHttpResponce> GetResponceForCatalogAsync()
         {
-            using HttpClient httpClient = await CreateHttpClientForCatalogRequstAsync();
+            using HttpClient httpClient = CreateHttpClientForCatalogRequstAsync();
 
             HttpRequestGet httpRequestGet = new HttpRequestGet(httpClient);
             IHttpResponce httpResponce = await httpRequestGet.Request();
@@ -51,9 +51,9 @@ namespace Parser
             return httpResponce;
         }
 
-        private async Task<HttpClient> CreateHttpClientForCatalogRequstAsync()
+        private  HttpClient CreateHttpClientForCatalogRequstAsync()
         {
-            string requestUri = await GenerateReqestUriForCatalog();
+            string requestUri = GenerateReqestUriForCatalog(); 
 
             HttpClientHandler httpClientHandler = new HttpClientHandler
             {
@@ -88,12 +88,14 @@ namespace Parser
             return httpClientBulder.Build();
         }
 
-        private async Task<string> GenerateReqestUriForCatalog()
+        private string GenerateReqestUriForCatalog()
         {
             string requestUri = "https://wbxcatalog-sng.wildberries.ru/presets/bucket_100/catalog?";
-            string Xinfo = await GetXinfoAsync();
+            
+            Task<string> Xinfo = GetXinfoAsync();
+            Xinfo.Wait();
 
-            requestUri += Xinfo;
+            requestUri += Xinfo.Result;
             
             return requestUri;
         }
@@ -104,6 +106,23 @@ namespace Parser
 
             string textRecponce = await httpResponce.ReadAsStringAsync();
             string xInfo = ParseXinfoResponce(textRecponce);
+
+            return xInfo;
+        }
+
+        private async Task<IHttpResponce> GetResponceForXInfoAsync()
+        {
+            using HttpClient httpClient = CreateHttpClientForXInfoRequst();
+            HttpRequestPost httpRequestPost = new HttpRequestPost(httpClient);
+            IHttpResponce httpResponce = await httpRequestPost.Request();
+
+            return httpResponce;
+        }
+
+        private string ParseXinfoResponce(string textRecponce)
+        {
+            JObject jObject = JObject.Parse(textRecponce);
+            string xInfo = jObject["xInfo"].ToString();
 
             return xInfo;
         }
@@ -140,22 +159,7 @@ namespace Parser
             return httpClientBulder.Build();
         }
 
-        private async Task<IHttpResponce> GetResponceForXInfoAsync()
-        {
-            using HttpClient httpClient = CreateHttpClientForXInfoRequst();
-            HttpRequestPost httpRequestPost = new HttpRequestPost(httpClient);
-            IHttpResponce httpResponce = await httpRequestPost.Request();
-
-            return httpResponce;
-        }
-
-        private string ParseXinfoResponce(string textRecponce)
-        {
-            JObject jObject = JObject.Parse(textRecponce);
-            string xInfo = jObject["xInfo"].ToString();
-
-            return xInfo;
-        }
+      
     }
 
     

@@ -18,6 +18,7 @@ namespace Parser.Client
             HttpClient.DefaultProxy = new WebProxy("127.0.0.1", 8888);
             wbParser.ParseAsync();
 
+            Console.WriteLine("Конец");
             Console.ReadKey();
 
         }
