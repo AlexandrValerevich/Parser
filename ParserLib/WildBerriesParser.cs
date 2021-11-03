@@ -43,9 +43,10 @@ namespace Parser
         private async Task<string> GetXinfoAsync()
         {
             using HttpClient httpClient = CreateHttpClientForXInfoRequst();
-            IHttpResponce httpResponce = GetResponceForXInfo(httpClient);
+            IHttpResponce httpResponce = await GetResponceForXInfoAsync(httpClient);
 
             string textRecponce = await httpResponce.ReadAsStringAsync();
+            
             return textRecponce;
         }
 
@@ -76,13 +77,12 @@ namespace Parser
             return httpClientBulder.Build();
         }
 
-        private IHttpResponce GetResponceForXInfo(HttpClient httpClient)
+        private async Task<IHttpResponce> GetResponceForXInfoAsync(HttpClient httpClient)
         {
             HttpRequestPost httpRequestPost = new HttpRequestPost(httpClient);
-            Task<IHttpResponce> taskHttpResponce = httpRequestPost.Request();
+            IHttpResponce httpResponce = await httpRequestPost.Request();
 
-            taskHttpResponce.Wait();
-            return taskHttpResponce.Result;
+            return httpResponce;
         }
 
 
