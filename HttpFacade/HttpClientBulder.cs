@@ -11,6 +11,11 @@ namespace HttpFacade
         {
             return new HttpClientBulder();
         }
+        
+        public static HttpClientBulder Create(HttpClientHandler httpClientHandler)
+        {
+            return new HttpClientBulder(httpClientHandler);
+        }
 
         private HttpClient _httpClient;
 
@@ -31,6 +36,11 @@ namespace HttpFacade
         private HttpClientBulder()
         {
             _httpClient = new HttpClient();
+        }
+
+        private HttpClientBulder(HttpClientHandler httpClientHandler)
+        {
+            _httpClient = new HttpClient(httpClientHandler);
         }
         
         public IHttpClientBulder AddHeader(string key, string? value)
