@@ -6,6 +6,20 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 
+
+// В самом начале нужно получить preset
+// Потом нужно получить xInfo
+// Затем уже сам каталог
+
+// В коде есть повторяющиеся элементы.
+// Стоит ли их разбивать на меньшие элементы?
+// Или это прямая задача парсера и он больше не содержит причин изменений?
+// Или из этих трех запросов, что я делаю в парсере, можно сделать 3 класса
+// Которые будут реализовать единый интерфейс, и не зависить друг от друга 
+// функционально, а только результативно
+// Также в коде есть элементы разбивки JSON строки,
+// стоит ли с этим производить какие либо изменения?
+
 using HttpFacade;
 
 namespace Parser
@@ -91,10 +105,73 @@ namespace Parser
         {
             string requestUri = "https://wbxcatalog-sng.wildberries.ru/presets/bucket_100/catalog?";
             
+            string presets = GetPresetsAsFormatedString();
             string Xinfo = GetXinfoAsString();
             requestUri += Xinfo;
             
             return requestUri;
+        }
+
+        private string GetPresetsAsFormatedString()
+        {
+            IHttpResponce httpResponce = GetResponceForPresets();
+
+            string textRecponce = httpResponce.ReadAsString();
+            string presets = ParsePresetsResponce(textRecponce);
+
+            return presets;
+        }
+
+        private IHttpResponce GetResponceForPresets()
+        {
+            using HttpClient httpClient = CreateHttpClientForPresets();
+            HttpRequestGet httpRequestPost = new HttpRequestGet(httpClient);
+            IHttpResponce httpResponce = httpRequestPost.Request();
+
+            return httpResponce;
+        }
+
+        private string ParsePresetsResponce(string textRecponce)
+        {
+            JObject jObject = JObject.Parse(textRecponce);
+            string preset = jObject["query"].ToString();
+
+            return preset;
+        }
+
+        private HttpClient CreateHttpClientForPresets()
+        {
+            HttpClientHandler httpClientHandler = new HttpClientHandler
+            {
+                AutomaticDecompression = DecompressionMethods.GZip
+            };
+
+            HttpClientBulder httpClientBulder = HttpClientBulder.Create(httpClientHandler);
+
+            httpClientBulder
+            .AddUri("https://wbxsearch-by.wildberries.ru/exactmatch/common?query=" + _bookName)
+            .AddHeaderHost("wbxsearch-by.wildberries.ru")
+            .AddHeaderConnection("keep-alive")
+            
+            .AddHeader("sec-ch-ua", "\"Yandex\";v=\"21\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"")
+            
+            .AddHeaderUserAgent("Chrome", "93.0.4577.82")
+            .AddHeader("sec-ch-ua-platform", "Windows")
+            .AddHeaderOrigin("https://by.wildberries.ru")
+
+            .AddHeader("Sec-Fetch-Site", "same-origin")
+            .AddHeader("Sec-Fetch-Mode", "cors")
+            .AddHeader("Sec-Fetch-Dest", "empty")
+            
+            .AddHeaderReferer(_SearchUri)
+            .AddHeaderAcceptEncoding("gzip")
+            .AddHeaderAcceptEncoding("br")
+            .AddHeaderAcceptEncoding("deflate")
+
+            .AddHeaderAcceptLanguage("ru")
+            .AddHeaderAcceptLanguage("en", 0.9);
+
+            return httpClientBulder.Build();
         }
 
         private string GetXinfoAsString()
