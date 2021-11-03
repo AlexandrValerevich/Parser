@@ -27,14 +27,80 @@ namespace Parser
 
         public async Task ParseAsync()
         {
-            string text = await GetXinfoAsync();
-            Console.WriteLine(text);
+            Task<string> task = GetCatalogOfBook();
+            task.Wait();
+
+            Console.WriteLine(task.Result);
+        }
+
+        private async Task<string> GetCatalogOfBook()
+        {
+            IHttpResponce httpResponce = await GetResponceForCatalogAsync();
+            string textResponce = await httpResponce.ReadAsStringAsync();
+
+            return textResponce;
+        }
+
+        private async Task<IHttpResponce> GetResponceForCatalogAsync()
+        {
+            using HttpClient httpClient = await CreateHttpClientForCatalogRequstAsync();
+
+            HttpRequestGet httpRequestGet = new HttpRequestGet(httpClient);
+            IHttpResponce httpResponce = await httpRequestGet.Request();
+
+            return httpResponce;
+        }
+
+        private async Task<HttpClient> CreateHttpClientForCatalogRequstAsync()
+        {
+            string requestUri = await GenerateReqestUriForCatalog();
+
+            HttpClientHandler httpClientHandler = new HttpClientHandler
+            {
+                AutomaticDecompression = DecompressionMethods.GZip
+            };
+
+            HttpClientBulder httpClientBulder = HttpClientBulder.Create(httpClientHandler);
+
+            httpClientBulder
+            .AddUri(requestUri)
+            .AddHeaderHost("wbxcatalog-sng.wildberries.ru")
+            .AddHeaderConnection("keep-alive")
+            .AddHeader("sec-ch-ua", "\"Yandex\";v=\"21\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"")
+
+            .AddHeaderUserAgent("Chrome", "93.0.4577.82")
+            .AddHeader("sec-ch-ua-platform", "Windows")
+            .AddHeaderOrigin("https://by.wildberries.ru")
+            
+            .AddHeader("Sec-Fetch-Site", "same-origin")
+            .AddHeader("Sec-Fetch-Mode", "cors")
+            .AddHeader("Sec-Fetch-Dest", "empty")
+            
+            .AddHeaderReferer(_SearchUri)
+            
+            .AddHeaderAcceptEncoding("gzip")
+            .AddHeaderAcceptEncoding("br")
+            .AddHeaderAcceptEncoding("deflate")
+            
+            .AddHeaderAcceptLanguage("ru")
+            .AddHeaderAcceptLanguage("en", 0.9);
+
+            return httpClientBulder.Build();
+        }
+
+        private async Task<string> GenerateReqestUriForCatalog()
+        {
+            string requestUri = "https://wbxcatalog-sng.wildberries.ru/presets/bucket_100/catalog?";
+            string Xinfo = await GetXinfoAsync();
+
+            requestUri += Xinfo;
+            
+            return requestUri;
         }
 
         private async Task<string> GetXinfoAsync()
         {
-            using HttpClient httpClient = CreateHttpClientForXInfoRequst();
-            IHttpResponce httpResponce = await GetResponceForXInfoAsync(httpClient);
+            IHttpResponce httpResponce = await GetResponceForXInfoAsync();
 
             string textRecponce = await httpResponce.ReadAsStringAsync();
             string xInfo = ParseXinfoResponce(textRecponce);
@@ -74,8 +140,9 @@ namespace Parser
             return httpClientBulder.Build();
         }
 
-        private async Task<IHttpResponce> GetResponceForXInfoAsync(HttpClient httpClient)
+        private async Task<IHttpResponce> GetResponceForXInfoAsync()
         {
+            using HttpClient httpClient = CreateHttpClientForXInfoRequst();
             HttpRequestPost httpRequestPost = new HttpRequestPost(httpClient);
             IHttpResponce httpResponce = await httpRequestPost.Request();
 
@@ -90,4 +157,6 @@ namespace Parser
             return xInfo;
         }
     }
+
+    
 }

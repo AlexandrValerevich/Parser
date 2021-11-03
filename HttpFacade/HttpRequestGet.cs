@@ -11,9 +11,7 @@ namespace HttpFacade
         
 
         public HttpRequestGet(HttpClient httpClient): base(httpClient)
-        {
-            
-        }
+        {}
 
         public override async Task<IHttpResponce> Request()
         {
