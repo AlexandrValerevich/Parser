@@ -13,6 +13,7 @@ namespace Parser
     public class WildBerriesParser : IParser
     {
         private string _bookName;
+        private string _SearchUri => "https://by.wildberries.ru/catalog/0/search.aspx?search=" + _bookName;
 
         public WildBerriesParser(string bookName)
         {
@@ -36,8 +37,9 @@ namespace Parser
             IHttpResponce httpResponce = await GetResponceForXInfoAsync(httpClient);
 
             string textRecponce = await httpResponce.ReadAsStringAsync();
+            string xInfo = ParseXinfoResponce(textRecponce);
 
-            return textRecponce;
+            return xInfo;
         }
 
         private HttpClient CreateHttpClientForXInfoRequst()
@@ -61,7 +63,7 @@ namespace Parser
             .AddHeader("Sec-Fetch-Site", "same-origin")
             .AddHeader("Sec-Fetch-Mode", "cors")
             .AddHeader("Sec-Fetch-Dest", "empty")
-            .AddHeaderReferer("https://by.wildberries.ru/catalog/0/search.aspx?search=" + _bookName)
+            .AddHeaderReferer(_SearchUri)
             .AddHeaderAcceptEncoding("gzip")
             .AddHeaderAcceptEncoding("br")
             .AddHeaderAcceptEncoding("deflate")
@@ -80,6 +82,12 @@ namespace Parser
             return httpResponce;
         }
 
+        private string ParseXinfoResponce(string textRecponce)
+        {
+            JObject jObject = JObject.Parse(textRecponce);
+            string xInfo = jObject["xInfo"].ToString();
 
+            return xInfo;
+        }
     }
 }
