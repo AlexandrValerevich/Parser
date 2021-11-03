@@ -13,7 +13,7 @@ namespace Parser.Client
     {
         static void Main(string[] args)
         {
-            IParser wbParser = new WildBerriesParser("Angular 11");
+            IParser wbParser = new WildBerriesParser("Samsung");
 
             HttpClient.DefaultProxy = new WebProxy("127.0.0.1", 8888);
             wbParser.Parse();
