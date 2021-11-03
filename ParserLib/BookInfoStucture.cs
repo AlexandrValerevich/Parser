@@ -1,6 +1,6 @@
 namespace Parser
 {
-    struct BookInfo
+    public struct BookInfo
     {
         string name;
         decimal price;

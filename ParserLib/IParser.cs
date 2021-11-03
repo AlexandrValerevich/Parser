@@ -1,8 +1,10 @@
+using System.Threading.Tasks;
+
 namespace Parser
 {
-    interface IParser
+    public interface IParser
     {
-        void Parse();
+        Task ParseAsync();
         BookInfo GetResult();
     }
 }

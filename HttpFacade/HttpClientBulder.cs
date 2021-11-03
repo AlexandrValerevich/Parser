@@ -7,7 +7,7 @@ namespace HttpFacade
 {
     public class HttpClientBulder : IHttpClientBulder, IDisposable
     {
-        static HttpClientBulder Create()
+        public static HttpClientBulder Create()
         {
             return new HttpClientBulder();
         }
