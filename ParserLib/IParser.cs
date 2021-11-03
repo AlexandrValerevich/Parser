@@ -4,7 +4,7 @@ namespace Parser
 {
     public interface IParser
     {
-        Task ParseAsync();
+        void Parse();
         BookInfo GetResult();
     }
 }
