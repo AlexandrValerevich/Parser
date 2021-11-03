@@ -15,21 +15,13 @@ namespace HttpFacade
             
         }
 
-        public override async void Request()
+        public override async Task<IHttpResponce> Request()
         {
-            var responce = await _httpClient.GetAsync(_Uri);
-            _httpResponce = new HttpResponce(responce);
+            HttpResponseMessage responce = await _httpClient.GetAsync(_Uri);
+            var httpResponce = new HttpResponce(responce);
+
+            return httpResponce; 
         }
 
-        public override HttpResponce GetResponce()
-        {
-            if(_httpResponce == null)
-            {
-                //выбрасываем исключение
-                throw new Exception("Запрос еще не поступал");
-            }       
-
-            return _httpResponce;
-        }
     }
 }
