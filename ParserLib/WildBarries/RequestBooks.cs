@@ -14,7 +14,7 @@ namespace Parser.WildBarries
         private string _sharedKey;
         private string _xinfoFild;
         private string _queriFild;
-        private string _RequestUri => "https://wbxcatalog-sng.wildberries.ru/" + _sharedKey + "/catalog?" + _xinfoFild + _queriFild +"&sort=popular";
+        private string _RequestUri => "https://wbxcatalog-sng.wildberries.ru/" + _sharedKey + "/catalog?" + _xinfoFild +"&"+ _queriFild +"&sort=popular";
 
         public RequestBook(string bookName, string xinfoFild, string queriFild, string shardKey)
         {

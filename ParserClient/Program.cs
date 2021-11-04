@@ -13,13 +13,10 @@ namespace Parser.Client
     {
         static void Main(string[] args)
         {
-            IParser wbParser = new WildBerriesParser("JavaScript");
+            IParser wbParser = new WildBerriesParser("Разработка требований");
 
             HttpClient.DefaultProxy = new WebProxy("127.0.0.1", 8888);
             wbParser.Parse();
-
-            Console.WriteLine("Конец");
-            Console.ReadKey();
 
         }
     }

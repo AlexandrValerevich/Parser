@@ -69,8 +69,7 @@ namespace Parser
             RequestQueryAndSharedKeyFild requstQueryFild = new RequestQueryAndSharedKeyFild(_bookName);
             string responceBody = requstQueryFild.GetResponceBody();
 
-            Console.WriteLine(responceBody);
-            JObject jObject = new JObject(responceBody);
+            JObject jObject = JObject.Parse(responceBody);
             
             string query = jObject["query"].ToString();
             string shardKey = jObject["shardKey"].ToString();
