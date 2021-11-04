@@ -7,7 +7,7 @@ using Newtonsoft.Json.Linq;
 
 namespace Parser.WildBarries
 {
-    class RequestBook
+    class RequestAllThings
     {
         private string _bookName;
         private string _SearchUri => "https://by.wildberries.ru/catalog/0/search.aspx?search=" + _bookName;
@@ -16,7 +16,7 @@ namespace Parser.WildBarries
         private string _queriFild;
         private string _RequestUri => "https://wbxcatalog-sng.wildberries.ru/" + _sharedKey + "/catalog?" + _xinfoFild +"&"+ _queriFild +"&sort=popular";
 
-        public RequestBook(string bookName, string xinfoFild, string queriFild, string shardKey)
+        public RequestAllThings(string bookName, string xinfoFild, string queriFild, string shardKey)
         {
             _bookName = bookName.Replace(" ", "+");
             _xinfoFild = xinfoFild;

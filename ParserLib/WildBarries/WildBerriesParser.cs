@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
+using System.Linq;
 
 using Parser.WildBarries;
 
@@ -31,7 +32,7 @@ namespace Parser
     public class WildBerriesParser : IParser
     {
         private string _bookName;
-        private string _SearchUri => "https://by.wildberries.ru/catalog/0/search.aspx?search=" + _bookName;
+        //private string _SearchUri => "https://by.wildberries.ru/catalog/0/search.aspx?search=" + _bookName + "&xsubject=381";
 
         public WildBerriesParser(string bookName)
         {
@@ -45,24 +46,38 @@ namespace Parser
 
         public void Parse()
         {
-            string catalogOfBook = GetBookInJsonFormat();
+            string allThingInJson = GetAllThingJsonFormat();
+            
+            JArray products = JObject.Parse(allThingInJson)["data"]["products"] as JArray;
 
-            Console.WriteLine(catalogOfBook);
+            var productOfBook = products.Where(x => (int)x["subjectId"] == 381).Select(x => new{
+                id = (int)x["id"],
+                root = (int)x["root"], 
+                name = (string)x["name"],
+                brand = (string)x["brand"],
+                salePriceU = (int)x["salePriceU"]
+            });
+
+            foreach (var item in productOfBook)
+            {
+                string value = $"id: {item.id}\nroot: {item.root}\nname: {item.name}\nbrand: {item.brand}\nPrice: {item.salePriceU}";
+                Console.WriteLine(value);
+            }
+
+            //Console.WriteLine(allThingInJson);
         }
 
-        private string GetBookInJsonFormat()
+        private string GetAllThingJsonFormat()
         {
             (string query, string shardKey) = ParceQuertAndSharedKeyString();
             string xinfo = ParceXinfoString();
 
-            RequestBook requestBook = new RequestBook(_bookName, xinfo, query, shardKey);
+            RequestAllThings requestBook = new RequestAllThings(_bookName, xinfo, query, shardKey);
 
             string book = requestBook.GetResponceBody();
 
             return book;
-        }
-
-
+        } 
 
         private (string query, string shardKey) ParceQuertAndSharedKeyString()
         {
