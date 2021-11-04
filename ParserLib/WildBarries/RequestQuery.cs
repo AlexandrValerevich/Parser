@@ -17,14 +17,12 @@ namespace Parser.WildBarries
             _bookName = bookName.Replace(" ", "+");
         }
 
-        public string GetFormatedQuery()
+        public string GetResponceBody()
         {
             IHttpResponce httpResponce = GetResponce();
 
             string textRecponce = httpResponce.ReadAsString();
             string presets = ParseQueryString(textRecponce);
-
-            
 
             return presets;
         }

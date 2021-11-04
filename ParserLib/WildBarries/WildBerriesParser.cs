@@ -55,14 +55,14 @@ namespace Parser
             RequestQueryFild requstQueryFild = new RequestQueryFild(_bookName);
             RequestXinfoFild requestXinfoFild = new RequestXinfoFild(_bookName);
 
-            string query = requstQueryFild.GetFormatedQuery();
-            string xinfo = requestXinfoFild.GetFormatedXinfo();
+            string query = requstQueryFild.GetResponceBody();
+            string xinfo = requestXinfoFild.GetResponceBody();
 
-            query = "&" + "&";
+            query = "&" + query ;
 
             RequestBook requestBook = new RequestBook(_bookName, xinfo, query);
 
-            string book = requestBook.GetBookInJson();
+            string book = requestBook.GetResponceBody();
 
             return book;
         }
