@@ -29,7 +29,7 @@ using HttpFacade;
 
 namespace Parser
 {
-    public class WildBerriesParser : IParser
+    public class WildBerriesParser : IParserBook
     {
         private string _bookName;
         //private string _SearchUri => "https://by.wildberries.ru/catalog/0/search.aspx?search=" + _bookName + "&xsubject=381";

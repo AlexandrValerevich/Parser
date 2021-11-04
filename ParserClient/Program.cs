@@ -13,9 +13,9 @@ namespace Parser.Client
     {
         static void Main(string[] args)
         {
-            IParser wbParser = new WildBerriesParser("Learning Angular for .NET Developers. Develop dynamic .NET web applications powered by Angular 4");
+            IParser wbParser = new WildBerriesParser("Бизнес требования");
 
-            HttpClient.DefaultProxy = new WebProxy("127.0.0.1", 8888);
+            //HttpClient.DefaultProxy = new WebProxy("127.0.0.1", 8888);
             wbParser.Parse();
 
         }
