@@ -11,23 +11,23 @@ namespace Parser.WildBarries
     {
         private string _bookName;
         private string _SearchUri => "https://by.wildberries.ru/catalog/0/search.aspx?search=" + _bookName;
+        private string _sharedKey;
         private string _xinfoFild;
         private string _queriFild;
-        private string _RequestUri => "https://wbxcatalog-sng.wildberries.ru/presets/bucket_13/catalog?" + _xinfoFild + _queriFild +"&sort=popular";
+        private string _RequestUri => "https://wbxcatalog-sng.wildberries.ru/" + _sharedKey + "/catalog?" + _xinfoFild + _queriFild +"&sort=popular";
 
-        public RequestBook(string bookName, string xinfoFild, string queriFild)
+        public RequestBook(string bookName, string xinfoFild, string queriFild, string shardKey)
         {
             _bookName = bookName.Replace(" ", "+");
             _xinfoFild = xinfoFild;
             _queriFild = queriFild;
+            _sharedKey = shardKey;
         }
 
         public string GetResponceBody()
         {
             IHttpResponce httpResponce = GetResponce();
-
             string textRecponce = httpResponce.ReadAsString();
-            //string presets = ParseQueryString(textRecponce);
 
             return textRecponce;
         }
@@ -75,14 +75,5 @@ namespace Parser.WildBarries
 
             return httpClientBulder.Build();
         }
-
-        private string ParseQueryString(string textRecponce)
-        {
-            JObject jObject = JObject.Parse(textRecponce);
-            string preset = jObject["query"].ToString();
-
-            return preset;
-        }
-
     }
 }

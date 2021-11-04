@@ -7,12 +7,12 @@ using Newtonsoft.Json.Linq;
 
 namespace Parser.WildBarries
 {
-    class RequestQueryFild
+    class RequestQueryAndSharedKeyFild
     {
         private string _bookName;
         private string _SearchUri => "https://by.wildberries.ru/catalog/0/search.aspx?search=" + _bookName;
 
-        public RequestQueryFild(string bookName)
+        public RequestQueryAndSharedKeyFild(string bookName)
         {
             _bookName = bookName.Replace(" ", "+");
         }
@@ -20,11 +20,9 @@ namespace Parser.WildBarries
         public string GetResponceBody()
         {
             IHttpResponce httpResponce = GetResponce();
-
             string textRecponce = httpResponce.ReadAsString();
-            string presets = ParseQueryString(textRecponce);
 
-            return presets;
+            return textRecponce;
         }
 
         private IHttpResponce GetResponce()
@@ -64,14 +62,6 @@ namespace Parser.WildBarries
             .AddHeaderAcceptLanguage("en", 0.9);
 
             return httpClientBulder.Build();
-        }
-
-        private string ParseQueryString(string textRecponce)
-        {
-            JObject jObject = JObject.Parse(textRecponce);
-            string preset = jObject["query"].ToString();
-
-            return preset;
         }
 
     }

@@ -52,19 +52,41 @@ namespace Parser
 
         private string GetBookInJsonFormat()
         {
-            RequestQueryFild requstQueryFild = new RequestQueryFild(_bookName);
-            RequestXinfoFild requestXinfoFild = new RequestXinfoFild(_bookName);
+            (string query, string shardKey) = ParceQuertAndSharedKeyString();
+            string xinfo = ParceXinfoString();
 
-            string query = requstQueryFild.GetResponceBody();
-            string xinfo = requestXinfoFild.GetResponceBody();
-
-            query = "&" + query ;
-
-            RequestBook requestBook = new RequestBook(_bookName, xinfo, query);
+            RequestBook requestBook = new RequestBook(_bookName, xinfo, query, shardKey);
 
             string book = requestBook.GetResponceBody();
 
             return book;
+        }
+
+
+
+        private (string query, string shardKey) ParceQuertAndSharedKeyString()
+        {
+            RequestQueryAndSharedKeyFild requstQueryFild = new RequestQueryAndSharedKeyFild(_bookName);
+            string responceBody = requstQueryFild.GetResponceBody();
+
+            Console.WriteLine(responceBody);
+            JObject jObject = new JObject(responceBody);
+            
+            string query = jObject["query"].ToString();
+            string shardKey = jObject["shardKey"].ToString();
+
+            return (query, shardKey);
+        }
+
+        private string ParceXinfoString()
+        {
+            RequestXinfoFild requestXinfoFild = new RequestXinfoFild(_bookName);
+            string responceBody = requestXinfoFild.GetResponceBody();
+
+            JObject jObject = JObject.Parse(responceBody);
+            string xInfo = jObject["xinfo"].ToString();
+
+            return xInfo;
         }
 
     }
