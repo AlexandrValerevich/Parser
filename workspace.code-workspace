@@ -11,6 +11,9 @@
 		},
 		{
 			"path": "HttpFacade"
+		},
+		{
+			"path": "ParserTest"
 		}
 	],
 	"settings": {}

@@ -7,9 +7,6 @@ using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 using System.Linq;
 
-using Parser.WildBarries;
-
-
 // В самом начале нужно получить preset
 // Потом нужно получить xInfo
 // Затем уже сам каталог
@@ -27,7 +24,7 @@ using Parser.WildBarries;
 
 using HttpFacade;
 
-namespace Parser
+namespace Parser.WildBarries
 {
     public class WildBerriesParser : IParserBook
     {

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Net;
 using System.Net.Http;
-using System.IO;
-using System.Text;
 using System.Threading.Tasks;
 using static System.Console;
 using Parser;
+using Parser.WildBarries;
+
 
 namespace Parser.Client
 {
@@ -13,11 +13,10 @@ namespace Parser.Client
     {
         static void Main(string[] args)
         {
-            IParser wbParser = new WildBerriesParser("Бизнес требования");
+            IParserBook wbParser = new WildBerriesParser("Разработка требований");
 
             //HttpClient.DefaultProxy = new WebProxy("127.0.0.1", 8888);
             wbParser.Parse();
-
         }
     }
 }
