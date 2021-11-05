@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Net;
-using System.Net.Http;
-using System.Threading.Tasks;
+using System.IO;
 using static System.Console;
-using Parser;
 using Parser.WildBarries;
+using Parser;
 
 
 namespace Parser.Client
@@ -13,10 +11,18 @@ namespace Parser.Client
     {
         static void Main(string[] args)
         {
-            IParserBook wbParser = new WildBerriesParser("Разработка требований");
+            IParserBook wbParser = new WildBerriesParser("Angular");
 
             //HttpClient.DefaultProxy = new WebProxy("127.0.0.1", 8888);
             wbParser.Parse();
+            BookInfo[] books = wbParser.GetResult();
+            BookInfoAdapterToJson jsonAdapter = new BookInfoAdapterToJson(books);
+            string jsonBook = jsonAdapter.Convert();
+            WriteLine(jsonBook);
+
+            using StreamWriter stream = new StreamWriter("books.json");
+
+            stream.Write(jsonBook);
         }
     }
 }

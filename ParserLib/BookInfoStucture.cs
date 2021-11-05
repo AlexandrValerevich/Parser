@@ -2,11 +2,12 @@ namespace Parser
 {
     public struct BookInfo
     {
-        string name;
-        decimal price;
-        string? Description;
-        string uriSite;
-        string uriImage;
-        string genre;
+        public int id {get; set;}
+        public int root {get; set;}
+        public string name {get; set;}
+        public decimal price {get; set;}
+        public string brand {get; set;}
+        public string uriSite {get; set;}
+        public string uriImage {get; set;}
     }
 }

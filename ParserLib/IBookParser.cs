@@ -5,6 +5,6 @@ namespace Parser
     public interface IParserBook
     {
         void Parse();
-        BookInfo GetResult();
+        BookInfo[] GetResult();
     }
 }

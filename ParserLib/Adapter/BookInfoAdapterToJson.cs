@@ -9,13 +9,8 @@ namespace Parser
     {
         private List<BookInfo> _bookInfoList;
         private BookInfo[] _bookInfoAsArray => _bookInfoList.ToArray();
-
-        // BookInfoAdapterToJson()
-        // {
-        //     _bookInfoList = new List<BookInfo>();
-        // }
         
-        BookInfoAdapterToJson(BookInfo[] bookInfosArray)
+        public BookInfoAdapterToJson(BookInfo[] bookInfosArray)
         {
             _bookInfoList = bookInfosArray.ToList();
         }
@@ -23,10 +18,7 @@ namespace Parser
         public string Convert()
         {
             string resultConvert = JsonConvert.SerializeObject(_bookInfoList);
-
             return resultConvert;
         }
-
-
     }
 }
