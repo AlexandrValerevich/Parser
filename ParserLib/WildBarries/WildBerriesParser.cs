@@ -10,6 +10,9 @@ namespace Parser.WildBarries
     {
         private string _bookName;
         private List<BookInfo> _bookInfo;
+        private string _imageUriPrefix => "https://kemlenvg8e.a.trbcdn.net/c516x688/new/";
+        private string _siteUriPrefix => "https://by.wildberries.ru/catalog/";
+
 
         public WildBerriesParser(string bookName)
         {
@@ -39,7 +42,9 @@ namespace Parser.WildBarries
                 root = (int)x["root"], 
                 name = (string)x["name"],
                 brand = (string)x["brand"],
-                price = (int)x["salePriceU"]/100 // убираем 2 нуля
+                price = (int)x["salePriceU"]/100, // убираем 2 нуля
+                uriSite = _siteUriPrefix + (string)x["id"] + "/detail.aspx?targetUrl=XS",
+                uriImage = _imageUriPrefix + ((int)x["id"]/10000 * 10000) + "/" + (string)x["id"] + "-1.jpg" 
             }).ToList();
 
             return productOfBook;
