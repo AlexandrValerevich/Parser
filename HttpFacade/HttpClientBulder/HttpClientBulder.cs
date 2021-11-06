@@ -1,7 +1,8 @@
 using System;
-using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+
+#nullable enable
 
 namespace HttpFacade
 {
@@ -21,16 +22,10 @@ namespace HttpFacade
 
         private HttpRequestHeaders _Header => _httpClient.DefaultRequestHeaders;
 
-        private Uri _Uri
+        private Uri? _Uri
         {
-            get 
-            {
-                return  _httpClient.BaseAddress;
-            }
-            set
-            {
-                _httpClient.BaseAddress = value;
-            }
+            get => _httpClient.BaseAddress;
+            set => _httpClient.BaseAddress = value;
         }
 
         private HttpClientBulder()
