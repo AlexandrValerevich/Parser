@@ -49,18 +49,19 @@ namespace Parser.OZ
             var cards = doc.DocumentNode
             .QuerySelectorAll(".item-type-card__inner");
 
-            var books = cards.Select(x => new BookInfo()
-            {
-                name = x.QuerySelector(".item-type-card__title").InnerText.Trim(),
-                price = Decimal.Parse(x.QuerySelector(".item-type-card__btn")?.InnerText
-                                       .Split("&")[0]
-                                       .Replace(",", ".")),
-                currency = "BY",
-                uriSite = "https://oz.by" + x.QuerySelector(".item-type-card__link--main")?.Attributes["href"].Value,
-                uriImage = x.QuerySelector(".viewer-type-list__img")?.Attributes["src"].Value
-            }).ToList();
+            var books = from card in cards
+                         select new BookInfo()
+                         {
+                            name = card.QuerySelector(".item-type-card__title").InnerText.Trim(),
+                            price = Decimal.Parse(card.QuerySelector(".item-type-card__btn")?.InnerText
+                                                      .Split("&")[0]
+                                                      .Replace(",", ".")),
+                            currency = "BY",
+                            uriSite = "https://oz.by" + card.QuerySelector(".item-type-card__link--main")?.Attributes["href"].Value,
+                            uriImage = card.QuerySelector(".viewer-type-list__img")?.Attributes["src"].Value
+                         };
 
-            return books;
+            return books.ToList();
         }      
     }
 }

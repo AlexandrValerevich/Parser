@@ -2,6 +2,7 @@
 using System.IO;
 using static System.Console;
 using Parser.WildBarries;
+using Parser.Labirint;
 using Parser.OZ;
 using Parser;
 
@@ -25,7 +26,7 @@ namespace Parser.Client
 
             // stream.Write(jsonBook);
 
-            // IParserBook ozParser = new OZParser("Angular");
+            // IParserBook ozParser = new OZParser("Разработка требований");
 
             // ozParser.Parse();
 
@@ -34,6 +35,16 @@ namespace Parser.Client
             // BookInfoAdapterToJson jsonAdapter = new BookInfoAdapterToJson(books);
             // string jsonBook = jsonAdapter.Convert();
             // WriteLine(jsonBook);
+
+            IParserBook labirintParser = new LabirintParser("Разработка требований");
+
+            labirintParser.Parse();
+
+            var books = labirintParser.GetResult();
+
+            BookInfoAdapterToJson jsonAdapter = new BookInfoAdapterToJson(books);
+            string jsonBook = jsonAdapter.Convert();
+            WriteLine(jsonBook);
 
         }
     }
