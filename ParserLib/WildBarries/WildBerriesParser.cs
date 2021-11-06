@@ -38,11 +38,10 @@ namespace Parser.WildBarries
             var productOfBook = products
             .Where(x => (int)x["subjectId"] == 381)
             .Select(x => new BookInfo(){
-                id = (int)x["id"],
-                root = (int)x["root"], 
                 name = (string)x["name"],
                 brand = (string)x["brand"],
                 price = (int)x["salePriceU"]/100, // убираем 2 нуля
+                currency = "RU",
                 uriSite = _siteUriPrefix + (string)x["id"] + "/detail.aspx?targetUrl=XS",
                 uriImage = _imageUriPrefix + ((int)x["id"]/10000 * 10000) + "/" + (string)x["id"] + "-1.jpg" 
             }).ToList();

@@ -1,26 +1,20 @@
 using System;
 using System.Net;
 using System.Net.Http;
+
 using HttpFacade;
 
 
-namespace Parser.WildBarries
+namespace Parser.OZ
 {
-    class RequestAllThings
+    class RequestHtmlFromOz
     {
-        private string _bookName;
-        private string _SearchUri => "https://by.wildberries.ru/catalog/0/search.aspx?search=" + _bookName;
-        private string _sharedKey;
-        private string _xinfoFild;
-        private string _queriFild;
-        private string _RequestUri => "https://wbxcatalog-sng.wildberries.ru/" + _sharedKey + "/catalog?" + _xinfoFild +"&"+ _queriFild +"&sort=popular";
+       private string _bookName;
+        private string _SearchUri => "https://oz.by/search/?c=1101523&q=" + _bookName;
 
-        public RequestAllThings(string bookName, string xinfoFild, string queriFild, string shardKey)
+        public RequestHtmlFromOz(string bookName)
         {
             _bookName = bookName.Replace(" ", "+");
-            _xinfoFild = xinfoFild;
-            _queriFild = queriFild;
-            _sharedKey = shardKey;
         }
 
         public string GetResponceBody()
@@ -34,7 +28,7 @@ namespace Parser.WildBarries
         private IHttpResponce GetResponce()
         {
             using HttpClient httpClient = CreateHttpClient();
-            HttpRequestGet httpRequestPost = new HttpRequestGet(httpClient);
+            HttpRequestPost httpRequestPost = new HttpRequestPost(httpClient);
             IHttpResponce httpResponce = httpRequestPost.Request();
 
             return httpResponce;
@@ -42,6 +36,8 @@ namespace Parser.WildBarries
 
         private HttpClient CreateHttpClient()
         {
+            string refererUri = "https://oz.by/search/?q=" + _bookName;
+
             HttpClientHandler httpClientHandler = new HttpClientHandler
             {
                 AutomaticDecompression = DecompressionMethods.GZip
@@ -50,22 +46,23 @@ namespace Parser.WildBarries
             HttpClientBulder httpClientBulder = HttpClientBulder.Create(httpClientHandler);
 
             httpClientBulder
-            .AddUri(_RequestUri)
-            .AddHeaderHost("wbxcatalog-sng.wildberries.ru")
+            .AddUri(_SearchUri)
+            .AddHeaderHost("oz.by")
             .AddHeaderConnection("keep-alive")
             .AddHeader("sec-ch-ua", "\"Yandex\";v=\"21\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"")
-            .AddHeaderUserAgent("Chrome", "93.0.4577.82")
             .AddHeader("sec-ch-ua-platform", "Windows")
-            .AddHeaderOrigin("https://by.wildberries.ru")
+            .AddHeader("Upgrade-Insecure-Requests", "1")
+            .AddHeaderUserAgent("Chrome", "93.0.4577.82")
             .AddHeader("Sec-Fetch-Site", "same-origin")
-            .AddHeader("Sec-Fetch-Mode", "cors")
-            .AddHeader("Sec-Fetch-Dest", "empty")
-            .AddHeaderReferer(_SearchUri)
+            .AddHeader("Sec-Fetch-Mode", "navigate")
+            .AddHeader("Sec-Fetch-Dest", "document")
+            .AddHeaderReferer(refererUri)
             .AddHeaderAcceptEncoding("gzip")
             .AddHeaderAcceptEncoding("br")
             .AddHeaderAcceptEncoding("deflate")
             .AddHeaderAcceptLanguage("ru")
-            .AddHeaderAcceptLanguage("en", 0.9);
+            .AddHeaderAcceptLanguage("en", 0.9)
+            .AddHeaderCookies("SID_de664c25=6e95631653c94dd4861092b53215bd52; SID_970e2927=1f15f12897712521bd9b57108222de82; cl_today=611; CATALOG_MENU_STATE=0000000000000000000000000000000000000000000000000000100000110001; PHPSESSID=81c3r980j3a4pacd3cu2fpin45; _goods_limit_Desktop=96; search_goods_limit_Desktop=96; search_viewtype_Desktop=grid; screen=a%3A2%3A%7Bs%3A5%3A%22width%22%3Bs%3A4%3A%221536%22%3Bs%3A6%3A%22height%22%3Bs%3A3%3A%22864%22%3B%7D; _fbp=fb.1.1636193405990.456769587; _ym_uid=1636193409256156790; _ym_d=1636193409");
 
             return httpClientBulder.Build();
         }

@@ -136,5 +136,17 @@ namespace HttpFacade
         {
             _httpClient.Dispose();
         }
+
+        public IHttpClientBulder AddHeaderAccept(string accept)
+        {
+            _Header.Accept.Add(new MediaTypeWithQualityHeaderValue(accept));
+            return this;
+        }
+
+        public IHttpClientBulder AddHeaderAccept(string accept, double quality)
+        {
+            _Header.Accept.Add(new MediaTypeWithQualityHeaderValue(accept, quality));
+            return this;
+        }
     }
 }

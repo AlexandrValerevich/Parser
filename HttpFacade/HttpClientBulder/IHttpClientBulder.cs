@@ -16,6 +16,8 @@ namespace HttpFacade
         IHttpClientBulder AddHeaderUserAgent(string userAgent);
         IHttpClientBulder AddHeaderUserAgent(string userAgent, string version);
         IHttpClientBulder AddHeaderOrigin(string origin);
+        IHttpClientBulder AddHeaderAccept(string accept);
+        IHttpClientBulder AddHeaderAccept(string accept, double quality);
         IHttpClientBulder AddHeaderAcceptEncoding(string acceptEncoding);
         IHttpClientBulder AddHeaderAcceptEncoding(string acceptEncoding, double quality);
         IHttpClientBulder AddHeaderAcceptLanguage(string language);
