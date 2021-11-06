@@ -1,9 +1,12 @@
 ﻿using System;
 using System.IO;
+using System.Collections.Generic;
+using System.Linq;
 using static System.Console;
 using Parser.WildBarries;
 using Parser.Labirint;
 using Parser.OZ;
+using Parser.Ozon;
 using Parser;
 
 
@@ -36,15 +39,49 @@ namespace Parser.Client
             // string jsonBook = jsonAdapter.Convert();
             // WriteLine(jsonBook);
 
-            IParserBook labirintParser = new LabirintParser("Разработка требований");
+            // IParserBook labirintParser = new LabirintParser("Разработка требований");
 
-            labirintParser.Parse();
+            // labirintParser.Parse();
 
-            var books = labirintParser.GetResult();
+            // var books = labirintParser.GetResult();
 
-            BookInfoAdapterToJson jsonAdapter = new BookInfoAdapterToJson(books);
-            string jsonBook = jsonAdapter.Convert();
-            WriteLine(jsonBook);
+            // BookInfoAdapterToJson jsonAdapter = new BookInfoAdapterToJson(books);
+            // string jsonBook = jsonAdapter.Convert();
+            // WriteLine(jsonBook);
+
+            // IParserBook wbParser = new WildBerriesParser("Разработка требований");
+            // IParserBook ozParser = new OZParser("Разработка требований");
+            // IParserBook labirintParser = new LabirintParser("Разработка требований");
+            // IParserBook OzonParser = new OzonParser("Разработка требований");
+
+            // OzonParser.Parse();
+
+            // var books = OzonParser.GetResult();
+
+            // BookInfoAdapterToJson jsonAdapter = new BookInfoAdapterToJson(books);
+            // string jsonBook = jsonAdapter.Convert();
+            // WriteLine(jsonBook);
+
+            var parserList = new List<IParserBook>();
+
+            string bookName = "Angular 12";
+
+            parserList.Add(new WildBerriesParser(bookName));
+            parserList.Add(new OZParser(bookName));
+            parserList.Add(new LabirintParser(bookName));
+            parserList.Add(new OzonParser(bookName));
+
+            parserList.ForEach(x => x.Parse());
+
+            var bookInfoList = new List<BookInfo>();
+
+            parserList.ForEach(x => bookInfoList.AddRange(x.GetResult()));
+            string jsonBookInfo = BookInfoAdapterToJson.Convert(bookInfoList.ToArray());
+
+            using StreamWriter sw = new StreamWriter("books.json");
+
+            sw.Write(jsonBookInfo); 
+            
 
         }
     }
