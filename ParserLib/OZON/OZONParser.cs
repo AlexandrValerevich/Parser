@@ -42,7 +42,8 @@ namespace Parser.Ozon
             var doc = new HtmlDocument();
             doc.LoadHtml(html);
 
-            var cards = doc.DocumentNode.QuerySelectorAll(".bh6.bi");
+            var cards = doc.DocumentNode.QuerySelectorAll(".a9x3 .bh6.bi");
+
             var books = from card in cards
                         select new BookInfo()
                         {

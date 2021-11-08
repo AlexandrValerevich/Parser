@@ -64,7 +64,7 @@ namespace Parser.Client
 
             var parserList = new List<IParserBook>();
 
-            string bookName = "Angular 12";
+            string bookName = "Разработка требований";
 
             parserList.Add(new WildBerriesParser(bookName));
             parserList.Add(new OZParser(bookName));

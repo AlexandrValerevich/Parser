@@ -42,7 +42,7 @@ namespace Parser.Labirint
             var doc = new HtmlDocument();
             doc.LoadHtml(html);
 
-            var cards = doc.DocumentNode.QuerySelectorAll("products-row-outer.responsive-cards .product");
+            var cards = doc.DocumentNode.QuerySelectorAll(".products-row-outer.responsive-cards .product");
             var books = from card in cards
                         select new BookInfo()
                         {
