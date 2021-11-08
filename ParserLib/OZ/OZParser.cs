@@ -6,6 +6,8 @@ using System.Linq;
 using Parser;
 using System.Threading.Tasks;
 
+#nullable enable
+
 namespace Parser.OZ
 {
     public class OZParser : IParser<BookInfo>
@@ -58,15 +60,24 @@ namespace Parser.OZ
                          select new BookInfo()
                          {
                             name = card.QuerySelector(".item-type-card__title").InnerText.Trim(),
-                            price = Decimal.Parse(card.QuerySelector(".item-type-card__btn")?.InnerText
-                                                      .Split("&")[0]
-                                                      .Replace(",", ".")),
+                            price = GetPriceOfBookInCard(card),
                             currency = "BY",
                             uriSite = "https://oz.by" + card.QuerySelector(".item-type-card__link--main")?.Attributes["href"].Value,
                             uriImage = card.QuerySelector(".viewer-type-list__img")?.Attributes["src"].Value
                          };
 
             return books.ToList();
-        }      
+        }
+
+        private decimal GetPriceOfBookInCard(HtmlNode card)
+        {
+            string? priceWithRub = card.QuerySelector(".item-type-card__btn")?.InnerText.Trim();
+            string? price = priceWithRub?.Split("&")[0].Replace(",", ".");
+
+            decimal result = 0;
+            bool isDigit = decimal.TryParse(price, out result);
+
+            return result;
+        }  
     }
 }

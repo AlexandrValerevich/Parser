@@ -1,8 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Collections.Generic;
-using System.Linq;
-using static System.Console;
 using System.Threading.Tasks;
 
 using Parser.WildBarries;
@@ -18,70 +16,13 @@ namespace Parser.Client
     {
         static void Main(string[] args)
         {
-            // IBookParser wbParser = new WildBerriesParser("Angular");
-
-            // //HttpClient.DefaultProxy = new WebProxy("127.0.0.1", 8888);
-            // wbParser.Parse();
-            // BookInfo[] books = wbParser.GetResult();
-            // BookInfoAdapterToJson jsonAdapter = new BookInfoAdapterToJson(books);
-            // string jsonBook = jsonAdapter.Convert();
-            // WriteLine(jsonBook);
-
-            // using StreamWriter stream = new StreamWriter("books.json");
-
-            // stream.Write(jsonBook);
-
-            // IParserBook ozParser = new OZParser("Разработка требований");
-
-            // ozParser.Parse();
-
-            // var books = ozParser.GetResult();
-
-            // BookInfoAdapterToJson jsonAdapter = new BookInfoAdapterToJson(books);
-            // string jsonBook = jsonAdapter.Convert();
-            // WriteLine(jsonBook);
-
-            // IParserBook labirintParser = new LabirintParser("Разработка требований");
-
-            // labirintParser.Parse();
-
-            // var books = labirintParser.GetResult();
-
-            // BookInfoAdapterToJson jsonAdapter = new BookInfoAdapterToJson(books);
-            // string jsonBook = jsonAdapter.Convert();
-            // WriteLine(jsonBook);
-
-            // IParserBook wbParser = new WildBerriesParser("Разработка требований");
-            // IParserBook ozParser = new OZParser("Разработка требований");
-            // IParserBook labirintParser = new LabirintParser("Разработка требований");
-            // IParserBook OzonParser = new OzonParser("Разработка требований");
-
-            // OzonParser.Parse();
-
-            // var books = OzonParser.GetResult();
-
-            // BookInfoAdapterToJson jsonAdapter = new BookInfoAdapterToJson(books);
-            // string jsonBook = jsonAdapter.Convert();
-            // WriteLine(jsonBook);
-
             var parserList = new List<IParser<BookInfo>>();
-            var tasks = new List<Task>();
-            var bookInfoList = new List<BookInfo>();
 
-            string bookName = "Angular";
+            string bookName = ".NET";
 
             InitializeList(parserList, bookName);
-
-            parserList.ForEach(x => tasks.Add(x.ParseAsync()));
-
-            tasks.ForEach(x => x.Wait());
-
-            parserList.ForEach(x => bookInfoList.AddRange(x.GetResult()));
-            string jsonBookInfo = BookInfoAdapterToJson.Convert(bookInfoList.ToArray());
-
-            using StreamWriter sw = new StreamWriter("books.json");
-
-            sw.Write(jsonBookInfo); 
+            BookInfo[] bookInfo = ExecuteAllParser(parserList);
+            ConvertToJsonAndWriteToFile(bookInfo); 
             
 
         }
@@ -92,6 +33,35 @@ namespace Parser.Client
             parserList.Add(new OZParser(bookName));
             parserList.Add(new LabirintParser(bookName));
             parserList.Add(new OzonParser(bookName));
+        }
+
+        private static BookInfo[] ExecuteAllParser(List<IParser<BookInfo>> parserList)
+        {
+            var bookInfo = new List<BookInfo>();
+
+            parserList.ForEach(x => x.Parse());
+            parserList.ForEach(x => bookInfo.AddRange(x.GetResult()));
+
+            return bookInfo.ToArray();
+        }
+
+        private static BookInfo[] ExecuteAllParserWithAsync(List<IParser<BookInfo>> parserList)
+        {
+            var tasks = new List<Task>();
+            var bookInfo = new List<BookInfo>();
+
+            parserList.ForEach(x => tasks.Add(x.ParseAsync()));
+            tasks.ForEach(x => x.Wait());
+            parserList.ForEach(x => bookInfo.AddRange(x.GetResult()));
+
+            return bookInfo.ToArray();
+        }
+       
+        private static void ConvertToJsonAndWriteToFile(BookInfo[] bookInfo)
+        {
+            string jsonBookInfo = BookInfoAdapterToJson.Convert(bookInfo);
+            using StreamWriter sw = new StreamWriter("books.json");
+            sw.Write(jsonBookInfo); 
         }
     }
 }
