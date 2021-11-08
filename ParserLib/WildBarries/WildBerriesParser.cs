@@ -25,15 +25,15 @@ namespace Parser.WildBarries
             return _bookInfo.ToArray();
         }
 
+        public async Task ParseAsync()
+        {
+            await Task.Run(() => Parse());
+        }
+
         public void Parse()
         {
             string allThingInJson = GetAllThingJsonFormat();
             _bookInfo = FilterOnlyBook(allThingInJson);
-        }
-
-        public async Task ParseAsync()
-        {
-            await Task.Run(() => Parse());
         }
 
         private List<BookInfo> FilterOnlyBook(string allThingInJson)
@@ -43,12 +43,12 @@ namespace Parser.WildBarries
             var productOfBook = products
             .Where(x => (int)x["subjectId"] == 381)
             .Select(x => new BookInfo(){
-                name = (string)x["name"],
-                brand = (string)x["brand"],
-                price = (int)x["salePriceU"]/100, // убираем 2 нуля
-                currency = "RU",
-                uriSite = _siteUriPrefix + (string)x["id"] + "/detail.aspx?targetUrl=XS",
-                uriImage = _imageUriPrefix + ((int)x["id"]/10000 * 10000) + "/" + (string)x["id"] + "-1.jpg" 
+                Name = (string)x["name"],
+                Brand = (string)x["brand"],
+                Price = (int)x["salePriceU"]/100, // убираем 2 нуля
+                Currency = "RU",
+                UriSite = _siteUriPrefix + (string)x["id"] + "/detail.aspx?targetUrl=XS",
+                UriImage = _imageUriPrefix + ((int)x["id"]/10000 * 10000) + "/" + (string)x["id"] + "-1.jpg" 
             }).ToList();
 
             return productOfBook;

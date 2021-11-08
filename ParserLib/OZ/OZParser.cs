@@ -59,11 +59,11 @@ namespace Parser.OZ
             var books = from card in cards
                          select new BookInfo()
                          {
-                            name = card.QuerySelector(".item-type-card__title").InnerText.Trim(),
-                            price = GetPriceOfBookInCard(card),
-                            currency = "BY",
-                            uriSite = "https://oz.by" + card.QuerySelector(".item-type-card__link--main")?.Attributes["href"].Value,
-                            uriImage = card.QuerySelector(".viewer-type-list__img")?.Attributes["src"].Value
+                            Name = card.QuerySelector(".item-type-card__title").InnerText.Trim(),
+                            Price = GetPriceOfBookInCard(card),
+                            Currency = "BY",
+                            UriSite = "https://oz.by" + card.QuerySelector(".item-type-card__link--main")?.Attributes["href"].Value,
+                            UriImage = card.QuerySelector(".viewer-type-list__img")?.Attributes["src"].Value
                          };
 
             return books.ToList();

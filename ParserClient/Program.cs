@@ -1,12 +1,14 @@
 ﻿using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Parser.WildBarries;
 using Parser.Labirint;
 using Parser.OZ;
 using Parser.Ozon;
+using Parser.Currency;
 using Parser;
 
 
@@ -18,14 +20,18 @@ namespace Parser.Client
         {
             var parserList = new List<IParser<BookInfo>>();
 
-            string bookName = "C#";
+            string bookName = "Разработка требований";
 
             InitializeList(parserList, bookName);
-            BookInfo[] bookInfo = ExecuteAllParser(parserList);
-            ConvertToJsonAndWriteToFile(bookInfo); 
-            
 
+            BookInfo[] bookInfo = ExecuteAllParserWithAsync(parserList);
+            CurrencyInfo[] currencyInfo = GetCurrency();
+
+            ConverBookPriceToBLR(ref bookInfo, currencyInfo);
+            ConvertToJsonAndWriteToFile(bookInfo); 
         }
+
+        
 
         private static void InitializeList(List<IParser<BookInfo>> parserList, string bookName)
         {
@@ -43,6 +49,30 @@ namespace Parser.Client
             parserList.ForEach(x => bookInfo.AddRange(x.GetResult()));
 
             return bookInfo.ToArray();
+        }
+
+        private static CurrencyInfo[] GetCurrency()
+        {
+            IParser<CurrencyInfo> parserCurrency = new ParserCurrency(CurrencyAbbreviation.USD | CurrencyAbbreviation.RUB);
+            parserCurrency.Parse();
+            CurrencyInfo[] currencies = parserCurrency.GetResult();
+
+            return currencies;
+        }
+
+        private static void ConverBookPriceToBLR(ref BookInfo[] bookInfo, CurrencyInfo[] currencyInfo)
+        {
+            CurrencyInfo rus = currencyInfo.First(x => x.Abbreviation == "RUB");
+
+            for (var i = 0; i < bookInfo.Length; i++)
+            {
+                if(bookInfo[i].Currency == "RU")
+                {
+                    bookInfo[i].Price *= rus.OfficialRate / 100;
+                    bookInfo[i].Price = Math.Round(bookInfo[i].Price, 2);
+                    bookInfo[i].Currency = "BY";
+                }
+            }
         }
 
         private static BookInfo[] ExecuteAllParserWithAsync(List<IParser<BookInfo>> parserList)

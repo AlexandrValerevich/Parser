@@ -55,11 +55,11 @@ namespace Parser.Ozon
             var books = from card in cards
                         select new BookInfo()
                         {
-                            uriSite = _prefixUri + card.QuerySelector(".b0c8.tile-hover-target").Attributes["href"].Value,
-                            uriImage = card.QuerySelector(".ui-o7").Attributes["src"].Value,
-                            name = card.QuerySelector(".a7y.a8a2.a8a6.a8b2.f-tsBodyL.bj5").InnerText.Trim(),
-                            price = GetPriceOfBookInCard(card),
-                            currency = "BY"
+                            UriSite = _prefixUri + card.QuerySelector(".b0c8.tile-hover-target").Attributes["href"].Value,
+                            UriImage = card.QuerySelector(".ui-o7").Attributes["src"].Value,
+                            Name = card.QuerySelector(".a7y.a8a2.a8a6.a8b2.f-tsBodyL.bj5").InnerText.Trim(),
+                            Price = GetPriceOfBookInCard(card),
+                            Currency = "BY"
                         };
 
             return books.ToList();

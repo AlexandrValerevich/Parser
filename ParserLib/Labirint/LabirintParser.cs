@@ -52,11 +52,11 @@ namespace Parser.Labirint
             var books = from card in cards
                         select new BookInfo()
                         {
-                            uriSite = _prefixUri + card.QuerySelector(".cover").Attributes["href"].Value,
-                            uriImage = card.QuerySelector(".book-img-cover").Attributes["src"].Value,
-                            name = card.QuerySelector(".product-title").InnerText.Trim(),
-                            price = Decimal.Parse(card.QuerySelector(".price-val span").InnerHtml.Replace(" ", "")),
-                            currency = "RU"
+                            UriSite = _prefixUri + card.QuerySelector(".cover").Attributes["href"].Value,
+                            UriImage = card.QuerySelector(".book-img-cover").Attributes["src"].Value,
+                            Name = card.QuerySelector(".product-title").InnerText.Trim(),
+                            Price = Decimal.Parse(card.QuerySelector(".price-val span").InnerHtml.Replace(" ", "")),
+                            Currency = "RU"
                         };
 
             return books.ToList();
