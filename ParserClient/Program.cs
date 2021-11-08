@@ -3,6 +3,8 @@ using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using static System.Console;
+using System.Threading.Tasks;
+
 using Parser.WildBarries;
 using Parser.Labirint;
 using Parser.OZ;
@@ -63,17 +65,16 @@ namespace Parser.Client
             // WriteLine(jsonBook);
 
             var parserList = new List<IParser<BookInfo>>();
+            var tasks = new List<Task>();
+            var bookInfoList = new List<BookInfo>();
 
             string bookName = "Angular";
 
-            parserList.Add(new WildBerriesParser(bookName));
-            parserList.Add(new OZParser(bookName));
-            parserList.Add(new LabirintParser(bookName));
-            parserList.Add(new OzonParser(bookName));
+            InitializeList(parserList, bookName);
 
-            parserList.ForEach(x => x.Parse());
+            parserList.ForEach(x => tasks.Add(x.ParseAsync()));
 
-            var bookInfoList = new List<BookInfo>();
+            tasks.ForEach(x => x.Wait());
 
             parserList.ForEach(x => bookInfoList.AddRange(x.GetResult()));
             string jsonBookInfo = BookInfoAdapterToJson.Convert(bookInfoList.ToArray());
@@ -83,6 +84,14 @@ namespace Parser.Client
             sw.Write(jsonBookInfo); 
             
 
+        }
+
+        private static void InitializeList(List<IParser<BookInfo>> parserList, string bookName)
+        {
+            parserList.Add(new WildBerriesParser(bookName));
+            parserList.Add(new OZParser(bookName));
+            parserList.Add(new LabirintParser(bookName));
+            parserList.Add(new OzonParser(bookName));
         }
     }
 }
