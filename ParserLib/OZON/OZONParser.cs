@@ -5,6 +5,8 @@ using Fizzler.Systems.HtmlAgilityPack;
 using System.Collections.Generic;
 using System.Linq;
 
+#nullable enable
+
 namespace Parser.Ozon
 {
     public class OzonParser : IParser<BookInfo>
@@ -59,10 +61,10 @@ namespace Parser.Ozon
 
         private decimal GetPriceOfBookInCard(HtmlNode card)
         {
-            string priceWithCurrency = card.QuerySelector(".ui-p5.ui-p8.ui-q0").InnerHtml.Replace(",", ".");
-            string price = priceWithCurrency.Substring(0, priceWithCurrency.IndexOf(".") + 3);
+            string? priceWithCurrency = card.QuerySelector(".ui-p5.ui-p8")?.InnerHtml.Replace(",", ".");
+            string? price = priceWithCurrency?.Substring(0, priceWithCurrency.IndexOf(".") + 3);
 
-            return Decimal.Parse(price); 
+            return Decimal.Parse(price ?? "0"); 
         }
         
     }
