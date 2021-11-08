@@ -4,6 +4,7 @@ using Fizzler.Systems.HtmlAgilityPack;
 using System.Collections.Generic;
 using System.Linq;
 using Parser;
+using System.Threading.Tasks;
 
 namespace Parser.OZ
 {
@@ -32,6 +33,11 @@ namespace Parser.OZ
             _bookInfo = books;
         }
 
+        public async Task ParseAsync()
+        {
+            await Task.Run(() => Parse());
+        }
+
         private string GetHtmlWithBook()
         {
             var requestHtmlFromOz = new RequestHtmlFromOz(_bookName);
@@ -39,7 +45,6 @@ namespace Parser.OZ
 
             return responceBody;
         }
-
 
         private List<BookInfo> ConvertHtmlToBookInfo(string html)
         {

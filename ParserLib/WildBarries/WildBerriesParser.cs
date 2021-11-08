@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
-using HttpFacade;
+using System.Threading.Tasks;
 
 namespace Parser.WildBarries
 {
@@ -29,6 +29,11 @@ namespace Parser.WildBarries
         {
             string allThingInJson = GetAllThingJsonFormat();
             _bookInfo = FilterOnlyBook(allThingInJson);
+        }
+
+        public async Task ParseAsync()
+        {
+            await Task.Run(() => Parse());
         }
 
         private List<BookInfo> FilterOnlyBook(string allThingInJson)

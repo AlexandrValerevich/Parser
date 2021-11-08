@@ -4,6 +4,7 @@ using HtmlAgilityPack;
 using Fizzler.Systems.HtmlAgilityPack;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 #nullable enable
 
@@ -29,6 +30,11 @@ namespace Parser.Ozon
             string responceBody = GetHtmlWithBook();
             List<BookInfo> books = ConvertHtmlToBookInfo(responceBody);
             _bookInfo = books;
+        }
+
+        public async Task ParseAsync()
+        {
+            await Task.Run(() => Parse());
         }
 
         private string GetHtmlWithBook()

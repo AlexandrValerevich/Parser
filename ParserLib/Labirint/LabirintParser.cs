@@ -4,6 +4,7 @@ using HtmlAgilityPack;
 using Fizzler.Systems.HtmlAgilityPack;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Parser.Labirint
 {
@@ -27,6 +28,11 @@ namespace Parser.Labirint
             string responceBody = GetHtmlWithBook();
             List<BookInfo> books = ConvertHtmlToBookInfo(responceBody);
             _bookInfo = books;
+        }
+
+        public async Task ParseAsync()
+        {
+            await Task.Run(() => Parse());
         }
 
         private string GetHtmlWithBook()
