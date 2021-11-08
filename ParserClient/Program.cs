@@ -18,7 +18,7 @@ namespace Parser.Client
         {
             var parserList = new List<IParser<BookInfo>>();
 
-            string bookName = ".NET";
+            string bookName = "C#";
 
             InitializeList(parserList, bookName);
             BookInfo[] bookInfo = ExecuteAllParser(parserList);
