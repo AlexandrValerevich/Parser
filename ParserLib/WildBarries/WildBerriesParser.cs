@@ -6,7 +6,7 @@ using HttpFacade;
 
 namespace Parser.WildBarries
 {
-    public class WildBerriesParser : IParserBook
+    public class WildBerriesParser : IParser<BookInfo>
     {
         private string _bookName;
         private List<BookInfo> _bookInfo;

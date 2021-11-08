@@ -62,9 +62,9 @@ namespace Parser.Client
             // string jsonBook = jsonAdapter.Convert();
             // WriteLine(jsonBook);
 
-            var parserList = new List<IParserBook>();
+            var parserList = new List<IParser<BookInfo>>();
 
-            string bookName = "Разработка требований";
+            string bookName = "Angular";
 
             parserList.Add(new WildBerriesParser(bookName));
             parserList.Add(new OZParser(bookName));

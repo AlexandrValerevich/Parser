@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace Parser.Labirint
 {
-    public class LabirintParser : IParserBook
+    public class LabirintParser : IParser<BookInfo>
     {
         private string _bookName;
         private List<BookInfo> _bookInfo;

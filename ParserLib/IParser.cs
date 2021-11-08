@@ -2,9 +2,9 @@ using System.Threading.Tasks;
 
 namespace Parser
 {
-    public interface IParserBook
+    public interface IParser<T>
     {
         void Parse();
-        BookInfo[] GetResult();
+        T[] GetResult();
     }
 }

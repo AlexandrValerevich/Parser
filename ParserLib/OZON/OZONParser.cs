@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace Parser.Ozon
 {
-    public class OzonParser : IParserBook
+    public class OzonParser : IParser<BookInfo>
     {
         private string _bookName;
         private List<BookInfo> _bookInfo;

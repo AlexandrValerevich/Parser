@@ -7,7 +7,7 @@ using Parser;
 
 namespace Parser.OZ
 {
-    public class OZParser : IParserBook
+    public class OZParser : IParser<BookInfo>
     {
         private string _bookName;
         private string _SearchUri => "https://oz.by/search/?c=1101523&q=" + _bookName;
