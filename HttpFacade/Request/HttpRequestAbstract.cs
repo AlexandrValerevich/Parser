@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace HttpFacade
 {
-    public abstract class HttpRequestAbstract : IDisposable, IHttpRequest
+    public abstract class HttpRequestAbstract : IHttpRequest
     {
         protected HttpClient _httpClient;
         protected Uri _Uri => _httpClient.BaseAddress;

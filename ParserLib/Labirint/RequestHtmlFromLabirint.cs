@@ -4,43 +4,26 @@ using HttpFacade;
 
 namespace Parser.Labirint
 {
-    class RequestHtmlFromLabirint
+    static class RequestHtmlFromLabirint
     {
-         private string _bookName;
-        private string _SearchUri => "https://www.labirint.ru/search/" + _bookName + "/?stype=0&available=1&wait=1&preorder=1&paperbooks=1";
-        public RequestHtmlFromLabirint(string bookName)
+        static private string _searchUriPrefix => "https://www.labirint.ru/search/";
+        static private string _searchUriPostfix => "/?stype=0&available=1&wait=1&preorder=1&paperbooks=1";
+
+        static public string GetResponce(string bookName)
         {
-            _bookName = bookName;
+            using IHttpRequest httpRequest = CreateHttpRequest(bookName);
+            string responceBody = httpRequest.RequestAsString();
+
+            return responceBody;
         }
 
-        public string GetResponceBody()
+        static private IHttpRequest CreateHttpRequest(string bookName)
         {
-            IHttpResponce httpResponce = GetResponce();
-            string textRecponce = httpResponce.ReadAsString();
+            string uri = _searchUriPrefix + bookName.Replace(" ", "+") + _searchUriPostfix;
+            HttpRequestBuilder httpRequestBulder = HttpRequestBuilder.Create();
 
-            return textRecponce;
-        }
-
-        private IHttpResponce GetResponce()
-        {
-            using HttpClient httpClient = CreateHttpClient();
-            var httpRequestGet = new HttpRequestPost(httpClient);
-            IHttpResponce httpResponce = httpRequestGet.Request();
-
-            return httpResponce;
-        }
-
-        private HttpClient CreateHttpClient()
-        {
-            HttpClientHandler httpClientHandler = new HttpClientHandler
-            {
-                AutomaticDecompression = DecompressionMethods.GZip
-            };
-
-            HttpClientBulder httpClientBulder = HttpClientBulder.Create(httpClientHandler);
-
-            httpClientBulder
-            .AddUri(_SearchUri)
+            httpRequestBulder
+            .AddUri(uri)
             .AddHeaderHost("www.labirint.ru")
             .AddHeaderConnection("keep-alive")
             .AddHeader("sec-ch-ua", "\"Yandex\";v=\"21\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"")
@@ -58,7 +41,7 @@ namespace Parser.Labirint
             .AddHeaderAcceptLanguage("ru")
             .AddHeaderAcceptLanguage("en", 0.9);
             
-            return httpClientBulder.Build();
+            return httpRequestBulder.Build();
         } 
     }
 }

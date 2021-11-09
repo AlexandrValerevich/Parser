@@ -1,8 +1,9 @@
+using System;
 using System.Threading.Tasks;
 
 namespace HttpFacade
 {
-    public interface IHttpRequest
+    public interface IHttpRequest : IDisposable
     {
         IHttpResponce Request();
 

@@ -2,7 +2,6 @@ using System;
 using Parser;
 using HtmlAgilityPack;
 using Fizzler.Systems.HtmlAgilityPack;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -18,6 +17,11 @@ namespace Parser.Labirint
             _bookName = bookName;
         }
 
+        public async Task<BookInfo[]> ParseAsync()
+        {
+            return await Task.Run(() => Parse());
+        }
+
         public BookInfo[] Parse()
         {
             string responceBody = GetHtmlWithBook();
@@ -25,15 +29,9 @@ namespace Parser.Labirint
             return books;
         }
 
-        public async Task<BookInfo[]> ParseAsync()
-        {
-            return await Task.Run(() => Parse());
-        }
-
         private string GetHtmlWithBook()
         {
-            var requestHtmlFromLabirint = new RequestHtmlFromLabirint(_bookName);
-            string responceBody = requestHtmlFromLabirint.GetResponceBody();
+            string responceBody = RequestHtmlFromLabirint.GetResponce(_bookName);
 
             return responceBody;
         }

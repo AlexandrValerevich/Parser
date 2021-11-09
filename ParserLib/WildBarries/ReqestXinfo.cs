@@ -7,43 +7,26 @@ using HttpFacade;
 
 namespace Parser.WildBarries
 {
-    class RequestXinfoFild
+    static class RequestXinfoFild
     {
-        private string _bookName;
-        private string _SearchUri => "https://by.wildberries.ru/catalog/0/search.aspx?search=" + _bookName;
+        static private string _searchUri => "https://by.wildberries.ru/catalog/0/search.aspx?search=";
 
-        public RequestXinfoFild(string bookName)
+        static public string GetResponce(string bookName)
         {
-            _bookName = bookName.Replace(" ", "+");
+            using IHttpRequest httpRequest = CreateHttpRequest(bookName);
+            string responceBody = httpRequest.RequestAsString();
+
+            return responceBody;
         }
 
-        public string GetResponceBody()
+        static private IHttpRequest CreateHttpRequest(string bookName)
         {
-            IHttpResponce httpResponce = GetResponce();
-            string textRecponce = httpResponce.ReadAsString();
+            string refererUri = _searchUri + bookName.Replace(" ", "+");
 
-            return textRecponce;
-        }
-
-        private IHttpResponce GetResponce()
-        {
-            using HttpClient httpClient = CreateHttpClient();
-            HttpRequestPost httpRequestPost = new HttpRequestPost(httpClient);
-            IHttpResponce httpResponce = httpRequestPost.Request();
-
-            return httpResponce;
-        }
-
-        private HttpClient CreateHttpClient()
-        {
-            HttpClientHandler httpClientHandler = new HttpClientHandler
-            {
-                AutomaticDecompression = DecompressionMethods.GZip
-            };
-
-            HttpClientBulder httpClientBulder = HttpClientBulder.Create(httpClientHandler);
+            HttpRequestBuilder httpClientBulder = HttpRequestBuilder.Create();
 
             httpClientBulder
+            .UsePost()
             .AddUri("https://by.wildberries.ru/user/get-xinfo-v2")
             .AddHeaderHost("by.wildberries.ru")
             .AddHeaderConnection("keep-alive")
@@ -55,7 +38,7 @@ namespace Parser.WildBarries
             .AddHeader("Sec-Fetch-Site", "same-origin")
             .AddHeader("Sec-Fetch-Mode", "cors")
             .AddHeader("Sec-Fetch-Dest", "empty")
-            .AddHeaderReferer(_SearchUri)
+            .AddHeaderReferer(refererUri)
             .AddHeaderAcceptEncoding("gzip")
             .AddHeaderAcceptEncoding("br")
             .AddHeaderAcceptEncoding("deflate")

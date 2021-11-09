@@ -20,6 +20,11 @@ namespace Parser.Ozon
             _bookName = bookName;
         }
 
+        public async Task<BookInfo[]> ParseAsync()
+        {
+            return await Task.Run(() => Parse());
+        }
+
         public BookInfo[] Parse()
         {
             string responceBody = GetHtmlWithBook();
@@ -27,16 +32,9 @@ namespace Parser.Ozon
             return books;
         }
 
-        public async Task<BookInfo[]> ParseAsync()
-        {
-            return await Task.Run(() => Parse());
-        }
-
         private string GetHtmlWithBook()
         {
-            var requestHtmlFromLabirint = new RequestHtmlFromOzon(_bookName);
-            string responceBody = requestHtmlFromLabirint.GetResponceBody();
-
+            string responceBody = RequestHtmlFromOzon.GetResponce(_bookName);
             return responceBody;
         }
 

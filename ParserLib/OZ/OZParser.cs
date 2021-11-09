@@ -1,7 +1,6 @@
 using System;
 using HtmlAgilityPack;
 using Fizzler.Systems.HtmlAgilityPack;
-using System.Collections.Generic;
 using System.Linq;
 using Parser;
 using System.Threading.Tasks;
@@ -19,6 +18,11 @@ namespace Parser.OZ
         {
             _bookName = bookName.Replace(" ", "+");
         }
+        
+        public async Task<BookInfo[]> ParseAsync()
+        {
+            return await Task.Run(() => Parse());
+        }
 
         public BookInfo[] Parse()
         {
@@ -28,16 +32,10 @@ namespace Parser.OZ
             return books;
         }
 
-        public async Task<BookInfo[]> ParseAsync()
-        {
-            return await Task.Run(() => Parse());
-        }
 
         private string GetHtmlWithBook()
         {
-            var requestHtmlFromOz = new RequestHtmlFromOz(_bookName);
-            string responceBody = requestHtmlFromOz.GetResponceBody();
-
+            string responceBody = RequestHtmlFromOz.GetResponce(_bookName);
             return responceBody;
         }
 

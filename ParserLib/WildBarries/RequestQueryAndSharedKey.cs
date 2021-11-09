@@ -7,44 +7,29 @@ using Newtonsoft.Json.Linq;
 
 namespace Parser.WildBarries
 {
-    class RequestQueryAndSharedKeyFild
+    static class RequestQueryAndSharedKeyFild
     {
-        private string _bookName;
-        private string _SearchUri => "https://by.wildberries.ru/catalog/0/search.aspx?search=" + _bookName;
+        static private string _refererUriPrefix => "https://by.wildberries.ru/catalog/0/search.aspx?search=";
+        static private string _searchUriPrefix => "https://wbxsearch-by.wildberries.ru/exactmatch/common?query=";
 
-        public RequestQueryAndSharedKeyFild(string bookName)
+        static public string GetResponce(string bookName)
         {
-            _bookName = bookName.Replace(" ", "+");
+            using IHttpRequest httpRequest = CreateHttpRequest(bookName);
+            string responceBody = httpRequest.RequestAsString();
+
+            return responceBody;
         }
 
-        public string GetResponceBody()
+        static private IHttpRequest CreateHttpRequest(string bookName)
         {
-            IHttpResponce httpResponce = GetResponce();
-            string textRecponce = httpResponce.ReadAsString();
+            string book = bookName.Replace(" ", "+");
+            string refererUri = _refererUriPrefix + book;
+            string searchUri = _searchUriPrefix + book;
 
-            return textRecponce;
-        }
-
-        private IHttpResponce GetResponce()
-        {
-            using HttpClient httpClient = CreateHttpClient();
-            HttpRequestGet httpRequestPost = new HttpRequestGet(httpClient);
-            IHttpResponce httpResponce = httpRequestPost.Request();
-
-            return httpResponce;
-        }
-
-        private HttpClient CreateHttpClient()
-        {
-            HttpClientHandler httpClientHandler = new HttpClientHandler
-            {
-                AutomaticDecompression = DecompressionMethods.GZip
-            };
-
-            HttpClientBulder httpClientBulder = HttpClientBulder.Create(httpClientHandler);
+            HttpRequestBuilder httpClientBulder = HttpRequestBuilder.Create();
 
             httpClientBulder
-            .AddUri("https://wbxsearch-by.wildberries.ru/exactmatch/common?query=" + _bookName)
+            .AddUri(searchUri)
             .AddHeaderHost("wbxsearch-by.wildberries.ru")
             .AddHeaderConnection("keep-alive")
             .AddHeader("sec-ch-ua", "\"Yandex\";v=\"21\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"")
@@ -54,7 +39,7 @@ namespace Parser.WildBarries
             .AddHeader("Sec-Fetch-Site", "same-origin")
             .AddHeader("Sec-Fetch-Mode", "cors")
             .AddHeader("Sec-Fetch-Dest", "empty")
-            .AddHeaderReferer(_SearchUri)
+            .AddHeaderReferer(refererUri)
             .AddHeaderAcceptEncoding("gzip")
             .AddHeaderAcceptEncoding("br")
             .AddHeaderAcceptEncoding("deflate")

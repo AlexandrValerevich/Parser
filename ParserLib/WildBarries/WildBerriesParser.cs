@@ -56,15 +56,14 @@ namespace Parser.WildBarries
 
             RequestAllThings requestBook = new RequestAllThings(_bookName, xinfo, query, shardKey);
 
-            string book = requestBook.GetResponceBody();
+            string book = requestBook.GetResponce();
 
             return book;
         } 
 
         private (string query, string shardKey) ParceQuertAndSharedKeyString()
         {
-            RequestQueryAndSharedKeyFild requstQueryAndSharedKeyFild = new RequestQueryAndSharedKeyFild(_bookName);
-            string responceBody = requstQueryAndSharedKeyFild.GetResponceBody();
+            string responceBody = RequestQueryAndSharedKeyFild.GetResponce(_bookName);
 
             JObject jObject = JObject.Parse(responceBody);
             
@@ -76,8 +75,8 @@ namespace Parser.WildBarries
 
         private string ParceXinfoString()
         {
-            RequestXinfoFild requestXinfoFild = new RequestXinfoFild(_bookName);
-            string responceBody = requestXinfoFild.GetResponceBody();
+            // RequestXinfoFild requestXinfoFild = new RequestXinfoFild(_bookName);
+            string responceBody = RequestXinfoFild.GetResponce(_bookName);
 
             JObject jObject = JObject.Parse(responceBody);
             string xInfo = jObject["xinfo"].ToString();

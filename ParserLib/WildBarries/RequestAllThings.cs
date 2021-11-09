@@ -9,11 +9,11 @@ namespace Parser.WildBarries
     class RequestAllThings
     {
         private string _bookName;
-        private string _SearchUri => "https://by.wildberries.ru/catalog/0/search.aspx?search=" + _bookName;
+        private string _refererUri => "https://by.wildberries.ru/catalog/0/search.aspx?search=" + _bookName;
         private string _sharedKey;
         private string _xinfoFild;
         private string _queriFild;
-        private string _RequestUri => "https://wbxcatalog-sng.wildberries.ru/" + _sharedKey + "/catalog?" + _xinfoFild +"&"+ _queriFild +"&sort=popular";
+        private string _requestUri => "https://wbxcatalog-sng.wildberries.ru/" + _sharedKey + "/catalog?" + _xinfoFild +"&"+ _queriFild +"&sort=popular";
 
         public RequestAllThings(string bookName, string xinfoFild, string queriFild, string shardKey)
         {
@@ -23,34 +23,20 @@ namespace Parser.WildBarries
             _sharedKey = shardKey;
         }
 
-        public string GetResponceBody()
+        public string GetResponce()
         {
-            IHttpResponce httpResponce = GetResponce();
-            string textRecponce = httpResponce.ReadAsString();
+            using IHttpRequest httpRequest = CreateHttpRequest();
+            string responceBody = httpRequest.RequestAsString();
 
-            return textRecponce;
+            return responceBody;
         }
 
-        private IHttpResponce GetResponce()
+        private IHttpRequest CreateHttpRequest()
         {
-            using HttpClient httpClient = CreateHttpClient();
-            HttpRequestGet httpRequestPost = new HttpRequestGet(httpClient);
-            IHttpResponce httpResponce = httpRequestPost.Request();
-
-            return httpResponce;
-        }
-
-        private HttpClient CreateHttpClient()
-        {
-            HttpClientHandler httpClientHandler = new HttpClientHandler
-            {
-                AutomaticDecompression = DecompressionMethods.GZip
-            };
-
-            HttpClientBulder httpClientBulder = HttpClientBulder.Create(httpClientHandler);
+            HttpRequestBuilder httpClientBulder = HttpRequestBuilder.Create();
 
             httpClientBulder
-            .AddUri(_RequestUri)
+            .AddUri(_requestUri)
             .AddHeaderHost("wbxcatalog-sng.wildberries.ru")
             .AddHeaderConnection("keep-alive")
             .AddHeader("sec-ch-ua", "\"Yandex\";v=\"21\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"")
@@ -60,7 +46,7 @@ namespace Parser.WildBarries
             .AddHeader("Sec-Fetch-Site", "same-origin")
             .AddHeader("Sec-Fetch-Mode", "cors")
             .AddHeader("Sec-Fetch-Dest", "empty")
-            .AddHeaderReferer(_SearchUri)
+            .AddHeaderReferer(_refererUri)
             .AddHeaderAcceptEncoding("gzip")
             .AddHeaderAcceptEncoding("br")
             .AddHeaderAcceptEncoding("deflate")
