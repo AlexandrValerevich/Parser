@@ -455,3 +455,4 @@ $RECYCLE.BIN/
 
 ## ParserTest
 ParserTest/*
+ParserClient/books.json
