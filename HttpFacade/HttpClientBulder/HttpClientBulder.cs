@@ -1,4 +1,5 @@
 using System;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 
@@ -10,7 +11,12 @@ namespace HttpFacade
     {
         public static HttpClientBulder Create()
         {
-            return new HttpClientBulder();
+            HttpClientHandler httpClientHandler = new HttpClientHandler
+            {
+                AutomaticDecompression = DecompressionMethods.GZip
+            };
+
+            return new HttpClientBulder(httpClientHandler);
         }
         
         public static HttpClientBulder Create(HttpClientHandler httpClientHandler)
@@ -26,11 +32,6 @@ namespace HttpFacade
         {
             get => _httpClient.BaseAddress;
             set => _httpClient.BaseAddress = value;
-        }
-
-        private HttpClientBulder()
-        {
-            _httpClient = new HttpClient();
         }
 
         private HttpClientBulder(HttpClientHandler httpClientHandler)

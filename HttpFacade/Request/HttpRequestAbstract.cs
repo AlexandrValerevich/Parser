@@ -15,14 +15,30 @@ namespace HttpFacade
         {
             _httpClient = httpClient;
         }
+
         public abstract IHttpResponce Request();
 
-        public abstract Task<IHttpResponce> RequestAsync();
+        public async Task<IHttpResponce> RequestAsync()
+        {    
+            return await Task.Run(() => Request()); 
+        }
+
+        public string RequestAsString()
+        {
+            IHttpResponce httpResponce = Request();
+            string responceBody = httpResponce.ReadAsString();
+
+            return responceBody;
+        }
+
+        public async Task<string> RequestAsStringAsync()
+        {
+            return await Task.Run(() => RequestAsString());
+        }
 
         public void Dispose()
         {
             _httpClient.Dispose();
         }
-
     }
 }
