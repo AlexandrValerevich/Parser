@@ -9,7 +9,6 @@ namespace Parser.WildBarries
     public class WildBerriesParser : IParser<BookInfo>
     {
         private string _bookName;
-        private List<BookInfo> _bookInfo;
         private string _imageUriPrefix => "https://kemlenvg8e.a.trbcdn.net/c516x688/new/";
         private string _siteUriPrefix => "https://by.wildberries.ru/catalog/";
 
@@ -17,26 +16,22 @@ namespace Parser.WildBarries
         public WildBerriesParser(string bookName)
         {
             _bookName = bookName.Replace(" ", "+");
-            _bookInfo = new List<BookInfo>();
-        }
-        
-        public BookInfo[] GetResult()
-        {
-            return _bookInfo.ToArray();
         }
 
-        public async Task ParseAsync()
+        public async Task<BookInfo[]> ParseAsync()
         {
-            await Task.Run(() => Parse());
+            return await Task.Run(() => Parse());
         }
 
-        public void Parse()
+        public BookInfo[] Parse()
         {
             string allThingInJson = GetAllThingJsonFormat();
-            _bookInfo = FilterOnlyBook(allThingInJson);
+            BookInfo[] bookInfo = FilterOnlyBook(allThingInJson);
+
+            return bookInfo;
         }
 
-        private List<BookInfo> FilterOnlyBook(string allThingInJson)
+        private BookInfo[] FilterOnlyBook(string allThingInJson)
         {
             JArray products = JObject.Parse(allThingInJson)["data"]["products"] as JArray;
 
@@ -49,7 +44,7 @@ namespace Parser.WildBarries
                 Currency = "RU",
                 UriSite = _siteUriPrefix + (string)x["id"] + "/detail.aspx?targetUrl=XS",
                 UriImage = _imageUriPrefix + ((int)x["id"]/10000 * 10000) + "/" + (string)x["id"] + "-1.jpg" 
-            }).ToList();
+            }).ToArray();
 
             return productOfBook;
         }

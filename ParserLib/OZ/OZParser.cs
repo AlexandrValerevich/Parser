@@ -14,30 +14,23 @@ namespace Parser.OZ
     {
         private string _bookName;
         private string _SearchUri => "https://oz.by/search/?c=1101523&q=" + _bookName;
-        private List<BookInfo> _bookInfo;
 
         public OZParser(string bookName)
         {
             _bookName = bookName.Replace(" ", "+");
-            _bookInfo = new List<BookInfo>();
-        }
-        
-        public BookInfo[] GetResult()
-        {
-            return _bookInfo.ToArray();
         }
 
-        public void Parse()
+        public BookInfo[] Parse()
         {
             string responceBody = GetHtmlWithBook();
-            List<BookInfo> books = ConvertHtmlToBookInfo(html: responceBody); 
+            BookInfo[] books = ConvertHtmlToBookInfo(html: responceBody); 
 
-            _bookInfo = books;
+            return books;
         }
 
-        public async Task ParseAsync()
+        public async Task<BookInfo[]> ParseAsync()
         {
-            await Task.Run(() => Parse());
+            return await Task.Run(() => Parse());
         }
 
         private string GetHtmlWithBook()
@@ -48,7 +41,7 @@ namespace Parser.OZ
             return responceBody;
         }
 
-        private List<BookInfo> ConvertHtmlToBookInfo(string html)
+        private BookInfo[] ConvertHtmlToBookInfo(string html)
         {
             var doc = new HtmlDocument();
             doc.LoadHtml(html);
@@ -66,7 +59,7 @@ namespace Parser.OZ
                             UriImage = card.QuerySelector(".viewer-type-list__img")?.Attributes["src"].Value
                          };
 
-            return books.ToList();
+            return books.ToArray();
         }
 
         private decimal GetPriceOfBookInCard(HtmlNode card)

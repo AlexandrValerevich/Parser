@@ -11,28 +11,23 @@ namespace Parser.Labirint
     public class LabirintParser : IParser<BookInfo>
     {
         private string _bookName;
-        private List<BookInfo> _bookInfo;
         private string _prefixUri = "https://www.labirint.ru";
 
         public LabirintParser(string bookName) 
         {
             _bookName = bookName;
         }
-        public BookInfo[] GetResult()
-        {
-            return _bookInfo.ToArray();
-        }
 
-        public void Parse()
+        public BookInfo[] Parse()
         {
             string responceBody = GetHtmlWithBook();
-            List<BookInfo> books = ConvertHtmlToBookInfo(responceBody);
-            _bookInfo = books;
+            BookInfo[] books = ConvertHtmlToBookInfo(responceBody);
+            return books;
         }
 
-        public async Task ParseAsync()
+        public async Task<BookInfo[]> ParseAsync()
         {
-            await Task.Run(() => Parse());
+            return await Task.Run(() => Parse());
         }
 
         private string GetHtmlWithBook()
@@ -43,7 +38,7 @@ namespace Parser.Labirint
             return responceBody;
         }
 
-        private List<BookInfo> ConvertHtmlToBookInfo(string html)
+        private BookInfo[] ConvertHtmlToBookInfo(string html)
         {
             var doc = new HtmlDocument();
             doc.LoadHtml(html);
@@ -59,7 +54,7 @@ namespace Parser.Labirint
                             Currency = "RU"
                         };
 
-            return books.ToList();
+            return books.ToArray();
         }
         
     }

@@ -13,28 +13,23 @@ namespace Parser.Ozon
     public class OzonParser : IParser<BookInfo>
     {
         private string _bookName;
-        private List<BookInfo> _bookInfo;
         private string _prefixUri = "https://www.ozon.ru";
 
         public OzonParser(string bookName) 
         {
             _bookName = bookName;
         }
-        public BookInfo[] GetResult()
-        {
-            return _bookInfo.ToArray();
-        }
 
-        public void Parse()
+        public BookInfo[] Parse()
         {
             string responceBody = GetHtmlWithBook();
-            List<BookInfo> books = ConvertHtmlToBookInfo(responceBody);
-            _bookInfo = books;
+            BookInfo[] books = ConvertHtmlToBookInfo(responceBody);
+            return books;
         }
 
-        public async Task ParseAsync()
+        public async Task<BookInfo[]> ParseAsync()
         {
-            await Task.Run(() => Parse());
+            return await Task.Run(() => Parse());
         }
 
         private string GetHtmlWithBook()
@@ -45,7 +40,7 @@ namespace Parser.Ozon
             return responceBody;
         }
 
-        private List<BookInfo> ConvertHtmlToBookInfo(string html)
+        private BookInfo[] ConvertHtmlToBookInfo(string html)
         {
             var doc = new HtmlDocument();
             doc.LoadHtml(html);
@@ -62,7 +57,7 @@ namespace Parser.Ozon
                             Currency = "BY"
                         };
 
-            return books.ToList();
+            return books.ToArray();
         }
 
         private decimal GetPriceOfBookInCard(HtmlNode card)

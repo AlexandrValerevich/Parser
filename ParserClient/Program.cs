@@ -22,6 +22,9 @@ namespace Parser.Client
 
             string bookName = "Разработка требований";
 
+            Console.WriteLine("Введите книгу:");
+            bookName = Console.ReadLine();
+
             InitializeList(parserList, bookName);
 
             BookInfo[] bookInfo = ExecuteAllParserWithAsync(parserList);
@@ -44,9 +47,7 @@ namespace Parser.Client
         private static BookInfo[] ExecuteAllParser(List<IParser<BookInfo>> parserList)
         {
             var bookInfo = new List<BookInfo>();
-
-            parserList.ForEach(x => x.Parse());
-            parserList.ForEach(x => bookInfo.AddRange(x.GetResult()));
+            parserList.ForEach(x => bookInfo.AddRange(x.Parse()));
 
             return bookInfo.ToArray();
         }
@@ -54,8 +55,7 @@ namespace Parser.Client
         private static CurrencyInfo[] GetCurrency()
         {
             IParser<CurrencyInfo> parserCurrency = new ParserCurrency(CurrencyAbbreviation.USD | CurrencyAbbreviation.RUB);
-            parserCurrency.Parse();
-            CurrencyInfo[] currencies = parserCurrency.GetResult();
+            CurrencyInfo[] currencies = parserCurrency.Parse();
 
             return currencies;
         }
@@ -77,12 +77,11 @@ namespace Parser.Client
 
         private static BookInfo[] ExecuteAllParserWithAsync(List<IParser<BookInfo>> parserList)
         {
-            var tasks = new List<Task>();
+            var tasks = new List<Task<BookInfo[]>>();
             var bookInfo = new List<BookInfo>();
 
             parserList.ForEach(x => tasks.Add(x.ParseAsync()));
-            tasks.ForEach(x => x.Wait());
-            parserList.ForEach(x => bookInfo.AddRange(x.GetResult()));
+            tasks.ForEach(x => bookInfo.AddRange(x.Result));
 
             return bookInfo.ToArray();
         }

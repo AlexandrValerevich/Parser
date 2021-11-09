@@ -11,28 +11,23 @@ namespace Parser.Currency
     public class ParserCurrency : IParser<CurrencyInfo>
     {
         private CurrencyAbbreviation _currencyName;
-        private CurrencyInfo[] _currentInfo;
 
         public ParserCurrency(CurrencyAbbreviation currencyName)
         {
             _currencyName = currencyName;
        }
 
-        public CurrencyInfo[] GetResult()
+        public async Task<CurrencyInfo[]> ParseAsync()
         {
-            return _currentInfo;
+            return await Task.Run(() => Parse());
         }
 
-        public async Task ParseAsync()
-        {
-            await Task.Run(() => Parse());
-        }
-
-        public void Parse()
+        public CurrencyInfo[] Parse()
         {
             string currencys = RequestToApiNbrb.GetCurrencyJson(_currencyName);
+            CurrencyInfo[] currencyInfo = ConvertToCurrenctInfo(currencys);
 
-            _currentInfo = ConvertToCurrenctInfo(currencys);
+            return currencyInfo;
         }
 
         private CurrencyInfo[] ConvertToCurrenctInfo(string currencys)
@@ -46,7 +41,7 @@ namespace Parser.Currency
                                             OfficialRate = Decimal.Parse((string)cur["Cur_OfficialRate"])
                                         };
 
-            return filtredCurrencysField.ToList().ToArray();
+            return filtredCurrencysField.ToArray();
         }
         
     }

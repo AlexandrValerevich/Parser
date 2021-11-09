@@ -1,74 +1,722 @@
 [
     {
-        "Name": "Разработка требований к программному обеспечению. 3-е изд., дополненное",
-        "Price": 33.77,
+        "Name": "Angular на примерах. Создаем web-приложения с нуля",
+        "Price": 10.23,
+        "Currency": "BY",
+        "Brand": "Издательство Наука и техника",
+        "UriSite": "https://by.wildberries.ru/catalog/15391578/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/15390000/15391578-1.jpg"
+    },
+    {
+        "Name": "Angular 4. Быстрая разработка сверхдинамических Web-сайтов на TypeScript и PHP",
+        "Price": 19.39,
         "Currency": "BY",
         "Brand": "Bhv",
-        "UriSite": "https://by.wildberries.ru/catalog/6350000/detail.aspx?targetUrl=XS",
-        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/6350000/6350000-1.jpg"
+        "UriSite": "https://by.wildberries.ru/catalog/5294259/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/5290000/5294259-1.jpg"
     },
     {
-        "Name": "Разработка требований к программному обеспечению",
-        "Price": 55.67,
+        "Name": "An Elementary Treatise On the Angular Calculus, Part 1",
+        "Price": 24.33,
         "Currency": "BY",
-        "Brand": null,
-        "UriSite": "https://oz.by/books/more1010201.html?sbtoken=c88eb7158bcd03193c177832eaf20d70",
-        "UriImage": "https://s1-listing.ozstatic.by/200200/201/10/1/1010201_0.jpg"
+        "Brand": "Нобель Пресс",
+        "UriSite": "https://by.wildberries.ru/catalog/24180752/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/24180000/24180752-1.jpg"
     },
     {
-        "Name": "Разработка требований к программному обеспечению",
-        "Price": 51.68,
+        "Name": "Learning Angular - Third Edition. A no-nonsense beginner's guide to building web applications wit...",
+        "Price": 210.23,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/23490626/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/23490000/23490626-1.jpg"
+    },
+    {
+        "Name": "MongoDB, Express, Angular, and Node.js Fundamentals",
+        "Price": 162.59,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22862051/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22860000/22862051-1.jpg"
+    },
+    {
+        "Name": "Magnetic Surveying and Angular Surveying",
+        "Price": 24.57,
+        "Currency": "BY",
+        "Brand": "Нобель Пресс",
+        "UriSite": "https://by.wildberries.ru/catalog/24309617/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/24300000/24309617-1.jpg"
+    },
+    {
+        "Name": "Angular-leafspot of cucumber: dissemination, overwintering and control",
+        "Price": 22.27,
+        "Currency": "BY",
+        "Brand": "Нобель Пресс",
+        "UriSite": "https://by.wildberries.ru/catalog/24565383/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/24560000/24565383-1.jpg"
+    },
+    {
+        "Name": "Angular Projects",
+        "Price": 163.28,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/24748391/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/24740000/24748391-1.jpg"
+    },
+    {
+        "Name": "Изучаем Angular 2",
+        "Price": 28.21,
+        "Currency": "BY",
+        "Brand": "ДМК Пресс",
+        "UriSite": "https://by.wildberries.ru/catalog/20821553/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/20820000/20821553-1.jpg"
+    },
+    {
+        "Name": "Application of the Angular Analysis to the Solution of Indeterminate .",
+        "Price": 24.26,
+        "Currency": "BY",
+        "Brand": "Нобель Пресс",
+        "UriSite": "https://by.wildberries.ru/catalog/24640461/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/24640000/24640461-1.jpg"
+    },
+    {
+        "Name": "Excitation function and angular distribution of the neutrons from the D-D reaction.",
+        "Price": 22.55,
+        "Currency": "BY",
+        "Brand": "Нобель Пресс",
+        "UriSite": "https://by.wildberries.ru/catalog/25041708/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/25040000/25041708-1.jpg"
+    },
+    {
+        "Name": "Angular Projects - Second Edition. Build modern web apps by exploring Angular 12 with 10 differen...",
+        "Price": 163.28,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/34017901/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/34010000/34017901-1.jpg"
+    },
+    {
+        "Name": "Magnetic Surveying and Angular Surveying",
+        "Price": 68.08,
+        "Currency": "BY",
+        "Brand": "Palala Press",
+        "UriSite": "https://by.wildberries.ru/catalog/31648531/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/31640000/31648531-1.jpg"
+    },
+    {
+        "Name": "The Correct Principles Of Treatment For Angular Curvature Of The Spine (1872)",
+        "Price": 53.40,
+        "Currency": "BY",
+        "Brand": "Kessinger Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/23612783/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/23610000/23612783-1.jpg"
+    },
+    {
+        "Name": "Angular-leafspot of cucumber: dissemination, overwintering and control",
+        "Price": 22.27,
+        "Currency": "BY",
+        "Brand": "Нобель Пресс",
+        "UriSite": "https://by.wildberries.ru/catalog/25141140/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/25140000/25141140-1.jpg"
+    },
+    {
+        "Name": "Step-by-Step Angular Routing. Learn To Create client-side and Single Page Apps with Routing and N...",
+        "Price": 61.84,
+        "Currency": "BY",
+        "Brand": "BPB Publications",
+        "UriSite": "https://by.wildberries.ru/catalog/35357327/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/35350000/35357327-1.jpg"
+    },
+    {
+        "Name": "An Angular Tour Of The World Or The Curiosities Of Latitude And Longitude. A Book For Teachers (1...",
+        "Price": 53.40,
+        "Currency": "BY",
+        "Brand": "Kessinger Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/32610728/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/32610000/32610728-1.jpg"
+    },
+    {
+        "Name": "Synthesis of Biologically Active Angular Pyranocoumarins",
+        "Price": 220.62,
+        "Currency": "BY",
+        "Brand": "KS OmniScriptum Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/32660579/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/32660000/32660579-1.jpg"
+    },
+    {
+        "Name": "An angular tour of the world, or, The curiosities of latitude and longitude; a book for teachers",
+        "Price": 24.23,
+        "Currency": "BY",
+        "Brand": "Нобель Пресс",
+        "UriSite": "https://by.wildberries.ru/catalog/24158951/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/24150000/24158951-1.jpg"
+    },
+    {
+        "Name": "La piedra angular... el viaje al septimo cielo",
+        "Price": 91.39,
+        "Currency": "BY",
+        "Brand": "Lulu Press",
+        "UriSite": "https://by.wildberries.ru/catalog/31272381/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/31270000/31272381-1.jpg"
+    },
+    {
+        "Name": "ASP.NET Core 3 and Angular 9 - Third Edition",
+        "Price": 171.31,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/21894651/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/21890000/21894651-1.jpg"
+    },
+    {
+        "Name": "Back To The Soil Or From Tenement House To Farm Colony. A Circular Solution Of An Angular Problem...",
+        "Price": 66.37,
+        "Currency": "BY",
+        "Brand": "Kessinger Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/32529711/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/32520000/32529711-1.jpg"
+    },
+    {
+        "Name": "Calculation of Exact Eigenfunctions of Spin and Angular Momentum Using the Projection Operator Me...",
+        "Price": 66.92,
+        "Currency": "BY",
+        "Brand": "Sagwan Press",
+        "UriSite": "https://by.wildberries.ru/catalog/31561682/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/31560000/31561682-1.jpg"
+    },
+    {
+        "Name": "A photographic technique for the determination of the angular distribution of neutrons from deute...",
+        "Price": 24.78,
+        "Currency": "BY",
+        "Brand": "Нобель Пресс",
+        "UriSite": "https://by.wildberries.ru/catalog/25065528/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/25060000/25065528-1.jpg"
+    },
+    {
+        "Name": "Contributions to the pathology. diagnosis, and treatment of angular curvature of the spine",
+        "Price": 26.18,
+        "Currency": "BY",
+        "Brand": "Нобель Пресс",
+        "UriSite": "https://by.wildberries.ru/catalog/23836497/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/23830000/23836497-1.jpg"
+    },
+    {
+        "Name": "An Analytical Treatise on Plane and Spherical Trigonometry, and the Analysis of Angular Sections .",
+        "Price": 30.16,
+        "Currency": "BY",
+        "Brand": "Нобель Пресс",
+        "UriSite": "https://by.wildberries.ru/catalog/23963557/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/23960000/23963557-1.jpg"
+    },
+    {
+        "Name": "Dioptric Formula For Combined Cylindrical Lenses. Applicable For All Angular Deviations Of Their ...",
+        "Price": 52.57,
+        "Currency": "BY",
+        "Brand": "Kessinger Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/23593181/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/23590000/23593181-1.jpg"
+    },
+    {
+        "Name": "Piedra Angular de La Arquitectura",
+        "Price": 230.37,
+        "Currency": "BY",
+        "Brand": "KS OmniScriptum Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/25450526/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/25450000/25450526-1.jpg"
+    },
+    {
+        "Name": "Разработка веб-приложений с помощью Node.js, MongoDB и Angular",
+        "Price": 71.14,
+        "Currency": "BY",
+        "Brand": "Диалектика",
+        "UriSite": "https://by.wildberries.ru/catalog/11940380/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/11940000/11940380-1.jpg"
+    },
+    {
+        "Name": "Performance of Charm Baryons in ITS under Angular Correlation",
+        "Price": 205.70,
+        "Currency": "BY",
+        "Brand": "KS OmniScriptum Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/32516446/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/32510000/32516446-1.jpg"
+    },
+    {
+        "Name": "Detection of Angular Orientation of a Line Using a Hexagonal Selcuk Network",
+        "Price": 63.97,
+        "Currency": "BY",
+        "Brand": "Palala Press",
+        "UriSite": "https://by.wildberries.ru/catalog/22377017/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22370000/22377017-1.jpg"
+    },
+    {
+        "Name": "Learning Angular 2",
+        "Price": 188.30,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/21887814/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/21880000/21887814-1.jpg"
+    },
+    {
+        "Name": "Building Web Apps with Spring 5 and Angular",
+        "Price": 238.02,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22576133/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22570000/22576133-1.jpg"
+    },
+    {
+        "Name": "Mastering Angular Components",
+        "Price": 186.24,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22441105/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22440000/22441105-1.jpg"
+    },
+    {
+        "Name": "Building Large-Scale Web Applications with Angular",
+        "Price": 223.40,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22858036/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22850000/22858036-1.jpg"
+    },
+    {
+        "Name": "TypeScript 2.x for Angular Developers",
+        "Price": 218.56,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22728221/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22720000/22728221-1.jpg"
+    },
+    {
+        "Name": "Switching to Angular 2",
+        "Price": 167.47,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22194661/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22190000/22194661-1.jpg"
+    },
+    {
+        "Name": "Hands-on Full Stack Development with Angular 5 and Firebase",
+        "Price": 192.83,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22728207/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22720000/22728207-1.jpg"
+    },
+    {
+        "Name": "ASP.NET Core and Angular 2. Create powerful applications for the modern web",
+        "Price": 207.76,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22243850/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22240000/22243850-1.jpg"
+    },
+    {
+        "Name": "Power in Motion: Horse Power, Wheel Gearing, Driving Bands and Angular Forces",
+        "Price": 27.21,
+        "Currency": "BY",
+        "Brand": "Нобель Пресс",
+        "UriSite": "https://by.wildberries.ru/catalog/24072080/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/24070000/24072080-1.jpg"
+    },
+    {
+        "Name": "Beginning Angular with Typescript",
+        "Price": 53.77,
+        "Currency": "BY",
+        "Brand": "Jason Lim",
+        "UriSite": "https://by.wildberries.ru/catalog/32382273/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/32380000/32382273-1.jpg"
+    },
+    {
+        "Name": "Angular for Enterprise-Ready Web Applications - Second Edition. Build and deliver production-grad...",
+        "Price": 167.47,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/23490593/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/23490000/23490593-1.jpg"
+    },
+    {
+        "Name": "Angular. Сборник рецептов. 2-е изд",
+        "Price": 39.16,
+        "Currency": "BY",
+        "Brand": "АЛЬФА-КНИГА",
+        "UriSite": "https://by.wildberries.ru/catalog/35613737/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/35610000/35613737-1.jpg"
+    },
+    {
+        "Name": "Dioptric Formulae for Combined Cylindrical Lenses: Applicable for All Angular Deviations of Their...",
+        "Price": 22.48,
+        "Currency": "BY",
+        "Brand": "Нобель Пресс",
+        "UriSite": "https://by.wildberries.ru/catalog/24387744/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/24380000/24387744-1.jpg"
+    },
+    {
+        "Name": "An Analytical Treatise On Plane and Spherical Trigonometry, and the Analysis of Angular Sections:...",
+        "Price": 30.06,
+        "Currency": "BY",
+        "Brand": "Нобель Пресс",
+        "UriSite": "https://by.wildberries.ru/catalog/24291475/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/24290000/24291475-1.jpg"
+    },
+    {
+        "Name": "Specimens of the Fashionable Style of Ladies Handwriting Known As the Angular, Or English Hand",
+        "Price": 22.27,
+        "Currency": "BY",
+        "Brand": "Нобель Пресс",
+        "UriSite": "https://by.wildberries.ru/catalog/24554555/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/24550000/24554555-1.jpg"
+    },
+    {
+        "Name": "Geracao e caracterizacao de feixes possuindo momento angular orbital",
+        "Price": 153.91,
+        "Currency": "BY",
+        "Brand": "KS OmniScriptum Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/25452560/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/25450000/25452560-1.jpg"
+    },
+    {
+        "Name": "Application of the Angular Analysis to the Solution of Indeterminate Problems of the Second Degree",
+        "Price": 24.02,
+        "Currency": "BY",
+        "Brand": "Нобель Пресс",
+        "UriSite": "https://by.wildberries.ru/catalog/21912872/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/21910000/21912872-1.jpg"
+    },
+    {
+        "Name": "Specimens of the Fashionable Style of Ladies Handwriting Known As the Angular, Or English Hand",
+        "Price": 63.97,
+        "Currency": "BY",
+        "Brand": "Franklin Classics Trade Press",
+        "UriSite": "https://by.wildberries.ru/catalog/22809139/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22800000/22809139-1.jpg"
+    },
+    {
+        "Name": "Building Modern Web Applications Using Angular",
+        "Price": 193.86,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22728331/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22720000/22728331-1.jpg"
+    },
+    {
+        "Name": "Java EE 8 and Angular. A practical guide to building modern single-page applications with Angular...",
+        "Price": 214.04,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22437142/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22430000/22437142-1.jpg"
+    },
+    {
+        "Name": "Angular 2 Cookbook",
+        "Price": 233.84,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22246992/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22240000/22246992-1.jpg"
+    },
+    {
+        "Name": "La piedra angular",
+        "Price": 83.05,
+        "Currency": "BY",
+        "Brand": "Stockcero",
+        "UriSite": "https://by.wildberries.ru/catalog/25422786/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/25420000/25422786-1.jpg"
+    },
+    {
+        "Name": "Angular Design Patterns",
+        "Price": 145.57,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22728280/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22720000/22728280-1.jpg"
+    },
+    {
+        "Name": "Learning Angular for .NET Developers. Develop dynamic .NET web applications powered by Angular 4",
+        "Price": 193.17,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22728215/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22720000/22728215-1.jpg"
+    },
+    {
+        "Name": "Angular UI Development with PrimeNG",
+        "Price": 212.28,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22249885/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22240000/22249885-1.jpg"
+    },
+    {
+        "Name": "Back to the Soil; or From Tenement House to Farm Colony, a Circular Solution of an Angular Problem,",
+        "Price": 74.33,
+        "Currency": "BY",
+        "Brand": "Wentworth Press",
+        "UriSite": "https://by.wildberries.ru/catalog/23285604/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/23280000/23285604-1.jpg"
+    },
+    {
+        "Name": "ASP.NET Core 5 and Angular - Fourth Edition. Full-stack web development with .NET 5 and Angular 11",
+        "Price": 170.59,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/23587043/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/23580000/23587043-1.jpg"
+    },
+    {
+        "Name": "Разработка веб-приложений с помощью Node.js, MongoDB и Angular. Исчерпывающее руководство по использ",
+        "Price": 84.21,
+        "Currency": "BY",
+        "Brand": "Диалектика",
+        "UriSite": "https://by.wildberries.ru/catalog/42783199/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/42780000/42783199-1.jpg"
+    },
+    {
+        "Name": "Angular Services",
+        "Price": 191.08,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22246899/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22240000/22246899-1.jpg"
+    },
+    {
+        "Name": "NativeScript for Angular Mobile Development",
+        "Price": 211.94,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22576961/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22570000/22576961-1.jpg"
+    },
+    {
+        "Name": "Getting started with Angular - Second Edition",
+        "Price": 166.44,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22246754/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22240000/22246754-1.jpg"
+    },
+    {
+        "Name": "Web Development with Bootstrap 4 and Angular 2 - Second Edition. Bring responsiveness to your Ang...",
+        "Price": 236.62,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22246931/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22240000/22246931-1.jpg"
+    },
+    {
+        "Name": "Expert Angular",
+        "Price": 234.18,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22250675/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22250000/22250675-1.jpg"
+    },
+    {
+        "Name": "Mastering Angular 2 Components",
+        "Price": 212.63,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22245898/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22240000/22245898-1.jpg"
+    },
+    {
+        "Name": "Server-Side Enterprise Development with Angular",
+        "Price": 147.32,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22857756/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22850000/22857756-1.jpg"
+    },
+    {
+        "Name": "Hands-On Full-Stack Web Development with Angular 6 and Laravel 5",
+        "Price": 210.53,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22439324/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22430000/22439324-1.jpg"
+    },
+    {
+        "Name": "Essential Angular",
+        "Price": 148.70,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22728139/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22720000/22728139-1.jpg"
+    },
+    {
+        "Name": "Switching to Angular",
+        "Price": 141.04,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22317191/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22310000/22317191-1.jpg"
+    },
+    {
+        "Name": "Angular Router",
+        "Price": 173.71,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22249995/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22240000/22249995-1.jpg"
+    },
+    {
+        "Name": "Angular 6 for Enterprise-Ready Web Applications",
+        "Price": 231.74,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22401800/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22400000/22401800-1.jpg"
+    },
+    {
+        "Name": "Architecting Angular Applications with Redux, RxJs and NgRx",
+        "Price": 213.01,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22415137/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22410000/22415137-1.jpg"
+    },
+    {
+        "Name": "Angular 2 By Example. A quintessential DIY guide to learn everything about Angular 2",
+        "Price": 206.38,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22226075/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22220000/22226075-1.jpg"
+    },
+    {
+        "Name": "Specimens of the Fashionable Style of Ladies Handwriting Known As the Angular, Or English Hand",
+        "Price": 67.06,
+        "Currency": "BY",
+        "Brand": "Andesite Press",
+        "UriSite": "https://by.wildberries.ru/catalog/22658916/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22650000/22658916-1.jpg"
+    },
+    {
+        "Name": "Two Essays On The Diseases Of The Spine. On Angular Curvature Of The Spine And Its Treatment (1844)",
+        "Price": 61.94,
+        "Currency": "BY",
+        "Brand": "Kessinger Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/23750428/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/23750000/23750428-1.jpg"
+    },
+    {
+        "Name": "Specimens of the Fashionable Style of Ladies Handwriting Known As the Angular, Or English Hand",
+        "Price": 63.97,
+        "Currency": "BY",
+        "Brand": "Franklin Classics",
+        "UriSite": "https://by.wildberries.ru/catalog/22735746/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22730000/22735746-1.jpg"
+    },
+    {
+        "Name": "Angular Momentum in Quantum Mechanics",
+        "Price": 163.28,
+        "Currency": "BY",
+        "Brand": "Princeton University Press",
+        "UriSite": "https://by.wildberries.ru/catalog/31980214/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/31980000/31980214-1.jpg"
+    },
+    {
+        "Name": "Angular Test-Driven Development",
+        "Price": 192.83,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22247032/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22240000/22247032-1.jpg"
+    },
+    {
+        "Name": "Angular 2 Components",
+        "Price": 148.01,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22246898/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22240000/22246898-1.jpg"
+    },
+    {
+        "Name": "Профессиональное программирование. Angular 4. Быстрая разработка сверхдинамических Web-сайтов на TypeScript и PHP",
+        "Price": 35.60,
         "Currency": "BY",
         "Brand": null,
-        "UriSite": "https://www.labirint.ru/books/445051/",
+        "UriSite": "https://oz.by/books/more10681611.html?sbtoken=de339c3d9cd4ba018c07d0bac4c9abec",
+        "UriImage": "https://s1-listing.ozstatic.by/200200/611/681/10/10681611_0.jpg"
+    },
+    {
+        "Name": "Разработка веб-приложений с помощью Node.js, MongoDB и Angular. Исчерпывающее руководство",
+        "Price": 148.32,
+        "Currency": "BY",
+        "Brand": null,
+        "UriSite": "https://www.labirint.ru/books/736136/",
         "UriImage": "https://img.labirint.ru/design/emptycover-big.svg"
     },
     {
-        "Name": "Урок иностранного языка в формате требований ФГОС 7-11 классы. Разработки уроков, конспекты, технол.",
-        "Price": 7.69,
+        "Name": "Изучаем Angular 2",
+        "Price": 56.35,
         "Currency": "BY",
         "Brand": null,
-        "UriSite": "https://www.labirint.ru/books/643978/",
+        "UriSite": "https://www.labirint.ru/books/562033/",
         "UriImage": "https://img.labirint.ru/design/emptycover-big.svg"
     },
     {
-        "Name": "Детские лекарственные формы: международные требования по разработке и качеству. Учебное пособие",
-        "Price": 26.01,
+        "Name": "Angular. Сборник рецептов",
+        "Price": 59.30,
         "Currency": "BY",
         "Brand": null,
-        "UriSite": "https://www.labirint.ru/books/714050/",
+        "UriSite": "https://www.labirint.ru/books/660315/",
         "UriImage": "https://img.labirint.ru/design/emptycover-big.svg"
     },
     {
-        "Name": "Разработка требований к программному обеспечению | Вигерс Карл И., Битти Джой",
-        "Price": 36.61,
+        "Name": "Angular 4. Быстрая разработка сверхдинамичных Web-сайтов на TypeScript и PHP",
+        "Price": 33.36,
         "Currency": "BY",
         "Brand": null,
-        "UriSite": "https://www.ozon.ru/product/razrabotka-trebovaniy-k-programmnomu-obespecheniyu-vigers-karl-i-bitti-dzhoy-221778297/?asb=qUZ3Rz68FK4NWWglBb6EbWn%252F7DCv9a2noLfQ%252FduiE7M%253D&amp;asb2=zn0Rl9vcf6R4nV3QYj9csdLVYKHyKNvunk6GjVyLJ9TMe7KmfXV5-SwXEmeOfT70&amp;keywords=%D0%A0%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0+%D1%82%D1%80%D0%B5%D0%B1%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B9",
-        "UriImage": "https://cdn1.ozone.ru/multimedia/c250/1024408815.jpg"
+        "UriSite": "https://www.labirint.ru/books/627715/",
+        "UriImage": "https://img.labirint.ru/design/emptycover-big.svg"
     },
     {
-        "Name": "Разработка требований к программному обеспечению | Вигерс Карл И., Битти Джой",
-        "Price": 37.31,
+        "Name": "Разработка веб-приложений с использованием AngularJS",
+        "Price": 52.23,
         "Currency": "BY",
         "Brand": null,
-        "UriSite": "https://www.ozon.ru/product/razrabotka-trebovaniy-k-programmnomu-obespecheniyu-147197469/?asb=Uz1bJQrrrWiaED%252BGJZzkoGMpy92E6h6XuqwRjwl%252BN08%253D&amp;asb2=kKCULgWPuQnBFatbXM5pXE8n0yGZh_P3CqwNvnSO2Sscp__xfW3PRV_4WR4Yy-HO&amp;keywords=%D0%A0%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0+%D1%82%D1%80%D0%B5%D0%B1%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B9",
-        "UriImage": "https://cdn1.ozone.ru/multimedia/c250/1024408815.jpg"
+        "UriSite": "https://www.labirint.ru/books/419549/",
+        "UriImage": "https://img.labirint.ru/design/emptycover-big.svg"
     },
     {
-        "Name": "Algorithms Illuminated (Part 1). The Basics",
-        "Price": 53.69,
+        "Name": "Angular для профессионалов",
+        "Price": 91.08,
         "Currency": "BY",
         "Brand": null,
-        "UriSite": "https://www.ozon.ru/product/algorithms-illuminated-part-1-the-basics-167877123/?asb=7fye5fb1JBypF7aQ5UFcbXCHG%252B3HOrg6k1BYhpMcvg8%253D&amp;asb2=d7kJS_Te8wsCfJcqb5of-Zla5OEJlm4UCRNLigKHNxi2ArMG8sBwt_4GP0SBqfqW&amp;keywords=%D0%A0%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0+%D1%82%D1%80%D0%B5%D0%B1%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B9",
-        "UriImage": "https://cdn1.ozone.ru/s3/multimedia-r/c250/6122957883.jpg"
+        "UriSite": "https://www.labirint.ru/books/613667/",
+        "UriImage": "https://img.labirint.ru/design/emptycover-big.svg"
     },
     {
-        "Name": "Cracking the Coding Interview",
-        "Price": 28.52,
+        "Name": "Разработка веб-приложений с помощью Node.js, MongoDB и Angular. Исчерпывающее руководство по использованию стека MEAN | Дейли Брэд, Дейли Брендан",
+        "Price": 72.56,
         "Currency": "BY",
         "Brand": null,
-        "UriSite": "https://www.ozon.ru/product/cracking-the-coding-interview-148410382/?asb=MqtIoTSJtt26%252BRO5PsV8tDiowdf3OjoyEk%252BbZbyo2VQ%253D&amp;asb2=_eivw_e4pGVPaPFRFwV7j6NEIPIgtxYKy-mIrAntT1r1sn_gZG4VWa82lm5_OG12&amp;keywords=%D0%A0%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0+%D1%82%D1%80%D0%B5%D0%B1%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B9",
-        "UriImage": "https://cdn1.ozone.ru/s3/multimedia-4/c250/6122947636.jpg"
+        "UriSite": "https://www.ozon.ru/product/razrabotka-veb-prilozheniy-s-pomoshchyu-node-js-mongodb-i-angular-ischerpyvayushchee-rukovodstvo-168021945/?asb=qy1pezYlM9tgMzkeOWsVWnXVIaQmo7FnvIgnsz6v8ic%253D&amp;asb2=SWGuE3-DGG_NLvYni4-vhHhbNIWey1B8va6RdaCxogBo_Dgr4nXm3eUGBAF9kUWG&amp;keywords=Angular",
+        "UriImage": "https://cdn1.ozone.ru/s3/multimedia-e/c250/6009776426.jpg"
+    },
+    {
+        "Name": "Angular на примерах. Создаем web-приложения с нуля | Пономарев С. Н.",
+        "Price": 17.40,
+        "Currency": "BY",
+        "Brand": null,
+        "UriSite": "https://www.ozon.ru/product/angular-na-primerah-sozdaem-web-prilozheniya-s-nulya-ponomarev-s-n-199036418/?asb=944WPsFMmb6smCe404548bjkeLtKkZkL%252FdXB48M%252BM6Q%253D&amp;asb2=ywIzNVrfLnc9tcZYMRQmfx0ueN61i2zUqAIcmRea-T04PQBy7l58_iMrFD-Y71ZD&amp;keywords=Angular",
+        "UriImage": "https://cdn1.ozone.ru/s3/multimedia-h/c250/6008971073.jpg"
+    },
+    {
+        "Name": "Angular 4. Быстрая разработка сверхдинамических Web-сайтов на TypeScript и PHP | Дронов Владимир Александрович",
+        "Price": 23.35,
+        "Currency": "BY",
+        "Brand": null,
+        "UriSite": "https://www.ozon.ru/product/angular-4-bystraya-razrabotka-sverhdinamicheskih-web-saytov-na-typescript-i-php-dronov-221777545/?asb=1Kcg9Ox0rmkyv0Ajrf6s45%252FnjTb3X1ldoy1toSUCYVU%253D&amp;asb2=KjCLSin6zrZP4wV2BHmTvq499yn0Ag10ltggmvtuGwM4_r9hTN5XUpS668nKAQLL&amp;keywords=Angular",
+        "UriImage": "https://cdn1.ozone.ru/multimedia/c250/1021816054.jpg"
+    },
+    {
+        "Name": "Angular. Сборник рецептов. 2-е изд | Фрисби Мэтт",
+        "Price": 47.57,
+        "Currency": "BY",
+        "Brand": null,
+        "UriSite": "https://www.ozon.ru/product/angular-sbornik-retseptov-2-e-izd-frisbi-mett-340085359/?asb=oDqrbU5%252FEO7W1A2eTa1uRKfPBIYe6%252FYmSi1p9iuFi60%253D&amp;asb2=1Fo8bSqbNn_0mAcOAEsSz5jHX_M4qn_s-O5QVE96gVZP2y2aPnOAIJOsDGmC7NXU&amp;keywords=Angular",
+        "UriImage": "https://cdn1.ozone.ru/s3/multimedia-a/c250/6117285238.jpg"
     }
 ]
