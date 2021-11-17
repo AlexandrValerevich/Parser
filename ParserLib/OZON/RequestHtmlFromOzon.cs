@@ -19,7 +19,7 @@ namespace Parser.Ozon
         static private IHttpRequest CreateHttpRequest(string bookName)
         {
             string uri = _searchUriPrefix + bookName.Replace(" ", "+");
-            HttpRequestBuilder httpRequestBulder = HttpRequestBuilder.Create();
+            IHttpRequestBulder httpRequestBulder = HttpRequestGetBulder.Create();
 
             httpRequestBulder
             .AddUri(uri)

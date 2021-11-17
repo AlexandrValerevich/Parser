@@ -20,7 +20,7 @@ namespace Parser.Labirint
         static private IHttpRequest CreateHttpRequest(string bookName)
         {
             string uri = _searchUriPrefix + bookName.Replace(" ", "+") + _searchUriPostfix;
-            HttpRequestBuilder httpRequestBulder = HttpRequestBuilder.Create();
+            IHttpRequestBulder httpRequestBulder = HttpRequestGetBulder.Create();
 
             httpRequestBulder
             .AddUri(uri)

@@ -33,9 +33,9 @@ namespace Parser.WildBarries
 
         private IHttpRequest CreateHttpRequest()
         {
-            HttpRequestBuilder httpClientBulder = HttpRequestBuilder.Create();
+            IHttpRequestBulder httpRequestBulder = HttpRequestGetBulder.Create();
 
-            httpClientBulder
+            httpRequestBulder
             .AddUri(_requestUri)
             .AddHeaderHost("wbxcatalog-sng.wildberries.ru")
             .AddHeaderConnection("keep-alive")
@@ -53,7 +53,7 @@ namespace Parser.WildBarries
             .AddHeaderAcceptLanguage("ru")
             .AddHeaderAcceptLanguage("en", 0.9);
 
-            return httpClientBulder.Build();
+            return httpRequestBulder.Build();
         }
     }
 }

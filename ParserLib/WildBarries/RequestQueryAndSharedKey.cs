@@ -26,9 +26,9 @@ namespace Parser.WildBarries
             string refererUri = _refererUriPrefix + book;
             string searchUri = _searchUriPrefix + book;
 
-            HttpRequestBuilder httpClientBulder = HttpRequestBuilder.Create();
+            IHttpRequestBulder httpRequestBulder = HttpRequestGetBulder.Create();
 
-            httpClientBulder
+            httpRequestBulder
             .AddUri(searchUri)
             .AddHeaderHost("wbxsearch-by.wildberries.ru")
             .AddHeaderConnection("keep-alive")
@@ -46,7 +46,7 @@ namespace Parser.WildBarries
             .AddHeaderAcceptLanguage("ru")
             .AddHeaderAcceptLanguage("en", 0.9);
 
-            return httpClientBulder.Build();
+            return httpRequestBulder.Build();
         }
 
     }

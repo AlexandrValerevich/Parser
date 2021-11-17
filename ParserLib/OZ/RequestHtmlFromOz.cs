@@ -26,7 +26,7 @@ namespace Parser.OZ
             string refererUri = _refererUriPrefix + book;    
             string uri = _searchUriPrefix + book;       
 
-            HttpRequestBuilder httpRequestBulder = HttpRequestBuilder.Create();
+            IHttpRequestBulder httpRequestBulder = HttpRequestGetBulder.Create();
 
             httpRequestBulder
             .AddUri(uri)
