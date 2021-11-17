@@ -6,7 +6,6 @@ namespace HttpFacade
     {
         void Reset(); 
         IHttpRequest Build();
-        IHttpRequestBulder UsePost();
         IHttpRequestBulder AddUri(string uri);
         IHttpRequestBulder AddUri(Uri uri);
         IHttpRequestBulder AddHeader(string key, string value);

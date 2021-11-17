@@ -1,3 +1,4 @@
+using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -5,20 +6,33 @@ namespace HttpFacade
 {
     public class HttpRequestPost : HttpRequestAbstract
     {
+        private HttpContent _httpContent;
+        private HttpContent _DefaultHttpContent = new StringContent("");
+
         public HttpRequestPost(HttpClient httpClient): base(httpClient)
         {
-            
+            _httpContent = _DefaultHttpContent;
         }
 
         public override IHttpResponce Request()
         {
-            HttpContent httpConten = new ByteArrayContent(new byte[0]);
-            Task<HttpResponseMessage> taskResponce = _httpClient.PostAsync(_Uri, httpConten);
+            Task<HttpResponseMessage> taskResponce = _httpClient.PostAsync(_Uri, _httpContent);
 
             HttpResponseMessage responce = taskResponce.Result;
+            responce.EnsureSuccessStatusCode();
             IHttpResponce httpResponce = new HttpResponce(responce);
 
             return httpResponce;
         }
+        
+        public IHttpResponce Request(string content)
+        {
+            _httpContent = new StringContent(content);
+            IHttpResponce httpResponce = Request();
+            _httpContent = _DefaultHttpContent;
+
+            return httpResponce;
+        }
+
     }
 }

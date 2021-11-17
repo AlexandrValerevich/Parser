@@ -1,162 +1,338 @@
 [
     {
-        "Name": "Spring Boot 2: лучшие практики для профессионалов",
-        "Price": 121.19,
+        "Name": "Real World Java Ee Night Hacks Dissecting the Business Tier",
+        "Price": 234.12,
         "Currency": "BY",
-        "Brand": "ПИТЕР",
-        "UriSite": "https://by.wildberries.ru/catalog/12989897/detail.aspx?targetUrl=XS",
-        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/12980000/12989897-1.jpg"
+        "Brand": "Lulu Press",
+        "UriSite": "https://by.wildberries.ru/catalog/31269815/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/31260000/31269815-1.jpg"
     },
     {
-        "Name": "Hands-On Microservices with Spring Boot and Spring Cloud. Build and deploy Java microservices usi...",
-        "Price": 172.50,
+        "Name": "Nederlandsch beheer over Java gedurende drie eeuwen",
+        "Price": 33.87,
+        "Currency": "BY",
+        "Brand": "Нобель Пресс",
+        "UriSite": "https://by.wildberries.ru/catalog/24949728/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/24940000/24949728-1.jpg"
+    },
+    {
+        "Name": "Java EE 8 Cookbook",
+        "Price": 235.48,
         "Currency": "BY",
         "Brand": "Packt Publishing",
-        "UriSite": "https://by.wildberries.ru/catalog/21893485/detail.aspx?targetUrl=XS",
-        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/21890000/21893485-1.jpg"
+        "UriSite": "https://by.wildberries.ru/catalog/31977777/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/31970000/31977777-1.jpg"
     },
     {
-        "Name": "Microservices with Spring Boot and Spring Cloud - Second Edition. Build resilient and scalable mi...",
-        "Price": 192.80,
+        "Name": "The Java Ee Architect's Handbook. How to Be a Successful Application Architect for Java Ee Applic...",
+        "Price": 87.42,
+        "Currency": "BY",
+        "Brand": "Delta Vortex Technologies, Inc.",
+        "UriSite": "https://by.wildberries.ru/catalog/21886385/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/21880000/21886385-1.jpg"
+    },
+    {
+        "Name": "Real World Java EE Patterns-Rethinking Best Practices",
+        "Price": 211.37,
+        "Currency": "BY",
+        "Brand": "Lulu Press",
+        "UriSite": "https://by.wildberries.ru/catalog/22230476/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22230000/22230476-1.jpg"
+    },
+    {
+        "Name": "Java EE 8 Application Development",
+        "Price": 235.85,
         "Currency": "BY",
         "Brand": "Packt Publishing",
-        "UriSite": "https://by.wildberries.ru/catalog/36076017/detail.aspx?targetUrl=XS",
-        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/36070000/36076017-1.jpg"
+        "UriSite": "https://by.wildberries.ru/catalog/22320696/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22320000/22320696-1.jpg"
     },
     {
-        "Name": "Java Transaction Design Strategies",
-        "Price": 106.70,
-        "Currency": "BY",
-        "Brand": "Lulu Press",
-        "UriSite": "https://by.wildberries.ru/catalog/31266102/detail.aspx?targetUrl=XS",
-        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/31260000/31266102-1.jpg"
-    },
-    {
-        "Name": "Spring 5 для профессионалов",
-        "Price": 135.47,
-        "Currency": "BY",
-        "Brand": "Диалектика",
-        "UriSite": "https://by.wildberries.ru/catalog/10591387/detail.aspx?targetUrl=XS",
-        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/10590000/10591387-1.jpg"
-    },
-    {
-        "Name": "Spring Security - Third Edition. Secure your web applications, RESTful services, and microservice...",
-        "Price": 228.27,
-        "Currency": "BY",
-        "Brand": "Packt Publishing",
-        "UriSite": "https://by.wildberries.ru/catalog/22728150/detail.aspx?targetUrl=XS",
-        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22720000/22728150-1.jpg"
-    },
-    {
-        "Name": "Spring Boot 2: лучшие практики для профессионалов.",
-        "Price": 69.95,
-        "Currency": "BY",
-        "Brand": "ПИТЕР",
-        "UriSite": "https://by.wildberries.ru/catalog/44240012/detail.aspx?targetUrl=XS",
-        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/44240000/44240012-1.jpg"
-    },
-    {
-        "Name": "RESTful Java Web Services Interview Questions You'll Most Likely Be Asked. Second Edition",
-        "Price": 103.95,
-        "Currency": "BY",
-        "Brand": "Vibrant Publishers",
-        "UriSite": "https://by.wildberries.ru/catalog/21894272/detail.aspx?targetUrl=XS",
-        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/21890000/21894272-1.jpg"
-    },
-    {
-        "Name": "Arquitectura Java Solida",
-        "Price": 137.72,
-        "Currency": "BY",
-        "Brand": "Lulu Press",
-        "UriSite": "https://by.wildberries.ru/catalog/22236709/detail.aspx?targetUrl=XS",
-        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22230000/22236709-1.jpg"
-    },
-    {
-        "Name": "Spring Boot 2: лучшие практики для профессионалов",
-        "Price": 84.16,
-        "Currency": "BY",
-        "Brand": "ПИТЕР",
-        "UriSite": "https://by.wildberries.ru/catalog/35638368/detail.aspx?targetUrl=XS",
-        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/35630000/35638368-1.jpg"
-    },
-    {
-        "Name": "Taming Thymeleaf. Practical guide to building a webapplication with Spring Boot and Thymeleaf",
-        "Price": 172.81,
-        "Currency": "BY",
-        "Brand": "Lulu Press",
-        "UriSite": "https://by.wildberries.ru/catalog/30783924/detail.aspx?targetUrl=XS",
-        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/30780000/30783924-1.jpg"
-    },
-    {
-        "Name": "Spring 5 для профессионалов. 5-е изд.",
-        "Price": 122.89,
-        "Currency": "BY",
-        "Brand": "Диалектика",
-        "UriSite": "https://by.wildberries.ru/catalog/42782952/detail.aspx?targetUrl=XS",
-        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/42780000/42782952-1.jpg"
-    },
-    {
-        "Name": "The JHipster Mini-Book",
-        "Price": 82.29,
-        "Currency": "BY",
-        "Brand": "Lulu Press",
-        "UriSite": "https://by.wildberries.ru/catalog/31409118/detail.aspx?targetUrl=XS",
-        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/31400000/31409118-1.jpg"
-    },
-    {
-        "Name": "Application of numerical methods in Differential equations",
-        "Price": 203.82,
+        "Name": "Auswahl von Java EE Anwendungsservern fur Unternehmensanwendungen",
+        "Price": 240.31,
         "Currency": "BY",
         "Brand": "KS OmniScriptum Publishing",
-        "UriSite": "https://by.wildberries.ru/catalog/32701116/detail.aspx?targetUrl=XS",
-        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/32700000/32701116-1.jpg"
+        "UriSite": "https://by.wildberries.ru/catalog/25405607/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/25400000/25405607-1.jpg"
     },
     {
-        "Name": "Moderne Architekturrahmenwerke im Software-Projekt",
-        "Price": 208.61,
+        "Name": "Java EE 8 Development with Eclipse",
+        "Price": 276.11,
         "Currency": "BY",
-        "Brand": "KS OmniScriptum Publishing",
-        "UriSite": "https://by.wildberries.ru/catalog/33328950/detail.aspx?targetUrl=XS",
-        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/33320000/33328950-1.jpg"
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22728430/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22720000/22728430-1.jpg"
     },
     {
-        "Name": "Getting Started with Grails",
-        "Price": 97.08,
+        "Name": "Architecting Modern Java EE Applications",
+        "Price": 232.72,
         "Currency": "BY",
-        "Brand": "Lulu Press",
-        "UriSite": "https://by.wildberries.ru/catalog/25409320/detail.aspx?targetUrl=XS",
-        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/25400000/25409320-1.jpg"
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22728326/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22720000/22728326-1.jpg"
     },
     {
-        "Name": "Предметно-ориентированное проектирование в Enterprise Java  | Наир Виджей",
-        "Price": 55.36,
+        "Name": "Java EE Development with NetBeans",
+        "Price": 234.46,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22149871/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22140000/22149871-1.jpg"
+    },
+    {
+        "Name": "Java EE 8 High Performance",
+        "Price": 236.87,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22421594/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22420000/22421594-1.jpg"
+    },
+    {
+        "Name": "Developing Middleware in Java EE 8",
+        "Price": 216.20,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22437128/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22430000/22437128-1.jpg"
+    },
+    {
+        "Name": "Java EE 7 Development with NetBeans 8",
+        "Price": 236.16,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22179128/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22170000/22179128-1.jpg"
+    },
+    {
+        "Name": "Java Ee 7 First Look",
+        "Price": 194.16,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22150584/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22150000/22150584-1.jpg"
+    },
+    {
+        "Name": "Mastering Java EE Development with WildFly",
+        "Price": 231.70,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22728130/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22720000/22728130-1.jpg"
+    },
+    {
+        "Name": "Java EE 7 Development with WildFly",
+        "Price": 233.10,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22168504/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22160000/22168504-1.jpg"
+    },
+    {
+        "Name": "Java Ee 6 Development with Netbeans 7",
+        "Price": 234.80,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/30991990/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/30990000/30991990-1.jpg"
+    },
+    {
+        "Name": "Kotlin for Enterprise Applications using Java EE",
+        "Price": 210.01,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22852958/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22850000/22852958-1.jpg"
+    },
+    {
+        "Name": "Developing Java Ee 6 Applications on Jboss As7",
+        "Price": 237.89,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22149495/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22140000/22149495-1.jpg"
+    },
+    {
+        "Name": "Java EE 8 Microservices",
+        "Price": 215.86,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22859305/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22850000/22859305-1.jpg"
+    },
+    {
+        "Name": "Building RESTful Web Services with Java EE 8",
+        "Price": 147.00,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22439352/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22430000/22439352-1.jpg"
+    },
+    {
+        "Name": "Java EE 8 Design Patterns and Best Practices. Build enterprise-ready scalable applications with a...",
+        "Price": 213.44,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/24734434/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/24730000/24734434-1.jpg"
+    },
+    {
+        "Name": "Java EE 8 and Angular. A practical guide to building modern single-page applications with Angular...",
+        "Price": 212.08,
+        "Currency": "BY",
+        "Brand": "Packt Publishing",
+        "UriSite": "https://by.wildberries.ru/catalog/22437142/detail.aspx?targetUrl=XS",
+        "UriImage": "https://kemlenvg8e.a.trbcdn.net/c516x688/new/22430000/22437142-1.jpg"
+    },
+    {
+        "Name": "Java Persistence API и Hibernate",
+        "Price": 49.79,
         "Currency": "BY",
         "Brand": null,
-        "UriSite": "https://www.ozon.ru/product/predmetno-orientirovannoe-proektirovanie-v-enterprise-java-nair-vidzhey-217051461/?asb=iboQLR6hho6jEoKgxR7B9o27wfXxmGg81haSeMRypkE%253D&amp;asb2=02tH5xqnHHusqmwhu8QmAaK7Hbo9riLL_CvyMJlcRf8MGU_rcuOb7TLXR-xqPdpI&amp;keywords=spring+java",
-        "UriImage": "https://cdn1.ozone.ru/s3/multimedia-9/c250/6016683885.jpg"
+        "UriSite": "https://oz.by/books/more10780584.html",
+        "UriImage": "https://s3-listing.ozstatic.by/200200/584/780/10/10780584_0.jpg"
     },
     {
-        "Name": "Предметно-ориентированное проектирование в Enterprise Java  | Наир Виджей",
-        "Price": 57.40,
+        "Name": "Современный Java. Рецепты программирования",
+        "Price": 39.82,
         "Currency": "BY",
         "Brand": null,
-        "UriSite": "https://www.ozon.ru/product/predmetno-orientirovannoe-proektirovanie-v-enterprise-java-nair-vidzhey-363284086/?asb=CpLDyqv754qb2DFkMqJMZBqNN5blV8JwL2Elai9uI7I%253D&amp;asb2=nH2JqsXI_G2aSWGseHB8PmAgqpzk8Gm_2rsCcY7c2YicKzO6AsQdbuosvr2Gm0JN&amp;keywords=spring+java",
-        "UriImage": "https://cdn1.ozone.ru/s3/multimedia-9/c250/6016683885.jpg"
+        "UriSite": "https://oz.by/books/more10779111.html",
+        "UriImage": "https://s1-listing.ozstatic.by/200200/111/779/10/10779111_0.jpg"
     },
     {
-        "Name": "Java в облаке. Spring Boot, Spring Cloud, Cloud Foundry (pdf+epub) | Лонг Джош, Бастани Кеннет .",
-        "Price": 19.08,
+        "Name": "Философия Java",
+        "Price": 73.69,
         "Currency": "BY",
         "Brand": null,
-        "UriSite": "https://www.ozon.ru/product/java-v-oblake-spring-boot-spring-cloud-cloud-foundry-pdf-epub-150882650/?asb=bR9ou3hd3vBhqJ4NbVT6%252F%252Bc50SK4pyko6EpHfH49xnA%253D&amp;asb2=xe6oZOxLrpkrHd-ZB-eXN4_fP_GIgW2F3H-nVonVlgwkfYHhDL5PhBhB31cCWoek&amp;keywords=spring+java",
-        "UriImage": "https://cdn1.ozone.ru/s3/multimedia-e/c250/6016932218.jpg"
+        "UriSite": "https://oz.by/books/more10407993.html",
+        "UriImage": "https://s2-listing.ozstatic.by/200200/993/407/10/10407993_0.jpg"
     },
     {
-        "Name": "Practical Microservices Architectural Patterns. Event-Based Java Microservices with Spring Boot and Spring Cloud",
-        "Price": 146.26,
+        "Name": "Java Persistence API и Hibernate",
+        "Price": 49.79,
         "Currency": "BY",
         "Brand": null,
-        "UriSite": "https://www.ozon.ru/product/practical-microservices-architectural-patterns-event-based-java-microservices-with-spring-boot-and-214810019/?asb=6I0nPhQe2hPJA1mDCe9Vg5%252BlJW4dYXAvWPYz5AtpNu8%253D&amp;asb2=SN5hCYScjfdbfTmd10xQSYNY2H-rV8ns8vNATpJWcmKu5xl-gW6Lwvq_OF_NOwYC&amp;keywords=spring+java",
-        "UriImage": "https://cdn1.ozone.ru/s3/multimedia-n/c250/6090746447.jpg"
+        "UriSite": "https://oz.by/books/more10780584.html",
+        "UriImage": "https://s3-listing.ozstatic.by/200200/584/780/10/10780584_0.jpg"
+    },
+    {
+        "Name": "Современный Java. Рецепты программирования",
+        "Price": 39.82,
+        "Currency": "BY",
+        "Brand": null,
+        "UriSite": "https://oz.by/books/more10779111.html",
+        "UriImage": "https://s1-listing.ozstatic.by/200200/111/779/10/10779111_0.jpg"
+    },
+    {
+        "Name": "Философия Java",
+        "Price": 73.69,
+        "Currency": "BY",
+        "Brand": null,
+        "UriSite": "https://oz.by/books/more10407993.html",
+        "UriImage": "https://s2-listing.ozstatic.by/200200/993/407/10/10407993_0.jpg"
+    },
+    {
+        "Name": "Язык программирования Java и среда NetBeans (+ DVD)",
+        "Price": 27.80,
+        "Currency": "BY",
+        "Brand": null,
+        "UriSite": "https://oz.by/books/more1044614.html",
+        "UriImage": "https://s3-listing.ozstatic.by/200200/614/44/1/1044614_0.jpg"
+    },
+    {
+        "Name": "Правила управления людьми. Как раскрыть потенциал каждого сотрудника",
+        "Price": 23.66,
+        "Currency": "BY",
+        "Brand": null,
+        "UriSite": "https://oz.by/books/more10799088.html",
+        "UriImage": "https://s5-listing.ozstatic.by/200200/88/799/10/10799088_0.jpg"
+    },
+    {
+        "Name": "Речевой тренажер. Как говорить по-английски, не запинаясь",
+        "Price": 18.19,
+        "Currency": "BY",
+        "Brand": null,
+        "UriSite": "https://oz.by/selfstudytonguebooks/more10400049.html",
+        "UriImage": "https://s5-listing.ozstatic.by/200200/49/400/10/10400049_0.jpg"
+    },
+    {
+        "Name": "Вероятностное программирование на практике",
+        "Price": 44.80,
+        "Currency": "BY",
+        "Brand": null,
+        "UriSite": "https://oz.by/books/more10782599.html",
+        "UriImage": "https://s5-listing.ozstatic.by/200200/599/782/10/10782599_0.jpg"
+    },
+    {
+        "Name": "Java EE 7. Основы",
+        "Price": 26.97,
+        "Currency": "BY",
+        "Brand": null,
+        "UriSite": "https://www.labirint.ru/books/512896/",
+        "UriImage": "https://img.labirint.ru/design/emptycover-big.svg"
+    },
+    {
+        "Name": "Java EE 7 и сервер приложений GlassFish 4",
+        "Price": 48.52,
+        "Currency": "BY",
+        "Brand": null,
+        "UriSite": "https://www.labirint.ru/books/497081/",
+        "UriImage": "https://img.labirint.ru/design/emptycover-big.svg"
+    },
+    {
+        "Name": "Разработка приложений Java EE 6 в NetBeans 7",
+        "Price": 47.84,
+        "Currency": "BY",
+        "Brand": null,
+        "UriSite": "https://www.labirint.ru/books/378980/",
+        "UriImage": "https://img.labirint.ru/design/emptycover-big.svg"
+    },
+    {
+        "Name": "Разработка приложений Java EE 7 в NetBeans 8",
+        "Price": 50.87,
+        "Currency": "BY",
+        "Brand": null,
+        "UriSite": "https://www.labirint.ru/books/495549/",
+        "UriImage": "https://img.labirint.ru/design/emptycover-big.svg"
+    },
+    {
+        "Name": "Изучаем Java EE. Современное программирование для больших предприятий",
+        "Price": 48.39,
+        "Currency": "BY",
+        "Brand": null,
+        "UriSite": "https://www.labirint.ru/books/651967/",
+        "UriImage": "https://img.labirint.ru/design/emptycover-big.svg"
+    },
+    {
+        "Name": "Java EE 7. Основы | Гупта Арун",
+        "Price": 26.95,
+        "Currency": "BY",
+        "Brand": null,
+        "UriSite": "https://www.ozon.ru/product/java-ee-7-osnovy-27933274/?asb=haQ0hQAIMPizzWbrOSwTLSfamPbVH34x%252BPW8sFC2S08%253D&amp;asb2=lo866nFKG-ngLeT-HBSwD5ihPqAzYdYiLZNct6XoTxOIFtZ7-oMOTs-M2xAjVnBd&amp;keywords=java+EE",
+        "UriImage": "https://cdn1.ozone.ru/multimedia/c250/1013144386.jpg"
+    },
+    {
+        "Name": "Java EE 7. Основы | Гупта Арун",
+        "Price": 24.66,
+        "Currency": "BY",
+        "Brand": null,
+        "UriSite": "https://www.ozon.ru/product/java-ee-7-osnovy-gupta-arun-288476347/?asb=mxU6FmBoCijXFytvrxejPNM8hlq0hthSR6IIjecDuzM%253D&amp;asb2=Ed2uGpwKyEAFlQAJ8uZ3j7pcrz3SqsmyCzrqhK3WxULieFgThM-K9RKOAoDl1q_a&amp;keywords=java+EE",
+        "UriImage": "https://cdn1.ozone.ru/multimedia/c250/1013144386.jpg"
+    },
+    {
+        "Name": "Pro Java EE Spring Patterns. Best Practices and Design Strategies Implementing Java EE Patterns with the Spring Framework",
+        "Price": 120.77,
+        "Currency": "BY",
+        "Brand": null,
+        "UriSite": "https://www.ozon.ru/product/pro-java-ee-spring-patterns-best-practices-and-design-strategies-implementing-java-ee-patterns-157504400/?asb=MivhZnPaIFbB3AKheXAZCFUJtB%252F1%252FfoEmg%252BiFChZ2vg%253D&amp;asb2=x9mSG4DQoNYjGaGZTptJhv7luXNVbmMfgbVqrMKYdnSUXXTdQWlktbqTROCuxaHo&amp;keywords=java+EE",
+        "UriImage": "https://cdn1.ozone.ru/s3/multimedia-s/c250/6047449612.jpg"
+    },
+    {
+        "Name": "Java EE для разработки приложения управления торговлей",
+        "Price": 160.07,
+        "Currency": "BY",
+        "Brand": null,
+        "UriSite": "https://www.ozon.ru/product/java-ee-dlya-razrabotki-prilozheniya-upravleniya-torgovley-154626080/?asb=4LccE2ozuAmx5MyMPrdQWB3OFDoEycRfgW9tl4r0yds%253D&amp;asb2=eApiEv6TEmI100WezdZTZALjZESd0xXscldg_NidiA80KvdFoXbA8VzN3qG1tnbx&amp;keywords=java+EE",
+        "UriImage": "https://cdn1.ozone.ru/multimedia/c250/1036155031.jpg"
     }
 ]

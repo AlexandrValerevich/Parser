@@ -3,21 +3,13 @@ using System.Net.Http;
 
 namespace HttpFacade
 {
-    public class HttpRequestBuilder : IHttpRequestBulder
+    public abstract class HttpRequestBulderAbstract : IHttpRequestBulder
     {
-        public static HttpRequestBuilder Create()
-        {
-            return new HttpRequestBuilder();
-        }
+        protected HttpClientBulder _httpClientBulder;
 
-        private bool _usePost;
-        private IHttpRequest _httpRequest;
-        private HttpClientBulder _httpClientBulder;
-
-        private HttpRequestBuilder()
+        protected HttpRequestBulderAbstract()
         {
             _httpClientBulder = HttpClientBulder.Create();
-            _usePost = false;
         }
 
         public IHttpRequestBulder AddHeader(string key, string value)
@@ -116,25 +108,12 @@ namespace HttpFacade
             return this;
         }
 
-        public IHttpRequest Build()
-        {  
-            HttpClient httpClient = _httpClientBulder.Build();
-            IHttpRequest httpRequest = _usePost ? new HttpRequestPost(httpClient) : new HttpRequestGet(httpClient);
-            
-            return httpRequest;
-        }
-
+        public abstract IHttpRequest Build();
+        
         public void Reset()
         {
             _httpClientBulder.Reset();
-            _usePost = false;
             return;
-        }
-
-        public IHttpRequestBulder UsePost()
-        {
-            _usePost = true;
-            return this;
         }
     }
 }

@@ -15,6 +15,7 @@ namespace HttpFacade
             Task<HttpResponseMessage> taskResponce = _httpClient.GetAsync(_Uri);
 
             HttpResponseMessage responce = taskResponce.Result;
+            responce.EnsureSuccessStatusCode();
             IHttpResponce httpResponce = new HttpResponce(responce);
 
             return httpResponce; 
