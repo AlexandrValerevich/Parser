@@ -14,18 +14,20 @@ namespace Parser.OZ
         private string _bookName;
         private string _SearchUri => "https://oz.by/search/?c=1101523&q=" + _bookName;
 
-        public OZParser(string bookName)
+        public OZParser()
         {
-            _bookName = bookName.Replace(" ", "+");
+            _bookName = String.Empty;
         }
         
-        public async Task<BookInfo[]> ParseAsync()
+        public async Task<BookInfo[]> ParseAsync(string bookName)
         {
-            return await Task.Run(() => Parse());
+            return await Task.Run(() => Parse(bookName));
         }
 
-        public BookInfo[] Parse()
+        public BookInfo[] Parse(string bookName)
         {
+            _bookName = bookName.Replace(" ", "+");
+
             string responceBody = GetHtmlWithBook();
             BookInfo[] books = ConvertHtmlToBookInfo(html: responceBody); 
 

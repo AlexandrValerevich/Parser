@@ -12,21 +12,32 @@ namespace Parser.Currency
     {
         private CurrencyAbbreviation _currencyName;
 
-        public ParserCurrency(CurrencyAbbreviation currencyName)
+        public ParserCurrency()
         {
-            _currencyName = currencyName;
-       }
-
-        public async Task<CurrencyInfo[]> ParseAsync()
-        {
-            return await Task.Run(() => Parse());
+            _currencyName = CurrencyAbbreviation.RUB;
         }
 
-        public CurrencyInfo[] Parse()
+        public async Task<CurrencyInfo[]> ParseAsync(string currencyName)
         {
-            string currencys = RequestToApiNbrb.GetCurrencyJson(_currencyName);
+            return await Task.Run(() => Parse(currencyName));
+        }
+
+        public async Task<CurrencyInfo[]> ParseAsync(CurrencyAbbreviation currencyName)
+        {
+            return await Task.Run(() => Parse(currencyName));
+        }
+
+        public CurrencyInfo[] Parse(string currencyName)
+        {        
+            string currencys = RequestToApiNbrb.GetCurrencyJson(currencyName);
             CurrencyInfo[] currencyInfo = ConvertToCurrenctInfo(currencys);
 
+            return currencyInfo;
+        }
+
+        public CurrencyInfo[] Parse(CurrencyAbbreviation currencyName)
+        {   
+            CurrencyInfo[] currencyInfo = Parse(currencyName.ToString());
             return currencyInfo;
         }
 

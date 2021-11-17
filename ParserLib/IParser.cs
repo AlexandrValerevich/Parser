@@ -4,7 +4,7 @@ namespace Parser
 {
     public interface IParser<T>
     {
-        T[] Parse();
-        Task<T[]> ParseAsync();
+        T[] Parse(string thingName);
+        Task<T[]> ParseAsync(string thingName);
     }
 }

@@ -15,20 +15,23 @@ namespace Parser.Ozon
         private string _bookName;
         private string _prefixUri = "https://www.ozon.ru";
 
-        public OzonParser(string bookName) 
+        public OzonParser() 
         {
-            _bookName = bookName;
+            _bookName = String.Empty;
         }
 
-        public async Task<BookInfo[]> ParseAsync()
+        public async Task<BookInfo[]> ParseAsync(string bookName)
         {
-            return await Task.Run(() => Parse());
+            return await Task.Run(() => Parse(bookName));
         }
 
-        public BookInfo[] Parse()
+        public BookInfo[] Parse(string bookName)
         {
+            _bookName = bookName.Replace(" ", "+");
+
             string responceBody = GetHtmlWithBook();
             BookInfo[] books = ConvertHtmlToBookInfo(responceBody);
+
             return books;
         }
 

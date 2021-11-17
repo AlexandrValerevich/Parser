@@ -5,9 +5,9 @@ namespace Parser.Currency
 {
     static class RequestToApiNbrb
     {
-        public static string GetCurrencyJson(CurrencyAbbreviation currencyAbbreviation)
+        public static string GetCurrencyJson(string currencyAbbreviation)
         {
-            string[] currencys = currencyAbbreviation.ToString().Split(", ");
+            string[] currencys = currencyAbbreviation.Split(", ");
             string[] responces = GetArrayCurrency(currencys);
 
             string result = ConcatToJsonArray(responces);

@@ -12,20 +12,23 @@ namespace Parser.Labirint
         private string _bookName;
         private string _prefixUri = "https://www.labirint.ru";
 
-        public LabirintParser(string bookName) 
+        public LabirintParser() 
+        {
+            _bookName = String.Empty;
+        }
+
+        public async Task<BookInfo[]> ParseAsync(string bookName)
+        {
+            return await Task.Run(() => Parse(bookName));
+        }
+
+        public BookInfo[] Parse(string bookName)
         {
             _bookName = bookName;
-        }
 
-        public async Task<BookInfo[]> ParseAsync()
-        {
-            return await Task.Run(() => Parse());
-        }
-
-        public BookInfo[] Parse()
-        {
             string responceBody = GetHtmlWithBook();
             BookInfo[] books = ConvertHtmlToBookInfo(responceBody);
+            
             return books;
         }
 

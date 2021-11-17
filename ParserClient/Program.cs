@@ -25,37 +25,37 @@ namespace Parser.Client
             Console.WriteLine("Введите книгу:");
             bookName = Console.ReadLine();
 
-            InitializeList(parserList, bookName);
+            InitializeList(parserList);
 
-            BookInfo[] bookInfo = ExecuteAllParserWithAsync(parserList);
-            CurrencyInfo[] currencyInfo = GetCurrency();
+            BookInfo[] bookInfo = ExecuteAllParserWithAsync(parserList, bookName);
+            // CurrencyInfo[] currencyInfo = GetCurrency();
 
-            ConverBookPriceToBLR(ref bookInfo, currencyInfo);
+            // ConverBookPriceToBLR(ref bookInfo, currencyInfo);
             ConvertToJsonAndWriteToFile(bookInfo); 
         }
 
         
 
-        private static void InitializeList(List<IParser<BookInfo>> parserList, string bookName)
+        private static void InitializeList(List<IParser<BookInfo>> parserList)
         {
-            parserList.Add(new WildBerriesParser(bookName));
-            parserList.Add(new OZParser(bookName));
-            parserList.Add(new LabirintParser(bookName));
-            parserList.Add(new OzonParser(bookName));
+            parserList.Add(new WildBerriesParser());
+            parserList.Add(new OZParser());
+            parserList.Add(new LabirintParser());
+            parserList.Add(new OzonParser());
         }
 
-        private static BookInfo[] ExecuteAllParser(List<IParser<BookInfo>> parserList)
+        private static BookInfo[] ExecuteAllParser(List<IParser<BookInfo>> parserList, string bookName)
         {
             var bookInfo = new List<BookInfo>();
-            parserList.ForEach(x => bookInfo.AddRange(x.Parse()));
+            parserList.ForEach(x => bookInfo.AddRange(x.Parse(bookName)));
 
             return bookInfo.ToArray();
         }
 
         private static CurrencyInfo[] GetCurrency()
         {
-            IParser<CurrencyInfo> parserCurrency = new ParserCurrency(CurrencyAbbreviation.USD | CurrencyAbbreviation.RUB);
-            CurrencyInfo[] currencies = parserCurrency.Parse();
+            ParserCurrency parserCurrency = new ParserCurrency();
+            CurrencyInfo[] currencies = parserCurrency.Parse(CurrencyAbbreviation.USD | CurrencyAbbreviation.RUB);
 
             return currencies;
         }
@@ -75,12 +75,12 @@ namespace Parser.Client
             }
         }
 
-        private static BookInfo[] ExecuteAllParserWithAsync(List<IParser<BookInfo>> parserList)
+        private static BookInfo[] ExecuteAllParserWithAsync(List<IParser<BookInfo>> parserList, string bookName)
         {
             var tasks = new List<Task<BookInfo[]>>();
             var bookInfo = new List<BookInfo>();
 
-            parserList.ForEach(x => tasks.Add(x.ParseAsync()));
+            parserList.ForEach(x => tasks.Add(x.ParseAsync(bookName)));
             tasks.ForEach(x => bookInfo.AddRange(x.Result));
 
             return bookInfo.ToArray();
