@@ -28,9 +28,9 @@ namespace Parser.Client
             InitializeList(parserList);
 
             BookInfo[] bookInfo = ExecuteAllParserWithAsync(parserList, bookName);
-            // CurrencyInfo[] currencyInfo = GetCurrency();
+            CurrencyInfo[] currencyInfo = GetCurrency();
 
-            // ConverBookPriceToBLR(ref bookInfo, currencyInfo);
+            ConverBookPriceToBLR(ref bookInfo, currencyInfo);
             ConvertToJsonAndWriteToFile(bookInfo); 
         }
 
