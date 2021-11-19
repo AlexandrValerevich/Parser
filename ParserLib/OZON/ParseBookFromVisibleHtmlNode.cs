@@ -33,8 +33,8 @@ namespace Parser.Ozon
 
         static private decimal GetPriceOfBookInCard(HtmlNode card)
         {
-            string? priceWithCurrency = card.QuerySelector(".ui-p5.ui-p8")?.InnerHtml.Replace(",", ".");
-            string? price = priceWithCurrency?.Substring(0, priceWithCurrency.IndexOf(".") + 3);
+            string priceWithCurrency = card.QuerySelector(".ui-p5.ui-p8")?.InnerHtml.Replace(",", ".");
+            string price = priceWithCurrency?.Substring(0, priceWithCurrency.IndexOf(".") + 3);
 
             return Decimal.Parse(price ?? "0"); 
         }

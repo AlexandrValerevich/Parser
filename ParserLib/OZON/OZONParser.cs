@@ -39,11 +39,11 @@ namespace Parser.Ozon
         {
             List<BookInfo> result = new List<BookInfo>();
 
-            IEnumerable<BookInfo> booksFromHtmlNodes = BookFromVisibleNode();
-            IEnumerable<BookInfo> booksFromHideHtmlNodes = BookFromHidedNode(); 
+            var booksFromHtmlNodes = BookFromVisibleNodeAsync();
+            var booksFromHideHtmlNodes = BookFromHidedNodeAsync(); 
             
-            result.AddRange(booksFromHtmlNodes);
-            result.AddRange(booksFromHideHtmlNodes);
+            result.AddRange(booksFromHtmlNodes.Result);
+            result.AddRange(booksFromHideHtmlNodes.Result);
 
             return result.ToArray();
         }
@@ -51,6 +51,10 @@ namespace Parser.Ozon
         private IEnumerable<BookInfo> BookFromVisibleNode() => ParseBookFromVisibleHtmlNode.ParserBook(_doc);
 
         private IEnumerable<BookInfo> BookFromHidedNode() => ParseBookFromHidedHtmlNode.ParserBook(_doc);
+
+        private Task<IEnumerable<BookInfo>> BookFromVisibleNodeAsync() => ParseBookFromVisibleHtmlNode.ParsreBookAsync(_doc);
+
+        private Task<IEnumerable<BookInfo>> BookFromHidedNodeAsync() => ParseBookFromHidedHtmlNode.ParsreBookAsync(_doc);
         
     }
 }
