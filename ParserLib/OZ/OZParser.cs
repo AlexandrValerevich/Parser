@@ -2,7 +2,6 @@ using System;
 using HtmlAgilityPack;
 using Fizzler.Systems.HtmlAgilityPack;
 using System.Linq;
-using Parser;
 using System.Threading.Tasks;
 
 #nullable enable
@@ -54,7 +53,7 @@ namespace Parser.OZ
                          {
                             Name = card.QuerySelector(".item-type-card__title").InnerText.Trim(),
                             Price = GetPriceOfBookInCard(card),
-                            Currency = "BY",
+                            Currency = "BYN",
                             UriSite = "https://oz.by" + card.QuerySelector(".item-type-card__link--main")?.Attributes["href"].Value,
                             UriImage = card.QuerySelector(".viewer-type-list__img")?.Attributes["src"].Value
                          };

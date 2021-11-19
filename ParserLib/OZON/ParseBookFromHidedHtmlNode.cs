@@ -34,7 +34,7 @@ namespace Parser.Ozon
                                 UriImage = GetImageUriFromBook(book),
                                 Name = GetNameFromMainState(book?["mainState"]),
                                 Price = GetPriceFromMainState(book?["mainState"]),
-                                Currency = "BLR"
+                                Currency = "BYN"
                             });
 
             return convertedToBookInfo;

@@ -73,11 +73,11 @@ namespace Parser.Client
 
             for (var i = 0; i < bookInfo.Length; i++)
             {
-                if(bookInfo[i].Currency == "RU")
+                if(bookInfo[i].Currency == "RUB")
                 {
                     bookInfo[i].Price *= rus.OfficialRate / 100;
                     bookInfo[i].Price = Math.Round(bookInfo[i].Price, 2);
-                    bookInfo[i].Currency = "BY";
+                    bookInfo[i].Currency = "BYN";
                 }
             }
         }

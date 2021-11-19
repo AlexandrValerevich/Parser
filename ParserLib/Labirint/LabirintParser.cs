@@ -1,5 +1,4 @@
 using System;
-using Parser;
 using HtmlAgilityPack;
 using Fizzler.Systems.HtmlAgilityPack;
 using System.Linq;
@@ -52,7 +51,7 @@ namespace Parser.Labirint
                             UriImage = card.QuerySelector(".book-img-cover").Attributes["src"].Value,
                             Name = card.QuerySelector(".product-title").InnerText.Trim(),
                             Price = Decimal.Parse(card.QuerySelector(".price-val span").InnerHtml.Replace(" ", "")),
-                            Currency = "RU"
+                            Currency = "RUB"
                         };
 
             return books.ToArray();
