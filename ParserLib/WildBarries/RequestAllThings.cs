@@ -1,37 +1,35 @@
-using System;
-using System.Net;
-using System.Net.Http;
 using HttpFacade;
 
 
 namespace Parser.WildBarries
 {
-    class RequestAllThings
+    static class RequestAllThings
     {
-        private string _bookName;
-        private string _refererUri => "https://by.wildberries.ru/catalog/0/search.aspx?search=" + _bookName;
-        private string _sharedKey;
-        private string _xinfoFild;
-        private string _queriFild;
-        private string _requestUri => "https://wbxcatalog-sng.wildberries.ru/" + _sharedKey + "/catalog?" + _xinfoFild +"&"+ _queriFild +"&sort=popular";
+        static private string _bookName;
+        static private string _sharedKey;
+        static private string _xinfoFild;
+        static private string _queriFild;
+        static private string _refererUri => "https://by.wildberries.ru/catalog/0/search.aspx?search=" + _bookName;
+        static private string _requestUri => "https://wbxcatalog-sng.wildberries.ru/" + _sharedKey + "/catalog?" + _xinfoFild +"&"+ _queriFild +"&sort=popular";
 
-        public RequestAllThings(string bookName, string xinfoFild, string queriFild, string shardKey)
+        static public string GetResponce(string bookName)
         {
-            _bookName = bookName.Replace(" ", "+");
-            _xinfoFild = xinfoFild;
-            _queriFild = queriFild;
-            _sharedKey = shardKey;
-        }
+            InitializeField(bookName);
 
-        public string GetResponce()
-        {
             using IHttpRequest httpRequest = CreateHttpRequest();
             string responceBody = httpRequest.RequestAsString();
 
             return responceBody;
         }
 
-        private IHttpRequest CreateHttpRequest()
+        static private void InitializeField(string bookName)
+        {
+            _bookName = bookName.Replace(" ", "+");
+            _xinfoFild = Xinfo.ParseXinfo(_bookName);
+            (_queriFild, _sharedKey) = QueryAndSharedKey.ParseQueryAndSharedKey(bookName);
+        }
+
+        static private IHttpRequest CreateHttpRequest()
         {
             IHttpRequestBulder httpRequestBulder = HttpRequestGetBulder.Create();
 

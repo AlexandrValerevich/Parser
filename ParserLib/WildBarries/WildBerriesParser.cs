@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using System.Threading.Tasks;
 
@@ -30,48 +29,9 @@ namespace Parser.WildBarries
         }
         private string GetAllThingJsonFormat()
         {
-            var queryAndSharedKeyTask = ParseQueryAndSharedKeyAsync();
-            var xinfoTask = ParseXinfoAsync();
-
-            (string query, string shardKey) = queryAndSharedKeyTask.Result;
-            string xinfo = xinfoTask.Result;
-
-            RequestAllThings requestBook = new RequestAllThings(bookName: _bookName,
-                                                                xinfoFild: xinfo,
-                                                                queriFild: query,
-                                                                shardKey: shardKey);
-
-            string book = requestBook.GetResponce();
-
-            return book;
+            string things = RequestAllThings.GetResponce(_bookName);
+            return things;
         } 
-
-        private async Task<(string query, string shardKey)> ParseQueryAndSharedKeyAsync() => 
-            await Task.Run(() => ParseQueryAndSharedKey());
-
-        private (string query, string shardKey) ParseQueryAndSharedKey()
-        {
-            string responceBody = RequestQueryAndSharedKeyFild.GetResponce(_bookName);
-
-            JObject jObject = JObject.Parse(responceBody);
-            
-            string query = jObject["query"].ToString();
-            string shardKey = jObject["shardKey"].ToString();
-
-            return (query, shardKey);
-        }
-
-        private async Task<string> ParseXinfoAsync() => await Task.Run(() => ParseXinfo());
-
-        private string ParseXinfo()
-        {
-            string responceBody = RequestXinfoFild.GetResponce(_bookName);
-
-            JObject jObject = JObject.Parse(responceBody);
-            string xInfo = jObject["xinfo"].ToString();
-
-            return xInfo;
-        }
 
         private BookInfo[] FilterBookFromThings(string allThingInJson)
         {
