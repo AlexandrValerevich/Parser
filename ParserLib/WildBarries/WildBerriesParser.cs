@@ -17,24 +17,24 @@ namespace Parser.WildBarries
             _bookName = String.Empty;
         }
 
-        public async Task<BookInfo[]> ParseAsync(string bookName)
-        {
-            return await Task.Run(() => Parse(bookName));
-        }
-
+        public async Task<BookInfo[]> ParseAsync(string bookName) => await Task.Run(() => Parse(bookName));
+        
         public BookInfo[] Parse(string bookName)
         {
             _bookName = bookName.Replace(" ", "+");
 
             string allThingInJson = GetAllThingJsonFormat();
-            BookInfo[] bookInfo = FilterOnlyBook(allThingInJson);
+            BookInfo[] bookInfo = FilterBookFromThings(allThingInJson);
 
             return bookInfo;
         }
         private string GetAllThingJsonFormat()
         {
-            (string query, string shardKey) = ParceQuertAndSharedKeyString();
-            string xinfo = ParceXinfoString();
+            var queryAndSharedKeyTask = ParseQueryAndSharedKeyAsync();
+            var xinfoTask = ParseXinfoAsync();
+
+            (string query, string shardKey) = queryAndSharedKeyTask.Result;
+            string xinfo = xinfoTask.Result;
 
             RequestAllThings requestBook = new RequestAllThings(bookName: _bookName,
                                                                 xinfoFild: xinfo,
@@ -46,9 +46,10 @@ namespace Parser.WildBarries
             return book;
         } 
 
+        private async Task<(string query, string shardKey)> ParseQueryAndSharedKeyAsync() => 
+            await Task.Run(() => ParseQueryAndSharedKey());
 
-
-        private (string query, string shardKey) ParceQuertAndSharedKeyString()
+        private (string query, string shardKey) ParseQueryAndSharedKey()
         {
             string responceBody = RequestQueryAndSharedKeyFild.GetResponce(_bookName);
 
@@ -60,7 +61,9 @@ namespace Parser.WildBarries
             return (query, shardKey);
         }
 
-        private string ParceXinfoString()
+        private async Task<string> ParseXinfoAsync() => await Task.Run(() => ParseXinfo());
+
+        private string ParseXinfo()
         {
             string responceBody = RequestXinfoFild.GetResponce(_bookName);
 
@@ -70,19 +73,19 @@ namespace Parser.WildBarries
             return xInfo;
         }
 
-        private BookInfo[] FilterOnlyBook(string allThingInJson)
+        private BookInfo[] FilterBookFromThings(string allThingInJson)
         {
             JArray products = JObject.Parse(allThingInJson)["data"]["products"] as JArray;
 
             var productOfBook = products
-            .Where(x => (int)x["subjectId"] == 381)
-            .Select(x => new BookInfo(){
-                Name = (string)x["name"],
-                Brand = (string)x["brand"],
-                Price = (int)x["salePriceU"]/100, // убираем 2 нуля
-                Currency = "RU",
-                UriSite = _siteUriPrefix + (string)x["id"] + "/detail.aspx?targetUrl=XS",
-                UriImage = _imageUriPrefix + ((int)x["id"]/10000 * 10000) + "/" + (string)x["id"] + "-1.jpg" 
+            .Where(product => (int)product["subjectId"] == 381)
+            .Select(product => new BookInfo(){
+                Name = (string)product["name"],
+                Brand = (string)product["brand"],
+                Price = (int)product["salePriceU"]/100, // убираем 2 нуля
+                Currency = "RUB",
+                UriSite = _siteUriPrefix + (string)product["id"] + "/detail.aspx?targetUrl=XS",
+                UriImage = _imageUriPrefix + ((int)product["id"]/10000 * 10000) + "/" + (string)product["id"] + "-1.jpg" 
             }).ToArray();
 
             return productOfBook;

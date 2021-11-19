@@ -3,6 +3,7 @@ using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 using Parser.WildBarries;
 using Parser.Labirint;
@@ -27,11 +28,17 @@ namespace Parser.Client
 
             InitializeList(parserList);
 
-            BookInfo[] bookInfo = ExecuteAllParserWithAsync(parserList, bookName);
-            CurrencyInfo[] currencyInfo = GetCurrency();
+            Stopwatch sw = Stopwatch.StartNew();
 
-            ConverBookPriceToBLR(ref bookInfo, currencyInfo);
-            ConvertToJsonAndWriteToFile(bookInfo); 
+            BookInfo[] bookInfo = ExecuteAllParserWithAsync(parserList, bookName);
+            // CurrencyInfo[] currencyInfo = GetCurrency();
+            
+            // ConverBookPriceToBLR(ref bookInfo, currencyInfo);
+
+            sw.Stop();
+
+            Console.WriteLine(sw.ElapsedMilliseconds);
+            //ConvertToJsonAndWriteToFile(bookInfo); 
         }
 
         

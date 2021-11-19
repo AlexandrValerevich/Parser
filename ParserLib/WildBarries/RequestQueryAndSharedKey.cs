@@ -1,9 +1,5 @@
-using System;
-using System.Net;
-using System.Net.Http;
-
+using System.Threading.Tasks;
 using HttpFacade;
-using Newtonsoft.Json.Linq;
 
 namespace Parser.WildBarries
 {
@@ -11,6 +7,8 @@ namespace Parser.WildBarries
     {
         static private string _refererUriPrefix => "https://by.wildberries.ru/catalog/0/search.aspx?search=";
         static private string _searchUriPrefix => "https://wbxsearch-by.wildberries.ru/exactmatch/common?query=";
+
+        static public async Task<string> GetResponceAsync(string bookName) => await Task.Run(() => GetResponce(bookName));
 
         static public string GetResponce(string bookName)
         {

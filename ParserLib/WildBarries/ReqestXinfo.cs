@@ -1,7 +1,4 @@
-using System;
-using System.Net;
-using System.Net.Http;
-
+using System.Threading.Tasks;
 using HttpFacade;
 
 
@@ -10,6 +7,8 @@ namespace Parser.WildBarries
     static class RequestXinfoFild
     {
         static private string _searchUri => "https://by.wildberries.ru/catalog/0/search.aspx?search=";
+
+        static public async Task<string> GetResponceAsync(string bookName) => await Task.Run(() => GetResponce(bookName));
 
         static public string GetResponce(string bookName)
         {
