@@ -20,7 +20,7 @@ namespace Parser.Client
         {
             var parserList = new List<IParser<BookInfo>>();
 
-            string bookName = "Разработка требований";
+            string bookName = "Angular";
 
             Console.WriteLine("Введите книгу:");
             bookName = Console.ReadLine();
@@ -89,8 +89,10 @@ namespace Parser.Client
         private static void ConvertToJsonAndWriteToFile(BookInfo[] bookInfo)
         {
             string jsonBookInfo = BookInfoAdapterToJson.Convert(bookInfo);
+            
             using StreamWriter sw = new StreamWriter("books.json");
-            sw.Write(jsonBookInfo); 
+            sw.Write(jsonBookInfo);
+            sw.Close(); 
         }
     }
 }

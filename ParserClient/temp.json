@@ -1,0 +1,1216 @@
+{
+    "items": [
+        {
+            "action": {
+                "behavior": "BEHAVIOR_TYPE_REDIRECT",
+                "link": "\u002Fproduct\u002Frazrabotka-veb-prilozheniy-s-pomoshchyu-node-js-mongodb-i-angular-ischerpyvayushchee-rukovodstvo-168021945\u002F?asb=VjcA6Q5sP7bZ57HwY%252BwP5F52HhP%252BgivhgNAh6fIgvuo%253D\u0026asb2=fCzZxNEeOO3TdJ3oWW__Y534Qdqto2sxTAkGMDiimy8SrMgD5k_nPKyQRf1OEGZB\u0026keywords=Angular"
+            },
+            "isAdult": false,
+            "mainState": [
+                {
+                    "type": "atom",
+                    "id": "atom",
+                    "atom": {
+                        "type": "price",
+                        "price": {
+                            "price": "91,60 BYN",
+                            "priceColor": "ozTextPrimary",
+                            "theme": "STYLE_TYPE_MEDIUM"
+                        }
+                    }
+                },
+                {
+                    "type": "atom",
+                    "id": "label",
+                    "atom": {
+                        "type": "textAtom",
+                        "textAtom": {
+                            "text": "Лучшая цена на Ozon",
+                            "textStyle": "tsBodyM",
+                            "textColor": "ozAccentPrimary",
+                            "maxLines": 3,
+                            "testInfo": {
+                                "automatizationId": "tile-label"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "atom",
+                    "id": "name",
+                    "atom": {
+                        "type": "textAtom",
+                        "textAtom": {
+                            "text": "Разработка веб-приложений с помощью Node.js, MongoDB и Angular. Исчерпывающее руководство по использованию стека MEAN | Дейли Брэд, Дейли Брендан",
+                            "textStyle": "tsBodyL",
+                            "maxLines": 3,
+                            "testInfo": {
+                                "automatizationId": "tile-name"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "atom",
+                    "id": "atom",
+                    "atom": {
+                        "type": "rating",
+                        "rating": {
+                            "rating": 4.857143,
+                            "count": "7 отзывов",
+                            "theme": "THEME_TYPE_M",
+                            "action": {
+                                "behavior": "BEHAVIOR_TYPE_REDIRECT",
+                                "link": "\u002Fproduct\u002Frazrabotka-veb-prilozheniy-s-pomoshchyu-node-js-mongodb-i-angular-ischerpyvayushchee-rukovodstvo-168021945\u002F?asb=VjcA6Q5sP7bZ57HwY%252BwP5F52HhP%252BgivhgNAh6fIgvuo%253D\u0026asb2=fCzZxNEeOO3TdJ3oWW__Y534Qdqto2sxTAkGMDiimy8SrMgD5k_nPKyQRf1OEGZB\u0026keywords=Angular#comments--offset-80"
+                            },
+                            "trackingInfo": {
+                                "click": {
+                                    "actionType": "click",
+                                    "key": "1c75d058e2a8fa4c8c12561746c92d48b90f2c93"
+                                }
+                            }
+                        }
+                    }
+                }
+            ],
+            "multiButton": {
+                "type": "multiButton",
+                "id": "multiButton",
+                "theme": "THEME_TYPE_VERTICAL",
+                "ozonButton": {
+                    "type": "addToCartButtonWithQuantity",
+                    "addToCartButtonWithQuantity": {
+                        "text": "В корзину",
+                        "maxItems": 5,
+                        "currentItems": 0,
+                        "action": {
+                            "id": "168021945",
+                            "quantity": 1
+                        },
+                        "trackingInfo": {
+                            "click": {
+                                "actionType": "to_cart",
+                                "key": "8d1e17ddb287eb0e014a5558e90be0b401c9c0c2"
+                            }
+                        },
+                        "testInfo": {
+                            "automatizationId": "ozonAddToCart"
+                        },
+                        "theme": "STYLE_TYPE_PRIMARY"
+                    }
+                },
+                "ozonSubtitle": {
+                    "type": "textAtomWithIcon",
+                    "textAtomWithIcon": {
+                        "text": "Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e",
+                        "textStyle": "tsBodyM",
+                        "textColor": "#808d9a",
+                        "maxLines": 2
+                    }
+                }
+            },
+            "tileImage": {
+                "type": "tileImage",
+                "id": "tileImage",
+                "images": [
+                    "https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-e\u002F6009776426.jpg"
+                ],
+                "imageRatio": "1:1",
+                "imageBadges": [
+                    {
+                        "coordinates": {
+                            "x": 3,
+                            "y": 5
+                        },
+                        "badge": {
+                            "text": "209",
+                            "image": "ic_s_status_points_compact",
+                            "tintColor": "ozWhite1",
+                            "backgroundColor": "ozPremiumBlue",
+                            "theme": "STYLE_TYPE_DISCOUNT",
+                            "iconPosition": "ICON_POSITION_LEFT"
+                        }
+                    }
+                ]
+            },
+            "topRightButtons": [
+                {
+                    "type": "favoriteProductMolecule",
+                    "favoriteProductMolecule": {
+                        "sku": "168021945",
+                        "isFavorite": false,
+                        "favoriteButton": {
+                            "icon": "ic_m_fav_tiles_normal",
+                            "action": {
+                                "behavior": "BEHAVIOR_TYPE_COMPOSER_ACTION",
+                                "link": "favoriteBatchAddItems",
+                                "id": "addToFavorites",
+                                "params": {
+                                    "sku": "168021945"
+                                }
+                            },
+                            "theme": "STYLE_TYPE_CLEAR",
+                            "trackingInfo": {
+                                "click": {
+                                    "actionType": "favorite",
+                                    "key": "181048c2df660a97f56ec44cf9fe468d72fa8fd3"
+                                }
+                            },
+                            "testInfo": {
+                                "automatizationId": "favorite-button"
+                            }
+                        },
+                        "unfavoriteButton": {
+                            "icon": "ic_m_fav_tiles_active",
+                            "action": {
+                                "behavior": "BEHAVIOR_TYPE_COMPOSER_ACTION",
+                                "link": "favoriteBatchDeleteItems",
+                                "id": "removeFromFavorites",
+                                "params": {
+                                    "sku": "168021945"
+                                }
+                            },
+                            "theme": "STYLE_TYPE_CLEAR",
+                            "trackingInfo": {
+                                "click": {
+                                    "actionType": "unfavorite",
+                                    "key": "181048c2df660a97f56ec44cf9fe468d72fa8fd3"
+                                }
+                            },
+                            "testInfo": {
+                                "automatizationId": "unfavorite-button"
+                            }
+                        },
+                        "addToListAction": {
+                            "behavior": "BEHAVIOR_TYPE_COMPOSER_ACTION",
+                            "link": "addToList",
+                            "id": "addToList",
+                            "params": {
+                                "sku": "168021945"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "smallIconButton",
+                    "smallIconButton": {
+                        "icon": "ic_m_kebab_tiles",
+                        "action": {
+                            "behavior": "BEHAVIOR_TYPE_ACTION_SHEET",
+                            "link": "catalogActionSheet?id=168021945"
+                        },
+                        "theme": "STYLE_TYPE_CLEAR",
+                        "trackingInfo": {
+                            "click": {
+                                "actionType": "click",
+                                "key": "b2eb064e18dd0920191ee161d31d14f1410b050b"
+                            }
+                        },
+                        "testInfo": {
+                            "automatizationId": "action-sheet-btn"
+                        }
+                    }
+                }
+            ],
+            "trackingInfo": {
+                "click": {
+                    "actionType": "click",
+                    "key": "181048c2df660a97f56ec44cf9fe468d72fa8fd3"
+                },
+                "view": {
+                    "actionType": "view",
+                    "key": "181048c2df660a97f56ec44cf9fe468d72fa8fd3"
+                }
+            }
+        },
+        {
+            "action": {
+                "behavior": "BEHAVIOR_TYPE_REDIRECT",
+                "link": "\u002Fproduct\u002Fangular-na-primerah-sozdaem-web-prilozheniya-s-nulya-ponomarev-s-n-199036418\u002F?asb=iCB%252FIe4WBOWflchPn2vjwmJAr7%252BnhYg%252Fnv2YR4J6bpc%253D\u0026asb2=iupcpJwlPe2HrzT6KdaBQxXopvfSwRuJt5lV9qcXHA0QbyEKKl3tRvQeV2VBqORg\u0026keywords=Angular"
+            },
+            "isAdult": false,
+            "mainState": [
+                {
+                    "type": "atom",
+                    "id": "atom",
+                    "atom": {
+                        "type": "price",
+                        "price": {
+                            "price": "17,34 BYN",
+                            "priceColor": "ozAccentAlert",
+                            "originalPrice": "25,61 BYN",
+                            "originalPriceColor": "ozTextPrimary",
+                            "theme": "STYLE_TYPE_MEDIUM"
+                        }
+                    }
+                },
+                {
+                    "type": "atom",
+                    "id": "name",
+                    "atom": {
+                        "type": "textAtom",
+                        "textAtom": {
+                            "text": "Angular на примерах. Создаем web-приложения с нуля | Пономарев С. Н.",
+                            "textStyle": "tsBodyL",
+                            "maxLines": 3,
+                            "testInfo": {
+                                "automatizationId": "tile-name"
+                            }
+                        }
+                    }
+                }
+            ],
+            "multiButton": {
+                "type": "multiButton",
+                "id": "multiButton",
+                "theme": "THEME_TYPE_VERTICAL",
+                "ozonButton": {
+                    "type": "addToCartButtonWithQuantity",
+                    "addToCartButtonWithQuantity": {
+                        "text": "В корзину",
+                        "maxItems": 5,
+                        "currentItems": 0,
+                        "action": {
+                            "id": "199036418",
+                            "quantity": 1
+                        },
+                        "trackingInfo": {
+                            "click": {
+                                "actionType": "to_cart",
+                                "key": "6ebbd08e3f0b3fa6aeac9fa1be8362e003bd6d90"
+                            }
+                        },
+                        "testInfo": {
+                            "automatizationId": "ozonAddToCart"
+                        },
+                        "theme": "STYLE_TYPE_PRIMARY"
+                    }
+                },
+                "ozonSubtitle": {
+                    "type": "textAtomWithIcon",
+                    "textAtomWithIcon": {
+                        "text": "Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец Новационный центр \u0026#34;ЭНАС\u0026#34;\u0026#34;",
+                        "textStyle": "tsBodyM",
+                        "textColor": "#808d9a",
+                        "maxLines": 2
+                    }
+                }
+            },
+            "tileImage": {
+                "type": "tileImage",
+                "id": "tileImage",
+                "images": [
+                    "https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-h\u002F6008971073.jpg"
+                ],
+                "imageRatio": "1:1",
+                "imageBadges": [
+                    {
+                        "coordinates": {
+                            "x": 1,
+                            "y": 5
+                        },
+                        "badge": {
+                            "text": "?32%",
+                            "tintColor": "ozWhite1",
+                            "backgroundColor": "ozAccentAlert",
+                            "theme": "STYLE_TYPE_MEDIUM"
+                        }
+                    }
+                ]
+            },
+            "topRightButtons": [
+                {
+                    "type": "favoriteProductMolecule",
+                    "favoriteProductMolecule": {
+                        "sku": "199036418",
+                        "isFavorite": false,
+                        "favoriteButton": {
+                            "icon": "ic_m_fav_tiles_normal",
+                            "action": {
+                                "behavior": "BEHAVIOR_TYPE_COMPOSER_ACTION",
+                                "link": "favoriteBatchAddItems",
+                                "id": "addToFavorites",
+                                "params": {
+                                    "sku": "199036418"
+                                }
+                            },
+                            "theme": "STYLE_TYPE_CLEAR",
+                            "trackingInfo": {
+                                "click": {
+                                    "actionType": "favorite",
+                                    "key": "8ef426eb6ad3637c2c17dcffb728bd95be9d3ad5"
+                                }
+                            },
+                            "testInfo": {
+                                "automatizationId": "favorite-button"
+                            }
+                        },
+                        "unfavoriteButton": {
+                            "icon": "ic_m_fav_tiles_active",
+                            "action": {
+                                "behavior": "BEHAVIOR_TYPE_COMPOSER_ACTION",
+                                "link": "favoriteBatchDeleteItems",
+                                "id": "removeFromFavorites",
+                                "params": {
+                                    "sku": "199036418"
+                                }
+                            },
+                            "theme": "STYLE_TYPE_CLEAR",
+                            "trackingInfo": {
+                                "click": {
+                                    "actionType": "unfavorite",
+                                    "key": "8ef426eb6ad3637c2c17dcffb728bd95be9d3ad5"
+                                }
+                            },
+                            "testInfo": {
+                                "automatizationId": "unfavorite-button"
+                            }
+                        },
+                        "addToListAction": {
+                            "behavior": "BEHAVIOR_TYPE_COMPOSER_ACTION",
+                            "link": "addToList",
+                            "id": "addToList",
+                            "params": {
+                                "sku": "199036418"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "smallIconButton",
+                    "smallIconButton": {
+                        "icon": "ic_m_kebab_tiles",
+                        "action": {
+                            "behavior": "BEHAVIOR_TYPE_ACTION_SHEET",
+                            "link": "catalogActionSheet?id=199036418"
+                        },
+                        "theme": "STYLE_TYPE_CLEAR",
+                        "trackingInfo": {
+                            "click": {
+                                "actionType": "click",
+                                "key": "8c87b09110e40fb681cfe600880a6feb705813dd"
+                            }
+                        },
+                        "testInfo": {
+                            "automatizationId": "action-sheet-btn"
+                        }
+                    }
+                }
+            ],
+            "trackingInfo": {
+                "click": {
+                    "actionType": "click",
+                    "key": "8ef426eb6ad3637c2c17dcffb728bd95be9d3ad5"
+                },
+                "view": {
+                    "actionType": "view",
+                    "key": "8ef426eb6ad3637c2c17dcffb728bd95be9d3ad5"
+                }
+            }
+        },
+        {
+            "action": {
+                "behavior": "BEHAVIOR_TYPE_REDIRECT",
+                "link": "\u002Fproduct\u002Fangular-4-bystraya-razrabotka-sverhdinamicheskih-web-saytov-na-typescript-i-php-dronov-221777545\u002F?asb=IWbYpOtFgggDsOxfIXCBq6Uhc7GncbtFmyP9aP3L08E%253D\u0026asb2=ZNOktY17EJceTSN3H-uKq-HoUpqMzdVLIYyl8bgq4VjQmAT6wUtjvgiJ-UFMSHNf\u0026keywords=Angular"
+            },
+            "isAdult": false,
+            "mainState": [
+                {
+                    "type": "atom",
+                    "id": "atom",
+                    "atom": {
+                        "type": "price",
+                        "price": {
+                            "price": "23,28 BYN",
+                            "priceColor": "ozAccentAlert",
+                            "originalPrice": "27,74 BYN",
+                            "originalPriceColor": "ozTextPrimary",
+                            "theme": "STYLE_TYPE_MEDIUM"
+                        }
+                    }
+                },
+                {
+                    "type": "atom",
+                    "id": "name",
+                    "atom": {
+                        "type": "textAtom",
+                        "textAtom": {
+                            "text": "Angular 4. Быстрая разработка сверхдинамических Web-сайтов на TypeScript и PHP | Дронов Владимир Александрович",
+                            "textStyle": "tsBodyL",
+                            "maxLines": 3,
+                            "testInfo": {
+                                "automatizationId": "tile-name"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "atom",
+                    "id": "atom",
+                    "atom": {
+                        "type": "rating",
+                        "rating": {
+                            "rating": 5,
+                            "count": "1 отзыв",
+                            "theme": "THEME_TYPE_M",
+                            "action": {
+                                "behavior": "BEHAVIOR_TYPE_REDIRECT",
+                                "link": "\u002Fproduct\u002Fangular-4-bystraya-razrabotka-sverhdinamicheskih-web-saytov-na-typescript-i-php-dronov-221777545\u002F?asb=IWbYpOtFgggDsOxfIXCBq6Uhc7GncbtFmyP9aP3L08E%253D\u0026asb2=ZNOktY17EJceTSN3H-uKq-HoUpqMzdVLIYyl8bgq4VjQmAT6wUtjvgiJ-UFMSHNf\u0026keywords=Angular#comments--offset-80"
+                            },
+                            "trackingInfo": {
+                                "click": {
+                                    "actionType": "click",
+                                    "key": "01a025c9b0f73de5da7620217743e9e46cfcb48e"
+                                }
+                            }
+                        }
+                    }
+                }
+            ],
+            "multiButton": {
+                "type": "multiButton",
+                "id": "multiButton",
+                "theme": "THEME_TYPE_VERTICAL",
+                "ozonButton": {
+                    "type": "addToCartButtonWithQuantity",
+                    "addToCartButtonWithQuantity": {
+                        "text": "В корзину",
+                        "maxItems": 13,
+                        "currentItems": 0,
+                        "action": {
+                            "id": "221777545",
+                            "quantity": 1
+                        },
+                        "trackingInfo": {
+                            "click": {
+                                "actionType": "to_cart",
+                                "key": "c90cf7548003b9e6710c0353eac45970ce7cd7bd"
+                            }
+                        },
+                        "testInfo": {
+                            "automatizationId": "ozonAddToCart"
+                        },
+                        "theme": "STYLE_TYPE_PRIMARY"
+                    }
+                },
+                "ozonSubtitle": {
+                    "type": "textAtomWithIcon",
+                    "textAtomWithIcon": {
+                        "text": "Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец Торговый Дом ИКС",
+                        "textStyle": "tsBodyM",
+                        "textColor": "#808d9a",
+                        "maxLines": 2
+                    }
+                }
+            },
+            "tileImage": {
+                "type": "tileImage",
+                "id": "tileImage",
+                "images": [
+                    "https:\u002F\u002Fcdn1.ozone.ru\u002Fmultimedia\u002F1021816054.jpg"
+                ],
+                "imageRatio": "1:1",
+                "imageBadges": [
+                    {
+                        "coordinates": {
+                            "x": 1,
+                            "y": 5
+                        },
+                        "badge": {
+                            "text": "?16%",
+                            "tintColor": "ozWhite1",
+                            "backgroundColor": "ozAccentAlert",
+                            "theme": "STYLE_TYPE_MEDIUM"
+                        }
+                    }
+                ]
+            },
+            "topRightButtons": [
+                {
+                    "type": "favoriteProductMolecule",
+                    "favoriteProductMolecule": {
+                        "sku": "221777545",
+                        "isFavorite": false,
+                        "favoriteButton": {
+                            "icon": "ic_m_fav_tiles_normal",
+                            "action": {
+                                "behavior": "BEHAVIOR_TYPE_COMPOSER_ACTION",
+                                "link": "favoriteBatchAddItems",
+                                "id": "addToFavorites",
+                                "params": {
+                                    "sku": "221777545"
+                                }
+                            },
+                            "theme": "STYLE_TYPE_CLEAR",
+                            "trackingInfo": {
+                                "click": {
+                                    "actionType": "favorite",
+                                    "key": "5321a15e285b39c8e7b5019c3254235040df7aaf"
+                                }
+                            },
+                            "testInfo": {
+                                "automatizationId": "favorite-button"
+                            }
+                        },
+                        "unfavoriteButton": {
+                            "icon": "ic_m_fav_tiles_active",
+                            "action": {
+                                "behavior": "BEHAVIOR_TYPE_COMPOSER_ACTION",
+                                "link": "favoriteBatchDeleteItems",
+                                "id": "removeFromFavorites",
+                                "params": {
+                                    "sku": "221777545"
+                                }
+                            },
+                            "theme": "STYLE_TYPE_CLEAR",
+                            "trackingInfo": {
+                                "click": {
+                                    "actionType": "unfavorite",
+                                    "key": "5321a15e285b39c8e7b5019c3254235040df7aaf"
+                                }
+                            },
+                            "testInfo": {
+                                "automatizationId": "unfavorite-button"
+                            }
+                        },
+                        "addToListAction": {
+                            "behavior": "BEHAVIOR_TYPE_COMPOSER_ACTION",
+                            "link": "addToList",
+                            "id": "addToList",
+                            "params": {
+                                "sku": "221777545"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "smallIconButton",
+                    "smallIconButton": {
+                        "icon": "ic_m_kebab_tiles",
+                        "action": {
+                            "behavior": "BEHAVIOR_TYPE_ACTION_SHEET",
+                            "link": "catalogActionSheet?id=221777545"
+                        },
+                        "theme": "STYLE_TYPE_CLEAR",
+                        "trackingInfo": {
+                            "click": {
+                                "actionType": "click",
+                                "key": "ffc96658816d949825ac8a3ee95ff02205ce1278"
+                            }
+                        },
+                        "testInfo": {
+                            "automatizationId": "action-sheet-btn"
+                        }
+                    }
+                }
+            ],
+            "trackingInfo": {
+                "click": {
+                    "actionType": "click",
+                    "key": "5321a15e285b39c8e7b5019c3254235040df7aaf"
+                },
+                "view": {
+                    "actionType": "view",
+                    "key": "5321a15e285b39c8e7b5019c3254235040df7aaf"
+                }
+            }
+        },
+        {
+            "action": {
+                "behavior": "BEHAVIOR_TYPE_REDIRECT",
+                "link": "\u002Fproduct\u002Fizuchaem-angular-2-138937037\u002F?asb=hGQREoXC7zt%252BP7PkN2RRuJIhVzVHQbB1Vj4ma3Ctzoo%253D\u0026asb2=m-38IF9ESCrX5jWiiVCjr2CQ-uhoSWQ2l06XjMevxawu3atvWFsDWkDXCzJnWK8H\u0026keywords=Angular"
+            },
+            "isAdult": false,
+            "mainState": [
+                {
+                    "type": "atom",
+                    "id": "atom",
+                    "atom": {
+                        "type": "price",
+                        "price": {
+                            "price": "29,38 BYN",
+                            "priceColor": "ozAccentAlert",
+                            "originalPrice": "51,58 BYN",
+                            "originalPriceColor": "ozTextPrimary",
+                            "theme": "STYLE_TYPE_MEDIUM"
+                        }
+                    }
+                },
+                {
+                    "type": "atom",
+                    "id": "label",
+                    "atom": {
+                        "type": "textAtom",
+                        "textAtom": {
+                            "text": "Лучшая цена на Ozon",
+                            "textStyle": "tsBodyM",
+                            "textColor": "ozAccentPrimary",
+                            "maxLines": 3,
+                            "testInfo": {
+                                "automatizationId": "tile-label"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "atom",
+                    "id": "name",
+                    "atom": {
+                        "type": "textAtom",
+                        "textAtom": {
+                            "text": "Изучаем Angular 2",
+                            "textStyle": "tsBodyL",
+                            "maxLines": 3,
+                            "testInfo": {
+                                "automatizationId": "tile-name"
+                            }
+                        }
+                    }
+                }
+            ],
+            "multiButton": {
+                "type": "multiButton",
+                "id": "multiButton",
+                "theme": "THEME_TYPE_VERTICAL",
+                "ozonButton": {
+                    "type": "addToCartButtonWithQuantity",
+                    "addToCartButtonWithQuantity": {
+                        "text": "В корзину",
+                        "maxItems": 1,
+                        "currentItems": 0,
+                        "action": {
+                            "id": "138937037",
+                            "quantity": 1
+                        },
+                        "trackingInfo": {
+                            "click": {
+                                "actionType": "to_cart",
+                                "key": "79d0542d30897c3066b93075b16251753ba01c69"
+                            }
+                        },
+                        "testInfo": {
+                            "automatizationId": "ozonAddToCart"
+                        },
+                        "theme": "STYLE_TYPE_PRIMARY"
+                    }
+                },
+                "ozonSubtitle": {
+                    "type": "textAtomWithIcon",
+                    "textAtomWithIcon": {
+                        "text": "Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e",
+                        "textStyle": "tsBodyM",
+                        "textColor": "#808d9a",
+                        "maxLines": 2
+                    }
+                }
+            },
+            "tileImage": {
+                "type": "tileImage",
+                "id": "tileImage",
+                "images": [
+                    "https:\u002F\u002Fcdn1.ozone.ru\u002Fmultimedia\u002F1016926758.jpg"
+                ],
+                "imageRatio": "1:1",
+                "imageBadges": [
+                    {
+                        "coordinates": {
+                            "x": 3,
+                            "y": 5
+                        },
+                        "badge": {
+                            "text": "66",
+                            "image": "ic_s_status_points_compact",
+                            "tintColor": "ozWhite1",
+                            "backgroundColor": "ozPremiumBlue",
+                            "theme": "STYLE_TYPE_DISCOUNT",
+                            "iconPosition": "ICON_POSITION_LEFT"
+                        }
+                    },
+                    {
+                        "coordinates": {
+                            "x": 1,
+                            "y": 5
+                        },
+                        "badge": {
+                            "text": "?43%",
+                            "tintColor": "ozWhite1",
+                            "backgroundColor": "ozAccentAlert",
+                            "theme": "STYLE_TYPE_MEDIUM"
+                        }
+                    }
+                ]
+            },
+            "topRightButtons": [
+                {
+                    "type": "favoriteProductMolecule",
+                    "favoriteProductMolecule": {
+                        "sku": "138937037",
+                        "isFavorite": false,
+                        "favoriteButton": {
+                            "icon": "ic_m_fav_tiles_normal",
+                            "action": {
+                                "behavior": "BEHAVIOR_TYPE_COMPOSER_ACTION",
+                                "link": "favoriteBatchAddItems",
+                                "id": "addToFavorites",
+                                "params": {
+                                    "sku": "138937037"
+                                }
+                            },
+                            "theme": "STYLE_TYPE_CLEAR",
+                            "trackingInfo": {
+                                "click": {
+                                    "actionType": "favorite",
+                                    "key": "591d0773f6d6e345756fce6049aad7bf152db3ee"
+                                }
+                            },
+                            "testInfo": {
+                                "automatizationId": "favorite-button"
+                            }
+                        },
+                        "unfavoriteButton": {
+                            "icon": "ic_m_fav_tiles_active",
+                            "action": {
+                                "behavior": "BEHAVIOR_TYPE_COMPOSER_ACTION",
+                                "link": "favoriteBatchDeleteItems",
+                                "id": "removeFromFavorites",
+                                "params": {
+                                    "sku": "138937037"
+                                }
+                            },
+                            "theme": "STYLE_TYPE_CLEAR",
+                            "trackingInfo": {
+                                "click": {
+                                    "actionType": "unfavorite",
+                                    "key": "591d0773f6d6e345756fce6049aad7bf152db3ee"
+                                }
+                            },
+                            "testInfo": {
+                                "automatizationId": "unfavorite-button"
+                            }
+                        },
+                        "addToListAction": {
+                            "behavior": "BEHAVIOR_TYPE_COMPOSER_ACTION",
+                            "link": "addToList",
+                            "id": "addToList",
+                            "params": {
+                                "sku": "138937037"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "smallIconButton",
+                    "smallIconButton": {
+                        "icon": "ic_m_kebab_tiles",
+                        "action": {
+                            "behavior": "BEHAVIOR_TYPE_ACTION_SHEET",
+                            "link": "catalogActionSheet?id=138937037"
+                        },
+                        "theme": "STYLE_TYPE_CLEAR",
+                        "trackingInfo": {
+                            "click": {
+                                "actionType": "click",
+                                "key": "d2c8f4534eef583784082de99fb3d6908da66254"
+                            }
+                        },
+                        "testInfo": {
+                            "automatizationId": "action-sheet-btn"
+                        }
+                    }
+                }
+            ],
+            "trackingInfo": {
+                "click": {
+                    "actionType": "click",
+                    "key": "591d0773f6d6e345756fce6049aad7bf152db3ee"
+                },
+                "view": {
+                    "actionType": "view",
+                    "key": "591d0773f6d6e345756fce6049aad7bf152db3ee"
+                }
+            }
+        },
+        {
+            "action": {
+                "behavior": "BEHAVIOR_TYPE_REDIRECT",
+                "link": "\u002Fproduct\u002Fangular-dlya-professionalov-pdf-epub-147593367\u002F?asb=qKKh3lPeFhgOSDRDxFazsBDNo1%252BbFUpS6VRB3%252B0GnqU%253D\u0026asb2=PElGlLYu19lukH46V-36Dwkg6IdHI_r8Hl2lKx5CZxkqfShjy6olw3xjzNtTcfX2\u0026keywords=Angular"
+            },
+            "isAdult": false,
+            "mainState": [
+                {
+                    "type": "atom",
+                    "id": "atom",
+                    "atom": {
+                        "type": "price",
+                        "price": {
+                            "price": "19,16 BYN",
+                            "priceColor": "ozTextPrimary",
+                            "theme": "STYLE_TYPE_MEDIUM"
+                        }
+                    }
+                },
+                {
+                    "type": "atom",
+                    "id": "label",
+                    "atom": {
+                        "type": "textAtom",
+                        "textAtom": {
+                            "text": "Цифровой товар",
+                            "textStyle": "tsBodyM",
+                            "textColor": "ozTextPrimary",
+                            "maxLines": 3,
+                            "testInfo": {
+                                "automatizationId": "tile-label"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "atom",
+                    "id": "label",
+                    "atom": {
+                        "type": "textAtom",
+                        "textAtom": {
+                            "text": "Цифровая книга",
+                            "textStyle": "tsBodyM",
+                            "textColor": "ozTextPrimary",
+                            "maxLines": 3,
+                            "testInfo": {
+                                "automatizationId": "tile-label"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "atom",
+                    "id": "name",
+                    "atom": {
+                        "type": "textAtom",
+                        "textAtom": {
+                            "text": "Angular для профессионалов (pdf+epub) | Фримен Адам",
+                            "textStyle": "tsBodyL",
+                            "maxLines": 3,
+                            "testInfo": {
+                                "automatizationId": "tile-name"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "atom",
+                    "id": "atom",
+                    "atom": {
+                        "type": "rating",
+                        "rating": {
+                            "rating": 2,
+                            "count": "1 отзыв",
+                            "theme": "THEME_TYPE_M",
+                            "action": {
+                                "behavior": "BEHAVIOR_TYPE_REDIRECT",
+                                "link": "\u002Fproduct\u002Fangular-dlya-professionalov-pdf-epub-147593367\u002F?asb=qKKh3lPeFhgOSDRDxFazsBDNo1%252BbFUpS6VRB3%252B0GnqU%253D\u0026asb2=PElGlLYu19lukH46V-36Dwkg6IdHI_r8Hl2lKx5CZxkqfShjy6olw3xjzNtTcfX2\u0026keywords=Angular#comments--offset-80"
+                            },
+                            "trackingInfo": {
+                                "click": {
+                                    "actionType": "click",
+                                    "key": "e8dae4a0eadd8cb2cc3fd8b41d7c1ed7ac79a21b"
+                                }
+                            }
+                        }
+                    }
+                }
+            ],
+            "multiButton": {
+                "type": "multiButton",
+                "id": "multiButton",
+                "ozonButton": {
+                    "type": "smallButton",
+                    "smallButton": {
+                        "text": "Перейти",
+                        "action": {
+                            "behavior": "BEHAVIOR_TYPE_REDIRECT",
+                            "link": "\u002Fproduct\u002Fangular-dlya-professionalov-pdf-epub-147593367\u002F?asb=qKKh3lPeFhgOSDRDxFazsBDNo1%252BbFUpS6VRB3%252B0GnqU%253D\u0026asb2=PElGlLYu19lukH46V-36Dwkg6IdHI_r8Hl2lKx5CZxkqfShjy6olw3xjzNtTcfX2\u0026keywords=Angular"
+                        },
+                        "trackingInfo": {
+                            "click": {
+                                "actionType": "click",
+                                "key": "e3597e9ac53a1434fdc478ce0f69919872fd52dd"
+                            }
+                        },
+                        "testInfo": {
+                            "automatizationId": "redirect"
+                        }
+                    }
+                },
+                "ozonSubtitle": {
+                    "type": "textAtomWithIcon",
+                    "textAtomWithIcon": {
+                        "text": "\u003cfont color=\u0027#808d9a\u0027\u003eПродавец\u003c\u002Ffont\u003e \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e",
+                        "textStyle": "tsBodyM",
+                        "textColor": "#808d9a",
+                        "maxLines": 2
+                    }
+                }
+            },
+            "tileImage": {
+                "type": "tileImage",
+                "id": "tileImage",
+                "images": [
+                    "https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-i\u002F6016920306.jpg"
+                ],
+                "imageRatio": "1:1",
+                "imageBadges": [
+                    {
+                        "coordinates": {
+                            "x": 3,
+                            "y": 5
+                        },
+                        "badge": {
+                            "text": "42",
+                            "image": "ic_s_status_points_compact",
+                            "tintColor": "ozWhite1",
+                            "backgroundColor": "ozPremiumBlue",
+                            "theme": "STYLE_TYPE_DISCOUNT",
+                            "iconPosition": "ICON_POSITION_LEFT"
+                        }
+                    }
+                ]
+            },
+            "topRightButtons": [
+                {
+                    "type": "favoriteProductMolecule",
+                    "favoriteProductMolecule": {
+                        "sku": "147593367",
+                        "isFavorite": false,
+                        "favoriteButton": {
+                            "icon": "ic_m_fav_tiles_normal",
+                            "action": {
+                                "behavior": "BEHAVIOR_TYPE_COMPOSER_ACTION",
+                                "link": "favoriteBatchAddItems",
+                                "id": "addToFavorites",
+                                "params": {
+                                    "sku": "147593367"
+                                }
+                            },
+                            "theme": "STYLE_TYPE_CLEAR",
+                            "trackingInfo": {
+                                "click": {
+                                    "actionType": "favorite",
+                                    "key": "0510ca073af4b7a5cf84fe13406649e2cf9610da"
+                                }
+                            },
+                            "testInfo": {
+                                "automatizationId": "favorite-button"
+                            }
+                        },
+                        "unfavoriteButton": {
+                            "icon": "ic_m_fav_tiles_active",
+                            "action": {
+                                "behavior": "BEHAVIOR_TYPE_COMPOSER_ACTION",
+                                "link": "favoriteBatchDeleteItems",
+                                "id": "removeFromFavorites",
+                                "params": {
+                                    "sku": "147593367"
+                                }
+                            },
+                            "theme": "STYLE_TYPE_CLEAR",
+                            "trackingInfo": {
+                                "click": {
+                                    "actionType": "unfavorite",
+                                    "key": "0510ca073af4b7a5cf84fe13406649e2cf9610da"
+                                }
+                            },
+                            "testInfo": {
+                                "automatizationId": "unfavorite-button"
+                            }
+                        },
+                        "addToListAction": {
+                            "behavior": "BEHAVIOR_TYPE_COMPOSER_ACTION",
+                            "link": "addToList",
+                            "id": "addToList",
+                            "params": {
+                                "sku": "147593367"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "smallIconButton",
+                    "smallIconButton": {
+                        "icon": "ic_m_kebab_tiles",
+                        "action": {
+                            "behavior": "BEHAVIOR_TYPE_ACTION_SHEET",
+                            "link": "catalogActionSheet?id=147593367"
+                        },
+                        "theme": "STYLE_TYPE_CLEAR",
+                        "trackingInfo": {
+                            "click": {
+                                "actionType": "click",
+                                "key": "9b7e695d185590c7cebbb56918031e264b7c5cc6"
+                            }
+                        },
+                        "testInfo": {
+                            "automatizationId": "action-sheet-btn"
+                        }
+                    }
+                }
+            ],
+            "trackingInfo": {
+                "click": {
+                    "actionType": "click",
+                    "key": "0510ca073af4b7a5cf84fe13406649e2cf9610da"
+                },
+                "view": {
+                    "actionType": "view",
+                    "key": "0510ca073af4b7a5cf84fe13406649e2cf9610da"
+                }
+            }
+        },
+        {
+            "action": {
+                "behavior": "BEHAVIOR_TYPE_REDIRECT",
+                "link": "\u002Fproduct\u002Frazrabotka-veb-prilozheniy-s-ispolzovaniem-angularjs-kozlovskiy-pavel-darvin-piter-bekon-217051385\u002F?asb=wVXrE%252BfH%252FK2ONK0%252FRCti2YWsISDtbOUfKkIKmpqcCTs%253D\u0026asb2=sKw5sZC4nfcO2Dc4oNNtNA5zZYsyK6mRBPsrA0OBAlzhCY6h449oLFnTAzFEGyyb\u0026keywords=Angular"
+            },
+            "isAdult": false,
+            "mainState": [
+                {
+                    "type": "atom",
+                    "id": "atom",
+                    "atom": {
+                        "type": "price",
+                        "price": {
+                            "price": "36,15 BYN",
+                            "priceColor": "ozTextPrimary",
+                            "theme": "STYLE_TYPE_MEDIUM"
+                        }
+                    }
+                },
+                {
+                    "type": "atom",
+                    "id": "name",
+                    "atom": {
+                        "type": "textAtom",
+                        "textAtom": {
+                            "text": "Разработка веб-приложений с использованием AngularJS  | Козловский Павел, Дарвин Питер Бэкон",
+                            "textStyle": "tsBodyL",
+                            "maxLines": 3,
+                            "testInfo": {
+                                "automatizationId": "tile-name"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "atom",
+                    "id": "atom",
+                    "atom": {
+                        "type": "rating",
+                        "rating": {
+                            "rating": 3.25,
+                            "count": "4 отзыва",
+                            "theme": "THEME_TYPE_M",
+                            "action": {
+                                "behavior": "BEHAVIOR_TYPE_REDIRECT",
+                                "link": "\u002Fproduct\u002Frazrabotka-veb-prilozheniy-s-ispolzovaniem-angularjs-kozlovskiy-pavel-darvin-piter-bekon-217051385\u002F?asb=wVXrE%252BfH%252FK2ONK0%252FRCti2YWsISDtbOUfKkIKmpqcCTs%253D\u0026asb2=sKw5sZC4nfcO2Dc4oNNtNA5zZYsyK6mRBPsrA0OBAlzhCY6h449oLFnTAzFEGyyb\u0026keywords=Angular#comments--offset-80"
+                            },
+                            "trackingInfo": {
+                                "click": {
+                                    "actionType": "click",
+                                    "key": "aa2da172fb1be32e28ddf02338c8b5f33b65120b"
+                                }
+                            }
+                        }
+                    }
+                }
+            ],
+            "multiButton": {
+                "type": "multiButton",
+                "id": "multiButton",
+                "theme": "THEME_TYPE_VERTICAL",
+                "ozonButton": {
+                    "type": "addToCartButtonWithQuantity",
+                    "addToCartButtonWithQuantity": {
+                        "text": "В корзину",
+                        "maxItems": 3,
+                        "currentItems": 0,
+                        "action": {
+                            "id": "217051385",
+                            "quantity": 1
+                        },
+                        "trackingInfo": {
+                            "click": {
+                                "actionType": "to_cart",
+                                "key": "1976e65940dfc9a4a5d54094791c3719b31902d5"
+                            }
+                        },
+                        "testInfo": {
+                            "automatizationId": "ozonAddToCart"
+                        },
+                        "theme": "STYLE_TYPE_PRIMARY"
+                    }
+                },
+                "ozonSubtitle": {
+                    "type": "textAtomWithIcon",
+                    "textAtomWithIcon": {
+                        "text":"Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец Книготорговая компания \u0026#34;Галактика\u0026#34;","textStyle":"tsBodyM","textColor":"#808d9a","maxLines":2}}},"tileImage":{"type":"tileImage","id":"tileImage","images":["https:\u002F\u002Fcdn1.ozone.ru\u002Fmultimedia\u002F1008802038.jpg"],"imageRatio":"1: 1"},"topRightButtons":[{"type":"favoriteProductMolecule","favoriteProductMolecule":{"sku":"217051385","isFavorite":false,"favoriteButton":{"icon":"ic_m_fav_tiles_normal","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchAddItems","id":"addToFavorites","params":{"sku":"217051385"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"favorite","key":"511240a2d169d37a52428a98608bccd52fc4de56"}},"testInfo":{"automatizationId":"favorite-button"}},"unfavoriteButton":{"icon":"ic_m_fav_tiles_active","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchDeleteItems","id":"removeFromFavorites","params":{"sku":"217051385"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"unfavorite","key":"511240a2d169d37a52428a98608bccd52fc4de56"}},"testInfo":{"automatizationId":"unfavorite-button"}},"addToListAction":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"addToList","id":"addToList","params":{"sku":"217051385"}}}},{"type":"smallIconButton","smallIconButton":{"icon":"ic_m_kebab_tiles","action":{"behavior":"BEHAVIOR_TYPE_ACTION_SHEET","link":"catalogActionSheet?id=217051385"},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"click","key":"560a3e71d7b5eb04c8465d4e46ae6124f40e15d1"}},"testInfo":{"automatizationId":"action-sheet-btn"}}}],"trackingInfo":{"click":{"actionType":"click","key":"511240a2d169d37a52428a98608bccd52fc4de56"},"view":{"actionType":"view","key":"511240a2d169d37a52428a98608bccd52fc4de56"}}},{"action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Frazrabotka-veb-prilozheniy-s-ispolzovaniem-angularjs-24938072\u002F?asb=fzxe0rk4m%252F2HcfrhR3JqJn4WiYvQRgA8qlS0mcYzcjM%253D\u0026asb2=diemDM51O7x6D16Mk6916v_AAFKH43aCSWOxZ8MKCuXiQl-0D12AA2Uoaah8eZHC\u0026keywords=Angular"},"isAdult":false,"mainState":[{"type":"atom","id":"atom","atom":{"type":"price","price":{"price":"47,
+                        88 BYN","priceColor":"ozTextPrimary","theme":"STYLE_TYPE_MEDIUM"}}},{"type":"atom","id":"name","atom":{"type":"textAtom","textAtom":{"text":"Разработка веб-приложений с использованием AngularJS | Козловский Павел, Дарвин Питер Бэкон","textStyle":"tsBodyL","maxLines":3,"testInfo":{"automatizationId":"tile-name"}}}}],"multiButton":{"type":"multiButton","id":"multiButton","theme":"THEME_TYPE_VERTICAL","ozonButton":{"type":"addToCartButtonWithQuantity","addToCartButtonWithQuantity":{"text":"В корзину","maxItems":2,"currentItems":0,"action":{"id":"24938072","quantity":1},"trackingInfo":{"click":{"actionType":"to_cart","key":"db1ae6c6260b23d0e0fd71c28690a30b49af618e"}},"testInfo":{"automatizationId":"ozonAddToCart"},"theme":"STYLE_TYPE_PRIMARY"}},"ozonSubtitle":{"type":"textAtomWithIcon","textAtomWithIcon":{"text":"Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e","textStyle":"tsBodyM","textColor":"#808d9a","maxLines":2}}},"tileImage":{"type":"tileImage","id":"tileImage","images":["https:\u002F\u002Fcdn1.ozone.ru\u002Fmultimedia\u002F1008802038.jpg"],"imageRatio":"1: 1","imageBadges":[{"coordinates":{"x":3,"y":5},"badge":{"text":"109","image":"ic_s_status_points_compact","tintColor":"ozWhite1","backgroundColor":"ozPremiumBlue","theme":"STYLE_TYPE_DISCOUNT","iconPosition":"ICON_POSITION_LEFT"}}]},"topRightButtons":[{"type":"favoriteProductMolecule","favoriteProductMolecule":{"sku":"24938072","isFavorite":false,"favoriteButton":{"icon":"ic_m_fav_tiles_normal","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchAddItems","id":"addToFavorites","params":{"sku":"24938072"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"favorite","key":"cb0870091ddff2709f2abd031bc455470c5196b6"}},"testInfo":{"automatizationId":"favorite-button"}},"unfavoriteButton":{"icon":"ic_m_fav_tiles_active","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchDeleteItems","id":"removeFromFavorites","params":{"sku":"24938072"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"unfavorite","key":"cb0870091ddff2709f2abd031bc455470c5196b6"}},"testInfo":{"automatizationId":"unfavorite-button"}},"addToListAction":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"addToList","id":"addToList","params":{"sku":"24938072"}}}},{"type":"smallIconButton","smallIconButton":{"icon":"ic_m_kebab_tiles","action":{"behavior":"BEHAVIOR_TYPE_ACTION_SHEET","link":"catalogActionSheet?id=24938072"},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"click","key":"99349e16b3b52a1d627ef3d53e4578a319827f36"}},"testInfo":{"automatizationId":"action-sheet-btn"}}}],"trackingInfo":{"click":{"actionType":"click","key":"cb0870091ddff2709f2abd031bc455470c5196b6"},"view":{"actionType":"view","key":"cb0870091ddff2709f2abd031bc455470c5196b6"}}},{"action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Fizuchaem-angular-2-363283861\u002F?asb=acQD7VlFAfTGf6mXYGJvFpNRWTsrlXaTvHBxNnQrrVU%253D\u0026asb2=yAyRFJ-_Sd2AdJV-95eWtF7Yxfx2Vds0MOYQlsotsfBe5TQzfdo4xH-0g9EiFtz7\u0026keywords=Angular"},"isAdult":false,"mainState":[{"type":"atom","id":"atom","atom":{"type":"price","price":{"price":"40,
+                        69 BYN","priceColor":"ozAccentAlert","originalPrice":"50,
+                        84 BYN","originalPriceColor":"ozTextPrimary","theme":"STYLE_TYPE_MEDIUM"}}},{"type":"atom","id":"label","atom":{"type":"textAtom","textAtom":{"text":"Есть дешевле внутри, от 29,
+                        38 BYN","textStyle":"tsBodyM","textColor":"ozAccentPrimary","maxLines":3,"testInfo":{"automatizationId":"tile-label"}}}},{"type":"atom","id":"label","atom":{"type":"textAtom","textAtom":{"text":"Новинка","textStyle":"tsBodyM","textColor":"ozAccentSecondary","maxLines":3,"testInfo":{"automatizationId":"tile-label"}}}},{"type":"atom","id":"name","atom":{"type":"textAtom","textAtom":{"text":"Изучаем Angular 2","textStyle":"tsBodyL","maxLines":3,"testInfo":{"automatizationId":"tile-name"}}}}],"multiButton":{"type":"multiButton","id":"multiButton","theme":"THEME_TYPE_VERTICAL","ozonButton":{"type":"addToCartButtonWithQuantity","addToCartButtonWithQuantity":{"text":"В корзину","maxItems":5,"currentItems":0,"action":{"id":"363283861","quantity":1},"trackingInfo":{"click":{"actionType":"to_cart","key":"2ec8d651b1892de86f02ad78f7751ef2c29cd09e"}},"testInfo":{"automatizationId":"ozonAddToCart"},"theme":"STYLE_TYPE_PRIMARY"}},"ozonSubtitle":{"type":"textAtomWithIcon","textAtomWithIcon":{"text":"Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец КомБук","textStyle":"tsBodyM","textColor":"#808d9a","maxLines":2}}},"tileImage":{"type":"tileImage","id":"tileImage","images":["https:\u002F\u002Fcdn1.ozone.ru\u002Fmultimedia\u002F1016926758.jpg"],"imageRatio":"1: 1","imageBadges":[{"coordinates":{"x":1,"y":5},"badge":{"text":"?19%","tintColor":"ozWhite1","backgroundColor":"ozAccentAlert","theme":"STYLE_TYPE_MEDIUM"}}]},"topRightButtons":[{"type":"favoriteProductMolecule","favoriteProductMolecule":{"sku":"363283861","isFavorite":false,"favoriteButton":{"icon":"ic_m_fav_tiles_normal","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchAddItems","id":"addToFavorites","params":{"sku":"363283861"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"favorite","key":"52f109da812892abfc7a84538760e791ed64ffb3"}},"testInfo":{"automatizationId":"favorite-button"}},"unfavoriteButton":{"icon":"ic_m_fav_tiles_active","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchDeleteItems","id":"removeFromFavorites","params":{"sku":"363283861"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"unfavorite","key":"52f109da812892abfc7a84538760e791ed64ffb3"}},"testInfo":{"automatizationId":"unfavorite-button"}},"addToListAction":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"addToList","id":"addToList","params":{"sku":"363283861"}}}},{"type":"smallIconButton","smallIconButton":{"icon":"ic_m_kebab_tiles","action":{"behavior":"BEHAVIOR_TYPE_ACTION_SHEET","link":"catalogActionSheet?id=363283861"},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"click","key":"bb2b7b58b0c854a6571059690be2c3448114c69f"}},"testInfo":{"automatizationId":"action-sheet-btn"}}}],"trackingInfo":{"click":{"actionType":"click","key":"52f109da812892abfc7a84538760e791ed64ffb3"},"view":{"actionType":"view","key":"52f109da812892abfc7a84538760e791ed64ffb3"}}},{"action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Fizuchaem-angular-2-217051293\u002F?asb=Urg3STscUz4ytM4XzgCmJj%252BGsqXHOInuUDcT28UMb8w%253D\u0026asb2=tfjSTwCMWlTNyoXKNJbeAYIE_8HSjF_TomNyOvywBOBQvdQ65w8-sPfValDh0YAx\u0026keywords=Angular"},"isAdult":false,"mainState":[{"type":"atom","id":"atom","atom":{"type":"price","price":{"price":"38,
+                        98 BYN","priceColor":"ozTextPrimary","theme":"STYLE_TYPE_MEDIUM"}}},{"type":"atom","id":"label","atom":{"type":"textAtom","textAtom":{"text":"Есть дешевле внутри, от 29,
+                        38 BYN","textStyle":"tsBodyM","textColor":"ozAccentPrimary","maxLines":3,"testInfo":{"automatizationId":"tile-label"}}}},{"type":"atom","id":"name","atom":{"type":"textAtom","textAtom":{"text":"Изучаем Angular 2","textStyle":"tsBodyL","maxLines":3,"testInfo":{"automatizationId":"tile-name"}}}},{"type":"atom","id":"atom","atom":{"type":"rating","rating":{"rating":1.5,"count":"2 отзыва","theme":"THEME_TYPE_M","action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Fizuchaem-angular-2-217051293\u002F?asb=Urg3STscUz4ytM4XzgCmJj%252BGsqXHOInuUDcT28UMb8w%253D\u0026asb2=tfjSTwCMWlTNyoXKNJbeAYIE_8HSjF_TomNyOvywBOBQvdQ65w8-sPfValDh0YAx\u0026keywords=Angular#comments--offset-80"},"trackingInfo":{"click":{"actionType":"click","key":"4c9901bf1bfb851c6ca855e2b7ac895d1e4005c1"}}}}}],"multiButton":{"type":"multiButton","id":"multiButton","theme":"THEME_TYPE_VERTICAL","ozonButton":{"type":"addToCartButtonWithQuantity","addToCartButtonWithQuantity":{"text":"В корзину","maxItems":2,"currentItems":0,"action":{"id":"217051293","quantity":1},"trackingInfo":{"click":{"actionType":"to_cart","key":"88c03789f315c039a1798a0cc01fd3666711f56c"}},"testInfo":{"automatizationId":"ozonAddToCart"},"theme":"STYLE_TYPE_PRIMARY"}},"ozonSubtitle":{"type":"textAtomWithIcon","textAtomWithIcon":{"text":"Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец Книготорговая компания \u0026#34;Галактика\u0026#34;","textStyle":"tsBodyM","textColor":"#808d9a","maxLines":2}}},"tileImage":{"type":"tileImage","id":"tileImage","images":["https:\u002F\u002Fcdn1.ozone.ru\u002Fmultimedia\u002F1016926758.jpg"],"imageRatio":"1: 1"},"topRightButtons":[{"type":"favoriteProductMolecule","favoriteProductMolecule":{"sku":"217051293","isFavorite":false,"favoriteButton":{"icon":"ic_m_fav_tiles_normal","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchAddItems","id":"addToFavorites","params":{"sku":"217051293"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"favorite","key":"c7eb7b25933b1ff373a5a10eaf4e49069ee8c064"}},"testInfo":{"automatizationId":"favorite-button"}},"unfavoriteButton":{"icon":"ic_m_fav_tiles_active","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchDeleteItems","id":"removeFromFavorites","params":{"sku":"217051293"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"unfavorite","key":"c7eb7b25933b1ff373a5a10eaf4e49069ee8c064"}},"testInfo":{"automatizationId":"unfavorite-button"}},"addToListAction":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"addToList","id":"addToList","params":{"sku":"217051293"}}}},{"type":"smallIconButton","smallIconButton":{"icon":"ic_m_kebab_tiles","action":{"behavior":"BEHAVIOR_TYPE_ACTION_SHEET","link":"catalogActionSheet?id=217051293"},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"click","key":"94ae7004662bc801b3238edf2e5a2a39564213e3"}},"testInfo":{"automatizationId":"action-sheet-btn"}}}],"trackingInfo":{"click":{"actionType":"click","key":"c7eb7b25933b1ff373a5a10eaf4e49069ee8c064"},"view":{"actionType":"view","key":"c7eb7b25933b1ff373a5a10eaf4e49069ee8c064"}}},{"action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Fmagnetic-surveying-and-angular-surveying-156749282\u002F?asb=YngD3%252F%252FAbV7rVt%252BeJzNcqLmfdA3g5NCRMOxnqcE4wXM%253D\u0026asb2=B73PrBy9IZ_WZ1jFkoqtrJ96HTgygeuFDHp-9t5kloD4yCrdNQTuznLBeDaLJuGz\u0026keywords=Angular"},"isAdult":false,"mainState":[{"type":"atom","id":"atom","atom":{"type":"price","price":{"price":"21,
+                        57 BYN","priceColor":"ozAccentAlert","originalPrice":"30,
+                        85 BYN","originalPriceColor":"ozTextPrimary","theme":"STYLE_TYPE_MEDIUM"}}},{"type":"atom","id":"name","atom":{"type":"textAtom","textAtom":{"text":"Magnetic Surveying and Angular Surveying","textStyle":"tsBodyL","maxLines":3,"testInfo":{"automatizationId":"tile-name"}}}}],"multiButton":{"type":"multiButton","id":"multiButton","theme":"THEME_TYPE_VERTICAL","ozonButton":{"type":"addToCartButtonWithQuantity","addToCartButtonWithQuantity":{"text":"В корзину","maxItems":10000,"currentItems":0,"action":{"id":"156749282","quantity":1},"trackingInfo":{"click":{"actionType":"to_cart","key":"b1830bdca625babde34b8aa96a369c3d34c4e82a"}},"testInfo":{"automatizationId":"ozonAddToCart"},"theme":"STYLE_TYPE_PRIMARY"}},"ozonSubtitle":{"type":"textAtomWithIcon","textAtomWithIcon":{"text":"Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец Т8 Издательские Технологии","textStyle":"tsBodyM","textColor":"#808d9a","maxLines":2}}},"tileImage":{"type":"tileImage","id":"tileImage","images":["https:\u002F\u002Fcdn1.ozone.ru\u002Fmultimedia\u002F1008566879.jpg"],"imageRatio":"1: 1","imageBadges":[{"coordinates":{"x":1,"y":5},"badge":{"text":"?30%","tintColor":"ozWhite1","backgroundColor":"ozAccentAlert","theme":"STYLE_TYPE_MEDIUM"}},{"coordinates":{"x":1,"y":1},"badge":{"text":"Код для скидки","tintColor":"#ffffff","backgroundColor":"#7D36AA","theme":"STYLE_TYPE_MEDIUM"}}]},"topRightButtons":[{"type":"favoriteProductMolecule","favoriteProductMolecule":{"sku":"156749282","isFavorite":false,"favoriteButton":{"icon":"ic_m_fav_tiles_normal","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchAddItems","id":"addToFavorites","params":{"sku":"156749282"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"favorite","key":"06bdebbf87505cb554039c4785aafc9d5835605e"}},"testInfo":{"automatizationId":"favorite-button"}},"unfavoriteButton":{"icon":"ic_m_fav_tiles_active","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchDeleteItems","id":"removeFromFavorites","params":{"sku":"156749282"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"unfavorite","key":"06bdebbf87505cb554039c4785aafc9d5835605e"}},"testInfo":{"automatizationId":"unfavorite-button"}},"addToListAction":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"addToList","id":"addToList","params":{"sku":"156749282"}}}},{"type":"smallIconButton","smallIconButton":{"icon":"ic_m_kebab_tiles","action":{"behavior":"BEHAVIOR_TYPE_ACTION_SHEET","link":"catalogActionSheet?id=156749282"},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"click","key":"fc3766233096d7be55611e33afb584af33444e0d"}},"testInfo":{"automatizationId":"action-sheet-btn"}}}],"trackingInfo":{"click":{"actionType":"click","key":"06bdebbf87505cb554039c4785aafc9d5835605e"},"view":{"actionType":"view","key":"06bdebbf87505cb554039c4785aafc9d5835605e"}}},{"action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Fasp-net-core-5-and-angular-fourth-edition-full-stack-web-development-with-net-5-and-angular-11-230136153\u002F?asb=gDL5MZU8ePGNCs88jeWzVH5Bz5Anej%252Bd1r3%252Fc0NdVy4%253D\u0026asb2=xxXlUiQRgDPurUbm-VswiztkJ3-tnewGE8P01s0lLutVp8Rvpkn648n16bwFGc8G\u0026keywords=Angular"},"isAdult":false,"mainState":[{"type":"atom","id":"atom","atom":{"type":"price","price":{"price":"149,
+                        91 BYN","priceColor":"ozAccentAlert","originalPrice":"214,
+                        19 BYN","originalPriceColor":"ozTextPrimary","theme":"STYLE_TYPE_MEDIUM"}}},{"type":"atom","id":"name","atom":{"type":"textAtom","textAtom":{"text":"ASP.NET Core 5 and Angular - Fourth Edition. Full-stack web development with .NET 5 and Angular 11","textStyle":"tsBodyL","maxLines":3,"testInfo":{"automatizationId":"tile-name"}}}}],"multiButton":{"type":"multiButton","id":"multiButton","theme":"THEME_TYPE_VERTICAL","ozonButton":{"type":"addToCartButtonWithQuantity","addToCartButtonWithQuantity":{"text":"В корзину","maxItems":10000,"currentItems":0,"action":{"id":"230136153","quantity":1},"trackingInfo":{"click":{"actionType":"to_cart","key":"85a2c4562bf3aa068617a9a2cec85e2cd956f6f0"}},"testInfo":{"automatizationId":"ozonAddToCart"},"theme":"STYLE_TYPE_PRIMARY"}},"ozonSubtitle":{"type":"textAtomWithIcon","textAtomWithIcon":{"text":"Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец Т8 Издательские Технологии","textStyle":"tsBodyM","textColor":"#808d9a","maxLines":2}}},"tileImage":{"type":"tileImage","id":"tileImage","images":["https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-l\u002F6086237049.jpg","https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-k\u002F6086237048.jpg","https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-n\u002F6086237051.jpg","https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-o\u002F6086237052.jpg","https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-q\u002F6086237054.jpg","https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-v\u002F6086237059.jpg"],"imageRatio":"1: 1","imageBadges":[{"coordinates":{"x":1,"y":5},"badge":{"text":"?30%","tintColor":"ozWhite1","backgroundColor":"ozAccentAlert","theme":"STYLE_TYPE_MEDIUM"}},{"coordinates":{"x":1,"y":1},"badge":{"text":"Код для скидки","tintColor":"#ffffff","backgroundColor":"#7D36AA","theme":"STYLE_TYPE_MEDIUM"}}]},"topRightButtons":[{"type":"favoriteProductMolecule","favoriteProductMolecule":{"sku":"230136153","isFavorite":false,"favoriteButton":{"icon":"ic_m_fav_tiles_normal","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchAddItems","id":"addToFavorites","params":{"sku":"230136153"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"favorite","key":"400ce413085302e127e5705f115ede963155ab07"}},"testInfo":{"automatizationId":"favorite-button"}},"unfavoriteButton":{"icon":"ic_m_fav_tiles_active","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchDeleteItems","id":"removeFromFavorites","params":{"sku":"230136153"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"unfavorite","key":"400ce413085302e127e5705f115ede963155ab07"}},"testInfo":{"automatizationId":"unfavorite-button"}},"addToListAction":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"addToList","id":"addToList","params":{"sku":"230136153"}}}},{"type":"smallIconButton","smallIconButton":{"icon":"ic_m_kebab_tiles","action":{"behavior":"BEHAVIOR_TYPE_ACTION_SHEET","link":"catalogActionSheet?id=230136153"},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"click","key":"246ed623dfa497bebfa4c0286b9ab88db99db1ca"}},"testInfo":{"automatizationId":"action-sheet-btn"}}}],"trackingInfo":{"click":{"actionType":"click","key":"400ce413085302e127e5705f115ede963155ab07"},"view":{"actionType":"view","key":"400ce413085302e127e5705f115ede963155ab07"}}},{"action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Fasp-net-core-3-and-angular-9-third-edition-168210166\u002F?asb=IxrfB%252FkP2LWCVbaPj3HaadBuCU7hGcF4fWRwyyftCCQ%253D\u0026asb2=VYarXcQ_8enIxJT5wikC_g1etGDOMkEAH8KxwweobVOpUM-py0l7Hwiut-d0pPtl\u0026keywords=Angular"},"isAdult":false,"mainState":[{"type":"atom","id":"atom","atom":{"type":"price","price":{"price":"150,
+                        51 BYN","priceColor":"ozAccentAlert","originalPrice":"215,
+                        07 BYN","originalPriceColor":"ozTextPrimary","theme":"STYLE_TYPE_MEDIUM"}}},{"type":"atom","id":"name","atom":{"type":"textAtom","textAtom":{"text":"ASP.NET Core 3 and Angular 9 - Third Edition","textStyle":"tsBodyL","maxLines":3,"testInfo":{"automatizationId":"tile-name"}}}}],"multiButton":{"type":"multiButton","id":"multiButton","theme":"THEME_TYPE_VERTICAL","ozonButton":{"type":"addToCartButtonWithQuantity","addToCartButtonWithQuantity":{"text":"В корзину","maxItems":10000,"currentItems":0,"action":{"id":"168210166","quantity":1},"trackingInfo":{"click":{"actionType":"to_cart","key":"f433563aa436fcf8aa11ba9a7cdea5e96084cfe5"}},"testInfo":{"automatizationId":"ozonAddToCart"},"theme":"STYLE_TYPE_PRIMARY"}},"ozonSubtitle":{"type":"textAtomWithIcon","textAtomWithIcon":{"text":"Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец Т8 Издательские Технологии","textStyle":"tsBodyM","textColor":"#808d9a","maxLines":2}}},"tileImage":{"type":"tileImage","id":"tileImage","images":["https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-a\u002F6009871534.jpg","https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-7\u002F6040997455.jpg","https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-k\u002F6040997432.jpg","https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-r\u002F6040997439.jpg","https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-a\u002F6040997458.jpg","https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-u\u002F6040997442.jpg"],"imageRatio":"1: 1","imageBadges":[{"coordinates":{"x":1,"y":5},"badge":{"text":"?30%","tintColor":"ozWhite1","backgroundColor":"ozAccentAlert","theme":"STYLE_TYPE_MEDIUM"}},{"coordinates":{"x":1,"y":1},"badge":{"text":"Код для скидки","tintColor":"#ffffff","backgroundColor":"#7D36AA","theme":"STYLE_TYPE_MEDIUM"}}]},"topRightButtons":[{"type":"favoriteProductMolecule","favoriteProductMolecule":{"sku":"168210166","isFavorite":false,"favoriteButton":{"icon":"ic_m_fav_tiles_normal","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchAddItems","id":"addToFavorites","params":{"sku":"168210166"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"favorite","key":"b1d31a8c832bd139b1fdc1b09384c95555039bae"}},"testInfo":{"automatizationId":"favorite-button"}},"unfavoriteButton":{"icon":"ic_m_fav_tiles_active","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchDeleteItems","id":"removeFromFavorites","params":{"sku":"168210166"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"unfavorite","key":"b1d31a8c832bd139b1fdc1b09384c95555039bae"}},"testInfo":{"automatizationId":"unfavorite-button"}},"addToListAction":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"addToList","id":"addToList","params":{"sku":"168210166"}}}},{"type":"smallIconButton","smallIconButton":{"icon":"ic_m_kebab_tiles","action":{"behavior":"BEHAVIOR_TYPE_ACTION_SHEET","link":"catalogActionSheet?id=168210166"},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"click","key":"0af9b543c3d252d4fac7e44475b97a9cd43a3999"}},"testInfo":{"automatizationId":"action-sheet-btn"}}}],"trackingInfo":{"click":{"actionType":"click","key":"b1d31a8c832bd139b1fdc1b09384c95555039bae"},"view":{"actionType":"view","key":"b1d31a8c832bd139b1fdc1b09384c95555039bae"}}},{"action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Fessential-angular-157692971\u002F?asb=15yNEy8HqWqki6fx8Zhm6FXL7dmusOckLQtl%252BUJIohg%253D\u0026asb2=StOyv9HfLndRYMEdspRnJnKVdQVZ8_zTTXv8veRqdVV-AFdnO755nD9kHbiL83IB\u0026keywords=Angular"},"isAdult":false,"mainState":[{"type":"atom","id":"atom","atom":{"type":"price","price":{"price":"130,
+                        69 BYN","priceColor":"ozAccentAlert","originalPrice":"186,
+                        69 BYN","originalPriceColor":"ozTextPrimary","theme":"STYLE_TYPE_MEDIUM"}}},{"type":"atom","id":"name","atom":{"type":"textAtom","textAtom":{"text":"Essential Angular","textStyle":"tsBodyL","maxLines":3,"testInfo":{"automatizationId":"tile-name"}}}}],"multiButton":{"type":"multiButton","id":"multiButton","theme":"THEME_TYPE_VERTICAL","ozonButton":{"type":"addToCartButtonWithQuantity","addToCartButtonWithQuantity":{"text":"В корзину","maxItems":10000,"currentItems":0,"action":{"id":"157692971","quantity":1},"trackingInfo":{"click":{"actionType":"to_cart","key":"63af99236c6290804af78fcb69306e364916de52"}},"testInfo":{"automatizationId":"ozonAddToCart"},"theme":"STYLE_TYPE_PRIMARY"}},"ozonSubtitle":{"type":"textAtomWithIcon","textAtomWithIcon":{"text":"Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец Т8 Издательские Технологии","textStyle":"tsBodyM","textColor":"#808d9a","maxLines":2}}},"tileImage":{"type":"tileImage","id":"tileImage","images":["https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-x\u002F6122960625.jpg"],"imageRatio":"1: 1","imageBadges":[{"coordinates":{"x":1,"y":1},"badge":{"text":"Код для скидки","tintColor":"#ffffff","backgroundColor":"#7D36AA","theme":"STYLE_TYPE_MEDIUM"}},{"coordinates":{"x":1,"y":5},"badge":{"text":"?30%","tintColor":"ozWhite1","backgroundColor":"ozAccentAlert","theme":"STYLE_TYPE_MEDIUM"}}]},"topRightButtons":[{"type":"favoriteProductMolecule","favoriteProductMolecule":{"sku":"157692971","isFavorite":false,"favoriteButton":{"icon":"ic_m_fav_tiles_normal","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchAddItems","id":"addToFavorites","params":{"sku":"157692971"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"favorite","key":"09b0962620244d7d447faf39a18e3fdcf9317215"}},"testInfo":{"automatizationId":"favorite-button"}},"unfavoriteButton":{"icon":"ic_m_fav_tiles_active","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchDeleteItems","id":"removeFromFavorites","params":{"sku":"157692971"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"unfavorite","key":"09b0962620244d7d447faf39a18e3fdcf9317215"}},"testInfo":{"automatizationId":"unfavorite-button"}},"addToListAction":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"addToList","id":"addToList","params":{"sku":"157692971"}}}},{"type":"smallIconButton","smallIconButton":{"icon":"ic_m_kebab_tiles","action":{"behavior":"BEHAVIOR_TYPE_ACTION_SHEET","link":"catalogActionSheet?id=157692971"},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"click","key":"193fd783960a9b9a73d4e6ff6ee501024727174f"}},"testInfo":{"automatizationId":"action-sheet-btn"}}}],"trackingInfo":{"click":{"actionType":"click","key":"09b0962620244d7d447faf39a18e3fdcf9317215"},"view":{"actionType":"view","key":"09b0962620244d7d447faf39a18e3fdcf9317215"}}},{"action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Frazrabotka-veb-prilozheniy-s-pomoshchyu-node-js-mongodb-i-angular-ischerpyvayushchee-rukovodstvo-po-340088119\u002F?asb=HwETorhgccDgX1cS%252F1UP5p0BcdGR4LXq6mWhW4oK7GA%253D\u0026asb2=cADkhXbbuRT2417uAG_sr0BTTCP5FHKN1EyfGlRlr68l1XP7RpBUWuY_S068vZAX\u0026keywords=Angular"},"isAdult":false,"mainState":[{"type":"atom","id":"atom","atom":{"type":"price","price":{"price":"88,
+                        60 BYN","priceColor":"ozAccentAlert","originalPrice":"136,
+                        17 BYN","originalPriceColor":"ozTextPrimary","theme":"STYLE_TYPE_MEDIUM"}}},{"type":"atom","id":"label","atom":{"type":"textAtom","textAtom":{"text":"Новинка","textStyle":"tsBodyM","textColor":"ozAccentSecondary","maxLines":3,"testInfo":{"automatizationId":"tile-label"}}}},{"type":"atom","id":"name","atom":{"type":"textAtom","textAtom":{"text":"Разработка веб-приложений с помощью Node.js, MongoDB и Angular: исчерпывающее руководство по использованию стека MEAN. 2-е изд","textStyle":"tsBodyL","maxLines":3,"testInfo":{"automatizationId":"tile-name"}}}}],"multiButton":{"type":"multiButton","id":"multiButton","theme":"THEME_TYPE_VERTICAL","ozonButton":{"type":"addToCartButtonWithQuantity","addToCartButtonWithQuantity":{"text":"В корзину","maxItems":3,"currentItems":0,"action":{"id":"340088119","quantity":1},"trackingInfo":{"click":{"actionType":"to_cart","key":"a30bd8dc38b8df7f6eb76e1bc1a503491a672ce6"}},"testInfo":{"automatizationId":"ozonAddToCart"},"theme":"STYLE_TYPE_PRIMARY"}},"ozonSubtitle":{"type":"textAtomWithIcon","textAtomWithIcon":{"text":"Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец ООО \u0026#34;Торговый Дом БММ\u0026#34;","textStyle":"tsBodyM","textColor":"#808d9a","maxLines":2}}},"tileImage":{"type":"tileImage","id":"tileImage","images":["https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-p\u002F6117307321.jpg"],"imageRatio":"1: 1","imageBadges":[{"coordinates":{"x":1,"y":5},"badge":{"text":"?34%","tintColor":"ozWhite1","backgroundColor":"ozAccentAlert","theme":"STYLE_TYPE_MEDIUM"}}]},"topRightButtons":[{"type":"favoriteProductMolecule","favoriteProductMolecule":{"sku":"340088119","isFavorite":false,"favoriteButton":{"icon":"ic_m_fav_tiles_normal","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchAddItems","id":"addToFavorites","params":{"sku":"340088119"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"favorite","key":"442dd20b0f82577af91cbe7aff574df66b37a625"}},"testInfo":{"automatizationId":"favorite-button"}},"unfavoriteButton":{"icon":"ic_m_fav_tiles_active","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchDeleteItems","id":"removeFromFavorites","params":{"sku":"340088119"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"unfavorite","key":"442dd20b0f82577af91cbe7aff574df66b37a625"}},"testInfo":{"automatizationId":"unfavorite-button"}},"addToListAction":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"addToList","id":"addToList","params":{"sku":"340088119"}}}},{"type":"smallIconButton","smallIconButton":{"icon":"ic_m_kebab_tiles","action":{"behavior":"BEHAVIOR_TYPE_ACTION_SHEET","link":"catalogActionSheet?id=340088119"},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"click","key":"7f6bcfc653e149899ad198d71457908c6fc9c69e"}},"testInfo":{"automatizationId":"action-sheet-btn"}}}],"trackingInfo":{"click":{"actionType":"click","key":"442dd20b0f82577af91cbe7aff574df66b37a625"},"view":{"actionType":"view","key":"442dd20b0f82577af91cbe7aff574df66b37a625"}}},{"action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Fan-elementary-treatise-on-the-angular-calculus-part-1-153411680\u002F?asb=7kEiWloV%252BAKPRaz8ZifgCwQa16PLhyX0avzSz289HcA%253D\u0026asb2=NNnyxJOEFsshb0dn8Tei2hFusIXxUTnTlSQ2KealmS-8srO57-vdAvl1EyXc1dmh\u0026keywords=Angular"},"isAdult":false,"mainState":[{"type":"atom","id":"atom","atom":{"type":"price","price":{"price":"21,
+                        39 BYN","priceColor":"ozAccentAlert","originalPrice":"30,
+                        57 BYN","originalPriceColor":"ozTextPrimary","theme":"STYLE_TYPE_MEDIUM"}}},{"type":"atom","id":"name","atom":{"type":"textAtom","textAtom":{"text":"An Elementary Treatise On the Angular Calculus, Part 1","textStyle":"tsBodyL","maxLines":3,"testInfo":{"automatizationId":"tile-name"}}}}],"multiButton":{"type":"multiButton","id":"multiButton","theme":"THEME_TYPE_VERTICAL","ozonButton":{"type":"addToCartButtonWithQuantity","addToCartButtonWithQuantity":{"text":"В корзину","maxItems":10000,"currentItems":0,"action":{"id":"153411680","quantity":1},"trackingInfo":{"click":{"actionType":"to_cart","key":"acc5d31bb1364821f229816e4a81b352bbfb1453"}},"testInfo":{"automatizationId":"ozonAddToCart"},"theme":"STYLE_TYPE_PRIMARY"}},"ozonSubtitle":{"type":"textAtomWithIcon","textAtomWithIcon":{"text":"Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец 
+Т8 Издательские Технологии","textStyle":"tsBodyM","textColor":"#808d9a","maxLines":2}}},"tileImage":{"type":"tileImage","id":"tileImage","images":["https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-p\u002F6039302701.jpg"],"imageRatio":"1: 1","imageBadges":[{"coordinates":{"x":1,"y":5},"badge":{"text":"?30%","tintColor":"ozWhite1","backgroundColor":"ozAccentAlert","theme":"STYLE_TYPE_MEDIUM"}},{"coordinates":{"x":1,"y":1},"badge":{"text":"Код для скидки","tintColor":"#ffffff","backgroundColor":"#7D36AA","theme":"STYLE_TYPE_MEDIUM"}}]},"topRightButtons":[{"type":"favoriteProductMolecule","favoriteProductMolecule":{"sku":"153411680","isFavorite":false,"favoriteButton":{"icon":"ic_m_fav_tiles_normal","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchAddItems","id":"addToFavorites","params":{"sku":"153411680"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"favorite","key":"c0ff62af5e7604fdf97af4bc9feef01845fe49d0"}},"testInfo":{"automatizationId":"favorite-button"}},"unfavoriteButton":{"icon":"ic_m_fav_tiles_active","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchDeleteItems","id":"removeFromFavorites","params":{"sku":"153411680"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"unfavorite","key":"c0ff62af5e7604fdf97af4bc9feef01845fe49d0"}},"testInfo":{"automatizationId":"unfavorite-button"}},"addToListAction":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"addToList","id":"addToList","params":{"sku":"153411680"}}}},{"type":"smallIconButton","smallIconButton":{"icon":"ic_m_kebab_tiles","action":{"behavior":"BEHAVIOR_TYPE_ACTION_SHEET","link":"catalogActionSheet?id=153411680"},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"click","key":"550fb07137624add1860d768686bb24ec344733b"}},"testInfo":{"automatizationId":"action-sheet-btn"}}}],"trackingInfo":{"click":{"actionType":"click","key":"c0ff62af5e7604fdf97af4bc9feef01845fe49d0"},"view":{"actionType":"view","key":"c0ff62af5e7604fdf97af4bc9feef01845fe49d0"}}},{"action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Fdioptric-formulae-for-combined-cylindrical-lenses-applicable-for-all-angular-deviations-of-156886737\u002F?asb=%252F1YQbDDFgDetF84qtFok2Uu%252FNkSlYMp3RoR%252BRVfrbAs%253D\u0026asb2=6n-XQw0RG_CuA3JOS8hPtgoVhjpHOYO7fwUa7NDe9HxXD5_hz2vJ2o1EEsqnDla3\u0026keywords=Angular"},"isAdult":false,"mainState":[{"type":"atom","id":"atom","atom":{"type":"price","price":{"price":"19,
+                        75 BYN","priceColor":"ozAccentAlert","originalPrice":"28,
+                        23 BYN","originalPriceColor":"ozTextPrimary","theme":"STYLE_TYPE_MEDIUM"}}},{"type":"atom","id":"name","atom":{"type":"textAtom","textAtom":{"text":"Dioptric Formulae for Combined Cylindrical Lenses: Applicable for All Angular Deviations of Their Axes, with Six Original Diagrams and One Albertype Plate","textStyle":"tsBodyL","maxLines":3,"testInfo":{"automatizationId":"tile-name"}}}}],"multiButton":{"type":"multiButton","id":"multiButton","theme":"THEME_TYPE_VERTICAL","ozonButton":{"type":"addToCartButtonWithQuantity","addToCartButtonWithQuantity":{"text":"В корзину","maxItems":10000,"currentItems":0,"action":{"id":"156886737","quantity":1},"trackingInfo":{"click":{"actionType":"to_cart","key":"196153e7acb070e954ca67049ef8c66a2213f718"}},"testInfo":{"automatizationId":"ozonAddToCart"},"theme":"STYLE_TYPE_PRIMARY"}},"ozonSubtitle":{"type":"textAtomWithIcon","textAtomWithIcon":{"text":"Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец Т8 Издательские Технологии","textStyle":"tsBodyM","textColor":"#808d9a","maxLines":2}}},"tileImage":{"type":"tileImage","id":"tileImage","images":["https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-t\u002F6040267037.jpg"],"imageRatio":"1: 1","imageBadges":[{"coordinates":{"x":1,"y":5},"badge":{"text":"?30%","tintColor":"ozWhite1","backgroundColor":"ozAccentAlert","theme":"STYLE_TYPE_MEDIUM"}},{"coordinates":{"x":1,"y":1},"badge":{"text":"Код для скидки","tintColor":"#ffffff","backgroundColor":"#7D36AA","theme":"STYLE_TYPE_MEDIUM"}}]},"topRightButtons":[{"type":"favoriteProductMolecule","favoriteProductMolecule":{"sku":"156886737","isFavorite":false,"favoriteButton":{"icon":"ic_m_fav_tiles_normal","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchAddItems","id":"addToFavorites","params":{"sku":"156886737"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"favorite","key":"2e0e7e4acedf4f19f94ce64adc8a24bafcd6e714"}},"testInfo":{"automatizationId":"favorite-button"}},"unfavoriteButton":{"icon":"ic_m_fav_tiles_active","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchDeleteItems","id":"removeFromFavorites","params":{"sku":"156886737"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"unfavorite","key":"2e0e7e4acedf4f19f94ce64adc8a24bafcd6e714"}},"testInfo":{"automatizationId":"unfavorite-button"}},"addToListAction":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"addToList","id":"addToList","params":{"sku":"156886737"}}}},{"type":"smallIconButton","smallIconButton":{"icon":"ic_m_kebab_tiles","action":{"behavior":"BEHAVIOR_TYPE_ACTION_SHEET","link":"catalogActionSheet?id=156886737"},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"click","key":"ccd0d0402d0e4cd65a908e008da4ce16e2e82017"}},"testInfo":{"automatizationId":"action-sheet-btn"}}}],"trackingInfo":{"click":{"actionType":"click","key":"2e0e7e4acedf4f19f94ce64adc8a24bafcd6e714"},"view":{"actionType":"view","key":"2e0e7e4acedf4f19f94ce64adc8a24bafcd6e714"}}},{"action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Fangular-router-157476576\u002F?asb=gmznZyZ8izkNe7S7Hs4Z9%252FRC5hmB7fG12rAMbZ5PV60%253D\u0026asb2=YY0pMgySCSLUxUfqbHPOHIA4MWf6gjvwSrho5wr27fGWc8dLQN0jQ9k0e5LnLsFu\u0026keywords=Angular"},"isAdult":false,"mainState":[{"type":"atom","id":"atom","atom":{"type":"price","price":{"price":"152,
+                        67 BYN","priceColor":"ozAccentAlert","originalPrice":"218,
+                        10 BYN","originalPriceColor":"ozTextPrimary","theme":"STYLE_TYPE_MEDIUM"}}},{"type":"atom","id":"name","atom":{"type":"textAtom","textAtom":{"text":"Angular Router","textStyle":"tsBodyL","maxLines":3,"testInfo":{"automatizationId":"tile-name"}}}}],"multiButton":{"type":"multiButton","id":"multiButton","theme":"THEME_TYPE_VERTICAL","ozonButton":{"type":"addToCartButtonWithQuantity","addToCartButtonWithQuantity":{"text":"В корзину","maxItems":10000,"currentItems":0,"action":{"id":"157476576","quantity":1},"trackingInfo":{"click":{"actionType":"to_cart","key":"07576f7203bb8707c472ef4f49261e19ef6bc646"}},"testInfo":{"automatizationId":"ozonAddToCart"},"theme":"STYLE_TYPE_PRIMARY"}},"ozonSubtitle":{"type":"textAtomWithIcon","textAtomWithIcon":{"text":"Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец Т8 Издательские Технологии","textStyle":"tsBodyM","textColor":"#808d9a","maxLines":2}}},"tileImage":{"type":"tileImage","id":"tileImage","images":["https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-m\u002F6122957050.jpg"],"imageRatio":"1: 1","imageBadges":[{"coordinates":{"x":1,"y":5},"badge":{"text":"?30%","tintColor":"ozWhite1","backgroundColor":"ozAccentAlert","theme":"STYLE_TYPE_MEDIUM"}},{"coordinates":{"x":1,"y":1},"badge":{"text":"Код для скидки","tintColor":"#ffffff","backgroundColor":"#7D36AA","theme":"STYLE_TYPE_MEDIUM"}}]},"topRightButtons":[{"type":"favoriteProductMolecule","favoriteProductMolecule":{"sku":"157476576","isFavorite":false,"favoriteButton":{"icon":"ic_m_fav_tiles_normal","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchAddItems","id":"addToFavorites","params":{"sku":"157476576"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"favorite","key":"c2b55c5b62d0541fa356cc8036b54e984fae1b0c"}},"testInfo":{"automatizationId":"favorite-button"}},"unfavoriteButton":{"icon":"ic_m_fav_tiles_active","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchDeleteItems","id":"removeFromFavorites","params":{"sku":"157476576"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"unfavorite","key":"c2b55c5b62d0541fa356cc8036b54e984fae1b0c"}},"testInfo":{"automatizationId":"unfavorite-button"}},"addToListAction":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"addToList","id":"addToList","params":{"sku":"157476576"}}}},{"type":"smallIconButton","smallIconButton":{"icon":"ic_m_kebab_tiles","action":{"behavior":"BEHAVIOR_TYPE_ACTION_SHEET","link":"catalogActionSheet?id=157476576"},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"click","key":"0fa20f2bf5604eb91964fa5374d67fb4c1da4b35"}},"testInfo":{"automatizationId":"action-sheet-btn"}}}],"trackingInfo":{"click":{"actionType":"click","key":"c2b55c5b62d0541fa356cc8036b54e984fae1b0c"},"view":{"actionType":"view","key":"c2b55c5b62d0541fa356cc8036b54e984fae1b0c"}}},{"action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Fan-angular-tour-of-the-world-or-the-curiosities-of-latitude-and-longitude-a-book-for-teachers-156549951\u002F?asb=H5vuK8HfeVSYNLSWi6SVJdYk1P7pTwLKVRP%252FDAEjFtQ%253D\u0026asb2=0EQ4yhQeChBr9Vi-Z-yh9xLs4AE9CehnT-ttIZteylaN3QnTL-D5RxgsKxvMlBGe\u0026keywords=Angular"},"isAdult":false,"mainState":[{"type":"atom","id":"atom","atom":{"type":"price","price":{"price":"21,
+                        29 BYN","priceColor":"ozAccentAlert","originalPrice":"30,
+                        43 BYN","originalPriceColor":"ozTextPrimary","theme":"STYLE_TYPE_MEDIUM"}}},{"type":"atom","id":"name","atom":{"type":"textAtom","textAtom":{"text":"An angular tour of the world, or, The curiosities of latitude and longitude; a book for teachers","textStyle":"tsBodyL","maxLines":3,"testInfo":{"automatizationId":"tile-name"}}}}],"multiButton":{"type":"multiButton","id":"multiButton","theme":"THEME_TYPE_VERTICAL","ozonButton":{"type":"addToCartButtonWithQuantity","addToCartButtonWithQuantity":{"text":"В корзину","maxItems":10000,"currentItems":0,"action":{"id":"156549951","quantity":1},"trackingInfo":{"click":{"actionType":"to_cart","key":"6ba21f19d605d120ddb939d2dbc662e8e90dfd62"}},"testInfo":{"automatizationId":"ozonAddToCart"},"theme":"STYLE_TYPE_PRIMARY"}},"ozonSubtitle":{"type":"textAtomWithIcon","textAtomWithIcon":{"text":"Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец Т8 Издательские Технологии","textStyle":"tsBodyM","textColor":"#808d9a","maxLines":2}}},"tileImage":{"type":"tileImage","id":"tileImage","images":["https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-p\u002F6039451597.jpg"],"imageRatio":"1: 1","imageBadges":[{"coordinates":{"x":1,"y":5},"badge":{"text":"?30%","tintColor":"ozWhite1","backgroundColor":"ozAccentAlert","theme":"STYLE_TYPE_MEDIUM"}},{"coordinates":{"x":1,"y":1},"badge":{"text":"Код для скидки","tintColor":"#ffffff","backgroundColor":"#7D36AA","theme":"STYLE_TYPE_MEDIUM"}}]},"topRightButtons":[{"type":"favoriteProductMolecule","favoriteProductMolecule":{"sku":"156549951","isFavorite":false,"favoriteButton":{"icon":"ic_m_fav_tiles_normal","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchAddItems","id":"addToFavorites","params":{"sku":"156549951"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"favorite","key":"049ef8b15d8291c1f52dd0bacf66f002247510d3"}},"testInfo":{"automatizationId":"favorite-button"}},"unfavoriteButton":{"icon":"ic_m_fav_tiles_active","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchDeleteItems","id":"removeFromFavorites","params":{"sku":"156549951"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"unfavorite","key":"049ef8b15d8291c1f52dd0bacf66f002247510d3"}},"testInfo":{"automatizationId":"unfavorite-button"}},"addToListAction":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"addToList","id":"addToList","params":{"sku":"156549951"}}}},{"type":"smallIconButton","smallIconButton":{"icon":"ic_m_kebab_tiles","action":{"behavior":"BEHAVIOR_TYPE_ACTION_SHEET","link":"catalogActionSheet?id=156549951"},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"click","key":"265292ca431a104954d811e002a2589f15219992"}},"testInfo":{"automatizationId":"action-sheet-btn"}}}],"trackingInfo":{"click":{"actionType":"click","key":"049ef8b15d8291c1f52dd0bacf66f002247510d3"},"view":{"actionType":"view","key":"049ef8b15d8291c1f52dd0bacf66f002247510d3"}}},{"action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Fangular-leafspot-of-cucumber-dissemination-overwintering-and-control-160250261\u002F?asb=0J7q0o1QIIZkqS1QebK8PNxtqWo2C1pBbE3q35tXa2U%253D\u0026asb2=QHljz3Ylm_dHYpxMsg4JU13nKzIxxF1HPdaLDv4EZ4vS4HXX2CIlmpN0BLn0deEL\u0026keywords=Angular"},"isAdult":false,"mainState":[{"type":"atom","id":"atom","atom":{"type":"price","price":{"price":"19,
+                        58 BYN","priceColor":"ozAccentAlert","originalPrice":"27,
+                        99 BYN","originalPriceColor":"ozTextPrimary","theme":"STYLE_TYPE_MEDIUM"}}},{"type":"atom","id":"name","atom":{"type":"textAtom","textAtom":{"text":"Angular-leafspot of cucumber: dissemination, overwintering and control","textStyle":"tsBodyL","maxLines":3,"testInfo":{"automatizationId":"tile-name"}}}}],"multiButton":{"type":"multiButton","id":"multiButton","theme":"THEME_TYPE_VERTICAL","ozonButton":{"type":"addToCartButtonWithQuantity","addToCartButtonWithQuantity":{"text":"В корзину","maxItems":10000,"currentItems":0,"action":{"id":"160250261","quantity":1},"trackingInfo":{"click":{"actionType":"to_cart","key":"b36a94e88b6515ed8a6ba025549c98b7fffda819"}},"testInfo":{"automatizationId":"ozonAddToCart"},"theme":"STYLE_TYPE_PRIMARY"}},"ozonSubtitle":{"type":"textAtomWithIcon","textAtomWithIcon":{"text":"Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец Т8 Издательские Технологии","textStyle":"tsBodyM","textColor":"#808d9a","maxLines":2}}},"tileImage":{"type":"tileImage","id":"tileImage","images":["https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-j\u002F6039771847.jpg"],"imageRatio":"1: 1","imageBadges":[{"coordinates":{"x":1,"y":5},"badge":{"text":"?30%","tintColor":"ozWhite1","backgroundColor":"ozAccentAlert","theme":"STYLE_TYPE_MEDIUM"}},{"coordinates":{"x":1,"y":1},"badge":{"text":"Код для скидки","tintColor":"#ffffff","backgroundColor":"#7D36AA","theme":"STYLE_TYPE_MEDIUM"}}]},"topRightButtons":[{"type":"favoriteProductMolecule","favoriteProductMolecule":{"sku":"160250261","isFavorite":false,"favoriteButton":{"icon":"ic_m_fav_tiles_normal","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchAddItems","id":"addToFavorites","params":{"sku":"160250261"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"favorite","key":"a0ac8f57ad866f15f23a77aa569f9c54bfff097e"}},"testInfo":{"automatizationId":"favorite-button"}},"unfavoriteButton":{"icon":"ic_m_fav_tiles_active","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchDeleteItems","id":"removeFromFavorites","params":{"sku":"160250261"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"unfavorite","key":"a0ac8f57ad866f15f23a77aa569f9c54bfff097e"}},"testInfo":{"automatizationId":"unfavorite-button"}},"addToListAction":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"addToList","id":"addToList","params":{"sku":"160250261"}}}},{"type":"smallIconButton","smallIconButton":{"icon":"ic_m_kebab_tiles","action":{"behavior":"BEHAVIOR_TYPE_ACTION_SHEET","link":"catalogActionSheet?id=160250261"},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"click","key":"6fcd2b51ad0843dd2d66a99cdd7ed272a1a0b4bb"}},"testInfo":{"automatizationId":"action-sheet-btn"}}}],"trackingInfo":{"click":{"actionType":"click","key":"a0ac8f57ad866f15f23a77aa569f9c54bfff097e"},"view":{"actionType":"view","key":"a0ac8f57ad866f15f23a77aa569f9c54bfff097e"}}},{"action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Fapplication-of-the-angular-analysis-to-the-solution-of-indeterminate-153733801\u002F?asb=hxBcGL2BclmMPCNaIzpwVMvUCNVCqWVn4DVfnMAnVTA%253D\u0026asb2=uM6OTCg60VLSxKP7Dt3BR_uPyrxRsZ8MltalIiUcLIicZLb3dO33R2rkvCgZrAOo\u0026keywords=Angular"},"isAdult":false,"mainState":[{"type":"atom","id":"atom","atom":{"type":"price","price":{"price":"21,
+                        32 BYN","priceColor":"ozAccentAlert","originalPrice":"30,
+                        50 BYN","originalPriceColor":"ozTextPrimary","theme":"STYLE_TYPE_MEDIUM"}}},{"type":"atom","id":"name","atom":{"type":"textAtom","textAtom":{"text":"Application of the Angular Analysis to the Solution of Indeterminate .","textStyle":"tsBodyL","maxLines":3,"testInfo":{"automatizationId":"tile-name"}}}}],"multiButton":{"type":"multiButton","id":"multiButton","theme":"THEME_TYPE_VERTICAL","ozonButton":{"type":"addToCartButtonWithQuantity","addToCartButtonWithQuantity":{"text":"В корзину","maxItems":10000,"currentItems":0,"action":{"id":"153733801","quantity":1},"trackingInfo":{"click":{"actionType":"to_cart","key":"f80ba3c6bb4f0bbeec43b8fd215c6d926be29469"}},"testInfo":{"automatizationId":"ozonAddToCart"},"theme":"STYLE_TYPE_PRIMARY"}},"ozonSubtitle":{"type":"textAtomWithIcon","textAtomWithIcon":{"text":"Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец Т8 Издательские Технологии","textStyle":"tsBodyM","textColor":"#808d9a","maxLines":2}}},"tileImage":{"type":"tileImage","id":"tileImage","images":["https:\u002F\u002Fcdn1.ozone.ru\u002Fmultimedia\u002F1009232300.jpg"],"imageRatio":"1: 1","imageBadges":[{"coordinates":{"x":1,"y":5},"badge":{"text":"?30%","tintColor":"ozWhite1","backgroundColor":"ozAccentAlert","theme":"STYLE_TYPE_MEDIUM"}},{"coordinates":{"x":1,"y":1},"badge":{"text":"Код для скидки","tintColor":"#ffffff","backgroundColor":"#7D36AA","theme":"STYLE_TYPE_MEDIUM"}}]},"topRightButtons":[{"type":"favoriteProductMolecule","favoriteProductMolecule":{"sku":"153733801","isFavorite":false,"favoriteButton":{"icon":"ic_m_fav_tiles_normal","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchAddItems","id":"addToFavorites","params":{"sku":"153733801"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"favorite","key":"e075282dd963e4405644365b97a47113a707dd9a"}},"testInfo":{"automatizationId":"favorite-button"}},"unfavoriteButton":{"icon":"ic_m_fav_tiles_active","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchDeleteItems","id":"removeFromFavorites","params":{"sku":"153733801"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"unfavorite","key":"e075282dd963e4405644365b97a47113a707dd9a"}},"testInfo":{"automatizationId":"unfavorite-button"}},"addToListAction":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"addToList","id":"addToList","params":{"sku":"153733801"}}}},{"type":"smallIconButton","smallIconButton":{"icon":"ic_m_kebab_tiles","action":{"behavior":"BEHAVIOR_TYPE_ACTION_SHEET","link":"catalogActionSheet?id=153733801"},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"click","key":"8f6b36c96df4f3b6cfd315ce43ea5933a912f982"}},"testInfo":{"automatizationId":"action-sheet-btn"}}}],"trackingInfo":{"click":{"actionType":"click","key":"e075282dd963e4405644365b97a47113a707dd9a"},"view":{"actionType":"view","key":"e075282dd963e4405644365b97a47113a707dd9a"}}},{"action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Felements-of-plane-and-solid-free-hand-geometrical-drawing-with-lettering-and-some-elements-157138100\u002F?asb=rKmR%252BMt3ApIm9ZraWbuUrwsuKdMHMSKiuFdY9Tqo8z8%253D\u0026asb2=loDFD-Nc4wNcBDPm2a8a8CCb67gFdsisvxySfht5P_GJdBJJ2XpIjadvTRLzJjGn\u0026keywords=Angular"},"isAdult":false,"mainState":[{"type":"atom","id":"atom","atom":{"type":"price","price":{"price":"23,
+                        45 BYN","priceColor":"ozAccentAlert","originalPrice":"33,
+                        54 BYN","originalPriceColor":"ozTextPrimary","theme":"STYLE_TYPE_MEDIUM"}}},{"type":"atom","id":"name","atom":{"type":"textAtom","textAtom":{"text":"Elements of Plane and Solid Free-Hand Geometrical Drawing, with Lettering: And Some Elements of Geometrical Ornamental Design, Including the Principals of Harmonic Angular Ratios, Etc","textStyle":"tsBodyL","maxLines":3,"testInfo":{"automatizationId":"tile-name"}}}}],"multiButton":{"type":"multiButton","id":"multiButton","theme":"THEME_TYPE_VERTICAL","ozonButton":{"type":"addToCartButtonWithQuantity","addToCartButtonWithQuantity":{"text":"В корзину","maxItems":10000,"currentItems":0,"action":{"id":"157138100","quantity":1},"trackingInfo":{"click":{"actionType":"to_cart","key":"d794e012b52aa0078c22b1095614b2ba2e626c88"}},"testInfo":{"automatizationId":"ozonAddToCart"},"theme":"STYLE_TYPE_PRIMARY"}},"ozonSubtitle":{"type":"textAtomWithIcon","textAtomWithIcon":{"text":"Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец Т8 Издательские Технологии","textStyle":"tsBodyM","textColor":"#808d9a","maxLines":2}}},"tileImage":{"type":"tileImage","id":"tileImage","images":["https:\u002F\u002Fcdn1.ozone.ru\u002Fmultimedia\u002F1004331149.jpg"],"imageRatio":"1: 1","imageBadges":[{"coordinates":{"x":1,"y":5},"badge":{"text":"?30%","tintColor":"ozWhite1","backgroundColor":"ozAccentAlert","theme":"STYLE_TYPE_MEDIUM"}},{"coordinates":{"x":1,"y":1},"badge":{"text":"Код для скидки","tintColor":"#ffffff","backgroundColor":"#7D36AA","theme":"STYLE_TYPE_MEDIUM"}}]},"topRightButtons":[{"type":"favoriteProductMolecule","favoriteProductMolecule":{"sku":"157138100","isFavorite":false,"favoriteButton":{"icon":"ic_m_fav_tiles_normal","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchAddItems","id":"addToFavorites","params":{"sku":"157138100"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"favorite","key":"faa432e2f33b90fa0641c69d07679bbed75cb619"}},"testInfo":{"automatizationId":"favorite-button"}},"unfavoriteButton":{"icon":"ic_m_fav_tiles_active","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchDeleteItems","id":"removeFromFavorites","params":{"sku":"157138100"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"unfavorite","key":"faa432e2f33b90fa0641c69d07679bbed75cb619"}},"testInfo":{"automatizationId":"unfavorite-button"}},"addToListAction":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"addToList","id":"addToList","params":{"sku":"157138100"}}}},{"type":"smallIconButton","smallIconButton":{"icon":"ic_m_kebab_tiles","action":{"behavior":"BEHAVIOR_TYPE_ACTION_SHEET","link":"catalogActionSheet?id=157138100"},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"click","key":"09d817059a8106f8e417a7c275b1b70b2ff63736"}},"testInfo":{"automatizationId":"action-sheet-btn"}}}],"trackingInfo":{"click":{"actionType":"click","key":"faa432e2f33b90fa0641c69d07679bbed75cb619"},"view":{"actionType":"view","key":"faa432e2f33b90fa0641c69d07679bbed75cb619"}}},{"action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Fnativescript-for-angular-mobile-development-157492292\u002F?asb=ZrRa%252F45eIXDI5Rw8kE%252B8ktwXit%252FaKTd%252BXhoV69ylOlA%253D\u0026asb2=DUtjlPnXLB6BgpyJFEi_3DMEJvGC_Ae30OCvru6nSHbXeWWHqt22Sas5WXPgO-zT\u0026keywords=Angular"},"isAdult":false,"mainState":[{"type":"atom","id":"atom","atom":{"type":"price","price":{"price":"186,
+                        24 BYN","priceColor":"ozAccentAlert","originalPrice":"265,
+                        67 BYN","originalPriceColor":"ozTextPrimary","theme":"STYLE_TYPE_MEDIUM"}}},{"type":"atom","id":"name","atom":{"type":"textAtom","textAtom":{"text":"NativeScript for Angular Mobile Development","textStyle":"tsBodyL","maxLines":3,"testInfo":{"automatizationId":"tile-name"}}}}],"multiButton":{"type":"multiButton","id":"multiButton","theme":"THEME_TYPE_VERTICAL","ozonButton":{"type":"addToCartButtonWithQuantity","addToCartButtonWithQuantity":{"text":"В корзину","maxItems":10000,"currentItems":0,"action":{"id":"157492292","quantity":1},"trackingInfo":{"click":{"actionType":"to_cart","key":"f012d0a3a375aaded4c0b6ed95ab0c979208f435"}},"testInfo":{"automatizationId":"ozonAddToCart"},"theme":"STYLE_TYPE_PRIMARY"}},"ozonSubtitle":{"type":"textAtomWithIcon","textAtomWithIcon":{"text":"Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец Т8 Издательские Технологии","textStyle":"tsBodyM","textColor":"#808d9a","maxLines":2}}},"tileImage":{"type":"tileImage","id":"tileImage","images":["https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-c\u002F6122957616.jpg"],"imageRatio":"1: 1","imageBadges":[{"coordinates":{"x":1,"y":5},"badge":{"text":"?29%","tintColor":"ozWhite1","backgroundColor":"ozAccentAlert","theme":"STYLE_TYPE_MEDIUM"}},{"coordinates":{"x":1,"y":1},"badge":{"text":"Код для скидки","tintColor":"#ffffff","backgroundColor":"#7D36AA","theme":"STYLE_TYPE_MEDIUM"}}]},"topRightButtons":[{"type":"favoriteProductMolecule","favoriteProductMolecule":{"sku":"157492292","isFavorite":false,"favoriteButton":{"icon":"ic_m_fav_tiles_normal","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchAddItems","id":"addToFavorites","params":{"sku":"157492292"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"favorite","key":"c11785de224a506fab0c447dd2d3e50d14aee577"}},"testInfo":{"automatizationId":"favorite-button"}},"unfavoriteButton":{"icon":"ic_m_fav_tiles_active","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchDeleteItems","id":"removeFromFavorites","params":{"sku":"157492292"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"unfavorite","key":"c11785de224a506fab0c447dd2d3e50d14aee577"}},"testInfo":{"automatizationId":"unfavorite-button"}},"addToListAction":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"addToList","id":"addToList","params":{"sku":"157492292"}}}},{"type":"smallIconButton","smallIconButton":{"icon":"ic_m_kebab_tiles","action":{"behavior":"BEHAVIOR_TYPE_ACTION_SHEET","link":"catalogActionSheet?id=157492292"},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"click","key":"32f1564ff8b9a79f54c25ed2ede7980bf9cfb9cd"}},"testInfo":{"automatizationId":"action-sheet-btn"}}}],"trackingInfo":{"click":{"actionType":"click","key":"c11785de224a506fab0c447dd2d3e50d14aee577"},"view":{"actionType":"view","key":"c11785de224a506fab0c447dd2d3e50d14aee577"}}},{"action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Farchitecting-angular-applications-with-redux-rxjs-and-ngrx-157666885\u002F?asb=HMPOpSSchuI%252FPo4R5qXEmILKEsztUli1ouZSluz7uQs%253D\u0026asb2=IVdIaIEi4o-EguuBwe5JnobdE4RgYsap9ggcmQPMm3TIpjymuij6OWTLYDjFydQb\u0026keywords=Angular"},"isAdult":false,"mainState":[{"type":"atom","id":"atom","atom":{"type":"price","price":{"price":"187,
+                        15 BYN","priceColor":"ozAccentAlert","originalPrice":"267,
+                        41 BYN","originalPriceColor":"ozTextPrimary","theme":"STYLE_TYPE_MEDIUM"}}},{"type":"atom","id":"name","atom":{"type":"textAtom","textAtom":{"text":"Architecting Angular Applications with Redux, RxJs and NgRx","textStyle":"tsBodyL","maxLines":3,"testInfo":{"automatizationId":"tile-name"}}}}],"multiButton":{"type":"multiButton","id":"multiButton","theme":"THEME_TYPE_VERTICAL","ozonButton":{"type":"addToCartButtonWithQuantity","addToCartButtonWithQuantity":{"text":"В корзину","maxItems":10000,"currentItems":0,"action":{"id":"157666885","quantity":1},"trackingInfo":{"click":{"actionType":"to_cart","key":"45fa9c8cf34c15eb10393c10bb06052dcb06405d"}},"testInfo":{"automatizationId":"ozonAddToCart"},"theme":"STYLE_TYPE_PRIMARY"}},"ozonSubtitle":{"type":"textAtomWithIcon","textAtomWithIcon":{"text":"Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец Т8 Издательские Технологии","textStyle":"tsBodyM","textColor":"#808d9a","maxLines":2}}},"tileImage":{"type":"tileImage","id":"tileImage","images":["https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-2\u002F6122960558.jpg","https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-q\u002F6053432450.jpg","https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-6\u002F6053432430.jpg","https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-r\u002F6040789467.jpg","https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-w\u002F6053432420.jpg","https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-w\u002F6053432456.jpg"],"imageRatio":"1: 1","imageBadges":[{"coordinates":{"x":1,"y":5},"badge":{"text":"?30%","tintColor":"ozWhite1","backgroundColor":"ozAccentAlert","theme":"STYLE_TYPE_MEDIUM"}},{"coordinates":{"x":1,"y":1},"badge":{"text":"Код для скидки","tintColor":"#ffffff","backgroundColor":"#7D36AA","theme":"STYLE_TYPE_MEDIUM"}}]},"topRightButtons":[{"type":"favoriteProductMolecule","favoriteProductMolecule":{"sku":"157666885","isFavorite":false,"favoriteButton":{"icon":"ic_m_fav_tiles_normal","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchAddItems","id":"addToFavorites","params":{"sku":"157666885"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"favorite","key":"c61059c8ca47b9312cb5a5bcc60a3d0d0d463f98"}},"testInfo":{"automatizationId":"favorite-button"}},"unfavoriteButton":{"icon":"ic_m_fav_tiles_active","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchDeleteItems","id":"removeFromFavorites","params":{"sku":"157666885"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"unfavorite","key":"c61059c8ca47b9312cb5a5bcc60a3d0d0d463f98"}},"testInfo":{"automatizationId":"unfavorite-button"}},"addToListAction":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"addToList","id":"addToList","params":{"sku":"157666885"}}}},{"type":"smallIconButton","smallIconButton":{"icon":"ic_m_kebab_tiles","action":{"behavior":"BEHAVIOR_TYPE_ACTION_SHEET","link":"catalogActionSheet?id=157666885"},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"click","key":"0eca6dd785af8fa39da57fa14d5bbfd900390093"}},"testInfo":{"automatizationId":"action-sheet-btn"}}}],"trackingInfo":{"click":{"actionType":"click","key":"c61059c8ca47b9312cb5a5bcc60a3d0d0d463f98"},"view":{"actionType":"view","key":"c61059c8ca47b9312cb5a5bcc60a3d0d0d463f98"}}},{"action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Frazrabotka-veb-prilozheniy-s-pomoshchyu-node-js-mongodb-i-angular-ischerpyvayushchee-rukovodstvo-277453445\u002F?asb=qoUAzzxj11oZOzcUfscYZUbe3MEwqc1mPaQp7SoHR9w%253D\u0026asb2=lOQeMSsYxxfC5eI0CoA-EVqSjUVih7QHxppjs1dM-k5wmda7Oz7-czuj9sS8UXf1\u0026keywords=Angular"},"isAdult":false,"mainState":[{"type":"atom","id":"atom","atom":{"type":"price","price":{"price":"97,
+                        95 BYN","priceColor":"ozAccentAlert","originalPrice":"122,
+                        45 BYN","originalPriceColor":"ozTextPrimary","theme":"STYLE_TYPE_MEDIUM"}}},{"type":"atom","id":"label","atom":{"type":"textAtom","textAtom":{"text":"Есть дешевле внутри, от 91,
+                        60 BYN","textStyle":"tsBodyM","textColor":"ozAccentPrimary","maxLines":3,"testInfo":{"automatizationId":"tile-label"}}}},{"type":"atom","id":"name","atom":{"type":"textAtom","textAtom":{"text":"Разработка веб-приложений с помощью Node.js, MongoDB и Angular. Исчерпывающее руководство по использованию стека MEAN | Дейли Брэд, Дейли Брендан","textStyle":"tsBodyL","maxLines":3,"testInfo":{"automatizationId":"tile-name"}}}}],"multiButton":{"type":"multiButton","id":"multiButton","theme":"THEME_TYPE_VERTICAL","ozonButton":{"type":"addToCartButtonWithQuantity","addToCartButtonWithQuantity":{"text":"В корзину","maxItems":5,"currentItems":0,"action":{"id":"277453445","quantity":1},"trackingInfo":{"click":{"actionType":"to_cart","key":"0146bd3f96ecf45720a2a00a97c04db2e3bb29d3"}},"testInfo":{"automatizationId":"ozonAddToCart"},"theme":"STYLE_TYPE_PRIMARY"}},"ozonSubtitle":{"type":"textAtomWithIcon","textAtomWithIcon":{"text":"Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец КомБук","textStyle":"tsBodyM","textColor":"#808d9a","maxLines":2}}},"tileImage":{"type":"tileImage","id":"tileImage","images":["https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-e\u002F6009776426.jpg"],"imageRatio":"1: 1","imageBadges":[{"coordinates":{"x":1,"y":5},"badge":{"text":"?20%","tintColor":"ozWhite1","backgroundColor":"ozAccentAlert","theme":"STYLE_TYPE_MEDIUM"}}]},"topRightButtons":[{"type":"favoriteProductMolecule","favoriteProductMolecule":{"sku":"277453445","isFavorite":false,"favoriteButton":{"icon":"ic_m_fav_tiles_normal","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchAddItems","id":"addToFavorites","params":{"sku":"277453445"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"favorite","key":"8e961cd43f785990f3e4fddf71f78f5568b435a6"}},"testInfo":{"automatizationId":"favorite-button"}},"unfavoriteButton":{"icon":"ic_m_fav_tiles_active","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchDeleteItems","id":"removeFromFavorites","params":{"sku":"277453445"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"unfavorite","key":"8e961cd43f785990f3e4fddf71f78f5568b435a6"}},"testInfo":{"automatizationId":"unfavorite-button"}},"addToListAction":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"addToList","id":"addToList","params":{"sku":"277453445"}}}},{"type":"smallIconButton","smallIconButton":{"icon":"ic_m_kebab_tiles","action":{"behavior":"BEHAVIOR_TYPE_ACTION_SHEET","link":"catalogActionSheet?id=277453445"},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"click","key":"c42921f8b0d6fc6f47e5caba836d9fc44732cd53"}},"testInfo":{"automatizationId":"action-sheet-btn"}}}],"trackingInfo":{"click":{"actionType":"click","key":"8e961cd43f785990f3e4fddf71f78f5568b435a6"},"view":{"actionType":"view","key":"8e961cd43f785990f3e4fddf71f78f5568b435a6"}}},{"action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Fangular-leafspot-of-cucumber-dissemination-overwintering-and-control-153659998\u002F?asb=1rQtUYJZPRuCaNqIlOk%252BlTPzMtrfwoj0scI12e5B7V4%253D\u0026asb2=5E6mOrRGkplu1ZovKOPHKAOAoWQKUpqHoir9iiY_pQ1kJqL5zlu0mfs_ORiNkF2v\u0026keywords=Angular"},"isAdult":false,"mainState":[{"type":"atom","id":"atom","atom":{"type":"price","price":{"price":"19,
+                        58 BYN","priceColor":"ozAccentAlert","originalPrice":"27,
+                        99 BYN","originalPriceColor":"ozTextPrimary","theme":"STYLE_TYPE_MEDIUM"}}},{"type":"atom","id":"name","atom":{"type":"textAtom","textAtom":{"text":"Angular-leafspot of cucumber: dissemination, overwintering and control","textStyle":"tsBodyL","maxLines":3,"testInfo":{"automatizationId":"tile-name"}}}}],"multiButton":{"type":"multiButton","id":"multiButton","theme":"THEME_TYPE_VERTICAL","ozonButton":{"type":"addToCartButtonWithQuantity","addToCartButtonWithQuantity":{"text":"В корзину","maxItems":10000,"currentItems":0,"action":{"id":"153659998","quantity":1},"trackingInfo":{"click":{"actionType":"to_cart","key":"df0faee800a50e92edbc415ede95fc81ccf304c8"}},"testInfo":{"automatizationId":"ozonAddToCart"},"theme":"STYLE_TYPE_PRIMARY"}},"ozonSubtitle":{"type":"textAtomWithIcon","textAtomWithIcon":{"text":"Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец Т8 Издательские Технологии","textStyle":"tsBodyM","textColor":"#808d9a","maxLines":2}}},"tileImage":{"type":"tileImage","id":"tileImage","images":["https:\u002F\u002Fcdn1.ozone.ru\u002Fmultimedia\u002F1008949703.jpg"],"imageRatio":"1: 1","imageBadges":[{"coordinates":{"x":1,"y":5},"badge":{"text":"?30%","tintColor":"ozWhite1","backgroundColor":"ozAccentAlert","theme":"STYLE_TYPE_MEDIUM"}},{"coordinates":{"x":1,"y":1},"badge":{"text":"Код для скидки","tintColor":"#ffffff","backgroundColor":"#7D36AA","theme":"STYLE_TYPE_MEDIUM"}}]},"topRightButtons":[{"type":"favoriteProductMolecule","favoriteProductMolecule":{"sku":"153659998","isFavorite":false,"favoriteButton":{"icon":"ic_m_fav_tiles_normal","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchAddItems","id":"addToFavorites","params":{"sku":"153659998"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"favorite","key":"9d4610123b62ec28cdff9bc3238bc7a935d31c2f"}},"testInfo":{"automatizationId":"favorite-button"}},"unfavoriteButton":{"icon":"ic_m_fav_tiles_active","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchDeleteItems","id":"removeFromFavorites","params":{"sku":"153659998"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"unfavorite","key":"9d4610123b62ec28cdff9bc3238bc7a935d31c2f"}},"testInfo":{"automatizationId":"unfavorite-button"}},"addToListAction":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"addToList","id":"addToList","params":{"sku":"153659998"}}}},{"type":"smallIconButton","smallIconButton":{"icon":"ic_m_kebab_tiles","action":{"behavior":"BEHAVIOR_TYPE_ACTION_SHEET","link":"catalogActionSheet?id=153659998"},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"click","key":"a7c742af42b7659df3d7a62f22ef9c78feeca76d"}},"testInfo":{"automatizationId":"action-sheet-btn"}}}],"trackingInfo":{"click":{"actionType":"click","key":"9d4610123b62ec28cdff9bc3238bc7a935d31c2f"},"view":{"actionType":"view","key":"9d4610123b62ec28cdff9bc3238bc7a935d31c2f"}}},{"action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Fla-piedra-angular-157471167\u002F?asb=XzRu9%252FE%252F9ACjrMgedF3tKcGiYjgNS66NuBl6TBoyN2Q%253D\u0026asb2=AJTHA4NBZkjHHjb87Ue3DdCMRUDY7_67oDYN0IayJ9wYXBRHi9GuB3ReW_hFBj8B\u0026keywords=Angular"},"isAdult":false,"mainState":[{"type":"atom","id":"atom","atom":{"type":"price","price":{"price":"83,
+                        40 BYN","priceColor":"ozAccentAlert","originalPrice":"121,
+                        72 BYN","originalPriceColor":"ozTextPrimary","theme":"STYLE_TYPE_MEDIUM"}}},{"type":"atom","id":"name","atom":{"type":"textAtom","textAtom":{"text":"La piedra angular","textStyle":"tsBodyL","maxLines":3,"testInfo":{"automatizationId":"tile-name"}}}}],"multiButton":{"type":"multiButton","id":"multiButton","theme":"THEME_TYPE_VERTICAL","ozonButton":{"type":"addToCartButtonWithQuantity","addToCartButtonWithQuantity":{"text":"В корзину","maxItems":10000,"currentItems":0,"action":{"id":"157471167","quantity":1},"trackingInfo":{"click":{"actionType":"to_cart","key":"4030beea6b65e805741d602d652b361c55e7f9cc"}},"testInfo":{"automatizationId":"ozonAddToCart"},"theme":"STYLE_TYPE_PRIMARY"}},"ozonSubtitle":{"type":"textAtomWithIcon","textAtomWithIcon":{"text":"Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец Т8 Издательские Технологии","textStyle":"tsBodyM","textColor":"#808d9a","maxLines":2}}},"tileImage":{"type":"tileImage","id":"tileImage","images":["https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-9\u002F6119210049.jpg"],"imageRatio":"1: 1","imageBadges":[{"coordinates":{"x":1,"y":5},"badge":{"text":"?31%","tintColor":"ozWhite1","backgroundColor":"ozAccentAlert","theme":"STYLE_TYPE_MEDIUM"}},{"coordinates":{"x":1,"y":1},"badge":{"text":"Код для скидки","tintColor":"#ffffff","backgroundColor":"#7D36AA","theme":"STYLE_TYPE_MEDIUM"}}]},"topRightButtons":[{"type":"favoriteProductMolecule","favoriteProductMolecule":{"sku":"157471167","isFavorite":false,"favoriteButton":{"icon":"ic_m_fav_tiles_normal","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchAddItems","id":"addToFavorites","params":{"sku":"157471167"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"favorite","key":"898f2f3412c84cc0ed6fe2a8079d84ff04e0085b"}},"testInfo":{"automatizationId":"favorite-button"}},"unfavoriteButton":{"icon":"ic_m_fav_tiles_active","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchDeleteItems","id":"removeFromFavorites","params":{"sku":"157471167"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"unfavorite","key":"898f2f3412c84cc0ed6fe2a8079d84ff04e0085b"}},"testInfo":{"automatizationId":"unfavorite-button"}},"addToListAction":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"addToList","id":"addToList","params":{"sku":"157471167"}}}},{"type":"smallIconButton","smallIconButton":{"icon":"ic_m_kebab_tiles","action":{"behavior":"BEHAVIOR_TYPE_ACTION_SHEET","link":"catalogActionSheet?id=157471167"},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"click","key":"afc03b19013c93afe63dce238cf615100254bf00"}},"testInfo":{"automatizationId":"action-sheet-btn"}}}],"trackingInfo":{"click":{"actionType":"click","key":"898f2f3412c84cc0ed6fe2a8079d84ff04e0085b"},"view":{"actionType":"view","key":"898f2f3412c84cc0ed6fe2a8079d84ff04e0085b"}}},{"action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Fangular-2-components-157475827\u002F?asb=at94ZaTxpHtyPxFYHLzKvzRD4IjAlLFI5fXG5Xgb7rY%253D\u0026asb2=KRnpAZpLAWOMmD2mMKpj7_R494qt7RrNqaUHtrYoZwDn52XzuD87RJp794EoFIW4\u0026keywords=Angular"},"isAdult":false,"mainState":[{"type":"atom","id":"atom","atom":{"type":"price","price":{"price":"130,
+                        06 BYN","priceColor":"ozAccentAlert","originalPrice":"185,
+                        82 BYN","originalPriceColor":"ozTextPrimary","theme":"STYLE_TYPE_MEDIUM"}}},{"type":"atom","id":"name","atom":{"type":"textAtom","textAtom":{"text":"Angular 2 Components","textStyle":"tsBodyL","maxLines":3,"testInfo":{"automatizationId":"tile-name"}}}}],"multiButton":{"type":"multiButton","id":"multiButton","theme":"THEME_TYPE_VERTICAL","ozonButton":{"type":"addToCartButtonWithQuantity","addToCartButtonWithQuantity":{"text":"В корзину","maxItems":10000,"currentItems":0,"action":{"id":"157475827","quantity":1},"trackingInfo":{"click":{"actionType":"to_cart","key":"aec9c806fb1f1e026d08a047a1856d1dc6786f6e"}},"testInfo":{"automatizationId":"ozonAddToCart"},"theme":"STYLE_TYPE_PRIMARY"}},"ozonSubtitle":{"type":"textAtomWithIcon","textAtomWithIcon":{"text":"Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец Т8 Издательские Технологии","textStyle":"tsBodyM","textColor":"#808d9a","maxLines":2}}},"tileImage":{"type":"tileImage","id":"tileImage","images":["https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-t\u002F6123629033.jpg"],"imageRatio":"1: 1","imageBadges":[{"coordinates":{"x":1,"y":5},"badge":{"text":"?30%","tintColor":"ozWhite1","backgroundColor":"ozAccentAlert","theme":"STYLE_TYPE_MEDIUM"}},{"coordinates":{"x":1,"y":1},"badge":{"text":"Код для скидки","tintColor":"#ffffff","backgroundColor":"#7D36AA","theme":"STYLE_TYPE_MEDIUM"}}]},"topRightButtons":[{"type":"favoriteProductMolecule","favoriteProductMolecule":{"sku":"157475827","isFavorite":false,"favoriteButton":{"icon":"ic_m_fav_tiles_normal","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchAddItems","id":"addToFavorites","params":{"sku":"157475827"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"favorite","key":"ee31618f8ec1def945fe9bea5150d52a8a6ba625"}},"testInfo":{"automatizationId":"favorite-button"}},"unfavoriteButton":{"icon":"ic_m_fav_tiles_active","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchDeleteItems","id":"removeFromFavorites","params":{"sku":"157475827"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"unfavorite","key":"ee31618f8ec1def945fe9bea5150d52a8a6ba625"}},"testInfo":{"automatizationId":"unfavorite-button"}},"addToListAction":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"addToList","id":"addToList","params":{"sku":"157475827"}}}},{"type":"smallIconButton","smallIconButton":{"icon":"ic_m_kebab_tiles","action":{"behavior":"BEHAVIOR_TYPE_ACTION_SHEET","link":"catalogActionSheet?id=157475827"},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"click","key":"66a054061bb87591dc279054ed3e0f8dac9a9358"}},"testInfo":{"automatizationId":"action-sheet-btn"}}}],"trackingInfo":{"click":{"actionType":"click","key":"ee31618f8ec1def945fe9bea5150d52a8a6ba625"},"view":{"actionType":"view","key":"ee31618f8ec1def945fe9bea5150d52a8a6ba625"}}},{"action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Fbeginning-angular-with-typescript-214827393\u002F?asb=p%252Bz9mGV1717cOfzNDgdO54%252FVlX%252Fl5lsIXHeH0rXApX4%253D\u0026asb2=d2e_6yhjbl6urdvNcYt4P2xFNk_IjaHI61prwHbTedAFdYXgvBtInzDSmTA85a6A\u0026keywords=Angular"},"isAdult":false,"mainState":[{"type":"atom","id":"atom","atom":{"type":"price","price":{"price":"57,
+                        58 BYN","priceColor":"ozTextPrimary","theme":"STYLE_TYPE_MEDIUM"}}},{"type":"atom","id":"name","atom":{"type":"textAtom","textAtom":{"text":"Beginning Angular with Typescript","textStyle":"tsBodyL","maxLines":3,"testInfo":{"automatizationId":"tile-name"}}}},{"type":"atom","id":"atom","atom":{"type":"rating","rating":{"rating":1,"count":"1 отзыв","theme":"THEME_TYPE_M","action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Fbeginning-angular-with-typescript-214827393\u002F?asb=p%252Bz9mGV1717cOfzNDgdO54%252FVlX%252Fl5lsIXHeH0rXApX4%253D\u0026asb2=d2e_6yhjbl6urdvNcYt4P2xFNk_IjaHI61prwHbTedAFdYXgvBtInzDSmTA85a6A\u0026keywords=Angular#comments--offset-80"},"trackingInfo":{"click":{"actionType":"click","key":"c93416faf07ec23d56aa8004456cf9093cf203a0"}}}}}],"multiButton":{"type":"multiButton","id":"multiButton","theme":"THEME_TYPE_VERTICAL","ozonButton":{"type":"addToCartButtonWithQuantity","addToCartButtonWithQuantity":{"text":"В корзину","maxItems":10000,"currentItems":0,"action":{"id":"214827393","quantity":1},"trackingInfo":{"click":{"actionType":"to_cart","key":"230ca60e8ead4ca1db62487203194058b9673c7b"}},"testInfo":{"automatizationId":"ozonAddToCart"},"theme":"STYLE_TYPE_PRIMARY"}},"ozonSubtitle":{"type":"textAtomWithIcon","textAtomWithIcon":{"text":"Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец Т8 Издательские Технологии","textStyle":"tsBodyM","textColor":"#808d9a","maxLines":2}}},"tileImage":{"type":"tileImage","id":"tileImage","images":["https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-8\u002F6140677460.jpg","https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-5\u002F6056742233.jpg","https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-z\u002F6056742227.jpg","https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-0\u002F6056742228.jpg","https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-6\u002F6056742234.jpg","https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-1\u002F6056742229.jpg"],"imageRatio":"1: 1","imageBadges":[{"coordinates":{"x":1,"y":1},"badge":{"text":"Код для скидки","tintColor":"#ffffff","backgroundColor":"#7D36AA","theme":"STYLE_TYPE_MEDIUM"}}]},"topRightButtons":[{"type":"favoriteProductMolecule","favoriteProductMolecule":{"sku":"214827393","isFavorite":false,"favoriteButton":{"icon":"ic_m_fav_tiles_normal","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchAddItems","id":"addToFavorites","params":{"sku":"214827393"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"favorite","key":"8e6481eb808e798615e574d97e43e49b44e03d7d"}},"testInfo":{"automatizationId":"favorite-button"}},"unfavoriteButton":{"icon":"ic_m_fav_tiles_active","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchDeleteItems","id":"removeFromFavorites","params":{"sku":"214827393"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"unfavorite","key":"8e6481eb808e798615e574d97e43e49b44e03d7d"}},"testInfo":{"automatizationId":"unfavorite-button"}},"addToListAction":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"addToList","id":"addToList","params":{"sku":"214827393"}}}},{"type":"smallIconButton","smallIconButton":{"icon":"ic_m_kebab_tiles","action":{"behavior":"BEHAVIOR_TYPE_ACTION_SHEET","link":"catalogActionSheet?id=214827393"},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"click","key":"aa116666944add357d8caf92660d5048dc4cb5f3"}},"testInfo":{"automatizationId":"action-sheet-btn"}}}],"trackingInfo":{"click":{"actionType":"click","key":"8e6481eb808e798615e574d97e43e49b44e03d7d"},"view":{"actionType":"view","key":"8e6481eb808e798615e574d97e43e49b44e03d7d"}}},{"action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Fexcitation-function-and-angular-distribution-of-the-neutrons-from-the-d-d-reaction-160201664\u002F?asb=5z%252BM%252FjJfCHF3sRtGxtAJ5YsXyPS1aeO%252FfOZFb%252BBuVJ8%253D\u0026asb2=Lsg6Pa9Fsqh3Qpq9Ro5dmhoPY1a-14UnCm-Ckoeb7LpRsH932OaWK8hTXV5Gd0Fs\u0026keywords=Angular"},"isAdult":false,"mainState":[{"type":"atom","id":"atom","atom":{"type":"price","price":{"price":"19,
+                        82 BYN","priceColor":"ozAccentAlert","originalPrice":"28,
+                        34 BYN","originalPriceColor":"ozTextPrimary","theme":"STYLE_TYPE_MEDIUM"}}},{"type":"atom","id":"name","atom":{"type":"textAtom","textAtom":{"text":"Excitation function and angular distribution of the neutrons from the D-D reaction.","textStyle":"tsBodyL","maxLines":3,"testInfo":{"automatizationId":"tile-name"}}}}],"multiButton":{"type":"multiButton","id":"multiButton","theme":"THEME_TYPE_VERTICAL","ozonButton":{"type":"addToCartButtonWithQuantity","addToCartButtonWithQuantity":{"text":"В корзину","maxItems":10000,"currentItems":0,"action":{"id":"160201664","quantity":1},"trackingInfo":{"click":{"actionType":"to_cart","key":"45d3ee3a8edc6284715a30e74ed42222720153ac"}},"testInfo":{"automatizationId":"ozonAddToCart"},"theme":"STYLE_TYPE_PRIMARY"}},"ozonSubtitle":{"type":"textAtomWithIcon","textAtomWithIcon":{"text":"Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец Т8 Издательские Технологии","textStyle":"tsBodyM","textColor":"#808d9a","maxLines":2}}},"tileImage":{"type":"tileImage","id":"tileImage","images":["https:\u002F\u002Fcdn1.ozone.ru\u002Fmultimedia\u002F1009452773.jpg"],"imageRatio":"1: 1","imageBadges":[{"coordinates":{"x":1,"y":5},"badge":{"text":"?30%","tintColor":"ozWhite1","backgroundColor":"ozAccentAlert","theme":"STYLE_TYPE_MEDIUM"}},{"coordinates":{"x":1,"y":1},"badge":{"text":"Код для скидки","tintColor":"#ffffff","backgroundColor":"#7D36AA","theme":"STYLE_TYPE_MEDIUM"}}]},"topRightButtons":[{"type":"favoriteProductMolecule","favoriteProductMolecule":{"sku":"160201664","isFavorite":false,"favoriteButton":{"icon":"ic_m_fav_tiles_normal","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchAddItems","id":"addToFavorites","params":{"sku":"160201664"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"favorite","key":"0da25106ff15d28fedcbf91dd529d083ec846aef"}},"testInfo":{"automatizationId":"favorite-button"}},"unfavoriteButton":{"icon":"ic_m_fav_tiles_active","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchDeleteItems","id":"removeFromFavorites","params":{"sku":"160201664"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"unfavorite","key":"0da25106ff15d28fedcbf91dd529d083ec846aef"}},"testInfo":{"automatizationId":"unfavorite-button"}},"addToListAction":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"addToList","id":"addToList","params":{"sku":"160201664"}}}},{"type":"smallIconButton","smallIconButton":{"icon":"ic_m_kebab_tiles","action":{"behavior":"BEHAVIOR_TYPE_ACTION_SHEET","link":"catalogActionSheet?id=160201664"},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"click","key":"3f43681c2b5b4226d940f338df4921b9b2c9a5cc"}},"testInfo":{"automatizationId":"action-sheet-btn"}}}],"trackingInfo":{"click":{"actionType":"click","key":"0da25106ff15d28fedcbf91dd529d083ec846aef"},"view":{"actionType":"view","key":"0da25106ff15d28fedcbf91dd529d083ec846aef"}}},{"action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Fla-piedra-angular-el-viaje-al-septimo-cielo-171075179\u002F?asb=dIrzLQTjkTGlNODwvSZcY1iMUJ3VfN7mo7u1EXu%252BmfM%253D\u0026asb2=e4SRdJNymiwUVze31Wr3s_TFKj-Tm3OFk_eyDNR2gzdcpFOCK5N4hb3F95NoE7TQ\u0026keywords=Angular"},"isAdult":false,"mainState":[{"type":"atom","id":"atom","atom":{"type":"price","price":{"price":"91,
+                        78 BYN","priceColor":"ozAccentAlert","originalPrice":"114,
+                        74 BYN","originalPriceColor":"ozTextPrimary","theme":"STYLE_TYPE_MEDIUM"}}},{"type":"atom","id":"name","atom":{"type":"textAtom","textAtom":{"text":"La piedra angular... el viaje al 
+septimo cielo","textStyle":"tsBodyL","maxLines":3,"testInfo":{"automatizationId":"tile-name"}}}}],"multiButton":{"type":"multiButton","id":"multiButton","theme":"THEME_TYPE_VERTICAL","ozonButton":{"type":"addToCartButtonWithQuantity","addToCartButtonWithQuantity":{"text":"В корзину","maxItems":10000,"currentItems":0,"action":{"id":"171075179","quantity":1},"trackingInfo":{"click":{"actionType":"to_cart","key":"50cd2d6e89ed3bfb06829d0d243f0d6887bac4ca"}},"testInfo":{"automatizationId":"ozonAddToCart"},"theme":"STYLE_TYPE_PRIMARY"}},"ozonSubtitle":{"type":"textAtomWithIcon","textAtomWithIcon":{"text":"Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец Т8 Издательские Технологии","textStyle":"tsBodyM","textColor":"#808d9a","maxLines":2}}},"tileImage":{"type":"tileImage","id":"tileImage","images":["https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-a\u002F6012159190.jpg"],"imageRatio":"1: 1","imageBadges":[{"coordinates":{"x":1,"y":1},"badge":{"text":"Код для скидки","tintColor":"#ffffff","backgroundColor":"#7D36AA","theme":"STYLE_TYPE_MEDIUM"}},{"coordinates":{"x":1,"y":5},"badge":{"text":"?20%","tintColor":"ozWhite1","backgroundColor":"ozAccentAlert","theme":"STYLE_TYPE_MEDIUM"}}]},"topRightButtons":[{"type":"favoriteProductMolecule","favoriteProductMolecule":{"sku":"171075179","isFavorite":false,"favoriteButton":{"icon":"ic_m_fav_tiles_normal","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchAddItems","id":"addToFavorites","params":{"sku":"171075179"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"favorite","key":"2c32515a8bd6e7d52f2c47d806ef3c7b1d0ef66b"}},"testInfo":{"automatizationId":"favorite-button"}},"unfavoriteButton":{"icon":"ic_m_fav_tiles_active","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchDeleteItems","id":"removeFromFavorites","params":{"sku":"171075179"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"unfavorite","key":"2c32515a8bd6e7d52f2c47d806ef3c7b1d0ef66b"}},"testInfo":{"automatizationId":"unfavorite-button"}},"addToListAction":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"addToList","id":"addToList","params":{"sku":"171075179"}}}},{"type":"smallIconButton","smallIconButton":{"icon":"ic_m_kebab_tiles","action":{"behavior":"BEHAVIOR_TYPE_ACTION_SHEET","link":"catalogActionSheet?id=171075179"},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"click","key":"782ba4daf2de2d13b960de6e2bbcf1088b134bf7"}},"testInfo":{"automatizationId":"action-sheet-btn"}}}],"trackingInfo":{"click":{"actionType":"click","key":"2c32515a8bd6e7d52f2c47d806ef3c7b1d0ef66b"},"view":{"actionType":"view","key":"2c32515a8bd6e7d52f2c47d806ef3c7b1d0ef66b"}}},{"action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Fapplication-of-the-angular-analysis-to-the-solution-of-indeterminate-problems-of-the-second-degree-150683009\u002F?asb=RsnCTXcEI%252BUVzXJ61jdS0HM3KW%252FoCmrxcnSwFjT13Ls%253D\u0026asb2=3pXH8BX1M9EHLZp-Gr813Nem7Hg8dQagKH8bn8R3da2BYIEeV84SUt3VByB2am1G\u0026keywords=Angular"},"isAdult":false,"mainState":[{"type":"atom","id":"atom","atom":{"type":"price","price":{"price":"21,11 BYN","priceColor":"ozAccentAlert","originalPrice":"30,
+                        19 BYN","originalPriceColor":"ozTextPrimary","theme":"STYLE_TYPE_MEDIUM"}}},{"type":"atom","id":"name","atom":{"type":"textAtom","textAtom":{"text":"Application of the Angular Analysis to the Solution of Indeterminate Problems of the Second Degree","textStyle":"tsBodyL","maxLines":3,"testInfo":{"automatizationId":"tile-name"}}}}],"multiButton":{"type":"multiButton","id":"multiButton","theme":"THEME_TYPE_VERTICAL","ozonButton":{"type":"addToCartButtonWithQuantity","addToCartButtonWithQuantity":{"text":"В корзину","maxItems":10000,"currentItems":0,"action":{"id":"150683009","quantity":1},"trackingInfo":{"click":{"actionType":"to_cart","key":"766117932b9be2fadd8054a2cf862750c781ea15"}},"testInfo":{"automatizationId":"ozonAddToCart"},"theme":"STYLE_TYPE_PRIMARY"}},"ozonSubtitle":{"type":"textAtomWithIcon","textAtomWithIcon":{"text":"Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец Т8 Издательские Технологии","textStyle":"tsBodyM","textColor":"#808d9a","maxLines":2}}},"tileImage":{"type":"tileImage","id":"tileImage","images":["https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-6\u002F6038651370.jpg"],"imageRatio":"1: 1","imageBadges":[{"coordinates":{"x":1,"y":5},"badge":{"text":"?30%","tintColor":"ozWhite1","backgroundColor":"ozAccentAlert","theme":"STYLE_TYPE_MEDIUM"}},{"coordinates":{"x":1,"y":1},"badge":{"text":"Код для скидки","tintColor":"#ffffff","backgroundColor":"#7D36AA","theme":"STYLE_TYPE_MEDIUM"}}]},"topRightButtons":[{"type":"favoriteProductMolecule","favoriteProductMolecule":{"sku":"150683009","isFavorite":false,"favoriteButton":{"icon":"ic_m_fav_tiles_normal","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchAddItems","id":"addToFavorites","params":{"sku":"150683009"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"favorite","key":"43677396ecb6612be9f2bfaed9ea15d418a86092"}},"testInfo":{"automatizationId":"favorite-button"}},"unfavoriteButton":{"icon":"ic_m_fav_tiles_active","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchDeleteItems","id":"removeFromFavorites","params":{"sku":"150683009"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"unfavorite","key":"43677396ecb6612be9f2bfaed9ea15d418a86092"}},"testInfo":{"automatizationId":"unfavorite-button"}},"addToListAction":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"addToList","id":"addToList","params":{"sku":"150683009"}}}},{"type":"smallIconButton","smallIconButton":{"icon":"ic_m_kebab_tiles","action":{"behavior":"BEHAVIOR_TYPE_ACTION_SHEET","link":"catalogActionSheet?id=150683009"},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"click","key":"afec74f02ffeee6b972fa46f3c33e74465f8dae6"}},"testInfo":{"automatizationId":"action-sheet-btn"}}}],"trackingInfo":{"click":{"actionType":"click","key":"43677396ecb6612be9f2bfaed9ea15d418a86092"},"view":{"actionType":"view","key":"43677396ecb6612be9f2bfaed9ea15d418a86092"}}},{"action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Fa-photographic-technique-for-the-determination-of-the-angular-distribution-of-neutrons-from-deuteron-165833344\u002F?asb=NxE8D8nK5N1%252BBN9c59AgrWzIabtdBCXMrfsNDvoPc%252Bw%253D\u0026asb2=18Rx69461DimC6kc16s4bhL1CMsCCfMsbdlEDZjv8EjjbM3Nrns15ngnLUx5NgPK\u0026keywords=Angular"},"isAdult":false,"mainState":[{"type":"atom","id":"atom","atom":{"type":"price","price":{"price":"21,
+                        78 BYN","priceColor":"ozAccentAlert","originalPrice":"31,
+                        13 BYN","originalPriceColor":"ozTextPrimary","theme":"STYLE_TYPE_MEDIUM"}}},{"type":"atom","id":"name","atom":{"type":"textAtom","textAtom":{"text":"A photographic technique for the determination of the angular distribution of neutrons from deuteron-induced reactions","textStyle":"tsBodyL","maxLines":3,"testInfo":{"automatizationId":"tile-name"}}}}],"multiButton":{"type":"multiButton","id":"multiButton","theme":"THEME_TYPE_VERTICAL","ozonButton":{"type":"addToCartButtonWithQuantity","addToCartButtonWithQuantity":{"text":"В корзину","maxItems":10000,"currentItems":0,"action":{"id":"165833344","quantity":1},"trackingInfo":{"click":{"actionType":"to_cart","key":"827e1eeb2fc1ccc619e0aaf0052825b73c106be4"}},"testInfo":{"automatizationId":"ozonAddToCart"},"theme":"STYLE_TYPE_PRIMARY"}},"ozonSubtitle":{"type":"textAtomWithIcon","textAtomWithIcon":{"text":"Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец Т8 Издательские Технологии","textStyle":"tsBodyM","textColor":"#808d9a","maxLines":2}}},"tileImage":{"type":"tileImage","id":"tileImage","images":["https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-0\u002F6002429136.jpg"],"imageRatio":"1: 1","imageBadges":[{"coordinates":{"x":1,"y":1},"badge":{"text":"Код для скидки","tintColor":"#ffffff","backgroundColor":"#7D36AA","theme":"STYLE_TYPE_MEDIUM"}},{"coordinates":{"x":1,"y":5},"badge":{"text":"?30%","tintColor":"ozWhite1","backgroundColor":"ozAccentAlert","theme":"STYLE_TYPE_MEDIUM"}}]},"topRightButtons":[{"type":"favoriteProductMolecule","favoriteProductMolecule":{"sku":"165833344","isFavorite":false,"favoriteButton":{"icon":"ic_m_fav_tiles_normal","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchAddItems","id":"addToFavorites","params":{"sku":"165833344"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"favorite","key":"48ecb48ddecaca81e90b218933c0ab511dadda77"}},"testInfo":{"automatizationId":"favorite-button"}},"unfavoriteButton":{"icon":"ic_m_fav_tiles_active","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchDeleteItems","id":"removeFromFavorites","params":{"sku":"165833344"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"unfavorite","key":"48ecb48ddecaca81e90b218933c0ab511dadda77"}},"testInfo":{"automatizationId":"unfavorite-button"}},"addToListAction":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"addToList","id":"addToList","params":{"sku":"165833344"}}}},{"type":"smallIconButton","smallIconButton":{"icon":"ic_m_kebab_tiles","action":{"behavior":"BEHAVIOR_TYPE_ACTION_SHEET","link":"catalogActionSheet?id=165833344"},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"click","key":"44a4a79a73e6d37973dca9a522bd3d6bf51d5c77"}},"testInfo":{"automatizationId":"action-sheet-btn"}}}],"trackingInfo":{"click":{"actionType":"click","key":"48ecb48ddecaca81e90b218933c0ab511dadda77"},"view":{"actionType":"view","key":"48ecb48ddecaca81e90b218933c0ab511dadda77"}}},{"action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Fcontributions-to-the-pathology-diagnosis-and-treatment-of-angular-curvature-of-the-spine-152243607\u002F?asb=Dvig%252Bp3N3KDxYqHYuXJXxVQXsXzqtpdgSFjf%252Fu%252BsdGU%253D\u0026asb2=YF0aMlBYxYX6DJ1Cwr4TjMuX3YSIMkGnj74yrYv0i-4TtvOcpEb-9Q_FRkU236Xn\u0026keywords=Angular"},"isAdult":false,"mainState":[{"type":"atom","id":"atom","atom":{"type":"price","price":{"price":"23,
+                        03 BYN","priceColor":"ozAccentAlert","originalPrice":"32,
+                        91 BYN","originalPriceColor":"ozTextPrimary","theme":"STYLE_TYPE_MEDIUM"}}},{"type":"atom","id":"name","atom":{"type":"textAtom","textAtom":{"text":"Contributions to the pathology. diagnosis, and treatment of angular curvature of the spine","textStyle":"tsBodyL","maxLines":3,"testInfo":{"automatizationId":"tile-name"}}}}],"multiButton":{"type":"multiButton","id":"multiButton","theme":"THEME_TYPE_VERTICAL","ozonButton":{"type":"addToCartButtonWithQuantity","addToCartButtonWithQuantity":{"text":"В корзину","maxItems":10000,"currentItems":0,"action":{"id":"152243607","quantity":1},"trackingInfo":{"click":{"actionType":"to_cart","key":"e911947640926263632af2abe1196c9d21456601"}},"testInfo":{"automatizationId":"ozonAddToCart"},"theme":"STYLE_TYPE_PRIMARY"}},"ozonSubtitle":{"type":"textAtomWithIcon","textAtomWithIcon":{"text":"Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец Т8 Издательские Технологии","textStyle":"tsBodyM","textColor":"#808d9a","maxLines":2}}},"tileImage":{"type":"tileImage","id":"tileImage","images":["https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-s\u002F6003088792.jpg"],"imageRatio":"1: 1","imageBadges":[{"coordinates":{"x":1,"y":5},"badge":{"text":"?30%","tintColor":"ozWhite1","backgroundColor":"ozAccentAlert","theme":"STYLE_TYPE_MEDIUM"}},{"coordinates":{"x":1,"y":1},"badge":{"text":"Код для скидки","tintColor":"#ffffff","backgroundColor":"#7D36AA","theme":"STYLE_TYPE_MEDIUM"}}]},"topRightButtons":[{"type":"favoriteProductMolecule","favoriteProductMolecule":{"sku":"152243607","isFavorite":false,"favoriteButton":{"icon":"ic_m_fav_tiles_normal","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchAddItems","id":"addToFavorites","params":{"sku":"152243607"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"favorite","key":"50cfd6336c7564dc7f35df616516cdf7c63beca3"}},"testInfo":{"automatizationId":"favorite-button"}},"unfavoriteButton":{"icon":"ic_m_fav_tiles_active","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchDeleteItems","id":"removeFromFavorites","params":{"sku":"152243607"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"unfavorite","key":"50cfd6336c7564dc7f35df616516cdf7c63beca3"}},"testInfo":{"automatizationId":"unfavorite-button"}},"addToListAction":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"addToList","id":"addToList","params":{"sku":"152243607"}}}},{"type":"smallIconButton","smallIconButton":{"icon":"ic_m_kebab_tiles","action":{"behavior":"BEHAVIOR_TYPE_ACTION_SHEET","link":"catalogActionSheet?id=152243607"},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"click","key":"75e577504c80ab1864e987f9e571d252d26da882"}},"testInfo":{"automatizationId":"action-sheet-btn"}}}],"trackingInfo":{"click":{"actionType":"click","key":"50cfd6336c7564dc7f35df616516cdf7c63beca3"},"view":{"actionType":"view","key":"50cfd6336c7564dc7f35df616516cdf7c63beca3"}}},{"action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Fpower-in-motion-horse-power-wheel-gearing-driving-bands-and-angular-forces-153322533\u002F?asb=niccL4Tj1XU1MycnOTAcEAPRVZpJ5Ubcio2ABLXPIRs%253D\u0026asb2=D-0wJnOcLqK80huZVSRznVxN3GCZq4B7aH3ih45NgWDfKsFbUf14yqyg0a8enlYs\u0026keywords=Angular"},"isAdult":false,"mainState":[{"type":"atom","id":"atom","atom":{"type":"price","price":{"price":"23,
+                        94 BYN","priceColor":"ozAccentAlert","originalPrice":"34,
+                        20 BYN","originalPriceColor":"ozTextPrimary","theme":"STYLE_TYPE_MEDIUM"}}},{"type":"atom","id":"name","atom":{"type":"textAtom","textAtom":{"text":"Power in Motion: Horse Power, Wheel Gearing, Driving Bands and Angular Forces","textStyle":"tsBodyL","maxLines":3,"testInfo":{"automatizationId":"tile-name"}}}}],"multiButton":{"type":"multiButton","id":"multiButton","theme":"THEME_TYPE_VERTICAL","ozonButton":{"type":"addToCartButtonWithQuantity","addToCartButtonWithQuantity":{"text":"В корзину","maxItems":10000,"currentItems":0,"action":{"id":"153322533","quantity":1},"trackingInfo":{"click":{"actionType":"to_cart","key":"287411e7804a4fd6a273f1a209b9aac4bc4bf25e"}},"testInfo":{"automatizationId":"ozonAddToCart"},"theme":"STYLE_TYPE_PRIMARY"}},"ozonSubtitle":{"type":"textAtomWithIcon","textAtomWithIcon":{"text":"Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец Т8 Издательские Технологии","textStyle":"tsBodyM","textColor":"#808d9a","maxLines":2}}},"tileImage":{"type":"tileImage","id":"tileImage","images":["https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-h\u002F6039211469.jpg"],"imageRatio":"1: 1","imageBadges":[{"coordinates":{"x":1,"y":5},"badge":{"text":"?30%","tintColor":"ozWhite1","backgroundColor":"ozAccentAlert","theme":"STYLE_TYPE_MEDIUM"}},{"coordinates":{"x":1,"y":1},"badge":{"text":"Код для скидки","tintColor":"#ffffff","backgroundColor":"#7D36AA","theme":"STYLE_TYPE_MEDIUM"}}]},"topRightButtons":[{"type":"favoriteProductMolecule","favoriteProductMolecule":{"sku":"153322533","isFavorite":false,"favoriteButton":{"icon":"ic_m_fav_tiles_normal","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchAddItems","id":"addToFavorites","params":{"sku":"153322533"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"favorite","key":"bb2167758900a52bead9a386c625062cef75ca6a"}},"testInfo":{"automatizationId":"favorite-button"}},"unfavoriteButton":{"icon":"ic_m_fav_tiles_active","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchDeleteItems","id":"removeFromFavorites","params":{"sku":"153322533"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"unfavorite","key":"bb2167758900a52bead9a386c625062cef75ca6a"}},"testInfo":{"automatizationId":"unfavorite-button"}},"addToListAction":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"addToList","id":"addToList","params":{"sku":"153322533"}}}},{"type":"smallIconButton","smallIconButton":{"icon":"ic_m_kebab_tiles","action":{"behavior":"BEHAVIOR_TYPE_ACTION_SHEET","link":"catalogActionSheet?id=153322533"},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"click","key":"7f0e89ab2b75c45f1807920e9fe36c71da802e90"}},"testInfo":{"automatizationId":"action-sheet-btn"}}}],"trackingInfo":{"click":{"actionType":"click","key":"bb2167758900a52bead9a386c625062cef75ca6a"},"view":{"actionType":"view","key":"bb2167758900a52bead9a386c625062cef75ca6a"}}},{"action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Fan-analytical-treatise-on-plane-and-spherical-trigonometry-and-the-analysis-of-angular-sections-156428941\u002F?asb=%252F6MWJHFli5gkKvH0hV4bFHf5lJ3Bv1pjssNKoqSmolg%253D\u0026asb2=cBn0-ZkBSBObgLP6varElk32P3TUlmF7Nyuaoj6nRKSkhgcwg-1EsTyto6C1B1O8\u0026keywords=Angular"},"isAdult":false,"mainState":[{"type":"atom","id":"atom","atom":{"type":"price","price":{"price":"26,
+                        52 BYN","priceColor":"ozAccentAlert","originalPrice":"37,
+                        90 BYN","originalPriceColor":"ozTextPrimary","theme":"STYLE_TYPE_MEDIUM"}}},{"type":"atom","id":"name","atom":{"type":"textAtom","textAtom":{"text":"An Analytical Treatise on Plane and Spherical Trigonometry, and the Analysis of Angular Sections .","textStyle":"tsBodyL","maxLines":3,"testInfo":{"automatizationId":"tile-name"}}}}],"multiButton":{"type":"multiButton","id":"multiButton","theme":"THEME_TYPE_VERTICAL","ozonButton":{"type":"addToCartButtonWithQuantity","addToCartButtonWithQuantity":{"text":"В корзину","maxItems":10000,"currentItems":0,"action":{"id":"156428941","quantity":1},"trackingInfo":{"click":{"actionType":"to_cart","key":"7089b13ed20623edd0073753d921a0dbcf757b1c"}},"testInfo":{"automatizationId":"ozonAddToCart"},"theme":"STYLE_TYPE_PRIMARY"}},"ozonSubtitle":{"type":"textAtomWithIcon","textAtomWithIcon":{"text":"Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец Т8 Издательские Технологии","textStyle":"tsBodyM","textColor":"#808d9a","maxLines":2}}},"tileImage":{"type":"tileImage","id":"tileImage","images":["https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-e\u002F6003191126.jpg"],"imageRatio":"1: 1","imageBadges":[{"coordinates":{"x":1,"y":5},"badge":{"text":"?30%","tintColor":"ozWhite1","backgroundColor":"ozAccentAlert","theme":"STYLE_TYPE_MEDIUM"}},{"coordinates":{"x":1,"y":1},"badge":{"text":"Код для скидки","tintColor":"#ffffff","backgroundColor":"#7D36AA","theme":"STYLE_TYPE_MEDIUM"}}]},"topRightButtons":[{"type":"favoriteProductMolecule","favoriteProductMolecule":{"sku":"156428941","isFavorite":false,"favoriteButton":{"icon":"ic_m_fav_tiles_normal","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchAddItems","id":"addToFavorites","params":{"sku":"156428941"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"favorite","key":"0ab95ed742734ba1c12f1c54c87bfe0203d014dd"}},"testInfo":{"automatizationId":"favorite-button"}},"unfavoriteButton":{"icon":"ic_m_fav_tiles_active","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchDeleteItems","id":"removeFromFavorites","params":{"sku":"156428941"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"unfavorite","key":"0ab95ed742734ba1c12f1c54c87bfe0203d014dd"}},"testInfo":{"automatizationId":"unfavorite-button"}},"addToListAction":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"addToList","id":"addToList","params":{"sku":"156428941"}}}},{"type":"smallIconButton","smallIconButton":{"icon":"ic_m_kebab_tiles","action":{"behavior":"BEHAVIOR_TYPE_ACTION_SHEET","link":"catalogActionSheet?id=156428941"},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"click","key":"fd72dc42a41e0177b07c8b1e5c126b7e26dc86e5"}},"testInfo":{"automatizationId":"action-sheet-btn"}}}],"trackingInfo":{"click":{"actionType":"click","key":"0ab95ed742734ba1c12f1c54c87bfe0203d014dd"},"view":{"actionType":"view","key":"0ab95ed742734ba1c12f1c54c87bfe0203d014dd"}}},{"action":{"behavior":"BEHAVIOR_TYPE_REDIRECT","link":"\u002Fproduct\u002Fangular-design-patterns-157693120\u002F?asb=wmxMBuwQmD4p7Eympp4wYdrIt2X0QRAv5FKCxgJMmJs%253D\u0026asb2=8zh75ExqzQBEHClDH2f8H4r0dJlyD2MLxtdBFiDlwUQWQkqU69ezBXoPVvtvhKVP\u0026keywords=Angular"},"isAdult":false,"mainState":[{"type":"atom","id":"atom","atom":{"type":"price","price":{"price":"127,
+                        93 BYN","priceColor":"ozAccentAlert","originalPrice":"182,
+                        79 BYN","originalPriceColor":"ozTextPrimary","theme":"STYLE_TYPE_MEDIUM"}}},{"type":"atom","id":"name","atom":{"type":"textAtom","textAtom":{"text":"Angular Design Patterns","textStyle":"tsBodyL","maxLines":3,"testInfo":{"automatizationId":"tile-name"}}}}],"multiButton":{"type":"multiButton","id":"multiButton","theme":"THEME_TYPE_VERTICAL","ozonButton":{"type":"addToCartButtonWithQuantity","addToCartButtonWithQuantity":{"text":"В корзину","maxItems":10000,"currentItems":0,"action":{"id":"157693120","quantity":1},"trackingInfo":{"click":{"actionType":"to_cart","key":"a861b1d9a143ad36cb72e1cda5cd91f5321acb5e"}},"testInfo":{"automatizationId":"ozonAddToCart"},"theme":"STYLE_TYPE_PRIMARY"}},"ozonSubtitle":{"type":"textAtomWithIcon","textAtomWithIcon":{"text":"Доставит \u003cfont color=\u0027#005bff\u0027\u003e\u003cb\u003eOzon\u003c\u002Fb\u003e\u003c\u002Ffont\u003e, продавец Т8 Издательские Технологии","textStyle":"tsBodyM","textColor":"#808d9a","maxLines":2}}},"tileImage":{"type":"tileImage","id":"tileImage","images":["https:\u002F\u002Fcdn1.ozone.ru\u002Fs3\u002Fmultimedia-u\u002F6123633858.jpg"],"imageRatio":"1: 1","imageBadges":[{"coordinates":{"x":1,"y":5},"badge":{"text":"?30%","tintColor":"ozWhite1","backgroundColor":"ozAccentAlert","theme":"STYLE_TYPE_MEDIUM"}},{"coordinates":{"x":1,"y":1},"badge":{"text":"Код для скидки","tintColor":"#ffffff","backgroundColor":"#7D36AA","theme":"STYLE_TYPE_MEDIUM"}}]},"topRightButtons":[{"type":"favoriteProductMolecule","favoriteProductMolecule":{"sku":"157693120","isFavorite":false,"favoriteButton":{"icon":"ic_m_fav_tiles_normal","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchAddItems","id":"addToFavorites","params":{"sku":"157693120"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"favorite","key":"c2697f169929ba7dfb5eed87cd1c93af13f90d31"}},"testInfo":{"automatizationId":"favorite-button"}},"unfavoriteButton":{"icon":"ic_m_fav_tiles_active","action":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"favoriteBatchDeleteItems","id":"removeFromFavorites","params":{"sku":"157693120"}},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"unfavorite","key":"c2697f169929ba7dfb5eed87cd1c93af13f90d31"}},"testInfo":{"automatizationId":"unfavorite-button"}},"addToListAction":{"behavior":"BEHAVIOR_TYPE_COMPOSER_ACTION","link":"addToList","id":"addToList","params":{"sku":"157693120"}}}},{"type":"smallIconButton","smallIconButton":{"icon":"ic_m_kebab_tiles","action":{"behavior":"BEHAVIOR_TYPE_ACTION_SHEET","link":"catalogActionSheet?id=157693120"},"theme":"STYLE_TYPE_CLEAR","trackingInfo":{"click":{"actionType":"click","key":"a0ac7cb2b27207bf763ecba63d13c944c73f3ed1"}},"testInfo":{"automatizationId":"action-sheet-btn"}}}],"trackingInfo":{"click":{"actionType":"click","key":"c2697f169929ba7dfb5eed87cd1c93af13f90d31"},"view":{"actionType":"view","key":"c2697f169929ba7dfb5eed87cd1c93af13f90d31"}}}]
+                        ,"templates":null,"page":1,"cols":12,"tileLayout":"LAYOUT_GRID4"}

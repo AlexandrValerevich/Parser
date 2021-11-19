@@ -1,10 +1,7 @@
 using System;
-using Parser;
-using HtmlAgilityPack;
-using Fizzler.Systems.HtmlAgilityPack;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
+using HtmlAgilityPack;
 
 #nullable enable
 
@@ -14,60 +11,46 @@ namespace Parser.Ozon
     {
         private string _bookName;
         private string _prefixUri = "https://www.ozon.ru";
+        private HtmlDocument _doc;
 
         public OzonParser() 
         {
             _bookName = String.Empty;
+            _doc = new HtmlDocument();
         }
 
-        public async Task<BookInfo[]> ParseAsync(string bookName)
-        {
-            return await Task.Run(() => Parse(bookName));
-        }
-
+        public async Task<BookInfo[]> ParseAsync(string bookName) => await Task.Run(() => Parse(bookName));
+        
         public BookInfo[] Parse(string bookName)
         {
             _bookName = bookName.Replace(" ", "+");
 
-            string responceBody = GetHtmlWithBook();
-            BookInfo[] books = ConvertHtmlToBookInfo(responceBody);
+            string html = GetHtmlWithBook();
+            _doc.LoadHtml(html);
+
+            BookInfo[] books = ParseBookFromHtml();
 
             return books;
         }
 
-        private string GetHtmlWithBook()
+        private string GetHtmlWithBook() => RequestHtmlFromOzon.GetResponce(_bookName);
+
+        private BookInfo[] ParseBookFromHtml()
         {
-            string responceBody = RequestHtmlFromOzon.GetResponce(_bookName);
-            return responceBody;
+            List<BookInfo> result = new List<BookInfo>();
+
+            IEnumerable<BookInfo> booksFromHtmlNodes = BookFromVisibleNode();
+            IEnumerable<BookInfo> booksFromHideHtmlNodes = BookFromHidedNode(); 
+            
+            result.AddRange(booksFromHtmlNodes);
+            result.AddRange(booksFromHideHtmlNodes);
+
+            return result.ToArray();
         }
 
-        private BookInfo[] ConvertHtmlToBookInfo(string html)
-        {
-            var doc = new HtmlDocument();
-            doc.LoadHtml(html);
+        private IEnumerable<BookInfo> BookFromVisibleNode() => ParseBookFromVisibleHtmlNode.ParserBook(_doc);
 
-            var cards = doc.DocumentNode.QuerySelectorAll(".a9x3 .bh6.bi");
-
-            var books = from card in cards
-                        select new BookInfo()
-                        {
-                            UriSite = _prefixUri + card.QuerySelector(".b0c8.tile-hover-target").Attributes["href"].Value,
-                            UriImage = card.QuerySelector(".ui-o7").Attributes["src"].Value,
-                            Name = card.QuerySelector(".a7y.a8a2.a8a6.a8b2.f-tsBodyL.bj5").InnerText.Trim(),
-                            Price = GetPriceOfBookInCard(card),
-                            Currency = "BY"
-                        };
-
-            return books.ToArray();
-        }
-
-        private decimal GetPriceOfBookInCard(HtmlNode card)
-        {
-            string? priceWithCurrency = card.QuerySelector(".ui-p5.ui-p8")?.InnerHtml.Replace(",", ".");
-            string? price = priceWithCurrency?.Substring(0, priceWithCurrency.IndexOf(".") + 3);
-
-            return Decimal.Parse(price ?? "0"); 
-        }
+        private IEnumerable<BookInfo> BookFromHidedNode() => ParseBookFromHidedHtmlNode.ParserBook(_doc);
         
     }
 }
