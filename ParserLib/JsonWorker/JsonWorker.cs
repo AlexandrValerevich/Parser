@@ -6,7 +6,7 @@ namespace Parser.Json
 {
     static class JsonWorker
     {
-        public static bool TryParseToJObject(this string json, ref JObject? jObject)
+        public static bool TryParseToJObject(this string json, out JObject? jObject)
         {
             bool isTry = true;
             

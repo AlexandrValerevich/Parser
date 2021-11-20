@@ -1,64 +1,29 @@
-using System.Net.Http;
+using System;
+using System.Threading.Tasks;
 using HttpFacade;
 
 namespace Parser.Currency
 {
     static class RequestToApiNbrb
     {
-        public static string GetCurrencyJson(string currencyAbbreviation)
+        static public async Task<string> GetResponceAsync(string currency) => await Task.Run(() => GetResponce(currency));
+
+        static public string GetResponce(string currency)
         {
-            string[] currencys = currencyAbbreviation.Split(", ");
-            string[] responces = GetArrayCurrency(currencys);
-
-            string result = ConcatToJsonArray(responces);
-            
-            return result;
-        }
-
-        private static string ConcatToJsonArray(string[] responces)
-        {
-            string joinResponce = string.Join("," , responces);
-            string jsonArrayResponce = "[" + joinResponce + "]";
-            
-            return jsonArrayResponce;
-        }
-
-        private static string[] GetArrayCurrency(string[] currencys)
-        {
-            string[] responces = new string[currencys.Length];
-
-            for (var i = 0; i < currencys.Length; i++)
-            {
-                responces[i] = GetOneCurrency(currencys[i]);
-            }
-
-            return responces;
-        }
-
-        private static string GetOneCurrency(string currency)
-        {
-            IHttpResponce httpResponce = GetResponce(currency);
-            string responceBody = httpResponce.ReadAsString();
+            using IHttpRequest httpRequest = CreateHttpRequest(currency);
+            string responceBody = httpRequest.RequestAsString();
 
             return responceBody;
         }
 
-        private static IHttpResponce GetResponce(string currency)
+        private static IHttpRequest CreateHttpRequest(string currency)
         {
-            using HttpClient httpClient = CreateHttpClient(currency);
+            IHttpRequestBulder httpRequestBulder = HttpRequestGetBulder.Create();
 
-            var httpRequestGet = new HttpRequestGet(httpClient);
-            IHttpResponce httpResponce = httpRequestGet.Request();
+            Uri uri = new System.Uri("https://www.nbrb.by/api/exrates/rates/" + currency + "?parammode=2");
+            httpRequestBulder.AddUri(uri);
 
-            return httpResponce;
-        }
-
-        private static HttpClient CreateHttpClient(string currency)
-        {
-            var httpClient = new HttpClient();
-            httpClient.BaseAddress = new System.Uri("https://www.nbrb.by/api/exrates/rates/" + currency + "?parammode=2");
-
-            return httpClient;
+            return httpRequestBulder.Build();
         }
     }
 }

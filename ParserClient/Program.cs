@@ -10,7 +10,6 @@ using Parser.Labirint;
 using Parser.OZ;
 using Parser.Ozon;
 using Parser.Currency;
-using Parser;
 
 
 namespace Parser.Client
@@ -23,22 +22,22 @@ namespace Parser.Client
 
             string bookName = "Angular";
 
-            Console.WriteLine("Введите книгу:");
-            bookName = Console.ReadLine();
+            // Console.WriteLine("Введите книгу:");
+            // bookName = Console.ReadLine();
 
             InitializeList(parserList);
 
             Stopwatch sw = Stopwatch.StartNew();
 
             BookInfo[] bookInfo = ExecuteAllParserWithAsync(parserList, bookName);
-            // CurrencyInfo[] currencyInfo = GetCurrency();
+            CurrencyInfo[] currencyInfo = GetCurrency();
             
-            // ConverBookPriceToBLR(ref bookInfo, currencyInfo);
+            ConverBookPriceToBLR(ref bookInfo, currencyInfo);
 
             sw.Stop();
 
             Console.WriteLine(sw.ElapsedMilliseconds);
-            //ConvertToJsonAndWriteToFile(bookInfo); 
+            ConvertToJsonAndWriteToFile(bookInfo); 
         }
 
         

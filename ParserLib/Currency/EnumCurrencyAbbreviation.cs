@@ -8,6 +8,6 @@ namespace Parser.Currency
         RUB  = 0b_0001,
         USD = 0b_0010,
         EUR = 0b_0100,
-        BLR = 0b_1000
+        BYN = 0b_1000
     }
 }
