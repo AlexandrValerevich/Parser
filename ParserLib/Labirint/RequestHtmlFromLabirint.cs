@@ -1,15 +1,13 @@
-using System.Net;
-using System.Net.Http;
 using HttpFacade;
 
 namespace Parser.Labirint
 {
     static class RequestHtmlFromLabirint
     {
-        static private string _searchUriPrefix => "https://www.labirint.ru/search/";
-        static private string _searchUriPostfix => "/?stype=0&available=1&wait=1&preorder=1&paperbooks=1";
+        private static readonly string s_searchUriPrefix = "https://www.labirint.ru/search/";
+        private static readonly string s_searchUriPostfix = "/?stype=0&available=1&wait=1&preorder=1&paperbooks=1";
 
-        static public string GetResponce(string bookName)
+        public static string GetResponce(string bookName)
         {
             using IHttpRequest httpRequest = CreateHttpRequest(bookName);
             string responceBody = httpRequest.RequestAsString();
@@ -17,9 +15,10 @@ namespace Parser.Labirint
             return responceBody;
         }
 
-        static private IHttpRequest CreateHttpRequest(string bookName)
+        private static IHttpRequest CreateHttpRequest(string bookName)
         {
-            string uri = _searchUriPrefix + bookName.Replace(" ", "+") + _searchUriPostfix;
+            string uri = UriBuild(bookName);
+            
             IHttpRequestBulder httpRequestBulder = HttpRequestGetBulder.Create();
 
             httpRequestBulder
@@ -42,6 +41,8 @@ namespace Parser.Labirint
             .AddHeaderAcceptLanguage("en", 0.9);
             
             return httpRequestBulder.Build();
-        } 
+        }
+
+        private static string UriBuild(string bookName) => s_searchUriPrefix + bookName.Replace(" ", "+") + s_searchUriPostfix;
     }
 }

@@ -1,14 +1,12 @@
-using System.Net;
-using System.Net.Http;
 using HttpFacade;
 
 namespace Parser.Ozon
 {
     static class RequestHtmlFromOzon
     {
-        static private string _searchUriPrefix => "https://www.ozon.ru/category/knigi-16500/?text=";
+        private static readonly string s_searchUriPrefix = "https://www.ozon.ru/category/knigi-16500/?text=";
     
-        static public string GetResponce(string bookName)
+        public static string GetResponce(string bookName)
         {
             using IHttpRequest httpRequest = CreateHttpRequest(bookName);
             string responceBody = httpRequest.RequestAsString();
@@ -16,9 +14,9 @@ namespace Parser.Ozon
             return responceBody;
         }
 
-        static private IHttpRequest CreateHttpRequest(string bookName)
+        private static IHttpRequest CreateHttpRequest(string bookName)
         {
-            string uri = _searchUriPrefix + bookName.Replace(" ", "+");
+            string uri = s_searchUriPrefix + bookName.Replace(" ", "+");
             IHttpRequestBulder httpRequestBulder = HttpRequestGetBulder.Create();
 
             httpRequestBulder

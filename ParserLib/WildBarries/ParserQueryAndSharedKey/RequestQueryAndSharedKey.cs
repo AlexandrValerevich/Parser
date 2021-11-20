@@ -5,12 +5,12 @@ namespace Parser.WildBarries
 {
     static class RequestQueryAndSharedKeyFild
     {
-        static private string _refererUriPrefix => "https://by.wildberries.ru/catalog/0/search.aspx?search=";
-        static private string _searchUriPrefix => "https://wbxsearch-by.wildberries.ru/exactmatch/common?query=";
+        private static readonly string s_refererUriPrefix = "https://by.wildberries.ru/catalog/0/search.aspx?search=";
+        private static readonly string s_searchUriPrefix = "https://wbxsearch-by.wildberries.ru/exactmatch/common?query=";
 
-        static public async Task<string> GetResponceAsync(string bookName) => await Task.Run(() => GetResponce(bookName));
+        public static async Task<string> GetResponceAsync(string bookName) => await Task.Run(() => GetResponce(bookName));
 
-        static public string GetResponce(string bookName)
+        public static string GetResponce(string bookName)
         {
             using IHttpRequest httpRequest = CreateHttpRequest(bookName);
             string responceBody = httpRequest.RequestAsString();
@@ -18,11 +18,11 @@ namespace Parser.WildBarries
             return responceBody;
         }
 
-        static private IHttpRequest CreateHttpRequest(string bookName)
+        private static IHttpRequest CreateHttpRequest(string bookName)
         {
             string book = bookName.Replace(" ", "+");
-            string refererUri = _refererUriPrefix + book;
-            string searchUri = _searchUriPrefix + book;
+            string refererUri = s_refererUriPrefix + book;
+            string searchUri = s_searchUriPrefix + book;
 
             IHttpRequestBulder httpRequestBulder = HttpRequestGetBulder.Create();
 

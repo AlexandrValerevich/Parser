@@ -5,10 +5,10 @@ namespace Parser.WildBarries
 {
     static class QueryAndSharedKey
     {
-        static public async Task<(string query, string shardKey)> ParseQueryAndSharedKeyAsync(string bookName) => 
+        public static async Task<(string query, string shardKey)> ParseQueryAndSharedKeyAsync(string bookName) => 
             await Task.Run(() => ParseQueryAndSharedKey(bookName));
 
-        static public (string query, string shardKey) ParseQueryAndSharedKey(string bookName)
+        public static (string query, string shardKey) ParseQueryAndSharedKey(string bookName)
         {
             string responceBody = RequestQueryAndSharedKeyFild.GetResponce(bookName);
 

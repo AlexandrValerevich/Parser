@@ -10,7 +10,6 @@ namespace Parser.Ozon
     public class OzonParser : IParser<BookInfo>
     {
         private string _bookName;
-        private string _prefixUri = "https://www.ozon.ru";
         private HtmlDocument _doc;
 
         public OzonParser() 

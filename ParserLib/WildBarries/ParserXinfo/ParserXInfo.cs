@@ -5,9 +5,9 @@ namespace Parser.WildBarries
 {
     static class Xinfo
     {
-        static public async Task<string> ParseXinfoAsync(string bookName) => await Task<string>.Run(() => ParseXinfo(bookName));
+        public static async Task<string> ParseXinfoAsync(string bookName) => await Task<string>.Run(() => ParseXinfo(bookName));
 
-        static public string ParseXinfo(string bookName)
+        public static string ParseXinfo(string bookName)
         {
             string responceBody = RequestXinfoFild.GetResponce(bookName);
 

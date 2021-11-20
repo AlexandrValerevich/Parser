@@ -11,42 +11,35 @@ namespace Parser.OZ
     public class OZParser : IParser<BookInfo>
     {
         private string _bookName;
+        private HtmlDocument _doc;
         private string _SearchUri => "https://oz.by/search/?c=1101523&q=" + _bookName;
 
         public OZParser()
         {
             _bookName = String.Empty;
+            _doc = new HtmlDocument();
         }
         
-        public async Task<BookInfo[]> ParseAsync(string bookName)
-        {
-            return await Task.Run(() => Parse(bookName));
-        }
+        public async Task<BookInfo[]> ParseAsync(string bookName) => await Task.Run(() => Parse(bookName));
+        
 
         public BookInfo[] Parse(string bookName)
         {
             _bookName = bookName.Replace(" ", "+");
 
-            string responceBody = GetHtmlWithBook();
-            BookInfo[] books = ConvertHtmlToBookInfo(html: responceBody); 
+            string html = GetHtmlWithBook();
+            _doc.LoadHtml(html);
+            
+            BookInfo[] books = ConvertHtmlToBookInfo(); 
 
             return books;
         }
 
+        private string GetHtmlWithBook() => RequestHtmlFromOz.GetResponce(_bookName);
 
-        private string GetHtmlWithBook()
+        private BookInfo[] ConvertHtmlToBookInfo()
         {
-            string responceBody = RequestHtmlFromOz.GetResponce(_bookName);
-            return responceBody;
-        }
-
-        private BookInfo[] ConvertHtmlToBookInfo(string html)
-        {
-            var doc = new HtmlDocument();
-            doc.LoadHtml(html);
-
-            var cards = doc.DocumentNode
-            .QuerySelectorAll(".item-type-card__inner");
+            var cards = _doc.DocumentNode.QuerySelectorAll(".item-type-card__inner");
 
             var books = from card in cards
                          select new BookInfo()

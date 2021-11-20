@@ -1,7 +1,3 @@
-using System;
-using System.Net;
-using System.Net.Http;
-
 using HttpFacade;
 
 
@@ -9,10 +5,10 @@ namespace Parser.OZ
 {
     static class RequestHtmlFromOz
     {
-        static private string _searchUriPrefix => "https://oz.by/search/?c=1101523&q=";
-        static private string _refererUriPrefix => "https://oz.by/search/?q=";
+        private static readonly string s_searchUriPrefix = "https://oz.by/search/?c=1101523&q=";
+        private static readonly string s_refererUriPrefix = "https://oz.by/search/?q=";
 
-        static public string GetResponce(string bookName)
+        public static string GetResponce(string bookName)
         {
             using IHttpRequest httpRequest = CreateHttpRequest(bookName);
             string responceBody = httpRequest.RequestAsString();
@@ -20,11 +16,11 @@ namespace Parser.OZ
             return responceBody;
         }
 
-        static private IHttpRequest CreateHttpRequest(string bookName)
+        private static IHttpRequest CreateHttpRequest(string bookName)
         {
             string book = bookName.Replace(" ", "+");
-            string refererUri = _refererUriPrefix + book;    
-            string uri = _searchUriPrefix + book;       
+            string refererUri = s_refererUriPrefix + book;    
+            string uri = s_searchUriPrefix + book;       
 
             IHttpRequestBulder httpRequestBulder = HttpRequestGetBulder.Create();
 

@@ -13,12 +13,12 @@ namespace Parser.Ozon
 {
     static class ParseBookFromHidedHtmlNode
     {
-        static private string _prefixUri = "https://www.ozon.ru";
+        private static readonly string s_prefixUri = "https://www.ozon.ru";
 
-        static public async Task<IEnumerable<BookInfo>> ParsreBookAsync(HtmlDocument doc) =>
-            await Task<IEnumerable<BookInfo>> .Run(() => ParserBook(doc));
+        public static async Task<IEnumerable<BookInfo>> ParsreBookAsync(HtmlDocument doc) =>
+            await Task<IEnumerable<BookInfo>>.Run(() => ParserBook(doc));
 
-        static public IEnumerable<BookInfo> ParserBook(HtmlDocument doc)
+        public static IEnumerable<BookInfo> ParserBook(HtmlDocument doc)
         {
             string json = ParseJsonWithBook(doc);
             
@@ -30,7 +30,7 @@ namespace Parser.Ozon
             .Select(book => book as JObject)
             .Select(book => new BookInfo()
                             {
-                                UriSite = _prefixUri + book?["action"]?["link"]?.ToString() ?? "",
+                                UriSite = s_prefixUri + book?["action"]?["link"]?.ToString() ?? "",
                                 UriImage = GetImageUriFromBook(book),
                                 Name = GetNameFromMainState(book?["mainState"]),
                                 Price = GetPriceFromMainState(book?["mainState"]),
@@ -40,7 +40,7 @@ namespace Parser.Ozon
             return convertedToBookInfo;
         }
         
-        static private string ParseJsonWithBook(HtmlDocument doc)
+        private static string ParseJsonWithBook(HtmlDocument doc)
         {
             HtmlNode divWithJsonInAttribute = doc.DocumentNode.QuerySelector("#state-searchResultsV2-311201-default-1");
             string jsonWithBook = divWithJsonInAttribute?.Attributes?["data-state"]?.Value ?? "";
@@ -48,7 +48,7 @@ namespace Parser.Ozon
             return jsonWithBook;
         }
 
-        static private string GetNameFromMainState(JToken? mainState)
+        private static string GetNameFromMainState(JToken? mainState)
         {
             string name = mainState?.Where(obj => obj?["id"]?.ToString() == "name")
                                     ?.Select(obj => obj?["atom"]?["textAtom"]?["text"]?.ToString())
@@ -56,7 +56,7 @@ namespace Parser.Ozon
             return name;
         }
         
-        static private decimal GetPriceFromMainState(JToken? mainState)
+        private static decimal GetPriceFromMainState(JToken? mainState)
         {
             string priceWithCurrency = mainState?.Where(obj => obj?["atom"]?["type"]?.ToString() == "price")
                                     ?.Select(obj => obj?["atom"]?["price"]?["price"]?.ToString())
@@ -71,7 +71,7 @@ namespace Parser.Ozon
             return convertedPrice;
         }
         
-        static private string GetImageUriFromBook(JObject? book)
+        private static string GetImageUriFromBook(JObject? book)
         {
             JArray? imagesBook = book?["tileImage"]?["images"] as JArray;
             JValue? firstImageBook = imagesBook?.Values()?.ElementAt(0) as JValue;

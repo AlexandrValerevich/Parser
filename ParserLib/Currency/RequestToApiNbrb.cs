@@ -6,9 +6,9 @@ namespace Parser.Currency
 {
     static class RequestToApiNbrb
     {
-        static public async Task<string> GetResponceAsync(string currency) => await Task.Run(() => GetResponce(currency));
+        public static async Task<string> GetResponceAsync(string currency) => await Task.Run(() => GetResponce(currency));
 
-        static public string GetResponce(string currency)
+        public static string GetResponce(string currency)
         {
             using IHttpRequest httpRequest = CreateHttpRequest(currency);
             string responceBody = httpRequest.RequestAsString();

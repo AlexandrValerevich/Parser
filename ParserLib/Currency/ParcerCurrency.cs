@@ -1,8 +1,6 @@
 using System;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using System.Linq;
-using Parser;
 using static Parser.Json.JsonWorker;
 
 using Newtonsoft.Json.Linq;
@@ -30,7 +28,6 @@ namespace Parser.Currency
 
             var currencyResponcies = GetJsonCurrencies();
             var currencyInfos = new List<CurrencyInfo>();
-
 
             foreach (string cur in currencyResponcies)
             {

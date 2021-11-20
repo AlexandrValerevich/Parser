@@ -6,11 +6,11 @@ namespace Parser.WildBarries
 {
     static class RequestXinfoFild
     {
-        static private string _searchUri => "https://by.wildberries.ru/catalog/0/search.aspx?search=";
+        private static readonly string s_searchUri = "https://by.wildberries.ru/catalog/0/search.aspx?search=";
 
-        static public async Task<string> GetResponceAsync(string bookName) => await Task.Run(() => GetResponce(bookName));
+        public static async Task<string> GetResponceAsync(string bookName) => await Task.Run(() => GetResponce(bookName));
 
-        static public string GetResponce(string bookName)
+        public static string GetResponce(string bookName)
         {
             using IHttpRequest httpRequest = CreateHttpRequest(bookName);
             string responceBody = httpRequest.RequestAsString();
@@ -18,9 +18,9 @@ namespace Parser.WildBarries
             return responceBody;
         }
 
-        static private IHttpRequest CreateHttpRequest(string bookName)
+        private static IHttpRequest CreateHttpRequest(string bookName)
         {
-            string refererUri = _searchUri + bookName.Replace(" ", "+");
+            string refererUri = s_searchUri + bookName.Replace(" ", "+");
 
             IHttpRequestBulder httpRequestBulder = HttpRequestPostBulder.Create();
 
