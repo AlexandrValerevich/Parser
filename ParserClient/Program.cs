@@ -35,9 +35,10 @@ namespace Parser.Client
             ConverBookPriceToBLR(ref bookInfo, currencyInfo);
 
             sw.Stop();
-
             Console.WriteLine(sw.ElapsedMilliseconds);
+
             ConvertToJsonAndWriteToFile(bookInfo); 
+            
         }
 
         

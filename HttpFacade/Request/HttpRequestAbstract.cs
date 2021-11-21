@@ -8,25 +8,18 @@ namespace HttpFacade
     {
         protected HttpClient _httpClient;
         protected Uri _Uri => _httpClient.BaseAddress;
+        
+        public abstract IHttpResponce Request();
 
         protected HttpRequestAbstract(HttpClient httpClient)
         {
             _httpClient = httpClient;
         }
 
-        public async Task<IHttpResponce> RequestAsync()
-        {    
-            return await Task.Run(() => Request()); 
-        }
+        public async Task<IHttpResponce> RequestAsync() => await Task.Run(() => Request()); 
         
-        public abstract IHttpResponce Request();
-
-
-        public async Task<string> RequestAsStringAsync()
-        {
-            return await Task.Run(() => RequestAsString());
-        }
-
+        public async Task<string> RequestAsStringAsync() => await Task.Run(() => RequestAsString());
+        
         public string RequestAsString()
         {
             IHttpResponce httpResponce = Request();

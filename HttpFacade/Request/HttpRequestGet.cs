@@ -7,7 +7,7 @@ namespace HttpFacade
     {
         public HttpRequestGet(HttpClient httpClient): base(httpClient)
         {
-
+            
         }
 
         public override IHttpResponce Request()

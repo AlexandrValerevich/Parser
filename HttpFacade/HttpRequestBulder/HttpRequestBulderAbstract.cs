@@ -7,6 +7,8 @@ namespace HttpFacade
     {
         protected HttpClientBulder _httpClientBulder;
 
+        public abstract IHttpRequest Build();
+        
         protected HttpRequestBulderAbstract()
         {
             _httpClientBulder = HttpClientBulder.Create();
@@ -108,7 +110,6 @@ namespace HttpFacade
             return this;
         }
 
-        public abstract IHttpRequest Build();
         
         public void Reset()
         {

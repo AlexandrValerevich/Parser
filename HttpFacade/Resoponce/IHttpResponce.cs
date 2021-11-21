@@ -6,10 +6,14 @@ namespace HttpFacade
     public interface IHttpResponce
     {
         IHttpResponce EnsureSuccessStatusCode();
+
         Task<string> ReadAsStringAsync();
-        string ReadAsString();
-        Task<byte[]> ReadAsByteArrayAsync();
-        Stream ReadAsStream();
         
+        string ReadAsString();
+        
+        Task<byte[]> ReadAsByteArrayAsync();
+        
+        Stream ReadAsStream();
+
     }
 }

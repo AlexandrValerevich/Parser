@@ -5,7 +5,6 @@ namespace HttpFacade
 {
     public class HttpRequestPostBulder : HttpRequestBulderAbstract
     {
-
         public static HttpRequestPostBulder Create()
         {
             return new HttpRequestPostBulder();

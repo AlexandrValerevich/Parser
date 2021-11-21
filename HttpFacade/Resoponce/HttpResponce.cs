@@ -3,14 +3,13 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using System.IO;
 
-
 namespace HttpFacade
 {
     public class HttpResponce : IDisposable, IHttpResponce
     {
         private HttpResponseMessage _httpResponceMassage;
 
-        private HttpContent _Content => _httpResponceMassage.Content;
+        private HttpContent _сontent => _httpResponceMassage.Content;
 
         public HttpResponce(HttpResponseMessage httpResponceMassage)
         {
@@ -23,37 +22,25 @@ namespace HttpFacade
             return this;
         }
 
-        public async Task<byte[]> ReadAsByteArrayAsync()
-        {
-            byte[] responce = await  _Content.ReadAsByteArrayAsync();
-            return responce;
-        }
+        public async Task<byte[]> ReadAsByteArrayAsync() => await _сontent.ReadAsByteArrayAsync();
 
-        public Stream ReadAsStream()
-        {
-            Stream responce = _Content.ReadAsStream();
-            return responce;
-        }
+        public Stream ReadAsStream() => _сontent.ReadAsStream();
 
-        public async Task<string> ReadAsStringAsync()
+        public async Task<string> ReadAsStringAsync() => await _сontent.ReadAsStringAsync();
+
+        public string ReadAsString()
         {
-            string responce = await _Content.ReadAsStringAsync();
+            Task<string> taskResponce = _сontent.ReadAsStringAsync();
+            taskResponce.Wait();
+
+            string responce = taskResponce.Result;
+
             return responce;
         }
 
         public void Dispose()
         {
             _httpResponceMassage.Dispose();
-        }
-
-        public string ReadAsString()
-        {
-            Task<string> taskResponce = _Content.ReadAsStringAsync();
-            taskResponce.Wait();
-
-            string responce = taskResponce.Result;
-
-            return responce;
         }
     }
 }

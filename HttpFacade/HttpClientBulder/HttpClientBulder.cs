@@ -9,6 +9,14 @@ namespace HttpFacade
 {
     public class HttpClientBulder : IHttpClientBulder, IDisposable
     {
+        private HttpClient _httpClient;
+        private HttpRequestHeaders _Header => _httpClient.DefaultRequestHeaders;
+        private Uri? _Uri
+        {
+            get => _httpClient.BaseAddress;
+            set => _httpClient.BaseAddress = value;
+        }
+        
         public static HttpClientBulder Create()
         {
             HttpClientHandler httpClientHandler = new HttpClientHandler
@@ -18,21 +26,12 @@ namespace HttpFacade
 
             return new HttpClientBulder(httpClientHandler);
         }
-        
+
         public static HttpClientBulder Create(HttpClientHandler httpClientHandler)
         {
             return new HttpClientBulder(httpClientHandler);
         }
 
-        private HttpClient _httpClient;
-
-        private HttpRequestHeaders _Header => _httpClient.DefaultRequestHeaders;
-
-        private Uri? _Uri
-        {
-            get => _httpClient.BaseAddress;
-            set => _httpClient.BaseAddress = value;
-        }
 
         private HttpClientBulder(HttpClientHandler httpClientHandler)
         {
@@ -123,6 +122,19 @@ namespace HttpFacade
             return this;
         }
 
+
+        public IHttpClientBulder AddHeaderAccept(string accept)
+        {
+            _Header.Accept.Add(new MediaTypeWithQualityHeaderValue(accept));
+            return this;
+        }
+
+        public IHttpClientBulder AddHeaderAccept(string accept, double quality)
+        {
+            _Header.Accept.Add(new MediaTypeWithQualityHeaderValue(accept, quality));
+            return this;
+        }
+        
         public HttpClient Build()
         {
             return _httpClient;
@@ -136,18 +148,6 @@ namespace HttpFacade
         public void Dispose()
         {
             _httpClient.Dispose();
-        }
-
-        public IHttpClientBulder AddHeaderAccept(string accept)
-        {
-            _Header.Accept.Add(new MediaTypeWithQualityHeaderValue(accept));
-            return this;
-        }
-
-        public IHttpClientBulder AddHeaderAccept(string accept, double quality)
-        {
-            _Header.Accept.Add(new MediaTypeWithQualityHeaderValue(accept, quality));
-            return this;
         }
     }
 }
