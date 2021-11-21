@@ -3,7 +3,6 @@ using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Diagnostics;
 
 using Parser.WildBarries;
 using Parser.Labirint;
@@ -18,26 +17,32 @@ namespace Parser.Client
     {
         static void Main(string[] args)
         {
-            var parserList = new List<IParser<BookInfo>>();
+            // var parserList = new List<IParser<BookInfo>>();
+
+            var diagnostic = new DiagnosticParsers();
 
             string bookName = "Angular";
+
+            diagnostic.Diagnostic(bookName);
+            diagnostic.DiagnosticWithAsync(bookName);
+
 
             // Console.WriteLine("Введите книгу:");
             // bookName = Console.ReadLine();
 
-            InitializeList(parserList);
+            // InitializeList(parserList);
 
-            Stopwatch sw = Stopwatch.StartNew();
+            // Stopwatch sw = Stopwatch.StartNew();
 
-            BookInfo[] bookInfo = ExecuteAllParserWithAsync(parserList, bookName);
-            CurrencyInfo[] currencyInfo = GetCurrency();
+            // BookInfo[] bookInfo = ExecuteAllParserWithAsync(parserList, bookName);
+            // CurrencyInfo[] currencyInfo = GetCurrency();
             
-            ConverBookPriceToBLR(ref bookInfo, currencyInfo);
+            // ConverBookPriceToBLR(ref bookInfo, currencyInfo);
 
-            sw.Stop();
-            Console.WriteLine(sw.ElapsedMilliseconds);
+            // sw.Stop();
+            // Console.WriteLine(sw.ElapsedMilliseconds);
 
-            ConvertToJsonAndWriteToFile(bookInfo); 
+            // ConvertToJsonAndWriteToFile(bookInfo); 
             
         }
 
@@ -93,7 +98,7 @@ namespace Parser.Client
             return bookInfo.ToArray();
         }
        
-        private static void ConvertToJsonAndWriteToFile(BookInfo[] bookInfo)
+        public static void ConvertToJsonAndWriteToFile(BookInfo[] bookInfo)
         {
             string jsonBookInfo = BookInfoAdapterToJson.Convert(bookInfo);
             
@@ -101,5 +106,7 @@ namespace Parser.Client
             sw.Write(jsonBookInfo);
             sw.Close(); 
         }
+
+        
     }
 }
