@@ -67,6 +67,6 @@ namespace Parser.WildBarries
                 + s_requestUriTailPart;
         }
 
-        private static string RefererUri(string bookName) => "https://by.wildberries.ru/catalog/0/search.aspx?search=" + bookName;
+        private static string RefererUri(string bookName) => s_refererUriPrefix + bookName;
     }
 }

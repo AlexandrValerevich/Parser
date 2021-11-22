@@ -15,10 +15,10 @@ namespace Parser.Ozon
     {
         private static readonly string s_prefixUri = "https://www.ozon.ru";
 
-        public static async Task<IEnumerable<BookInfo>> ParsreBookAsync(HtmlDocument doc) =>
-            await Task<IEnumerable<BookInfo>>.Run(() => ParserBook(doc));
+        public static async Task<IEnumerable<BookInfo>> ParseBookAsync(HtmlDocument doc) =>
+            await Task<IEnumerable<BookInfo>>.Run(() => ParseBook(doc));
 
-        public static IEnumerable<BookInfo> ParserBook(HtmlDocument doc)
+        public static IEnumerable<BookInfo> ParseBook(HtmlDocument doc)
         {
             string json = ParseJsonWithBook(doc);
             
@@ -26,7 +26,7 @@ namespace Parser.Ozon
             json.TryParseToJObject(out jObject);
             JArray? books = jObject?["items"] as JArray;
 
-            var convertedToBookInfo = books
+            var convertedToBookInfo = books?
             .Select(book => book as JObject)
             .Select(book => new BookInfo()
                             {
@@ -35,7 +35,7 @@ namespace Parser.Ozon
                                 Name = GetNameFromMainState(book?["mainState"]),
                                 Price = GetPriceFromMainState(book?["mainState"]),
                                 Currency = "BYN"
-                            });
+                            }) ?? new List<BookInfo>();
 
             return convertedToBookInfo;
         }

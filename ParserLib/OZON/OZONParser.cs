@@ -49,11 +49,11 @@ namespace Parser.Ozon
 
         private IEnumerable<BookInfo> BookFromVisibleNode() => ParseBookFromVisibleHtmlNode.ParserBook(_doc);
 
-        private IEnumerable<BookInfo> BookFromHidedNode() => ParseBookFromHidedHtmlNode.ParserBook(_doc);
+        private IEnumerable<BookInfo> BookFromHidedNode() => ParseBookFromHidedHtmlNode.ParseBook(_doc);
 
         private Task<IEnumerable<BookInfo>> BookFromVisibleNodeAsync() => ParseBookFromVisibleHtmlNode.ParsreBookAsync(_doc);
 
-        private Task<IEnumerable<BookInfo>> BookFromHidedNodeAsync() => ParseBookFromHidedHtmlNode.ParsreBookAsync(_doc);
+        private Task<IEnumerable<BookInfo>> BookFromHidedNodeAsync() => ParseBookFromHidedHtmlNode.ParseBookAsync(_doc);
         
     }
 }

@@ -18,13 +18,15 @@ namespace Parser.Client
             // diagnostic.Diagnostic(bookName);
             // diagnostic.DiagnosticWithAsync(bookName);
 
-            
-            Test("React");
-            Test("Требования разработки");
-            Test(".Net");
-            
+            int i = 3;
 
-            
+            while(i > 0)
+            {
+                Test("React");
+                Test("Требования разработки");
+                Test(".Net");    
+                i--;
+            } 
 
             //ConvertToJsonAndWriteToFile(books);
         }
