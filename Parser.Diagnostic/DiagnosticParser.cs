@@ -8,13 +8,13 @@ using Parser.Labirint;
 using Parser.OZ;
 using Parser.Ozon;
 
-namespace Parser.Client
+namespace Parser.Diagnostic
 {
-    class DiagnosticParsers
+    public class SpeedTestParsers
     {
         private List<IParser<BookInfo>> _parsers;
 
-        public DiagnosticParsers()
+        public SpeedTestParsers()
         {
             _parsers = new List<IParser<BookInfo>>
             {

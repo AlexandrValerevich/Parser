@@ -4,16 +4,22 @@
 			"path": "."
 		},
 		{
-			"path": "ParserClient"
+			"path": "Parser.Client"
 		},
 		{
-			"path": "ParserLib"
+			"path": "Parser.Library"
 		},
 		{
 			"path": "HttpFacade"
 		},
 		{
-			"path": "ParserTest"
+			"path": "Parser.Test"
+		},
+		{
+			"path": "Parser.Manager"
+		},
+		{
+			"path": "Parser.Diagnostic"
 		}
 	],
 	"settings": {}

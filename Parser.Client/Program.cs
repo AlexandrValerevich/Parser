@@ -2,6 +2,9 @@
 using System.Diagnostics;
 using static System.Console;
 
+using Parser.Manager;
+using Parser.Diagnostic;
+
 namespace Parser.Client
 {
     class Program

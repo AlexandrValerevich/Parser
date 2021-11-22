@@ -1,8 +1,8 @@
 using System;
 
-namespace Parser.Client
+namespace Parser.Manager
 {
-    class ManagerParser
+    public class ManagerParser
     {
         private static Object locker = new Object();
         private ExecutorParserBook _executorParserBook;

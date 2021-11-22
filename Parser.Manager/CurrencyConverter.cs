@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using Parser.Currency;
 
-namespace Parser.Client
+namespace Parser.Manager
 {
     class CurrencyConverter
     {

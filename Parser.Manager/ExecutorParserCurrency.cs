@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using Parser.Currency;
 
-namespace Parser.Client
+namespace Parser.Manager
 {
     class ExecutorParserCurrency
     {

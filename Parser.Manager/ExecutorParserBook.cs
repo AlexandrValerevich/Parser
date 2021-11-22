@@ -6,7 +6,7 @@ using Parser.Labirint;
 using Parser.OZ;
 using Parser.Ozon;
 
-namespace Parser.Client
+namespace Parser.Manager
 {
     class ExecutorParserBook
     {
