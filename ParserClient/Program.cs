@@ -1,101 +1,41 @@
-﻿using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-using Parser.WildBarries;
-using Parser.Labirint;
-using Parser.OZ;
-using Parser.Ozon;
-using Parser.Currency;
-
+﻿using System.IO;
+using System.Diagnostics;
+using static System.Console;
 
 namespace Parser.Client
 {
     class Program
     {
+        static ManagerParser manager = new ManagerParser();
         static void Main(string[] args)
         {
             // var parserList = new List<IParser<BookInfo>>();
 
-            var diagnostic = new DiagnosticParsers();
+            // var diagnostic = new DiagnosticParsers();
 
-            string bookName = "Angular";
+            // string bookName = "Angular";
 
-            diagnostic.Diagnostic(bookName);
-            diagnostic.DiagnosticWithAsync(bookName);
+            // diagnostic.Diagnostic(bookName);
+            // diagnostic.DiagnosticWithAsync(bookName);
 
-
-            // Console.WriteLine("Введите книгу:");
-            // bookName = Console.ReadLine();
-
-            // InitializeList(parserList);
-
-            // Stopwatch sw = Stopwatch.StartNew();
-
-            // BookInfo[] bookInfo = ExecuteAllParserWithAsync(parserList, bookName);
-            // CurrencyInfo[] currencyInfo = GetCurrency();
             
-            // ConverBookPriceToBLR(ref bookInfo, currencyInfo);
-
-            // sw.Stop();
-            // Console.WriteLine(sw.ElapsedMilliseconds);
-
-            // ConvertToJsonAndWriteToFile(bookInfo); 
+            Test("React");
+            Test("Требования разработки");
+            Test(".Net");
             
+
+            
+
+            //ConvertToJsonAndWriteToFile(books);
         }
 
-        
-
-        private static void InitializeList(List<IParser<BookInfo>> parserList)
+        private static void Test(string bookName)
         {
-            parserList.Add(new WildBerriesParser());
-            parserList.Add(new OZParser());
-            parserList.Add(new LabirintParser());
-            parserList.Add(new OzonParser());
-        }
+            Stopwatch sw = Stopwatch.StartNew();
+            BookInfo[] books = manager.Parse(bookName);
+            sw.Stop();
 
-        private static BookInfo[] ExecuteAllParser(List<IParser<BookInfo>> parserList, string bookName)
-        {
-            var bookInfo = new List<BookInfo>();
-            parserList.ForEach(x => bookInfo.AddRange(x.Parse(bookName)));
-
-            return bookInfo.ToArray();
-        }
-
-        private static CurrencyInfo[] GetCurrency()
-        {
-            ParserCurrency parserCurrency = new ParserCurrency();
-            CurrencyInfo[] currencies = parserCurrency.Parse(CurrencyAbbreviation.USD | CurrencyAbbreviation.RUB);
-
-            return currencies;
-        }
-
-        private static void ConverBookPriceToBLR(ref BookInfo[] bookInfo, CurrencyInfo[] currencyInfo)
-        {
-            CurrencyInfo rus = currencyInfo.First(x => x.Abbreviation == "RUB");
-
-            for (var i = 0; i < bookInfo.Length; i++)
-            {
-                if(bookInfo[i].Currency == "RUB")
-                {
-                    bookInfo[i].Price *= rus.OfficialRate / 100;
-                    bookInfo[i].Price = Math.Round(bookInfo[i].Price, 2);
-                    bookInfo[i].Currency = "BYN";
-                }
-            }
-        }
-
-        private static BookInfo[] ExecuteAllParserWithAsync(List<IParser<BookInfo>> parserList, string bookName)
-        {
-            var tasks = new List<Task<BookInfo[]>>();
-            var bookInfo = new List<BookInfo>();
-
-            parserList.ForEach(x => tasks.Add(x.ParseAsync(bookName)));
-            tasks.ForEach(x => bookInfo.AddRange(x.Result));
-
-            return bookInfo.ToArray();
+            WriteLine($"{sw.ElapsedMilliseconds} ms");
         }
        
         public static void ConvertToJsonAndWriteToFile(BookInfo[] bookInfo)

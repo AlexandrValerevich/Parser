@@ -3,9 +3,9 @@ using Parser.Currency;
 
 namespace Parser.Client
 {
-    class ManagerParserCurrency
+    class ExecutorParserCurrency
     {
-        public ManagerParserCurrency() {}
+        public ExecutorParserCurrency() {}
 
         public async Task<CurrencyInfo[]> ParseAsync(CurrencyAbbreviation currency) =>
             await Task<BookInfo[]>.Run(() => Parse(currency));
