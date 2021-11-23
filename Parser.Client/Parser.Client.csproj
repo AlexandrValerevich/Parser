@@ -1,7 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\Parser.Library\Parser.Library.csproj" />
     <ProjectReference Include="..\Parser.Manager\Parser.Manager.csproj" />
     <ProjectReference Include="..\Parser.Diagnostic\Parser.Diagnostic.csproj" />
   </ItemGroup>

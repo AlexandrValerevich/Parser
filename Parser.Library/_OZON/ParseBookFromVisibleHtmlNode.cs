@@ -24,14 +24,30 @@ namespace Parser.Ozon
                             UriSite = s_prefixUri + card.QuerySelector(".b0c8.tile-hover-target").Attributes["href"].Value,
                             UriImage = card.QuerySelector(".ui-o7").Attributes["src"].Value,
                             Name = card.QuerySelector(".a7y.a8a2.a8a6.a8b2.f-tsBodyL.bj5").InnerText.Trim(),
-                            Price = GetPriceOfBookInCard(card),
+                            Price = ParsePrice(card),
                             Currency = "BYN"
                         };
             
             return  books;
         }
 
-        private static decimal GetPriceOfBookInCard(HtmlNode card)
+        private static decimal ParsePrice(HtmlNode card)
+        {
+            decimal price = 0;
+
+            try
+            {
+                price = ParsePriceWithExeption(card);
+            }
+            catch (System.Exception)
+            {
+                price = 0;
+            }
+
+            return price; 
+        }
+
+        private static decimal ParsePriceWithExeption(HtmlNode card)
         {
             string priceWithCurrency = card.QuerySelector(".ui-p5.ui-p8")?.InnerHtml.Replace(",", ".");
             string price = priceWithCurrency?.Substring(0, priceWithCurrency.IndexOf(".") + 3);
