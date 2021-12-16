@@ -8,9 +8,9 @@ namespace HttpFacade
         IHttpResponce Request();
 
         Task<IHttpResponce> RequestAsync();
-        
-        string RequestAsString();   
-        
+
+        string RequestAsString();
+
         Task<string> RequestAsStringAsync();
     }
 }

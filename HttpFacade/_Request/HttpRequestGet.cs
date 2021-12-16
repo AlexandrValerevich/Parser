@@ -6,8 +6,8 @@ namespace HttpFacade
 {
     public class HttpRequestGet : HttpRequestAbstract
     {
-        public HttpRequestGet(HttpClient httpClient): base(httpClient) {}
-        
+        public HttpRequestGet(HttpClient httpClient) : base(httpClient) { }
+
         public override IHttpResponce Request()
         {
             Task<HttpResponseMessage> taskResponce = _httpClient.GetAsync(Uri);
@@ -16,7 +16,7 @@ namespace HttpFacade
             responce.EnsureSuccessStatusCode();
             IHttpResponce httpResponce = new HttpResponce(responce);
 
-            return httpResponce; 
+            return httpResponce;
         }
 
     }

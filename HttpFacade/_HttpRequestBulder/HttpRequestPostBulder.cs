@@ -10,7 +10,7 @@ namespace HttpFacade
             return new HttpRequestPostBulder();
         }
 
-        private HttpRequestPostBulder() {}
+        private HttpRequestPostBulder() { }
 
         public override IHttpRequest Build()
         {

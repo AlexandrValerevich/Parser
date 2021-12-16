@@ -26,7 +26,7 @@ namespace Parser.Manager
 
         private void CheckActucalCurrency()
         {
-            if(!IsActualDate)
+            if (!IsActualDate)
             {
                 _currencies = UpdateCurrency;
                 _lastDayOfParseCurrencies = DateTime.Now;
@@ -44,7 +44,7 @@ namespace Parser.Manager
         {
             for (var i = 0; i < books.Length; i++)
             {
-                if(books[i].Currency == "RUB")
+                if (books[i].Currency == "RUB")
                 {
                     ConvertCurrencyRub(ref books[i]);
                 }

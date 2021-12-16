@@ -19,8 +19,8 @@ namespace Parser.OZ
         private static IHttpRequest CreateHttpRequest(string bookName)
         {
             string book = bookName.Replace(" ", "+");
-            string refererUri = s_refererUriPrefix + book;    
-            string uri = s_searchUriPrefix + book;       
+            string refererUri = s_refererUriPrefix + book;
+            string uri = s_searchUriPrefix + book;
 
             IHttpRequestBulder httpRequestBulder = HttpRequestGetBulder.Create();
 

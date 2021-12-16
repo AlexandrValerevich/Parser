@@ -9,7 +9,7 @@ namespace Parser.Json
         public static bool TryParseToJObject(this string json, out JObject? jObject)
         {
             bool isTry = true;
-            
+
             try
             {
                 jObject = JObject.Parse(json);

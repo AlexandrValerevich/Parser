@@ -15,7 +15,7 @@ namespace HttpFacade
         {
             set => _httpClient.BaseAddress = value;
         }
-        
+
         public static HttpClientBulder Create()
         {
             var httpClientHandler = new HttpClientHandler
@@ -36,7 +36,7 @@ namespace HttpFacade
         {
             _httpClient = new HttpClient(httpClientHandler);
         }
-        
+
         public IHttpClientBulder AddHeader(string key, string? value)
         {
             Header.Add(key, value);
@@ -63,7 +63,7 @@ namespace HttpFacade
 
         public IHttpClientBulder AddHeaderAcceptLanguage(string language, double quality)
         {
-            Header.AcceptLanguage.Add(new StringWithQualityHeaderValue(language,quality));
+            Header.AcceptLanguage.Add(new StringWithQualityHeaderValue(language, quality));
             return this;
         }
 
@@ -105,7 +105,7 @@ namespace HttpFacade
 
         public IHttpClientBulder AddHeaderUserAgent(string userAgent, string version)
         {
-             Header.UserAgent.Add(new ProductInfoHeaderValue(userAgent, version));
+            Header.UserAgent.Add(new ProductInfoHeaderValue(userAgent, version));
             return this;
         }
 
@@ -133,7 +133,7 @@ namespace HttpFacade
             Header.Accept.Add(new MediaTypeWithQualityHeaderValue(accept, quality));
             return this;
         }
-        
+
         public HttpClient Build()
         {
             return _httpClient;

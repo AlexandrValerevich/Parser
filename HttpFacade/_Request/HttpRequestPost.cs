@@ -9,7 +9,7 @@ namespace HttpFacade
         private HttpContent _httpContent;
         private readonly HttpContent _DefaultHttpContent = new StringContent("");
 
-        public HttpRequestPost(HttpClient httpClient): base(httpClient)
+        public HttpRequestPost(HttpClient httpClient) : base(httpClient)
         {
             _httpContent = _DefaultHttpContent;
         }
@@ -24,7 +24,7 @@ namespace HttpFacade
 
             return httpResponce;
         }
-        
+
         public IHttpResponce Request(string content)
         {
             _httpContent = new StringContent(content);

@@ -27,8 +27,8 @@ namespace Parser.Ozon
                             Price = ParsePrice(card),
                             Currency = "BYN"
                         };
-            
-            return  books;
+
+            return books;
         }
 
         private static decimal ParsePrice(HtmlNode card)
@@ -44,7 +44,7 @@ namespace Parser.Ozon
                 price = 0;
             }
 
-            return price; 
+            return price;
         }
 
         private static decimal ParsePriceWithExeption(HtmlNode card)
@@ -52,7 +52,7 @@ namespace Parser.Ozon
             string priceWithCurrency = card.QuerySelector(".ui-p5.ui-p8")?.InnerHtml.Replace(",", ".");
             string price = priceWithCurrency?[..(priceWithCurrency.IndexOf(".") + 3)];
 
-            return decimal.Parse(price ?? "0"); 
+            return decimal.Parse(price ?? "0");
         }
 
     }

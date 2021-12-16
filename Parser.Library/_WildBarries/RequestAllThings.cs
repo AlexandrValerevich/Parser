@@ -11,7 +11,7 @@ namespace Parser.WildBarries
         private static readonly string s_requestUriMiddlePart = "/catalog?";
         private static readonly string s_requestUriTailPart = "&sort=popular";
         private static readonly char s_separator = '&';
-        
+
         public static string GetResponce(string bookName)
         {
             bookName = bookName.Replace(" ", "+");

@@ -18,9 +18,9 @@ namespace Parser.OZ
             _bookName = String.Empty;
             _doc = new HtmlDocument();
         }
-        
+
         public async Task<BookInfo[]> ParseAsync(string bookName) => await Task.Run(() => Parse(bookName));
-        
+
 
         public BookInfo[] Parse(string bookName)
         {
@@ -28,8 +28,8 @@ namespace Parser.OZ
 
             string html = GetHtmlWithBook();
             _doc.LoadHtml(html);
-            
-            BookInfo[] books = ConvertHtmlToBookInfo(); 
+
+            BookInfo[] books = ConvertHtmlToBookInfo();
 
             return books;
         }
@@ -41,14 +41,14 @@ namespace Parser.OZ
             var cards = _doc.DocumentNode.QuerySelectorAll(".item-type-card__inner");
 
             var books = from card in cards
-                         select new BookInfo()
-                         {
+                        select new BookInfo()
+                        {
                             Name = card.QuerySelector(".item-type-card__title").InnerText.Trim(),
                             Price = GetPriceOfBookInCard(card),
                             Currency = "BYN",
                             UriSite = "https://oz.by" + card.QuerySelector(".item-type-card__link--main")?.Attributes["href"].Value,
                             UriImage = card.QuerySelector(".viewer-type-list__img")?.Attributes["src"].Value
-                         };
+                        };
 
             return books.ToArray();
         }
@@ -61,6 +61,6 @@ namespace Parser.OZ
             bool isDigit = decimal.TryParse(price, out decimal result);
 
             return isDigit ? result : 0;
-        }  
+        }
     }
 }

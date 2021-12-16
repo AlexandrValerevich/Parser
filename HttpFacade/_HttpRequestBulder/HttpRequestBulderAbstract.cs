@@ -7,7 +7,7 @@ namespace HttpFacade
         protected HttpClientBulder _httpClientBulder;
 
         public abstract IHttpRequest Build();
-        
+
         protected HttpRequestBulderAbstract()
         {
             _httpClientBulder = HttpClientBulder.Create();
@@ -39,7 +39,7 @@ namespace HttpFacade
 
         public IHttpRequestBulder AddHeaderAcceptEncoding(string acceptEncoding, double quality)
         {
-            _httpClientBulder.AddHeaderAcceptEncoding(acceptEncoding,quality);
+            _httpClientBulder.AddHeaderAcceptEncoding(acceptEncoding, quality);
             return this;
         }
 
@@ -109,7 +109,7 @@ namespace HttpFacade
             return this;
         }
 
-        
+
         public void Reset()
         {
             _httpClientBulder.Reset();

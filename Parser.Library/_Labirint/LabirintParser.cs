@@ -12,14 +12,14 @@ namespace Parser.Labirint
         private readonly HtmlDocument _doc;
         private static readonly string s_prefixUri = "https://www.labirint.ru";
 
-        public LabirintParser() 
+        public LabirintParser()
         {
             _bookName = String.Empty;
             _doc = new HtmlDocument();
         }
 
         public async Task<BookInfo[]> ParseAsync(string bookName) => await Task.Run(() => Parse(bookName));
-        
+
         public BookInfo[] Parse(string bookName)
         {
             _bookName = bookName.Replace(" ", "+");
@@ -28,12 +28,12 @@ namespace Parser.Labirint
             _doc.LoadHtml(html);
 
             BookInfo[] books = ConvertHtmlToBookInfo();
-            
+
             return books;
         }
 
         private string GetHtmlWithBook() => RequestHtmlFromLabirint.GetResponce(_bookName);
- 
+
         private BookInfo[] ConvertHtmlToBookInfo()
         {
             var cards = _doc.DocumentNode.QuerySelectorAll(".products-row-outer.responsive-cards .product");
@@ -50,6 +50,6 @@ namespace Parser.Labirint
 
             return books.ToArray();
         }
-        
+
     }
 }

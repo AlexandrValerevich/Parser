@@ -18,7 +18,7 @@ namespace Parser.Labirint
         private static IHttpRequest CreateHttpRequest(string bookName)
         {
             string uri = UriBuild(bookName);
-            
+
             IHttpRequestBulder httpRequestBulder = HttpRequestGetBulder.Create();
 
             httpRequestBulder
@@ -39,7 +39,7 @@ namespace Parser.Labirint
             .AddHeaderAcceptEncoding("deflate")
             .AddHeaderAcceptLanguage("ru")
             .AddHeaderAcceptLanguage("en", 0.9);
-            
+
             return httpRequestBulder.Build();
         }
 

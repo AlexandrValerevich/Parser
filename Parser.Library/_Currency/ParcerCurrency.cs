@@ -19,11 +19,11 @@ namespace Parser.Currency
         public async Task<CurrencyInfo[]> ParseAsync(CurrencyAbbreviation currency) => await Task.Run(() => Parse(currency));
 
         public CurrencyInfo[] Parse(CurrencyAbbreviation currency) => Parse(currency.ToString());
-        
+
         public async Task<CurrencyInfo[]> ParseAsync(string currency) => await Task.Run(() => Parse(currency));
-        
+
         public CurrencyInfo[] Parse(string currency)
-        {   
+        {
             _currency = currency;
 
             var currencyResponcies = GetJsonCurrencies();
@@ -31,7 +31,7 @@ namespace Parser.Currency
 
             foreach (string cur in currencyResponcies)
             {
-                
+
                 cur.TryParseToJObject(out JObject jObjectCurrency);
 
                 currencyInfos.Add(new CurrencyInfo()
@@ -59,13 +59,13 @@ namespace Parser.Currency
 
             Task.WaitAll(currencyResponcies.ToArray());
 
-            foreach(Task<string> responce in currencyResponcies)
+            foreach (Task<string> responce in currencyResponcies)
             {
                 resultJson.Add(responce.Result);
             }
-            
+
             return resultJson;
         }
-        
+
     }
 }

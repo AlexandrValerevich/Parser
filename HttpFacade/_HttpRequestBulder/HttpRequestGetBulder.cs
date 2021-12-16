@@ -10,7 +10,7 @@ namespace HttpFacade
             return new HttpRequestGetBulder();
         }
 
-        private HttpRequestGetBulder() {}
+        private HttpRequestGetBulder() { }
 
         public override IHttpRequest Build()
         {

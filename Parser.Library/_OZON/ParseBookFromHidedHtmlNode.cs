@@ -21,24 +21,24 @@ namespace Parser.Ozon
         public static IEnumerable<BookInfo> ParseBook(HtmlDocument doc)
         {
             string json = ParseJsonWithBook(doc);
-            
+
             json.TryParseToJObject(out JObject? jObject);
             JArray? books = jObject?["items"] as JArray;
 
             var convertedToBookInfo = books?
             .Select(book => book as JObject)
             .Select(book => new BookInfo()
-                            {
-                                UriSite = s_prefixUri + book?["action"]?["link"]?.ToString() ?? "",
-                                UriImage = GetImageUriFromBook(book),
-                                Name = GetNameFromMainState(book?["mainState"]),
-                                Price = GetPriceFromMainState(book?["mainState"]),
-                                Currency = "BYN"
-                            }) ?? new List<BookInfo>();
+            {
+                UriSite = s_prefixUri + book?["action"]?["link"]?.ToString() ?? "",
+                UriImage = GetImageUriFromBook(book),
+                Name = GetNameFromMainState(book?["mainState"]),
+                Price = GetPriceFromMainState(book?["mainState"]),
+                Currency = "BYN"
+            }) ?? new List<BookInfo>();
 
             return convertedToBookInfo;
         }
-        
+
         private static string ParseJsonWithBook(HtmlDocument doc)
         {
             HtmlNode divWithJsonInAttribute = doc.DocumentNode.QuerySelector("#state-searchResultsV2-311201-default-1");
@@ -54,7 +54,7 @@ namespace Parser.Ozon
                                     ?.ElementAt(0) ?? "";
             return name;
         }
-        
+
         private static decimal GetPriceFromMainState(JToken? mainState)
         {
             string priceWithCurrency = mainState?.Where(obj => obj?["atom"]?["type"]?.ToString() == "price")
@@ -69,7 +69,7 @@ namespace Parser.Ozon
 
             return convertedPrice;
         }
-        
+
         private static string GetImageUriFromBook(JObject? book)
         {
             JArray? imagesBook = book?["tileImage"]?["images"] as JArray;

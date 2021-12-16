@@ -19,7 +19,7 @@ namespace Parser.WildBarries
         }
 
         public async Task<BookInfo[]> ParseAsync(string bookName) => await Task.Run(() => Parse(bookName));
-        
+
         public BookInfo[] Parse(string bookName)
         {
             _bookName = bookName.Replace(" ", "+");
@@ -35,11 +35,11 @@ namespace Parser.WildBarries
 
             lock (locker)
             {
-                things = RequestAllThings.GetResponce(_bookName); 
+                things = RequestAllThings.GetResponce(_bookName);
             }
 
             return things;
-        } 
+        }
 
         private static BookInfo[] FilterBookFromThings(string allThingInJson)
         {
@@ -47,13 +47,14 @@ namespace Parser.WildBarries
 
             var productOfBook = products
             .Where(product => (int)product["subjectId"] == 381)
-            .Select(product => new BookInfo(){
+            .Select(product => new BookInfo()
+            {
                 Name = (string)product["name"],
                 Brand = (string)product["brand"],
-                Price = (int)product["salePriceU"]/100, // убираем 2 нуля
+                Price = (int)product["salePriceU"] / 100, // убираем 2 нуля
                 Currency = "RUB",
                 UriSite = s_siteUriPrefix + (string)product["id"] + "/detail.aspx?targetUrl=XS",
-                UriImage = s_imageUriPrefix + ((int)product["id"]/10000 * 10000) + "/" + (string)product["id"] + "-1.jpg" 
+                UriImage = s_imageUriPrefix + ((int)product["id"] / 10000 * 10000) + "/" + (string)product["id"] + "-1.jpg"
             }).ToArray();
 
             return productOfBook;
@@ -61,5 +62,5 @@ namespace Parser.WildBarries
 
     }
 
-    
+
 }

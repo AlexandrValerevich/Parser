@@ -21,14 +21,14 @@ namespace Parser.Client
             diagnostic.Diagnostic(bookName);
             diagnostic.DiagnosticWithAsync(bookName);
 
-            
 
-            for(int i = 0; i < 3; i++)
+
+            for (int i = 0; i < 3; i++)
             {
                 Test("React");
                 Test("Требования разработки");
-                Test(".Net");    
-            } 
+                Test(".Net");
+            }
 
             //ConvertToJsonAndWriteToFile(books);
         }
@@ -41,16 +41,16 @@ namespace Parser.Client
 
             WriteLine($"{sw.ElapsedMilliseconds} ms");
         }
-       
+
         // public static void ConvertToJsonAndWriteToFile(BookInfo[] bookInfo)
         // {
         //     string jsonBookInfo = BookInfoAdapterToJson.Convert(bookInfo);
-            
+
         //     using var sw = new StreamWriter("books.json");
         //     sw.Write(jsonBookInfo);
         //     sw.Close(); 
         // }
 
-        
+
     }
 }

@@ -2,9 +2,9 @@ using System;
 
 namespace HttpFacade
 {
-    public interface IHttpRequestBulder 
+    public interface IHttpRequestBulder
     {
-        void Reset(); 
+        void Reset();
         IHttpRequest Build();
         IHttpRequestBulder AddUri(string uri);
         IHttpRequestBulder AddUri(Uri uri);

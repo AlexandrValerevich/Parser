@@ -12,14 +12,14 @@ namespace Parser.Ozon
         private string _bookName;
         private readonly HtmlDocument _doc;
 
-        public OzonParser() 
+        public OzonParser()
         {
             _bookName = String.Empty;
             _doc = new HtmlDocument();
         }
 
         public async Task<BookInfo[]> ParseAsync(string bookName) => await Task.Run(() => Parse(bookName));
-        
+
         public BookInfo[] Parse(string bookName)
         {
             _bookName = bookName.Replace(" ", "+");
@@ -39,8 +39,8 @@ namespace Parser.Ozon
             var result = new List<BookInfo>();
 
             var booksFromHtmlNodes = BookFromVisibleNodeAsync();
-            var booksFromHideHtmlNodes = BookFromHidedNodeAsync(); 
-            
+            var booksFromHideHtmlNodes = BookFromHidedNodeAsync();
+
             result.AddRange(booksFromHtmlNodes.Result);
             result.AddRange(booksFromHideHtmlNodes.Result);
 
@@ -50,6 +50,6 @@ namespace Parser.Ozon
         private Task<IEnumerable<BookInfo>> BookFromVisibleNodeAsync() => ParseBookFromVisibleHtmlNode.ParsreBookAsync(_doc);
 
         private Task<IEnumerable<BookInfo>> BookFromHidedNodeAsync() => ParseBookFromHidedHtmlNode.ParseBookAsync(_doc);
-        
+
     }
 }

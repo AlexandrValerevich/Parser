@@ -28,13 +28,13 @@ namespace Parser.Diagnostic
         public void Diagnostic(string bookName)
         {
             Stopwatch sw;
-            _parsers.ForEach(x => 
+            _parsers.ForEach(x =>
             {
                 string nameParser = x.GetType().Name;
                 sw = Stopwatch.StartNew();
-                
+
                 x.Parse(bookName);
-                
+
                 sw.Stop();
                 WriteLine($"{nameParser}: {sw.ElapsedMilliseconds}мс");
             });
@@ -53,6 +53,6 @@ namespace Parser.Diagnostic
             sw.Stop();
             WriteLine($"AllParserAsync {sw.ElapsedMilliseconds}мс");
         }
-       
+
     }
 }

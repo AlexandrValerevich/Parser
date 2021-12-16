@@ -8,11 +8,11 @@ namespace HttpFacade
         IHttpResponce EnsureSuccessStatusCode();
 
         Task<string> ReadAsStringAsync();
-        
+
         string ReadAsString();
-        
+
         Task<byte[]> ReadAsByteArrayAsync();
-        
+
         Stream ReadAsStream();
 
     }

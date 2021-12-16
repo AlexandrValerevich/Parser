@@ -5,7 +5,7 @@ namespace Parser.Manager
 {
     class ExecutorParserCurrency
     {
-        public ExecutorParserCurrency() {}
+        public ExecutorParserCurrency() { }
 
         public static async Task<CurrencyInfo[]> ParseAsync(CurrencyAbbreviation currency) =>
             await Task<BookInfo[]>.Run(() => Parse(currency));
