@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 
 namespace Parser.Manager
 {
@@ -12,6 +13,7 @@ namespace Parser.Manager
             _executorParserBook = new ExecutorParserBook();
             _currencyConverter = new CurrencyConverter();
         }
+        public async Task<BookInfo[]> ParseAsync(string bookName) => await Task.Run(() => Parse(bookName));
 
         public BookInfo[] Parse(string bookName)
         {
@@ -21,13 +23,5 @@ namespace Parser.Manager
             return books;
         }
 
-        // public static void WriteToFileAsJson(BookInfo[] bookInfo)
-        // {
-        //     string jsonBookInfo = BookInfoAdapterToJson.Convert(bookInfo);
-
-        //     using StreamWriter sw = new StreamWriter("books.json");
-        //     sw.Write(jsonBookInfo);
-        //     sw.Close(); 
-        // }
     }
 }

@@ -21,7 +21,6 @@ namespace Parser.OZ
 
         public async Task<BookInfo[]> ParseAsync(string bookName) => await Task.Run(() => Parse(bookName));
 
-
         public BookInfo[] Parse(string bookName)
         {
             _bookName = bookName.Replace(" ", "+");

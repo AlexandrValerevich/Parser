@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 using System.Collections.Generic;
 using Parser.Manager;
 
@@ -16,16 +17,16 @@ namespace Parser.Api
         }
 
         [HttpGet]
-        public IEnumerable<BookInfo> Get()
+        public async Task<IEnumerable<BookInfo>>  Get()
         {
-            var books = s_menager.Parse("React");
+            var books = await s_menager.ParseAsync("React");
             return books;
         }
 
         [HttpGet("search={bookName}")]
-        public IEnumerable<BookInfo> Get(string bookName)
+        public async Task<IEnumerable<BookInfo>> Get(string bookName)
         {
-            var books = s_menager.Parse(bookName);
+            var books = await s_menager.ParseAsync(bookName);
             return books;
         }
 
