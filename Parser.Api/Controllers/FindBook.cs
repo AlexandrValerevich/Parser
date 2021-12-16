@@ -10,7 +10,7 @@ namespace Parser.Api
     [Route("[controller]")]
     public class FindBookController : ControllerBase
     {
-        static readonly ManagerParser s_menager = new();
+        static readonly ManagerParser s_manager = new();
 
         public FindBookController()
         {
@@ -19,14 +19,14 @@ namespace Parser.Api
         [HttpGet]
         public async Task<IEnumerable<BookInfo>>  Get()
         {
-            var books = await s_menager.ParseAsync("React");
+            var books = await s_manager.ParseAsync("React");
             return books;
         }
 
         [HttpGet("search={bookName}")]
         public async Task<IEnumerable<BookInfo>> Get(string bookName)
         {
-            var books = await s_menager.ParseAsync(bookName);
+            var books = await s_manager.ParseAsync(bookName);
             return books;
         }
 
