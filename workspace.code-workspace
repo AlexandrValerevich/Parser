@@ -10,16 +10,13 @@
 			"path": "Parser.Library"
 		},
 		{
-			"path": "HttpFacade"
-		},
-		{
-			"path": "Parser.Test"
-		},
-		{
 			"path": "Parser.Manager"
 		},
 		{
 			"path": "Parser.Diagnostic"
+		},
+		{
+			"path": "Parser.Api"
 		}
 	],
 	"settings": {}

@@ -1,3 +1,4 @@
+using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -5,14 +6,11 @@ namespace HttpFacade
 {
     public class HttpRequestGet : HttpRequestAbstract
     {
-        public HttpRequestGet(HttpClient httpClient): base(httpClient)
-        {
-            
-        }
-
+        public HttpRequestGet(HttpClient httpClient): base(httpClient) {}
+        
         public override IHttpResponce Request()
         {
-            Task<HttpResponseMessage> taskResponce = _httpClient.GetAsync(_Uri);
+            Task<HttpResponseMessage> taskResponce = _httpClient.GetAsync(Uri);
 
             HttpResponseMessage responce = taskResponce.Result;
             responce.EnsureSuccessStatusCode();

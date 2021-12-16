@@ -7,12 +7,12 @@ namespace Parser.Manager
     {
         public ExecutorParserCurrency() {}
 
-        public async Task<CurrencyInfo[]> ParseAsync(CurrencyAbbreviation currency) =>
+        public static async Task<CurrencyInfo[]> ParseAsync(CurrencyAbbreviation currency) =>
             await Task<BookInfo[]>.Run(() => Parse(currency));
 
-        public CurrencyInfo[] Parse(CurrencyAbbreviation currency)
+        public static CurrencyInfo[] Parse(CurrencyAbbreviation currency)
         {
-            ParserCurrency parserCurrency = new ParserCurrency();
+            var parserCurrency = new ParserCurrency();
             CurrencyInfo[] currencies = parserCurrency.Parse(currency);
 
             return currencies;

@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using System.Diagnostics;
 using static System.Console;
+using System.Collections.Generic;
 
 using Parser.Manager;
 using Parser.Diagnostic;
@@ -9,26 +10,24 @@ namespace Parser.Client
 {
     class Program
     {
-        static ManagerParser manager = new ManagerParser();
-        static void Main(string[] args)
+        static readonly ManagerParser manager = new();
+        static void Main()
         {
-            // var parserList = new List<IParser<BookInfo>>();
+            //var parserList = new List<IParser<BookInfo>>();
 
-            // var diagnostic = new DiagnosticParsers();
+            var diagnostic = new SpeedTestParsers();
+            string bookName = "Angular";
 
-            // string bookName = "Angular";
+            diagnostic.Diagnostic(bookName);
+            diagnostic.DiagnosticWithAsync(bookName);
 
-            // diagnostic.Diagnostic(bookName);
-            // diagnostic.DiagnosticWithAsync(bookName);
+            
 
-            int i = 3;
-
-            while(i > 0)
+            for(int i = 0; i < 3; i++)
             {
                 Test("React");
                 Test("Требования разработки");
                 Test(".Net");    
-                i--;
             } 
 
             //ConvertToJsonAndWriteToFile(books);
@@ -43,14 +42,14 @@ namespace Parser.Client
             WriteLine($"{sw.ElapsedMilliseconds} ms");
         }
        
-        public static void ConvertToJsonAndWriteToFile(BookInfo[] bookInfo)
-        {
-            string jsonBookInfo = BookInfoAdapterToJson.Convert(bookInfo);
+        // public static void ConvertToJsonAndWriteToFile(BookInfo[] bookInfo)
+        // {
+        //     string jsonBookInfo = BookInfoAdapterToJson.Convert(bookInfo);
             
-            using StreamWriter sw = new StreamWriter("books.json");
-            sw.Write(jsonBookInfo);
-            sw.Close(); 
-        }
+        //     using var sw = new StreamWriter("books.json");
+        //     sw.Write(jsonBookInfo);
+        //     sw.Close(); 
+        // }
 
         
     }

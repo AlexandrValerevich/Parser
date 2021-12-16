@@ -10,7 +10,7 @@ namespace Parser.Ozon
     public class OzonParser : IParser<BookInfo>
     {
         private string _bookName;
-        private HtmlDocument _doc;
+        private readonly HtmlDocument _doc;
 
         public OzonParser() 
         {
@@ -36,7 +36,7 @@ namespace Parser.Ozon
 
         private BookInfo[] ParseBookFromHtml()
         {
-            List<BookInfo> result = new List<BookInfo>();
+            var result = new List<BookInfo>();
 
             var booksFromHtmlNodes = BookFromVisibleNodeAsync();
             var booksFromHideHtmlNodes = BookFromHidedNodeAsync(); 
@@ -46,10 +46,6 @@ namespace Parser.Ozon
 
             return result.ToArray();
         }
-
-        private IEnumerable<BookInfo> BookFromVisibleNode() => ParseBookFromVisibleHtmlNode.ParserBook(_doc);
-
-        private IEnumerable<BookInfo> BookFromHidedNode() => ParseBookFromHidedHtmlNode.ParseBook(_doc);
 
         private Task<IEnumerable<BookInfo>> BookFromVisibleNodeAsync() => ParseBookFromVisibleHtmlNode.ParsreBookAsync(_doc);
 

@@ -12,7 +12,7 @@ namespace Parser.Diagnostic
 {
     public class SpeedTestParsers
     {
-        private List<IParser<BookInfo>> _parsers;
+        private readonly List<IParser<BookInfo>> _parsers;
 
         public SpeedTestParsers()
         {

@@ -6,7 +6,6 @@ namespace Parser.Manager
 {
     class CurrencyConverter
     {
-        private ExecutorParserCurrency _executorParserCurrency;
         private CurrencyInfo[] _currencies;
         private CurrencyInfo RUB => _currencies.First(x => x.Abbreviation == "RUB");
         private CurrencyInfo EUR => _currencies.First(x => x.Abbreviation == "EUR");
@@ -15,7 +14,6 @@ namespace Parser.Manager
 
         public CurrencyConverter()
         {
-            _executorParserCurrency = new ExecutorParserCurrency();
             _currencies = UpdateCurrency;
             _lastDayOfParseCurrencies = DateTime.Now;
         }
@@ -28,16 +26,16 @@ namespace Parser.Manager
 
         private void CheckActucalCurrency()
         {
-            if(!isActualDate)
+            if(!IsActualDate)
             {
                 _currencies = UpdateCurrency;
                 _lastDayOfParseCurrencies = DateTime.Now;
             }
         }
 
-        private bool isActualDate => _lastDayOfParseCurrencies?.Day == DateTime.Now.Day;
+        private bool IsActualDate => _lastDayOfParseCurrencies?.Day == DateTime.Now.Day;
 
-        private CurrencyInfo[] UpdateCurrency => _executorParserCurrency.Parse(
+        private static CurrencyInfo[] UpdateCurrency => ExecutorParserCurrency.Parse(
                     CurrencyAbbreviation.RUB |
                     CurrencyAbbreviation.USD |
                     CurrencyAbbreviation.EUR);
@@ -74,6 +72,6 @@ namespace Parser.Manager
             book.Currency = "BYN";
         }
 
-        private decimal RoundPrice(decimal price) => Math.Round(price, 2);
+        private static decimal RoundPrice(decimal price) => Math.Round(price, 2);
     }
 }

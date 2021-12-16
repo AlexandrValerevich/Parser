@@ -7,9 +7,9 @@ namespace HttpFacade
 {
     public class HttpResponce : IDisposable, IHttpResponce
     {
-        private HttpResponseMessage _httpResponceMassage;
+        private readonly HttpResponseMessage _httpResponceMassage;
 
-        private HttpContent _сontent => _httpResponceMassage.Content;
+        private HttpContent Content => _httpResponceMassage.Content;
 
         public HttpResponce(HttpResponseMessage httpResponceMassage)
         {
@@ -22,15 +22,15 @@ namespace HttpFacade
             return this;
         }
 
-        public async Task<byte[]> ReadAsByteArrayAsync() => await _сontent.ReadAsByteArrayAsync();
+        public async Task<byte[]> ReadAsByteArrayAsync() => await Content.ReadAsByteArrayAsync();
 
-        public Stream ReadAsStream() => _сontent.ReadAsStream();
+        public Stream ReadAsStream() => Content.ReadAsStream();
 
-        public async Task<string> ReadAsStringAsync() => await _сontent.ReadAsStringAsync();
+        public async Task<string> ReadAsStringAsync() => await Content.ReadAsStringAsync();
 
         public string ReadAsString()
         {
-            Task<string> taskResponce = _сontent.ReadAsStringAsync();
+            Task<string> taskResponce = Content.ReadAsStringAsync();
             taskResponce.Wait();
 
             string responce = taskResponce.Result;
@@ -40,7 +40,7 @@ namespace HttpFacade
 
         public void Dispose()
         {
-            _httpResponceMassage.Dispose();
+            GC.SuppressFinalize(this);
         }
     }
 }

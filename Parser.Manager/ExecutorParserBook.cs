@@ -10,7 +10,7 @@ namespace Parser.Manager
 {
     class ExecutorParserBook
     {
-        private List<IParser<BookInfo>> _parsers;
+        private readonly List<IParser<BookInfo>> _parsers;
 
         public ExecutorParserBook()
         {

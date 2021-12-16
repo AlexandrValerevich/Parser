@@ -20,7 +20,7 @@ namespace Parser.Currency
         {
             IHttpRequestBulder httpRequestBulder = HttpRequestGetBulder.Create();
 
-            Uri uri = new System.Uri("https://www.nbrb.by/api/exrates/rates/" + currency + "?parammode=2");
+            var uri = new Uri("https://www.nbrb.by/api/exrates/rates/" + currency + "?parammode=2");
             httpRequestBulder.AddUri(uri);
 
             return httpRequestBulder.Build();

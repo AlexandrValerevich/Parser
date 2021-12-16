@@ -9,7 +9,7 @@ namespace Parser.Labirint
     public class LabirintParser : IParser<BookInfo>
     {
         private string _bookName;
-        private HtmlDocument _doc;
+        private readonly HtmlDocument _doc;
         private static readonly string s_prefixUri = "https://www.labirint.ru";
 
         public LabirintParser() 

@@ -31,8 +31,8 @@ namespace Parser.Currency
 
             foreach (string cur in currencyResponcies)
             {
-                JObject jObjectCurrency;
-                cur.TryParseToJObject(out jObjectCurrency);
+                
+                cur.TryParseToJObject(out JObject jObjectCurrency);
 
                 currencyInfos.Add(new CurrencyInfo()
                 {

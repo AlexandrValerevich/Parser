@@ -22,8 +22,7 @@ namespace Parser.Ozon
         {
             string json = ParseJsonWithBook(doc);
             
-            JObject? jObject = null;
-            json.TryParseToJObject(out jObject);
+            json.TryParseToJObject(out JObject? jObject);
             JArray? books = jObject?["items"] as JArray;
 
             var convertedToBookInfo = books?

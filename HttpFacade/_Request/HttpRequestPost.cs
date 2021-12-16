@@ -7,7 +7,7 @@ namespace HttpFacade
     public class HttpRequestPost : HttpRequestAbstract
     {
         private HttpContent _httpContent;
-        private HttpContent _DefaultHttpContent = new StringContent("");
+        private readonly HttpContent _DefaultHttpContent = new StringContent("");
 
         public HttpRequestPost(HttpClient httpClient): base(httpClient)
         {
@@ -16,7 +16,7 @@ namespace HttpFacade
 
         public override IHttpResponce Request()
         {
-            Task<HttpResponseMessage> taskResponce = _httpClient.PostAsync(_Uri, _httpContent);
+            Task<HttpResponseMessage> taskResponce = _httpClient.PostAsync(Uri, _httpContent);
 
             HttpResponseMessage responce = taskResponce.Result;
             responce.EnsureSuccessStatusCode();

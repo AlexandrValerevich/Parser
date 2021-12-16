@@ -454,5 +454,6 @@ $RECYCLE.BIN/
 !.vscode/extensions.json
 
 ## ParserTest
-ParserTest/*
-ParserClient/books.json
+Parser.Test/*
+Parser.Client/books.json
+Parser.Api

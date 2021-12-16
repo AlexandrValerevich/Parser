@@ -7,7 +7,7 @@ namespace HttpFacade
     public abstract class HttpRequestAbstract : IHttpRequest
     {
         protected HttpClient _httpClient;
-        protected Uri _Uri => _httpClient.BaseAddress;
+        protected Uri Uri => _httpClient.BaseAddress;
         
         public abstract IHttpResponce Request();
 
@@ -19,7 +19,7 @@ namespace HttpFacade
         public async Task<IHttpResponce> RequestAsync() => await Task.Run(() => Request()); 
         
         public async Task<string> RequestAsStringAsync() => await Task.Run(() => RequestAsString());
-        
+
         public string RequestAsString()
         {
             IHttpResponce httpResponce = Request();
@@ -30,7 +30,7 @@ namespace HttpFacade
 
         public void Dispose()
         {
-            _httpClient.Dispose();
+            GC.SuppressFinalize(this);
         }
     }
 }

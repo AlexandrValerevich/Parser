@@ -4,9 +4,8 @@ namespace Parser.Manager
 {
     public class ManagerParser
     {
-        private static Object locker = new Object();
-        private ExecutorParserBook _executorParserBook;
-        private CurrencyConverter _currencyConverter;
+        private readonly ExecutorParserBook _executorParserBook;
+        private readonly CurrencyConverter _currencyConverter;
 
         public ManagerParser()
         {

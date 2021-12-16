@@ -11,7 +11,7 @@ namespace Parser.WildBarries
         private static readonly string s_imageUriPrefix = "https://kemlenvg8e.a.trbcdn.net/c516x688/new/";
         private static readonly string s_siteUriPrefix = "https://by.wildberries.ru/catalog/";
 
-        private static object locker = new Object();
+        private static readonly object locker = new();
 
         public WildBerriesParser()
         {
@@ -41,7 +41,7 @@ namespace Parser.WildBarries
             return things;
         } 
 
-        private BookInfo[] FilterBookFromThings(string allThingInJson)
+        private static BookInfo[] FilterBookFromThings(string allThingInJson)
         {
             JArray products = JObject.Parse(allThingInJson)["data"]["products"] as JArray;
 

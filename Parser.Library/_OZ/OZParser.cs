@@ -11,8 +11,7 @@ namespace Parser.OZ
     public class OZParser : IParser<BookInfo>
     {
         private string _bookName;
-        private HtmlDocument _doc;
-        private string _SearchUri => "https://oz.by/search/?c=1101523&q=" + _bookName;
+        private readonly HtmlDocument _doc;
 
         public OZParser()
         {
@@ -54,15 +53,14 @@ namespace Parser.OZ
             return books.ToArray();
         }
 
-        private decimal GetPriceOfBookInCard(HtmlNode card)
+        private static decimal GetPriceOfBookInCard(HtmlNode card)
         {
             string? priceWithRub = card.QuerySelector(".item-type-card__btn")?.InnerText.Trim();
             string? price = priceWithRub?.Split("&")[0].Replace(",", ".");
 
-            decimal result = 0;
-            bool isDigit = decimal.TryParse(price, out result);
+            bool isDigit = decimal.TryParse(price, out decimal result);
 
-            return result;
+            return isDigit ? result : 0;
         }  
     }
 }
