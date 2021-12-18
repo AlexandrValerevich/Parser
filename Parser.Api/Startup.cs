@@ -28,6 +28,7 @@ namespace Parser.Api
         {
 
             services.AddControllers();
+            services.AddCors();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Parser.Api", Version = "v1" });
@@ -43,6 +44,9 @@ namespace Parser.Api
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Parser.Api v1"));
             }
+
+            // подключаем CORS
+            app.UseCors(builder => builder.AllowAnyOrigin());
 
             app.UseHttpsRedirection();
 
