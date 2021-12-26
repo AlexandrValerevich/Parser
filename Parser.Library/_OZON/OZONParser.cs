@@ -38,16 +38,16 @@ namespace Parser.Ozon
         {
             var result = new List<BookInfo>();
 
-            var booksFromHtmlNodes = BookFromVisibleNodeAsync();
+            //var booksFromVisibleHtmlNodes = BookFromVisibleNodeAsync();
             var booksFromHideHtmlNodes = BookFromHidedNodeAsync();
 
-            result.AddRange(booksFromHtmlNodes.Result);
+            //result.AddRange(booksFromVisibleHtmlNodes.Result);
             result.AddRange(booksFromHideHtmlNodes.Result);
 
             return result.ToArray();
         }
 
-        private Task<IEnumerable<BookInfo>> BookFromVisibleNodeAsync() => ParseBookFromVisibleHtmlNode.ParsreBookAsync(_doc);
+        //private Task<IEnumerable<BookInfo>> BookFromVisibleNodeAsync() => ParseBookFromVisibleHtmlNode.ParsreBookAsync(_doc);
 
         private Task<IEnumerable<BookInfo>> BookFromHidedNodeAsync() => ParseBookFromHidedHtmlNode.ParseBookAsync(_doc);
 

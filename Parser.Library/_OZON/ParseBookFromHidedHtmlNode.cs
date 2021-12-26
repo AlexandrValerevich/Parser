@@ -16,7 +16,7 @@ namespace Parser.Ozon
         private static readonly string s_prefixUri = "https://www.ozon.ru";
 
         public static async Task<IEnumerable<BookInfo>> ParseBookAsync(HtmlDocument doc) =>
-            await Task<IEnumerable<BookInfo>>.Run(() => ParseBook(doc));
+            await Task.Run(() => ParseBook(doc));
 
         public static IEnumerable<BookInfo> ParseBook(HtmlDocument doc)
         {

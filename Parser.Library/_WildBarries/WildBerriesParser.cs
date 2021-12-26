@@ -8,7 +8,7 @@ namespace Parser.WildBarries
     public class WildBerriesParser : IParser<BookInfo>
     {
         private string _bookName;
-        private static readonly string s_imageUriPrefix = "https://kemlenvg8e.a.trbcdn.net/c516x688/new/";
+        private static readonly string s_imageUriPrefix = "https://images.wbstatic.net/c516x688/new/";
         private static readonly string s_siteUriPrefix = "https://by.wildberries.ru/catalog/";
 
         private static readonly object locker = new();
